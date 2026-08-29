@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jerry Studio</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: #e5e5e5;
+    --accent: #2f6feb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c;
+      --fg: #e8e8e8;
+      --muted: #9a9a9a;
+      --line: #2c2f36;
+      --accent: #6ea8fe;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 1.25rem 5rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.5rem;
+  }
+
+  .tagline {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .intro {
+    text-align: center;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.75rem 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .intro p { margin: 0; }
+
+  h2 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin: 0 0 1.25rem;
+  }
+
+  ul.briefs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.briefs > li {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  ul.briefs > li:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .brief-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+  }
+
+  .brief-date {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 0.5rem;
+  }
+
+  .brief-summary {
+    margin: 0;
+    color: var(--fg);
+  }
+
+  footer {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  a { color: var(--accent); }
+
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    .wrap { padding: 2.5rem 1rem 3.5rem; }
+    h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <h1>Jerry Studio</h1>
+      <p class="tagline">每日简报 · Daily Briefing</p>
+    </header>
+
+    <section class="intro">
+      <p>这里以后会展示每天的简报内容。<br>每日更新，记录当天值得留意的信息与想法。</p>
+    </section>
+
+    <section>
+      <h2>简报列表</h2>
+
+      <!-- 以后按天新增：复制下面一个 <li> 块，改标题、日期和摘要，放到列表最上面即可 -->
+      <ul class="briefs">
+        <li>
+          <h3 class="brief-title">示例简报：第二期</h3>
+          <time class="brief-date" datetime="2026-08-29">2026-08-29</time>
+          <p class="brief-summary">这是一条示例摘要，用来演示列表的排版效果。正式内容发布后替换掉即可。</p>
+        </li>
+        <li>
+          <h3 class="brief-title">示例简报：第一期</h3>
+          <time class="brief-date" datetime="2026-08-28">2026-08-28</time>
+          <p class="brief-summary">这是另一条示例摘要，标题 + 日期 + 摘要就是每条简报的基本格式。</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Jerry Studio</p>
+    </footer>
+
+  </div>
+</body>
+</html>
