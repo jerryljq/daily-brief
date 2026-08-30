@@ -10,8 +10,16 @@ Run by a LaunchAgent每天上午。流程：
 并弹一条通知。原因见 build_index.audit —— 虚构栏目的标题每天写法都不一样，
 标注规则可能漏掉新写法，那种情况下宁可停下。
 
+两种模式：
+
+    --in-repo   简报已经被写进 briefs/（云端 routine 用这个）。闸门拦下时
+                推到 held/ 分支而不是丢在本地 —— 云端沙箱跑完就销毁，
+                不推走就没了。
+    （默认）    去本机 Claude 桌面版的 session outputs/ 里捞（本地定时任务用）
+
 用法:
-    python3 publish.py            # 正常跑
+    python3 publish.py            # 从本机 session outputs 收
+    python3 publish.py --in-repo  # 简报已在 briefs/ 里
     python3 publish.py --dry-run  # 只看会发生什么，不碰 git
 """
 import glob, os, re, shutil, subprocess, sys, time
@@ -27,7 +35,8 @@ SOURCE = os.environ.get("DAILY_BRIEF_SOURCE_GLOB") or os.path.expanduser(
 sys.path.insert(0, REPO)
 import build_index
 
-DRY = "--dry-run" in sys.argv
+DRY     = "--dry-run" in sys.argv
+IN_REPO = "--in-repo" in sys.argv
 
 
 def log(msg=""):
@@ -55,6 +64,17 @@ def git(*args, check=True):
     return r.stdout.strip()
 
 
+def collect_in_repo():
+    """简报已经在 briefs/ 里，认 git 眼中的未跟踪文件。"""
+    out = []
+    for line in git("status", "--porcelain", "--", "briefs").splitlines():
+        status, _, path = line.partition(" ")
+        name = os.path.basename(path.strip())
+        if line.startswith("??") and name.endswith(".html") and re.search(r"\d{8}", name):
+            out.append(name)
+    return sorted(out)
+
+
 def collect():
     """把 outputs/ 里还没收录的简报复制进 briefs/，返回新增的文件名。"""
     have = {os.path.basename(p) for p in glob.glob(os.path.join(BRIEFS, "*.html"))}
@@ -72,7 +92,7 @@ def collect():
 
 def main():
     log("=" * 58)
-    fresh = collect()
+    fresh = collect_in_repo() if IN_REPO else collect()
     if not fresh:
         log("没有新简报，跳过")
         return 0
@@ -112,11 +132,20 @@ def main():
         "-m", "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>")
 
     if blocking:
-        log(f"✗ 安全闸拦截 {len(blocking)} 处，已本地提交但未推送：")
+        log(f"✗ 安全闸拦截 {len(blocking)} 处，未进 main：")
         for name, x in blocking:
             log(f"    {name}: {x[:110]}")
-        notify("每日简报 · 已暂停发布",
-               f"{len(blocking)} 处疑似虚构但无标注，已本地提交未推送")
+        if IN_REPO:
+            # 云端沙箱跑完即销毁，本地提交等于丢失 —— 必须推到分支保住
+            branch = "held/" + time.strftime("%Y%m%d-%H%M")
+            git("branch", branch)
+            git("push", "origin", f"{branch}:{branch}")
+            log(f"  已推到分支 {branch}（未合入 main）")
+            notify("每日简报 · 已暂停发布",
+                   f"{len(blocking)} 处疑似虚构但无标注，见分支 {branch}")
+        else:
+            notify("每日简报 · 已暂停发布",
+                   f"{len(blocking)} 处疑似虚构但无标注，已本地提交未推送")
         return 1
 
     log(f"✓ 安全闸通过（{len(warnings)} 条提示）")
