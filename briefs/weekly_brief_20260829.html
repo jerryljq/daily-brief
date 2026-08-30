@@ -356,6 +356,27 @@
   ::selection{background:rgba(212,162,78,0.35);color:#fff;}
 
 .fic-tag{display:inline-block;margin-left:.5em;padding:.1em .5em;border:1px solid currentColor;border-radius:4px;font-size:.68em;font-weight:600;opacity:.8;vertical-align:middle;letter-spacing:.02em;white-space:nowrap;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;}
+
+/* MOBILE-PATCH */
+/* ── 移动端适配（仅 ≤600px 生效，桌面端不受影响） ── */
+@media (max-width:600px){
+  /* 刊头/顶栏的多列信息行改为竖排居中 */
+  .mh-top,.mh-meta,.masthead-top,.masthead-meta,.meta-row,.sec-hdr,.byline{
+    flex-direction:column!important;align-items:center!important;
+    gap:6px!important;text-align:center!important;
+  }
+  .mh-top>span,.mh-meta>span,.masthead-top>span,.masthead-meta>span{
+    white-space:normal!important;width:auto!important;
+  }
+  /* 多列网格一律降为单列 */
+  [class*="grid"],[class*="col"]{grid-template-columns:1fr!important;}
+  /* 宽内容不撑破页面 */
+  img,iframe,video{max-width:100%!important;height:auto;}
+  table,pre{display:block;max-width:100%;overflow-x:auto;}
+  /* 正文可读性 */
+  body{-webkit-text-size-adjust:100%;}
+  blockquote{margin-left:0!important;margin-right:0!important;}
+}
 </style>
 </head>
 <body>
@@ -503,7 +524,7 @@
     <div class="joke-inner">
       <div class="joke-icon">🌞</div>
       <div>
-        <div class="joke-label">冷笑话 · 反内卷版</div>
+        <div class="joke-label">冷笑话 · 反内卷版<span class="fic-tag">虚构</span></div>
         <div class="joke-text">光伏厂老板开会宣布："我们决定不再低于成本价卖货。"台下有人举手："那……去年卖的算不算？"老板沉默三秒："那叫市场调研。"</div>
       </div>
     </div>
@@ -631,7 +652,7 @@
     <div class="joke-inner">
       <div class="joke-icon">💾</div>
       <div>
-        <div class="joke-label">冷笑话 · 折旧版</div>
+        <div class="joke-label">冷笑话 · 折旧版<span class="fic-tag">虚构</span></div>
         <div class="joke-text">审计师问科技公司CFO："这批GPU准备折旧几年？"CFO答："六年。"审计师："可英伟达自己说芯片两年就落后了。"CFO："所以我们折旧的不是芯片，是信心。"</div>
       </div>
     </div>
@@ -758,7 +779,7 @@
     <div class="joke-inner">
       <div class="joke-icon">🍁</div>
       <div>
-        <div class="joke-label">冷笑话 · 关税版</div>
+        <div class="joke-label">冷笑话 · 关税版<span class="fic-tag">虚构</span></div>
         <div class="joke-text">加拿大商人问美国海关："我这批枫糖浆要交多少关税？"海关官员翻了翻清单："50%，还有——欢迎回来，我们想你了。"</div>
       </div>
     </div>
@@ -777,7 +798,7 @@
     <div class="joke-inner">
       <div class="joke-icon">🏦</div>
       <div>
-        <div class="joke-label">冷笑话 · 美联储版</div>
+        <div class="joke-label">冷笑话 · 美联储版<span class="fic-tag">虚构</span></div>
         <div class="joke-text">记者问新任美联储主席对降息路径的看法，他想了很久说："我倾向于渐进、数据驱动、留有余地——总之，下次开会前，别问我。"</div>
       </div>
     </div>

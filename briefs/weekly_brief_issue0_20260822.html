@@ -564,6 +564,27 @@
   }
 
 .fic-tag{display:inline-block;margin-left:.5em;padding:.1em .5em;border:1px solid currentColor;border-radius:4px;font-size:.68em;font-weight:600;opacity:.8;vertical-align:middle;letter-spacing:.02em;white-space:nowrap;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;}
+
+/* MOBILE-PATCH */
+/* ── 移动端适配（仅 ≤600px 生效，桌面端不受影响） ── */
+@media (max-width:600px){
+  /* 刊头/顶栏的多列信息行改为竖排居中 */
+  .mh-top,.mh-meta,.masthead-top,.masthead-meta,.meta-row,.sec-hdr,.byline{
+    flex-direction:column!important;align-items:center!important;
+    gap:6px!important;text-align:center!important;
+  }
+  .mh-top>span,.mh-meta>span,.masthead-top>span,.masthead-meta>span{
+    white-space:normal!important;width:auto!important;
+  }
+  /* 多列网格一律降为单列 */
+  [class*="grid"],[class*="col"]{grid-template-columns:1fr!important;}
+  /* 宽内容不撑破页面 */
+  img,iframe,video{max-width:100%!important;height:auto;}
+  table,pre{display:block;max-width:100%;overflow-x:auto;}
+  /* 正文可读性 */
+  body{-webkit-text-size-adjust:100%;}
+  blockquote{margin-left:0!important;margin-right:0!important;}
+}
 </style>
 </head>
 <body>
@@ -711,7 +732,7 @@
 
   <!-- ─── JOKE 1 ─── -->
   <div class="joke-card" id="joke1">
-    <div class="joke-label">冷笑话 · 经济学版</div>
+    <div class="joke-label">冷笑话 · 经济学版<span class="fic-tag">虚构</span></div>
     <p class="joke-text">中国央行行长开会讨论如何刺激消费。一位顾问建议："我们再降息50个基点。"<br>行长沉默片刻后问："上次降息之后，贷款增加了多少？"<br>顾问说："……银行是存钱的人变多了。"<br>行长点点头："很好。那就再降一次，让他们存更多。"</p>
     <p class="joke-punchline">※ 流动性陷阱的通俗解释，至此完毕。</p>
   </div>
@@ -829,7 +850,7 @@
 
   <!-- ─── JOKE 2 ─── -->
   <div class="joke-card" id="joke2">
-    <div class="joke-label">冷笑话 · 科技监管版</div>
+    <div class="joke-label">冷笑话 · 科技监管版<span class="fic-tag">虚构</span></div>
     <p class="joke-text">记者问OpenAI游说负责人："你们花了这么多钱游说，最终想要什么样的AI监管？"<br>负责人回答："我们希望监管既足够严格，让人们觉得我们负责任……"<br>"……又足够宽松，让我们根本不需要改变任何产品。"<br>记者追问："那具体是什么意思？"<br>负责人微笑道："就是现状。"</p>
     <p class="joke-punchline">※ 免责声明：以上为虚构对话。真实游说内容通常措辞更委婉。</p>
   </div>
@@ -945,7 +966,7 @@
 
   <!-- ─── JOKE 3 ─── -->
   <div class="joke-card" id="joke3">
-    <div class="joke-label">冷笑话 · 地缘政治版</div>
+    <div class="joke-label">冷笑话 · 地缘政治版<span class="fic-tag">虚构</span></div>
     <p class="joke-text">国际能源署发布报告，标题是《霍尔木兹：全球原油的咽喉》。<br>伊朗外交部发言人读完后表示："非常好的比喻。"<br>然后补充道："请注意，我们的手就放在那里。"<br><br>全球油价随即上涨2.3%。</p>
     <p class="joke-punchline">※ 地缘政治的本质，有时确实就是这么直接。</p>
   </div>
@@ -959,7 +980,7 @@
 
   <!-- ─── JOKE 4 ─── -->
   <div class="joke-card" id="joke4">
-    <div class="joke-label">冷笑话 · 综合时事版</div>
+    <div class="joke-label">冷笑话 · 综合时事版<span class="fic-tag">虚构</span></div>
     <p class="joke-text">经济学家、AI研究员和地缘政治分析师同时被问到一个问题：<br>"2027年全球经济会好吗？"<br><br>经济学家说："取决于信心修复的速度，预计正负2%的误差范围内……"<br>AI研究员说："我们正在训练一个模型来预测，准确率已达到——"<br>地缘政治分析师打断道："这取决于那条海峡那边的一位我们不认识的人，今天早上心情怎么样。"<br><br>房间陷入沉默。<br>三个人都觉得自己说的是对的。</p>
     <p class="joke-punchline">※ 2026年的世界，大概就是这样运作的。</p>
   </div>

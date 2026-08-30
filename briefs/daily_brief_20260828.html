@@ -84,6 +84,27 @@
   }
 
 .fic-tag{display:inline-block;margin-left:.5em;padding:.1em .5em;border:1px solid currentColor;border-radius:4px;font-size:.68em;font-weight:600;opacity:.8;vertical-align:middle;letter-spacing:.02em;white-space:nowrap;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;}
+
+/* MOBILE-PATCH */
+/* ── 移动端适配（仅 ≤600px 生效，桌面端不受影响） ── */
+@media (max-width:600px){
+  /* 刊头/顶栏的多列信息行改为竖排居中 */
+  .mh-top,.mh-meta,.masthead-top,.masthead-meta,.meta-row,.sec-hdr,.byline{
+    flex-direction:column!important;align-items:center!important;
+    gap:6px!important;text-align:center!important;
+  }
+  .mh-top>span,.mh-meta>span,.masthead-top>span,.masthead-meta>span{
+    white-space:normal!important;width:auto!important;
+  }
+  /* 多列网格一律降为单列 */
+  [class*="grid"],[class*="col"]{grid-template-columns:1fr!important;}
+  /* 宽内容不撑破页面 */
+  img,iframe,video{max-width:100%!important;height:auto;}
+  table,pre{display:block;max-width:100%;overflow-x:auto;}
+  /* 正文可读性 */
+  body{-webkit-text-size-adjust:100%;}
+  blockquote{margin-left:0!important;margin-right:0!important;}
+}
 </style>
 </head>
 <body>
@@ -120,7 +141,7 @@
   </section>
 
   <div class="joke-card">
-    <span class="tag">😄 冷笑话一枚</span>
+    <span class="tag">😄 冷笑话一枚<span class="fic-tag">虚构</span></span>
     <p>为什么程序员总是分不清万圣节和圣诞节？因为 Oct 31 == Dec 25。</p>
   </div>
 
@@ -173,7 +194,7 @@
   </section>
 
   <div class="joke-card">
-    <span class="tag">😄 再来一个冷笑话</span>
+    <span class="tag">😄 再来一个冷笑话<span class="fic-tag">虚构</span></span>
     <p>老板问我：你对薪水有什么要求？我说：越高越好。老板说：那你对工作有什么要求？我说：越少越好。老板：……你倒是挺"通胀预期"的。</p>
   </div>
 
