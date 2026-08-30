@@ -8,6 +8,9 @@ Run this after dropping a new brief HTML into briefs/. It is idempotent:
 2. fiction label — badges every 趣闻 / 本地简报 / 笑话 heading as 虚构, because
                    the brief specs generate those sections as fabricated
 3. index         — rewrites the <ul class="briefs"> list in index.html
+
+audit() is exported for publish.py, which refuses to push when it returns
+anything blocking.
 """
 import re, os, glob, html, sys
 
@@ -105,6 +108,78 @@ def meta(path):
     summary = "；".join(items) + "。" if items else "本期内容见全文。"
     return dict(file=name, date=date, title=title, kind=kind, summary=summary)
 
+
+# ── 4. 安全闸：找出“像编的、又没标注、又没出处”的段落 ──────────────
+from html.parser import HTMLParser
+
+# 一级：虚构内容的典型说法，未覆盖就拦截发布
+TELL_BLOCK = re.compile(
+    r'网友|论坛|据说|传闻|爆料|目击|小道消息|笑称|戏称|吐槽|据本地|非正式统计|本地居民')
+# 二级：正经报道里也常见，只记录不拦截
+TELL_WARN = re.compile(
+    r'分析师|发言人|受访|接受采访|经纪人表示|老板表示|经济学界|市民')
+
+_VOID = {'br','img','meta','link','hr','input','source'}
+
+class _Node:
+    __slots__ = ('tag','attrs','parent','kids','text')
+    def __init__(s, tag, attrs, parent):
+        s.tag, s.attrs, s.parent, s.kids, s.text = tag, dict(attrs), parent, [], []
+    def has(s, pred):
+        return pred(s) or any(k.has(pred) for k in s.kids)
+
+class _P(HTMLParser):
+    def __init__(s):
+        super().__init__(convert_charrefs=True)
+        s.root = _Node('root', [], None); s.cur = s.root
+    def handle_starttag(s, tag, attrs):
+        n = _Node(tag, attrs, s.cur); s.cur.kids.append(n)
+        if tag not in _VOID: s.cur = n
+    def handle_endtag(s, tag):
+        n = s.cur
+        while n is not None and n.tag != tag: n = n.parent
+        if n is not None and n.parent is not None: s.cur = n.parent
+    def handle_data(s, d): s.cur.text.append(d)
+
+_BLOCK_TAGS = ('div','section','article','li','aside','p','td','blockquote')
+_has_fic  = lambda n: 'fic-tag' in n.attrs.get('class','')
+_has_link = lambda n: n.tag == 'a' and n.attrs.get('href','').startswith('http')
+
+def _classed_ancestors(node, limit):
+    """自身往上最近的若干个“带 class 的块级容器”。"""
+    out, b, steps = [], node, 0
+    while b is not None and steps < 12 and len(out) < limit:
+        if b.tag in _BLOCK_TAGS and b.attrs.get('class'): out.append(b)
+        b = b.parent; steps += 1
+    return out
+
+def _covered(node):
+    """已标虚构，或所在卡片自带原文链接。
+
+    两者判定范围不同，因为它们在结构里的位置不同：
+    - 虚构标签打在栏目标题上，和正文是兄弟关系 → 向上找 3 层卡片
+    - 源链接和摘要同属一个条目卡片 → 只认最近一层，放宽会摸到页面级
+      容器（.wrap 之类），把编造段落误判成有出处
+    """
+    anc = _classed_ancestors(node, 3)
+    if any(a.has(_has_fic) for a in anc): return True
+    return bool(anc) and anc[0].has(_has_link)
+
+def audit(path):
+    """→ (blocking, warnings)，各是一串文字片段。"""
+    src = re.sub(r'<style.*?</style>|<script.*?</script>', '',
+                 open(path, encoding="utf-8").read(), flags=re.S)
+    p = _P(); p.feed(src)
+    blocking, warnings = [], []
+    def walk(n):
+        t = "".join(n.text).strip()
+        if t and (TELL_BLOCK.search(t) or TELL_WARN.search(t)) and not _covered(n):
+            (blocking if TELL_BLOCK.search(t) else warnings).append(re.sub(r'\s+', ' ', t)[:160])
+        for k in n.kids: walk(k)
+    walk(p.root)
+    return blocking, warnings
+
+
 def main():
     files = sorted(glob.glob(os.path.join(BRIEFS, "*.html")))
     if not files:
@@ -133,5 +208,7 @@ def main():
     new = pat.sub(lambda _: block, src)
     open(idx, "w", encoding="utf-8").write(new)
     print(f"index.html 已更新，共 {len(rows)} 期")
+    return rows
 
-main()
+if __name__ == "__main__":
+    main()
