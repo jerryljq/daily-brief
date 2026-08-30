@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深度周报 · 第1期 · 2026年8月29日</title>
+<style>
+  :root{
+    --bg:#0d0f14;
+    --bg-alt:#12151c;
+    --card:#161a23;
+    --card-2:#1b202b;
+    --border:#2a3040;
+    --text:#dfe3ea;
+    --text-dim:#9aa2b2;
+    --text-faint:#6b7386;
+    --accent:#d4a24e;
+    --accent-2:#7fb0d9;
+    --accent-3:#c1666b;
+    --china:#c1666b;
+    --us:#7fb0d9;
+    --global:#8fbf7f;
+    --joke:#d4a24e;
+    --local:#a389d4;
+    --serif:'Songti SC','Noto Serif SC',Georgia,'Times New Roman',serif;
+    --sans:'PingFang SC','Hiragino Sans GB','Microsoft YaHei',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    background-image:
+      radial-gradient(ellipse at top left, rgba(212,162,78,0.06), transparent 40%),
+      radial-gradient(ellipse at bottom right, rgba(127,176,217,0.05), transparent 40%);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent-2);text-decoration:none;border-bottom:1px solid rgba(127,176,217,0.35);transition:border-color .2s,color .2s;}
+  a:hover{color:var(--accent);border-color:var(--accent);}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+
+  /* ---- Masthead ---- */
+  header.masthead{
+    border-bottom:1px solid var(--border);
+    padding:56px 0 34px;
+    background:linear-gradient(180deg, rgba(212,162,78,0.05), transparent);
+  }
+  .masthead-inner{max-width:880px;margin:0 auto;padding:0 24px;text-align:center;}
+  .kicker{
+    letter-spacing:.35em;
+    font-size:12px;
+    color:var(--text-faint);
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  h1.title{
+    font-family:var(--serif);
+    font-size:44px;
+    font-weight:700;
+    margin:0 0 14px;
+    letter-spacing:.02em;
+    background:linear-gradient(180deg,#f2e6c9,#c9a256);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .meta-row{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+    font-size:13px;
+    color:var(--text-dim);
+    margin-top:10px;
+  }
+  .meta-row span{border-left:1px solid var(--border);padding-left:22px;}
+  .meta-row span:first-child{border-left:none;padding-left:0;}
+
+  /* ---- TOC ---- */
+  nav.toc{
+    background:var(--bg-alt);
+    border-bottom:1px solid var(--border);
+    padding:22px 0;
+    position:sticky;
+    top:0;
+    z-index:50;
+    backdrop-filter:blur(10px);
+  }
+  nav.toc .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;}
+  nav.toc .toc-label{font-size:11px;letter-spacing:.2em;color:var(--text-faint);text-transform:uppercase;margin-right:8px;}
+  nav.toc a{
+    border:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    border-radius:20px;
+    padding:7px 16px;
+    font-size:13px;
+    color:var(--text-dim);
+    white-space:nowrap;
+  }
+  nav.toc a:hover{color:var(--bg);background:var(--accent);border-color:var(--accent);}
+  nav.toc a.tag-china:hover{background:var(--china);border-color:var(--china);}
+  nav.toc a.tag-us:hover{background:var(--us);border-color:var(--us);}
+  nav.toc a.tag-global:hover{background:var(--global);border-color:var(--global);}
+
+  main{padding:50px 0 20px;}
+
+  .intro{
+    font-size:15px;
+    color:var(--text-dim);
+    padding:26px 0 10px;
+    border-bottom:1px dashed var(--border);
+    margin-bottom:46px;
+  }
+  .intro strong{color:var(--text);}
+
+  /* ---- Article ---- */
+  article.piece{margin-bottom:64px;scroll-margin-top:90px;}
+  .piece-tag{
+    display:inline-block;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:3px;
+    margin-bottom:16px;
+    font-weight:600;
+  }
+  .tag-china{background:rgba(193,102,107,0.15);color:var(--china);border:1px solid rgba(193,102,107,0.4);}
+  .tag-us{background:rgba(127,176,217,0.15);color:var(--us);border:1px solid rgba(127,176,217,0.4);}
+  .tag-global{background:rgba(143,191,127,0.15);color:var(--global);border:1px solid rgba(143,191,127,0.4);}
+
+  h2.piece-title{
+    font-family:var(--serif);
+    font-size:32px;
+    line-height:1.35;
+    margin:0 0 10px;
+    color:#f3f0e8;
+  }
+  p.piece-sub{
+    font-size:17px;
+    color:var(--text-dim);
+    font-style:italic;
+    margin:0 0 22px;
+    border-left:3px solid var(--accent);
+    padding-left:16px;
+  }
+  .piece-meta{
+    display:flex;gap:18px;flex-wrap:wrap;
+    font-size:12px;color:var(--text-faint);
+    margin-bottom:30px;padding-bottom:26px;
+    border-bottom:1px solid var(--border);
+  }
+
+  /* ---- Accordion module ---- */
+  .module{
+    border:1px solid var(--border);
+    border-radius:10px;
+    margin-bottom:16px;
+    background:var(--card);
+    overflow:hidden;
+  }
+  .module-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 22px;
+    cursor:pointer;
+    user-select:none;
+    transition:background .2s;
+  }
+  .module-head:hover{background:var(--card-2);}
+  .module-head h3{
+    margin:0;
+    font-size:16px;
+    font-weight:700;
+    color:var(--text);
+    display:flex;align-items:center;gap:10px;
+  }
+  .module-num{
+    font-family:var(--serif);
+    color:var(--accent);
+    font-size:13px;
+    opacity:.8;
+  }
+  .chev{
+    width:20px;height:20px;
+    flex-shrink:0;
+    transition:transform .35s cubic-bezier(.65,0,.35,1);
+    color:var(--text-faint);
+  }
+  .module.open .chev{transform:rotate(180deg);}
+  .module-body-outer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .5s cubic-bezier(.65,0,.35,1);
+  }
+  .module.open .module-body-outer{ /* max-height set via JS */ }
+  .module-body{
+    padding:0 24px 26px;
+    font-size:15.5px;
+    color:var(--text);
+  }
+  .module-body p{margin:0 0 16px;}
+  .module-body p:last-child{margin-bottom:0;}
+
+  /* pull quote */
+  blockquote{
+    margin:22px 0;
+    padding:16px 24px;
+    border-left:3px solid var(--accent);
+    background:linear-gradient(90deg, rgba(212,162,78,0.08), transparent);
+    font-family:var(--serif);
+    font-size:19px;
+    font-style:italic;
+    color:#f0e4c4;
+    line-height:1.6;
+  }
+
+  /* causal chain */
+  .chain{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    align-items:stretch;
+    margin:22px 0 26px;
+  }
+  .chain-step{
+    flex:1 1 150px;
+    background:var(--card-2);
+    border:1px solid var(--border);
+    border-top:3px solid var(--accent);
+    border-radius:8px;
+    padding:14px 16px;
+    font-size:13.5px;
+    color:var(--text-dim);
+    position:relative;
+  }
+  .chain-step b{display:block;color:var(--text);font-size:13px;margin-bottom:6px;letter-spacing:.05em;}
+  .chain-arrow{
+    display:flex;align-items:center;justify-content:center;
+    color:var(--accent);font-size:20px;flex:0 0 auto;
+    padding:0 2px;
+  }
+  @media(max-width:640px){
+    .chain{flex-direction:column;}
+    .chain-arrow{transform:rotate(90deg);padding:2px 0;}
+  }
+
+  /* cross-ref callout */
+  .xref{
+    background:rgba(127,176,217,0.08);
+    border:1px solid rgba(127,176,217,0.3);
+    border-radius:8px;
+    padding:14px 18px;
+    margin:16px 0;
+    font-size:14.5px;
+  }
+  .xref b{color:var(--accent-2);}
+
+  /* divergent list */
+  .divergent-list{list-style:none;margin:0;padding:0;}
+  .divergent-list li{
+    padding:16px 0;
+    border-bottom:1px solid var(--border);
+  }
+  .divergent-list li:last-child{border-bottom:none;}
+  .divergent-list .d-num{
+    font-family:var(--serif);
+    color:var(--accent);
+    font-size:20px;
+    margin-right:10px;
+  }
+
+  /* article source footer */
+  .piece-sources{
+    margin-top:8px;
+    font-size:12.5px;
+    color:var(--text-faint);
+  }
+  .piece-sources summary{cursor:pointer;color:var(--text-dim);padding:8px 0;}
+  .piece-sources ul{margin:8px 0 0;padding-left:20px;}
+  .piece-sources li{margin-bottom:5px;}
+
+  /* ---- Joke card ---- */
+  .joke-card{
+    max-width:880px;margin:0 auto 50px;padding:0 24px;
+  }
+  .joke-inner{
+    background:linear-gradient(135deg, rgba(212,162,78,0.09), rgba(212,162,78,0.02));
+    border:1px dashed rgba(212,162,78,0.5);
+    border-radius:12px;
+    padding:22px 26px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .joke-icon{font-size:26px;flex-shrink:0;}
+  .joke-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+  .joke-text{font-size:15px;color:var(--text);font-family:var(--serif);line-height:1.7;}
+
+  /* ---- Toronto local brief ---- */
+  .local-card{max-width:880px;margin:0 auto 50px;padding:0 24px;}
+  .local-inner{
+    background:rgba(163,137,212,0.07);
+    border:1px solid rgba(163,137,212,0.3);
+    border-radius:12px;
+    padding:20px 26px;
+  }
+  .local-label{
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--local);
+    margin-bottom:8px;display:flex;align-items:center;gap:8px;
+  }
+  .local-text{font-size:14.5px;color:var(--text-dim);}
+
+  /* section divider label */
+  .divider{
+    max-width:880px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;gap:14px;
+    color:var(--text-faint);font-size:12px;letter-spacing:.15em;
+    margin:8px auto 36px;
+    text-transform:uppercase;
+  }
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--border);}
+
+  /* ---- Footer / sources ---- */
+  footer{
+    border-top:1px solid var(--border);
+    margin-top:40px;
+    padding:50px 0 70px;
+    background:var(--bg-alt);
+  }
+  footer h2{
+    font-family:var(--serif);
+    font-size:24px;
+    margin-bottom:24px;
+    color:#f3f0e8;
+  }
+  .source-group{margin-bottom:28px;}
+  .source-group h4{
+    font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    margin:0 0 12px;
+  }
+  .source-group.china h4{color:var(--china);}
+  .source-group.us h4{color:var(--us);}
+  .source-group.global h4{color:var(--global);}
+  .source-group ul{margin:0;padding-left:20px;font-size:13.5px;color:var(--text-dim);}
+  .source-group li{margin-bottom:7px;}
+  .footer-note{
+    margin-top:36px;padding-top:24px;border-top:1px solid var(--border);
+    font-size:12.5px;color:var(--text-faint);
+  }
+
+  ::selection{background:rgba(212,162,78,0.35);color:#fff;}
+
+.fic-tag{display:inline-block;margin-left:.5em;padding:.1em .5em;border:1px solid currentColor;border-radius:4px;font-size:.68em;font-weight:600;opacity:.8;vertical-align:middle;letter-spacing:.02em;white-space:nowrap;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="kicker">WEEKLY DEEP BRIEF · 深度周报</div>
+    <h1 class="title">深度周报</h1>
+    <div class="meta-row">
+      <span>第 1 期</span>
+      <span>2026年8月29日 星期六</span>
+      <span>本期约 25 分钟阅读</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <span class="toc-label">本期导航</span>
+    <a class="tag-china" href="#piece-cn">反内卷元年</a>
+    <a class="tag-us" href="#piece-us">AI 循环金融</a>
+    <a class="tag-global" href="#piece-global">美加关税战</a>
+    <a href="#sources">全部信源</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="intro">
+      本期聚焦三条主线：<strong>中国</strong>自上而下叫停产能内卷的政策实验、<strong>美国</strong>AI资本开支背后的循环金融与折旧疑云、<strong>美加</strong>贸易谈判破裂后关税战的全面升级。三篇报道均按背景、逻辑、交叉引用、判断与发散五个模块展开，默认展开"背景故事"与"底层逻辑"，其余模块点击可展开。文中穿插本周新闻笑话与多伦多本地简报，作为阅读节奏的调剂。
+    </div>
+  </div>
+
+  <!-- ============ ARTICLE 1: CHINA ============ -->
+  <div class="wrap">
+    <article class="piece" id="piece-cn">
+      <span class="piece-tag tag-china">中国 · 政治经济</span>
+      <h2 class="piece-title">反内卷元年：一场自上而下的"止血"实验</h2>
+      <p class="piece-sub">从光伏到外卖，中国正在尝试给失控的价格战踩刹车——但病根埋在招商引资的地基里</p>
+      <div class="piece-meta">
+        <span>阅读时长 约8分钟</span>
+        <span>关联：AI循环金融 · 美加关税战</span>
+      </div>
+
+      <div class="module open" data-default="open">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">01</span> 背景故事 Background</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <p>8月6日晚，通威、协鑫科技、大全能源、新特能源等八家多晶硅企业在上海联署了一份"反内卷"倡议书，承诺不得低于成本价销售。这八家企业占据国内90%以上的多晶硅产能，倡议书本身几乎等同于一份行业限价协议。这不是孤立事件：往前一周，市场监管总局刚对光伏行业做完价格合规指导；往前数月，工信部、发改委、市场监管总局三部门在1月连开三场会议，逼新能源车企"坚决抵制无序价格战"；再往前，淘宝闪购和美团在外卖赛道烧掉数百亿补贴，直到6月市场监管总局出台《外卖平台补贴行为规范十条》才勉强降温。</p>
+            <p>三条战线几乎同时收紧，说明这不是行业自发调整，而是自上而下的政策转向——今年4月28日中央政治局会议明确要求"纵深推进全国统一大市场建设，深入整治内卷式竞争"，政府工作报告把它写进了年度任务清单。数字最能说明问题的严重性：中信建投期货研究发展部7月底测算，光伏产业链硅料、硅片、电池片的完全成本利润率分别是<b>-49.98%、-73.45%、-16.27%</b>——也就是说卖得越多，亏得越多，但企业还在卖，因为一旦停产就意味着市场份额永久让给对手。</p>
+            <blockquote>"这是7月31日市场监管总局对光伏行业开展价格合规指导后仅一周的行动，标志着光伏行业遏制低价竞争已从行业自律迈入标准化监管阶段。"</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="module open" data-default="open">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">02</span> 底层逻辑 Deep Logic</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <p>这场内卷的因果链其实很清楚，只是每一步都被"发展"的合理性包裹着：</p>
+            <div class="chain">
+              <div class="chain-step"><b>① 地方招商竞争</b>为完成GDP考核，地方政府对新兴产业开出"三免两减半"式优惠，土地、电价、税收层层让利</div>
+              <div class="chain-arrow">→</div>
+              <div class="chain-step"><b>② 软预算约束</b>企业预期政府兜底亏损，风险偏好被系统性扭曲，不计成本扩产</div>
+              <div class="chain-arrow">→</div>
+              <div class="chain-step"><b>③ 全国重复押注</b>数十个省市同时下注同一赛道，产能以数倍于需求的速度堆积</div>
+              <div class="chain-arrow">→</div>
+              <div class="chain-step"><b>④ 价格战消耗</b>产能过剩逼迫打价格战，价格跌破成本线，谁都不肯先退出</div>
+            </div>
+            <p>这条链条里最容易被忽略的前提是：内卷不是市场失灵，而是地方政府间竞争制造的"伪市场"——价格信号从一开始就被补贴污染了，企业不是在跟真实需求竞争，是在跟其他省份的补贴力度竞争。</p>
+            <p>历史上有过几乎同构的先例：2015年底启动的供给侧结构性改革，同样是应对钢铁、煤炭全行业亏损，唐山钢企数量从70家砍到39家，2016至2018年累计去除钢铁产能1.5亿吨、煤炭产能8.1亿吨。但这一轮不同：上一轮的主角是国企主导的上游重工业，靠行政指标强制关停；这一轮的主角是民企主导的下游新兴产业，政策工具换成了价格自律、标准引领和反垄断执法——某种程度上是因为，光伏和新能源车的产能已经是全球技术制高点，行政关停等于自毁核心竞争力，只能靠"温和出清"。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" data-default="closed">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">03</span> 交叉引用 Cross-References</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <div class="xref"><b>与 AI 循环金融（本期第二篇）：</b>光伏产能竞赛和美国AI资本开支狂潮本质上是同一种行为模式的两种变体——都是资本因"错过赛道"的恐惧涌入同一方向，区别只在于中国的内卷卷在实体产能上，美国的内卷卷在估值和算力合同上，一个卷价格，一个卷叙事。</div>
+            <div class="xref"><b>与美加关税战（本期第三篇）：</b>特朗普对加拿大钢铁加征50%关税的理由之一，正是全球钢铁产能过剩压低了国际价格——中国2016年后消化的1.5亿吨钢铁产能，至今仍在全球价格记忆里发挥作用，这也是欧美近年频繁对中国新能源产品发起反补贴调查的深层背景。</div>
+            <p>不同立场的观察者评价也存在明显分歧：产业内的多晶硅企业和车企普遍欢迎政策转向，视为"续命"；但部分经济学家担心，行政指导定价可能延缓真正低效产能的出清，让"温和整治"变成新的软预算约束——救的究竟是行业，还是落后产能本身，目前尚无定论。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" data-default="closed">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">04</span> 结论与判断 Conclusions</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <p>短期看，多晶硅、新能源车价格已现企稳甚至回升迹象——5月已有超过10家车企宣布涨价，光伏行业普遍预期2026年是"筑底年"，2027年边际修复。但这更像是止血而非治愈：只要地方政府的政绩考核体系、招商引资的竞争逻辑不变，资本就会在下一个风口（人形机器人、低空经济已现苗头）重演同样的剧本。</p>
+            <p><b>值得持续关注的信号：</b>四季度中央经济工作会议是否把反内卷从"整治"升级为制度性改革（统一大市场立法、地方债务与产业补贴脱钩）；多晶硅现货价格能否稳定在成本线以上超过一个季度；外卖补贴新规落地后即时零售份额是否重新洗牌。</p>
+            <p>对普通消费者而言，这意味着过去几年"越卷越便宜"的红利期正在结束，光伏组件、电动车、外卖优惠都可能温和涨价，代价是换取产业链的中长期健康。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" data-default="closed">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">05</span> 发散话题 Divergent Threads</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <ul class="divergent-list">
+              <li><span class="d-num">1</span><b>人形机器人会是下一个内卷重灾区吗？</b>——国内已有数十家机器人公司融资，地方补贴力度不亚于当年的光伏，产业尚未形成技术共识却已现价格竞争苗头，值得提前观察招商协议条款。</li>
+              <li><span class="d-num">2</span><b>反内卷会不会催生新的地方保护主义？</b>——若价格自律协议由龙头企业主导制定，会不会变相排挤中小企业，从"内卷"滑向"垄断"？这是反垄断执法接下来最需要平衡的张力。</li>
+              <li><span class="d-num">3</span><b>情景推演：若多晶硅限价联盟失败会怎样？</b>——历史上类似行业限价协议常因个别成员偷跑降价而瓦解，八家企业占90%产能听起来牢固，但边缘产能和地方国资背景的中小厂商是否会成为破局者，是判断这轮反内卷成色的关键变量。</li>
+              <li><span class="d-num">4</span><b>地方考核机制改革有无国际参照？</b>——德国、日本在应对区域产业同质化竞争时曾采用跨区域产业规划协调机制，是否有可供借鉴之处，是一个值得深挖的制度比较题。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <details class="piece-sources">
+        <summary>本篇信源（8）</summary>
+        <ul>
+          <li><a href="https://paper.cnstock.com/html/2026-08/08/content_2253443.htm" target="_blank">光伏多晶硅八巨头联署"反内卷"倡议书 多晶硅价格有望回升至成本线以上 · 上海证券报</a></li>
+          <li><a href="https://news.qq.com/rain/a/20260808A04ZTW00" target="_blank">多措并举"反内卷" 光伏行业或迎拐点 · 腾讯新闻</a></li>
+          <li><a href="https://finance.sina.com.cn/roll/2026-08-08/doc-inimrerm9557356.shtml" target="_blank">开展价格自查自纠 8家多晶硅企业签署"反内卷"倡议 · 新浪财经</a></li>
+          <li><a href="https://finance.sina.com.cn/tech/roll/2026-07-31/doc-inikrfcu9559960.shtml" target="_blank">政治局会议重磅定调下半年经济工作，再提整治"内卷式"竞争 · 新浪财经</a></li>
+          <li><a href="https://www.sfccn.com/2026/1-15/xMMDE0MDVfMjA5NjgxMw.html" target="_blank">工信部两天三场会议涉及汽车产业，反"内卷"是重头戏 · 南方财经网</a></li>
+          <li><a href="https://finance.sina.com.cn/stock/t/2026-05-21/doc-inhyrmms9167457.shtml" target="_blank">超10家车企涨价，新能源车开始告别"价格战" · 新浪财经</a></li>
+          <li><a href="https://www.tmtpost.com/8011985.html" target="_blank">外卖大战一年：美团回不去、阿里停不下 · 钛媒体</a></li>
+          <li><a href="https://www.rieti.go.jp/users/kan-si-yu/cn/c250825.html" target="_blank">在中国引发供过于求的"内卷式竞争"——基于原因和影响的政策应对 · RIETI</a></li>
+        </ul>
+      </details>
+    </article>
+  </div>
+
+  <!-- ============ JOKE 1 ============ -->
+  <div class="joke-card">
+    <div class="joke-inner">
+      <div class="joke-icon">🌞</div>
+      <div>
+        <div class="joke-label">冷笑话 · 反内卷版</div>
+        <div class="joke-text">光伏厂老板开会宣布："我们决定不再低于成本价卖货。"台下有人举手："那……去年卖的算不算？"老板沉默三秒："那叫市场调研。"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TORONTO LOCAL 1 ============ -->
+  <div class="local-card">
+    <div class="local-inner">
+      <div class="local-label">🍁 多伦多本地简报<span class="fic-tag">虚构 · 非真实新闻</span></div>
+      <div class="local-text">本周Distillery District的秋季市集提前开张，多家咖啡馆已上架南瓜拿铁——尽管枫叶都还没红，网友吐槽"季节限定比反内卷倡议书来得还快"。</div>
+    </div>
+  </div>
+
+  <div class="divider">下一篇</div>
+
+  <!-- ============ ARTICLE 2: US AI BUBBLE ============ -->
+  <div class="wrap">
+    <article class="piece" id="piece-us">
+      <span class="piece-tag tag-us">美国 · 科技/金融</span>
+      <h2 class="piece-title">循环的钱，两年半的芯片</h2>
+      <p class="piece-sub">当英伟达的投资变成自己的收入，AI繁荣的账本还能读多久</p>
+      <div class="piece-meta">
+        <span>阅读时长 约9分钟</span>
+        <span>关联：反内卷元年 · 美加关税战</span>
+      </div>
+
+      <div class="module open" data-default="open">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">01</span> 背景故事 Background</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <p>8月的AI板块弥漫着一种熟悉的紧张感。彭博社8月20日和22日接连发文追问"AI股票泡沫何时破裂"；迈克尔·伯里——那个做空次贷成名、《大空头》原型人物——在关闭自己的对冲基金后，仍公开持有英伟达和特斯拉的看跌期权，并指控几家超大规模云厂商系统性低估芯片折旧：微软把GPU折旧年限从4年拉长到6年，Meta用5.5年，谷歌、亚马逊、甲骨文采用类似手法，伯里测算这让2026至2028年间的账面利润被抬高了<b>1760亿美元</b>。</p>
+            <p>与此同时，"循环交易"的结构越描越黑：英伟达向OpenAI投资，OpenAI用这笔钱找甲骨文租算力，甲骨文再向英伟达采购芯片——现金从芯片厂的资产负债表流出变成"投资"，绕一圈又以"收入"的名义流回利润表。7月有报道称英伟达可能为高达2500亿美元的债务提供担保，股价当天盘中跌4.5%；8月18日又曝出OpenAI与英伟达的数据中心协议规模比此前报道的少了1450亿美元，市场解读为芯片"人为需求"被夸大的信号。</p>
+            <p>这一切发生在美联储主席换人的背景下——8月27日至29日的杰克逊霍尔年会，是新任主席沃什（Kevin Warsh）上任后的第一次公开亮相，市场紧盯他如何在利率路径上定调，因为便宜的资金正是这场万亿级资本开支狂欢的燃料之一。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module open" data-default="open">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">02</span> 底层逻辑 Deep Logic</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <div class="chain">
+              <div class="chain-step"><b>① 竞赛焦虑</b>云厂商必须证明没有掉队，资本开支推向极限，2026年合计预计6500-7000亿美元</div>
+              <div class="chain-arrow">→</div>
+              <div class="chain-step"><b>② 风险共担</b>规模过大无人能独自承受，催生英伟达/OpenAI/甲骨文层层嵌套的投资采购循环</div>
+              <div class="chain-arrow">→</div>
+              <div class="chain-step"><b>③ 折旧美化</b>拉长GPU折旧年限压低年度费用，账面利润好看，但芯片实际寿命仅2-3年</div>
+              <div class="chain-arrow">→</div>
+              <div class="chain-step"><b>④ 错配累积</b>一旦需求不及预期，减值冲击集中爆发，循环结构让风险沿产业链放大</div>
+            </div>
+            <p>历史上最接近的对照有两个：19世纪英国铁路狂热，巅峰时期铁路投资占GDP的7%以上，最终收入只达预期的四分之一；以及2000年前后的电信光纤大跃进，运营商砸下超过5000亿美元铺设光纤，结果产能过剩、价格崩溃。这正是当下最大的认知分歧所在——乐观派（高盛、摩根大通）认为AI资本开支和当年光纤一样"提前建好了未来"；悲观派认为，与光纤不同，GPU几乎没有"闲置后仍然有用"的长期价值，硬件报废速度远快于光缆，一旦泡沫破裂，沉没成本更难被下一轮繁荣复用。</p>
+            <blockquote>"英伟达的H100在2022年发布，到2025至2026年面对Blackwell架构已明显过时，芯片的实际经济寿命更接近2到3年，而非账面上的5到6年。"</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" data-default="closed">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">03</span> 交叉引用 Cross-References</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <div class="xref"><b>与反内卷元年（本期第一篇）：</b>两者都是"赛道恐慌"驱动的过度投资，若美联储在杰克逊霍尔后确认降息路径，全球资金成本下降会同时为中国的产能扩张和美国的AI资本开支融资提供燃料，让两场内卷同时加速而非相互抵消。</div>
+            <div class="xref"><b>与美加关税战（本期第三篇）：</b>特朗普对加拿大钢铁加征50%关税，会直接推高美国本土数据中心建设的钢材和电力设备成本，让本已高企的AI资本开支雪上加霜；数据中心电力需求也已引发美国民众对电价上涨的担忧，与关税推高的通胀压力叠加。</div>
+            <p>华尔街主流机构倾向于用"长期合同锁定+电力土地稀缺"来论证这轮周期与2000年不同；而伯里代表的少数派认为，会计操纵本身就是泡沫即将破裂前的典型信号——历史上安然、世通在崩溃前都出现过类似的费用递延手法。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" data-default="closed">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">04</span> 结论与判断 Conclusions</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <p>我们判断，这场AI资本开支狂欢在2026至2027年大概率不会突然崩盘，因为超大规模云厂商的现金流和长期合同结构确实比2000年的电信商更稳健，沃什领导下的美联储更可能选择渐进降息而非急刹车。但真正的风险窗口在2027到2028年——首批以更激进折旧假设入账的GPU集中面临技术淘汰，如果同期实际AI应用收入未能兑现预期，减值冲击将集中爆发。</p>
+            <p><b>值得持续关注的信号：</b>Q3财报季各云厂商是否进一步修改折旧披露口径；英伟达对外部融资的担保规模是否继续扩大；SEC是否跟进伯里的指控启动调查；沃什在杰克逊霍尔的演讲是否释放对AI相关信贷扩张的监管信号。</p>
+            <p>对普通投资者而言，这意味着科技股估值已高度依赖"叙事延续"而非"当期盈利"，标普500前十大公司占比已超三分之一，任何单一环节出现裂缝都可能引发远超其自身规模的连锁反应。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" data-default="closed">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">05</span> 发散话题 Divergent Threads</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <ul class="divergent-list">
+              <li><span class="d-num">1</span><b>若AI泡沫破裂，谁会是"电信光纤2.0"的受益者？</b>——2000年崩盘后廉价光纤支撑了后来的流媒体和云计算，这次的数据中心和电力基础设施会不会同样在十年后被完全不同的应用复用？</li>
+              <li><span class="d-num">2</span><b>电力才是真正的硬约束</b>——比起芯片折旧，数据中心建设正遭遇美国电网扩容速度跟不上的现实瓶颈，这会不会比资本市场情绪更早给这轮狂潮踩刹车？</li>
+              <li><span class="d-num">3</span><b>情景推演：若沃什9月宣布更激进降息</b>——AI资本开支狂潮会被进一步点燃还是提前透支泡沫破裂时点？低利率延长牛市，但也让循环负债规模继续膨胀，最终可能加剧崩盘烈度。</li>
+              <li><span class="d-num">4</span><b>蓝领逆袭</b>——数据中心电工年薪已涨到28万美元，白领岗位却在AI重组中持续被裁（2026上半年科技行业裁员15.4万人），这是否正在重塑美国的职业阶层结构，而非简单"消灭工作"？</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <details class="piece-sources">
+        <summary>本篇信源（7）</summary>
+        <ul>
+          <li><a href="https://www.bloomberg.com/opinion/articles/2026-08-20/us-stock-market-bubble-ai-boom-won-t-prevent-a-sharp-correction" target="_blank">US Stock Market Bubble: AI Boom Won't Prevent a Sharp Correction · Bloomberg</a></li>
+          <li><a href="https://www.bloomberg.com/opinion/newsletters/2026-08-22/when-will-the-ai-stock-bubble-burst-2027-or-sooner" target="_blank">When Will the AI Stock Bubble Burst? 2027 – or Sooner · Bloomberg</a></li>
+          <li><a href="https://fortune.com/2026/08/18/openai-data-center-deal-with-nvidia-comes-in-145-billion-lower-than-reportedsignaling-concerns-of-artificial-demand-for-chips/" target="_blank">OpenAI data center deal with Nvidia comes in $145 billion lower than reported · Fortune</a></li>
+          <li><a href="https://www.bloomberg.com/graphics/2026-ai-circular-deals/" target="_blank">AI Circular Deals: How Microsoft, OpenAI and Nvidia Keep Paying Each Other · Bloomberg</a></li>
+          <li><a href="https://cryptobriefing.com/michael-burry-bear-case-ai-chips-gpu/" target="_blank">Michael Burry revives bear case for AI chips amid GPU depreciation concerns</a></li>
+          <li><a href="https://issuesinsights.com/2026/08/24/americans-fear-higher-costs-strains-on-electricity-grid-from-data-centers-ii-tipp-poll/" target="_blank">Americans Fear Higher Costs, Strains On Electricity Grid, From Data Centers · I&I/TIPP Poll</a></li>
+          <li><a href="https://www.thecooldown.com/green-business/companies-layoffs-ai-automation-job-security/" target="_blank">As $725 billion floods into AI, more than 113,000 workers lose jobs in 2026 layoff wave</a></li>
+        </ul>
+      </details>
+    </article>
+  </div>
+
+  <!-- ============ JOKE 2 ============ -->
+  <div class="joke-card">
+    <div class="joke-inner">
+      <div class="joke-icon">💾</div>
+      <div>
+        <div class="joke-label">冷笑话 · 折旧版</div>
+        <div class="joke-text">审计师问科技公司CFO："这批GPU准备折旧几年？"CFO答："六年。"审计师："可英伟达自己说芯片两年就落后了。"CFO："所以我们折旧的不是芯片，是信心。"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TORONTO LOCAL 2 ============ -->
+  <div class="local-card">
+    <div class="local-inner">
+      <div class="local-label">🍁 多伦多本地简报<span class="fic-tag">虚构 · 非真实新闻</span></div>
+      <div class="local-text">TTC本周宣布Line 2部分区段周末维护，通勤族哀嚎一片；与此同时Eglinton Crosstown线又双叒延后通车，本地论坛戏称这条线快能申请"多伦多最长连续在建纪录"。</div>
+    </div>
+  </div>
+
+  <div class="divider">下一篇</div>
+
+  <!-- ============ ARTICLE 3: GLOBAL / CANADA ============ -->
+  <div class="wrap">
+    <article class="piece" id="piece-global">
+      <span class="piece-tag tag-global">全球 · 北美贸易</span>
+      <h2 class="piece-title">四十亿美元贸易额，一夜之间破裂的谈判桌</h2>
+      <p class="piece-sub">美加关税战升级、USMCA续约悬而未决，北美经济秩序正在被重新定价</p>
+      <div class="piece-meta">
+        <span>阅读时长 约8分钟</span>
+        <span>关联：反内卷元年 · AI循环金融</span>
+      </div>
+
+      <div class="module open" data-default="open">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">01</span> 背景故事 Background</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <p>8月22日星期五，经过两周密集谈判，美加贸易谈判在几个小时的乐观信号之后突然崩盘。就在当天下午，特朗普还对记者说双方"基本上"达成了协议；几个小时后，白宫宣布对一系列加拿大商品加征<b>50%关税</b>，覆盖约280亿美元出口，从葡萄酒、冰球棍到水泥无所不包。加拿大总理马克·卡尼随即宣布"以牙还牙"，将在9月8日起对总值200亿美元的美国钢铁、电子产品等商品加征15%至50%不等的关税，清单涉及超过800个税目。</p>
+            <p>这不是孤立的摩擦——它发生在USMCA（美墨加协定）法定六年联合审查刚刚触发年度复审机制的敏感节点：7月1日的审查会议上，美国明确拒绝确认按现有条款延长协议16年，理由是"不接受现有形式"，而加拿大和墨西哥都表态愿意延长。分歧的核心是汽车、乳制品和酒类贸易规则——特朗普指责加拿大存在"歧视性贸易做法"，并在本周一进一步宣布，从2027年1月1日起，所有加拿大汽车、卡车、零部件和钢铁的关税将统一上调至50%。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module open" data-default="open">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">02</span> 底层逻辑 Deep Logic</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <div class="chain">
+              <div class="chain-step"><b>① 续约悬空</b>7月美方拒绝确认延长USMCA 16年，协议未来被置于逐年不确定的悬崖边</div>
+              <div class="chain-arrow">→</div>
+              <div class="chain-step"><b>② 捆绑施压</b>美方将汽车、乳制品、酒类等行业争端与协议存续捆绑谈判，换取加方让步</div>
+              <div class="chain-arrow">→</div>
+              <div class="chain-step"><b>③ 谈判崩盘</b>两周谈判未能弥合分歧，卡尼直言"他们要价太高，给得太少"</div>
+              <div class="chain-arrow">→</div>
+              <div class="chain-step"><b>④ 关税螺旋</b>50%关税生效，加方出于国内政治压力必须对等反制，形成螺旋</div>
+            </div>
+            <p>经济学界测算，目标行业可能直接损失约5万个工作岗位，加上供应链传导再影响3.5万个，部分分析师认为如果USMCA最终瓦解，加拿大可能损失10万个工作岗位并陷入衰退。这条链条揭示的结构性矛盾是：美加经济高度一体化（供应链早已跨境交织，尤其是汽车产业），但政治决策权高度分散在两个主权国家手中，任何一方的国内政治需要都可能压倒经济一体化的理性逻辑。</p>
+            <p>历史对照并不陌生：1994年NAFTA生效前，双方也曾经历类似的关税拉锯，但那时的谈判逻辑是"分阶段降低壁垒换取市场准入"；这一次，谈判逻辑更接近"以关税为常态化施压工具"——加征关税不再只是谈判筹码，而可能变成新常态本身。</p>
+            <blockquote>"他们要价太高，给得太少。"——加拿大总理马克·卡尼谈判破裂后的回应</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" data-default="closed">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">03</span> 交叉引用 Cross-References</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <div class="xref"><b>与反内卷元年（本期第一篇）：</b>特朗普对加拿大钢铁征收50%关税所援引的理由之一，正是全球钢铁产能过剩压低了国际价格，而这种过剩很大程度上可追溯到包括中国在内的多国产业政策竞赛——中国正在国内解决的内卷问题，其外溢效应正是美国用关税"误伤"第三方的部分背景。</div>
+            <div class="xref"><b>与AI循环金融（本期第二篇）：</b>钢铁和铝关税上涨会直接推高美国本土数据中心建设成本；同时，美联储在杰克逊霍尔释放的利率信号既影响AI融资环境，也直接影响加元汇率和加拿大央行的应对空间——若美联储降息而加央行被迫跟进，会与关税冲击同时挤压加拿大的政策空间。</div>
+            <p>特朗普政府的叙事是"纠正长期不公平贸易关系，保护美国制造业工人"；加拿大方面的叙事是"美方漫天要价，摧毁两国互信"；经济学界普遍的中间立场是，双边贸易战对两国GDP的直接冲击其实有限（牛津经济研究院估算明年加拿大GDP仅被拉低0.3个百分点），真正的风险是USMCA不确定性对长期投资信心的侵蚀，这种"信心成本"比关税本身更难量化也更难修复。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" data-default="closed">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">04</span> 结论与判断 Conclusions</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <p>我们判断，这轮冲突不太可能演变为USMCA的彻底瓦解——协议在法律上仍完全有效，年度审查机制留出了持续磋商空间，且两国汽车产业的深度捆绑使"脱钩"代价对双方都过于高昂。更可能的路径是：关税与反制关税成为未来一到两年的谈判筹码常态，双方在具体行业逐项拉锯，而非一次性摊牌。</p>
+            <p><b>值得持续关注的信号：</b>9月8日加拿大反制关税正式生效后美方的回应力度；USMCA年度联合审查是否在2027年前产生实质性文本谈判；卡尼承诺的产业支持措施（软木、钢铁行业）能否真正对冲关税冲击。</p>
+            <p>对加拿大普通民众而言，这意味着部分进口消费品价格上涨、"Buy Canadian"消费趋势可能进一步固化，而对依赖对美出口的省份（安大略汽车产业、卑诗省软木产业）而言，这将是未来数季度实实在在的就业压力测试。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module" data-default="closed">
+        <div class="module-head" onclick="toggleModule(this)">
+          <h3><span class="module-num">05</span> 发散话题 Divergent Threads</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="module-body-outer">
+          <div class="module-body">
+            <ul class="divergent-list">
+              <li><span class="d-num">1</span><b>"去美国化"会成为加拿大的长期战略吗？</b>——数据显示加拿大人正减少赴美旅行和消费，转向国内和海外其他目的地，这种消费习惯一旦固化，可能比关税本身更持久地重塑两国经济联系。</li>
+              <li><span class="d-num">2</span><b>汽车产业的"原产地规则"战争</b>——北美汽车供应链跨境流转数十次才能造出一辆车，任何原产地规则调整都会牵一发动全身，这是本轮谈判中技术复杂度最高、也最容易被忽视的战场。</li>
+              <li><span class="d-num">3</span><b>情景推演：若USMCA在2027年真的解体</b>——回退到普通WTO关税水平意味着两国贸易成本大幅上升，供应链会加速转向近岸墨西哥或更早布局的东南亚，这将是自1994年以来北美经济地理最大的一次重组。</li>
+              <li><span class="d-num">4</span><b>卡尼的政治处境</b>——作为前央行行长转型的总理，卡尼在对美强硬和维护国内产业利益之间走钢丝，这场贸易战的结果很可能成为他执政成绩单上最关键的一项。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <details class="piece-sources">
+        <summary>本篇信源（6）</summary>
+        <ul>
+          <li><a href="https://finance.yahoo.com/markets/article/us-canada-trade-talks-collapse-as-new-50-tariffs-go-into-effect-160526827.html" target="_blank">US-Canada trade talks collapse as new 50% tariffs go into effect · Yahoo Finance</a></li>
+          <li><a href="https://www.nbcnews.com/business/economy/trump-canada-tariffs-carney-rcna593510" target="_blank">Canadian prime minister suspends trade talks with U.S., setting new 50% tariffs in motion · NBC News</a></li>
+          <li><a href="https://time.com/article/2026/08/24/-we-don-t-need-canada-trump-escalates-trade-war-with-threat-of-50-auto-tariffs/" target="_blank">'We Don't Need Canada': Trump Escalates Trade War With Threat of 50% Auto Tariffs · TIME</a></li>
+          <li><a href="https://www.spokesman.com/stories/2026/aug/22/canada-to-impose-retaliatory-tariffs-on-us-steel-e/" target="_blank">Canada to impose retaliatory tariffs on U.S. steel, electronics, other products, Carney says</a></li>
+          <li><a href="https://www.whitecase.com/insight-alert/usmca-2026-joint-review-united-states-declines-extend-agreement-triggering-annual" target="_blank">USMCA 2026 Joint Review: United States declines to extend Agreement · White & Case LLP</a></li>
+          <li><a href="https://www.bnnbloomberg.ca/tariffs/2026/08/24/re-escalating-trade-war-puts-canadas-economic-rebound-at-risk-economists/" target="_blank">Re-escalating trade war puts Canada's economic rebound at risk: economists · BNN Bloomberg</a></li>
+        </ul>
+      </details>
+    </article>
+  </div>
+
+  <!-- ============ JOKE 3 ============ -->
+  <div class="joke-card">
+    <div class="joke-inner">
+      <div class="joke-icon">🍁</div>
+      <div>
+        <div class="joke-label">冷笑话 · 关税版</div>
+        <div class="joke-text">加拿大商人问美国海关："我这批枫糖浆要交多少关税？"海关官员翻了翻清单："50%，还有——欢迎回来，我们想你了。"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TORONTO LOCAL 3 ============ -->
+  <div class="local-card">
+    <div class="local-inner">
+      <div class="local-label">🍁 多伦多本地简报<span class="fic-tag">虚构 · 非真实新闻</span></div>
+      <div class="local-text">安省政府本周低调宣布扩大电动车充电桩补贴，恰逢美加关税战升温。本地经济学家调侃：这大概是安省版"以不变应万变"——既然车暂时难卖去美国，先把本地充电桩建好再说。</div>
+    </div>
+  </div>
+
+  <!-- ============ JOKE 4 ============ -->
+  <div class="joke-card">
+    <div class="joke-inner">
+      <div class="joke-icon">🏦</div>
+      <div>
+        <div class="joke-label">冷笑话 · 美联储版</div>
+        <div class="joke-text">记者问新任美联储主席对降息路径的看法，他想了很久说："我倾向于渐进、数据驱动、留有余地——总之，下次开会前，别问我。"</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer id="sources">
+  <div class="wrap">
+    <h2>全部信源</h2>
+
+    <div class="source-group china">
+      <h4>中国 · 反内卷</h4>
+      <ul>
+        <li><a href="https://paper.cnstock.com/html/2026-08/08/content_2253443.htm" target="_blank">光伏多晶硅八巨头联署"反内卷"倡议书 · 上海证券报</a></li>
+        <li><a href="https://news.qq.com/rain/a/20260808A04ZTW00" target="_blank">多措并举"反内卷" 光伏行业或迎拐点 · 腾讯新闻</a></li>
+        <li><a href="https://finance.sina.com.cn/roll/2026-08-08/doc-inimrerm9557356.shtml" target="_blank">开展价格自查自纠 8家多晶硅企业签署"反内卷"倡议 · 新浪财经</a></li>
+        <li><a href="https://finance.sina.com.cn/tech/roll/2026-07-31/doc-inikrfcu9559960.shtml" target="_blank">政治局会议重磅定调下半年经济工作 · 新浪财经</a></li>
+        <li><a href="https://www.sfccn.com/2026/1-15/xMMDE0MDVfMjA5NjgxMw.html" target="_blank">工信部两天三场会议涉及汽车产业，反"内卷"是重头戏 · 南方财经网</a></li>
+        <li><a href="https://finance.sina.com.cn/stock/t/2026-05-21/doc-inhyrmms9167457.shtml" target="_blank">超10家车企涨价，新能源车开始告别"价格战" · 新浪财经</a></li>
+        <li><a href="https://www.guancha.cn/politics/2026_03_11_809610.shtml" target="_blank">两会观察⑥：反内卷之后 如何把竞争拉回正轨？· 观察者网</a></li>
+        <li><a href="https://www.tmtpost.com/8011985.html" target="_blank">外卖大战一年：美团回不去、阿里停不下 · 钛媒体</a></li>
+        <li><a href="https://www.rieti.go.jp/users/kan-si-yu/cn/c250825.html" target="_blank">在中国引发供过于求的"内卷式竞争" · RIETI</a></li>
+        <li><a href="https://www.cls.cn/detail/2097138" target="_blank">本轮反内卷与16-17年供给侧改革有何不同之处？· 兴业证券/财联社</a></li>
+        <li><a href="https://zh.wikipedia.org/zh-hans/%E4%BE%9B%E7%B5%A6%E5%81%B4%E7%B5%90%E6%A7%8B%E6%80%A7%E6%94%B9%E9%9D%A9" target="_blank">供给侧结构性改革 · 维基百科</a></li>
+      </ul>
+    </div>
+
+    <div class="source-group us">
+      <h4>美国 · AI循环金融</h4>
+      <ul>
+        <li><a href="https://www.bloomberg.com/opinion/articles/2026-08-20/us-stock-market-bubble-ai-boom-won-t-prevent-a-sharp-correction" target="_blank">US Stock Market Bubble: AI Boom Won't Prevent a Sharp Correction · Bloomberg</a></li>
+        <li><a href="https://www.bloomberg.com/opinion/newsletters/2026-08-22/when-will-the-ai-stock-bubble-burst-2027-or-sooner" target="_blank">When Will the AI Stock Bubble Burst? 2027 – or Sooner · Bloomberg</a></li>
+        <li><a href="https://fortune.com/2026/08/18/openai-data-center-deal-with-nvidia-comes-in-145-billion-lower-than-reportedsignaling-concerns-of-artificial-demand-for-chips/" target="_blank">OpenAI data center deal with Nvidia comes in $145B lower than reported · Fortune</a></li>
+        <li><a href="https://www.bloomberg.com/graphics/2026-ai-circular-deals/" target="_blank">AI Circular Deals: How Microsoft, OpenAI and Nvidia Keep Paying Each Other · Bloomberg</a></li>
+        <li><a href="https://cryptobriefing.com/michael-burry-bear-case-ai-chips-gpu/" target="_blank">Michael Burry revives bear case for AI chips amid GPU depreciation concerns</a></li>
+        <li><a href="https://davefriedman.substack.com/p/the-176-billion-accounting-question" target="_blank">The $176 Billion Accounting Question at the Heart of the AI Boom</a></li>
+        <li><a href="https://www.federalreserve.gov/newsevents/2026-august.htm" target="_blank">Federal Reserve Board - Calendar: August 2026</a></li>
+        <li><a href="https://intuitionlabs.ai/articles/ai-bubble-vs-dot-com-comparison" target="_blank">AI Bubble vs. Dot-com Bubble: A Data-Driven Comparison</a></li>
+        <li><a href="https://issuesinsights.com/2026/08/24/americans-fear-higher-costs-strains-on-electricity-grid-from-data-centers-ii-tipp-poll/" target="_blank">Americans Fear Higher Costs, Strains On Electricity Grid · I&I/TIPP Poll</a></li>
+        <li><a href="https://www.thecooldown.com/green-business/companies-layoffs-ai-automation-job-security/" target="_blank">As $725 billion floods into AI, more than 113,000 workers lose jobs in 2026</a></li>
+        <li><a href="https://memeburn.com/ai-data-center-electrician-salaries-2026/" target="_blank">AI Is Cutting White-Collar Jobs and Paying Electricians $280,000 · Memeburn</a></li>
+      </ul>
+    </div>
+
+    <div class="source-group global">
+      <h4>全球 · 美加关税战</h4>
+      <ul>
+        <li><a href="https://finance.yahoo.com/markets/article/us-canada-trade-talks-collapse-as-new-50-tariffs-go-into-effect-160526827.html" target="_blank">US-Canada trade talks collapse as new 50% tariffs go into effect · Yahoo Finance</a></li>
+        <li><a href="https://abcnews.com/Business/trumps-proposed-tariffs-canada-hurtle-deadline-amid-trade/story?id=135833861" target="_blank">Trump's 50% tariffs on Canada take effect as Carney vows to retaliate · ABC News</a></li>
+        <li><a href="https://time.com/article/2026/08/24/-we-don-t-need-canada-trump-escalates-trade-war-with-threat-of-50-auto-tariffs/" target="_blank">'We Don't Need Canada': Trump Escalates Trade War · TIME</a></li>
+        <li><a href="https://www.nbcnews.com/business/economy/trump-canada-tariffs-carney-rcna593510" target="_blank">Canadian PM suspends trade talks with U.S., setting new 50% tariffs in motion · NBC News</a></li>
+        <li><a href="https://www.spokesman.com/stories/2026/aug/22/canada-to-impose-retaliatory-tariffs-on-us-steel-e/" target="_blank">Canada to impose retaliatory tariffs on U.S. steel, electronics · Spokesman-Review</a></li>
+        <li><a href="https://www.whitecase.com/insight-alert/usmca-2026-joint-review-united-states-declines-extend-agreement-triggering-annual" target="_blank">USMCA 2026 Joint Review: US declines to extend Agreement · White & Case</a></li>
+        <li><a href="https://www.cnbc.com/2026/07/01/trump-usmca-canada-mexico-trade-treaty.html" target="_blank">U.S. won't renew USMCA, opening door for negotiations · CNBC</a></li>
+        <li><a href="https://www.bnnbloomberg.ca/tariffs/2026/08/24/re-escalating-trade-war-puts-canadas-economic-rebound-at-risk-economists/" target="_blank">Re-escalating trade war puts Canada's economic rebound at risk · BNN Bloomberg</a></li>
+        <li><a href="https://www.aljazeera.com/economy/2026/8/28/with-the-us-and-canada-locked-in-a-trade-war-fears-of-a-recession-lurk" target="_blank">With the US and Canada locked in a trade war, fears of a recession lurk · Al Jazeera</a></li>
+        <li><a href="https://www.cbc.ca/news/business/trade-war-by-the-numbers-9.7318683" target="_blank">Tens of thousands of jobs, half a point off GDP: Canada-U.S. trade war by the numbers · CBC News</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-note">
+      本刊为自动生成的新闻综述与分析，观点判断部分为基于公开信源的合理推断，不构成投资或政策建议。数据与事实以原始信源为准，如有出入请以链接原文为准。加拿大/多伦多本地简报栏目内容为轻松笔调创作，部分细节为情景化演绎，不作为事实陈述。<br><br>
+      深度周报 · 第1期 · 2026年8月29日
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleModule(headEl){
+    var mod = headEl.parentElement;
+    var body = mod.querySelector('.module-body-outer');
+    var isOpen = mod.classList.contains('open');
+    if(isOpen){
+      body.style.maxHeight = body.scrollHeight + 'px';
+      requestAnimationFrame(function(){
+        body.style.maxHeight = '0px';
+      });
+      mod.classList.remove('open');
+    } else {
+      mod.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+      body.addEventListener('transitionend', function handler(){
+        if(mod.classList.contains('open')){
+          body.style.maxHeight = 'none';
+        }
+        body.removeEventListener('transitionend', handler);
+      });
+    }
+  }
+
+  // initialize default-open modules with proper max-height
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.module.open').forEach(function(mod){
+      var body = mod.querySelector('.module-body-outer');
+      body.style.maxHeight = body.scrollHeight + 'px';
+      setTimeout(function(){ body.style.maxHeight = 'none'; }, 550);
+    });
+    // recalc on resize for open panels currently set to 'none'
+    window.addEventListener('resize', function(){
+      document.querySelectorAll('.module.open .module-body-outer').forEach(function(body){
+        body.style.maxHeight = 'none';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

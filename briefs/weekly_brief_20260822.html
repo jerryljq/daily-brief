@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深度周报 · 第34期 · 2026年8月22日</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Noto+Serif+SC:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:       #0d1117;
+  --bg-card:  #161b22;
+  --gold:     #c9a84c;
+  --gold-lt:  #e8d08a;
+  --cream:    #e6dcc8;
+  --txt:      #e6edf3;
+  --muted:    #8b949e;
+  --subtle:   #484f58;
+  --red:      #da3633;
+  --blue:     #388bfd;
+  --green:    #3fb950;
+  --border:   #21262d;
+  --border-g: rgba(201,168,76,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--txt);font-family:'Noto Serif SC','Georgia',serif;line-height:1.75;font-size:15px;}
+
+/* ── MASTHEAD ── */
+.masthead{background:linear-gradient(160deg,#0a0f18 0%,#161b26 50%,#0a0f18 100%);border-bottom:2px solid var(--gold);position:relative;overflow:hidden;}
+.masthead::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 14px,rgba(201,168,76,.025) 14px,rgba(201,168,76,.025) 28px);pointer-events:none;}
+.mh-top{display:flex;justify-content:space-between;padding:7px 40px;border-bottom:1px solid var(--border);font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);letter-spacing:.04em;}
+.mh-main{text-align:center;padding:28px 40px 22px;position:relative;}
+.pub-zh{font-family:'Noto Serif SC',serif;font-size:56px;font-weight:700;color:var(--cream);letter-spacing:.35em;display:block;line-height:1;text-shadow:0 2px 30px rgba(201,168,76,.25);}
+.pub-divider{display:flex;align-items:center;justify-content:center;gap:18px;margin:10px 0 6px;}
+.pub-divider::before,.pub-divider::after{content:'';height:1px;width:90px;background:linear-gradient(to right,transparent,var(--gold),transparent);}
+.pub-en{font-family:'Playfair Display',serif;font-size:13px;font-weight:400;color:var(--gold);letter-spacing:.45em;text-transform:uppercase;}
+.mh-meta{display:flex;justify-content:center;gap:28px;font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);letter-spacing:.08em;}
+.mh-meta span::before{content:'◆ ';color:var(--gold);font-size:7px;vertical-align:middle;}
+
+/* ── TICKER ── */
+.ticker-wrap{background:var(--gold);overflow:hidden;padding:5px 0;}
+.ticker-label{background:#0d1117;color:var(--gold);font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:0 14px;display:inline-block;margin-right:16px;letter-spacing:.08em;}
+.ticker-track{display:inline-block;white-space:nowrap;animation:tick 55s linear infinite;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;color:#0d1117;letter-spacing:.04em;}
+@keyframes tick{0%{transform:translateX(50vw);}100%{transform:translateX(-100%);}}
+
+/* ── INDEX BAR ── */
+.index-bar{display:flex;flex-wrap:wrap;justify-content:center;background:var(--bg-card);border-bottom:1px solid var(--border);}
+.ix{padding:11px 22px;border-right:1px solid var(--border);text-align:center;font-family:'Inter',sans-serif;}
+.ix:last-child{border-right:none;}
+.ix-label{font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block;}
+.ix-val{font-size:17px;font-weight:700;display:block;margin-top:1px;}
+.ix-val.r{color:var(--red);}.ix-val.g{color:var(--green);}.ix-val.o{color:var(--gold);}.ix-val.b{color:var(--blue);}
+.ix-chg{font-size:10px;color:var(--subtle);display:block;}
+
+/* ── LAYOUT ── */
+.wrap{max-width:1220px;margin:0 auto;padding:0 22px;}
+.sec-hdr{display:flex;align-items:center;gap:14px;padding:24px 0 14px;}
+.sec-hdr::before,.sec-hdr::after{content:'';flex:1;height:1px;background:var(--border);}
+.sec-lbl{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+
+/* grid helpers */
+.grid-2-1{display:grid;grid-template-columns:1fr 370px;gap:28px;align-items:start;}
+.grid-2{display:grid;grid-template-columns:2fr 1fr;gap:28px;align-items:start;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;align-items:start;}
+
+/* ── ARTICLE CARD ── */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:5px;padding:26px;}
+.card.gold-l{border-left:4px solid var(--gold);}
+.card.red-l{border-left:4px solid var(--red);}
+.card.blue-l{border-left:4px solid var(--blue);}
+
+/* badges */
+.badge{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:3px 9px;border-radius:2px;display:inline-block;margin-bottom:12px;}
+.b-cn{background:rgba(218,54,51,.18);color:#ff7b7b;border:1px solid rgba(218,54,51,.4);}
+.b-us{background:rgba(56,139,253,.18);color:#79b8ff;border:1px solid rgba(56,139,253,.4);}
+.b-gl{background:rgba(63,185,80,.18);color:#56d364;border:1px solid rgba(63,185,80,.4);}
+.b-lo{background:rgba(201,168,76,.18);color:var(--gold);border:1px solid rgba(201,168,76,.4);}
+.b-jk{background:rgba(139,148,158,.18);color:#b0bec5;border:1px solid rgba(139,148,158,.35);}
+
+/* titles */
+.t-zh{font-family:'Noto Serif SC',serif;font-size:27px;font-weight:700;color:var(--cream);line-height:1.3;margin-bottom:5px;}
+.t-zh.xl{font-size:35px;}
+.t-en{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:var(--muted);letter-spacing:.03em;display:block;margin-bottom:15px;}
+.byline{display:flex;align-items:center;gap:10px;font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid var(--border);}
+
+/* body copy */
+.body{font-family:'Noto Serif SC',serif;font-size:14.5px;line-height:1.88;color:var(--txt);}
+.body p{margin-bottom:13px;}
+.body p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:54px;font-weight:700;color:var(--gold);float:left;line-height:.82;margin-right:8px;margin-top:7px;}
+.num{font-family:'Inter',sans-serif;font-weight:600;color:var(--gold);}
+.em-r{color:var(--red);font-weight:600;}
+.em-b{color:var(--blue);}
+
+/* section label inside article */
+.art-sec{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:20px 0 10px;display:flex;align-items:center;gap:10px;}
+.art-sec::after{content:'';flex:1;height:1px;background:var(--border-g);}
+
+/* pull quote */
+.pq{border-left:3px solid var(--gold);padding:14px 18px;margin:18px 0;background:rgba(201,168,76,.07);border-radius:0 4px 4px 0;}
+.pq p{font-family:'Playfair Display',serif;font-size:16.5px;font-style:italic;color:var(--cream);line-height:1.52;margin:0 !important;}
+.pq p::first-letter{font-size:inherit !important;color:inherit !important;float:none !important;line-height:inherit !important;margin:0 !important;}
+
+/* causal chain */
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:14px 0;padding:11px 14px;background:rgba(0,0,0,.25);border-radius:4px;border:1px solid var(--border);}
+.ch-it{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;color:var(--txt);padding:3px 9px;background:rgba(255,255,255,.07);border-radius:3px;}
+.ch-ar{color:var(--gold);font-size:13px;padding:0 2px;}
+
+/* diverge items */
+.div-list{display:flex;flex-direction:column;gap:9px;margin-top:10px;}
+.div-item{display:flex;gap:11px;align-items:flex-start;padding:10px 13px;background:rgba(255,255,255,.03);border-radius:4px;border:1px solid var(--border);}
+.div-ar{color:var(--gold);font-size:13px;flex-shrink:0;margin-top:3px;}
+.div-txt{font-family:'Noto Serif SC',serif;font-size:13px;color:var(--muted);line-height:1.65;}
+.div-txt strong{color:var(--cream);display:block;font-size:13px;margin-bottom:3px;}
+
+/* ── JOKE CARD ── */
+.joke{background:linear-gradient(135deg,#1a1f2e,#1d2338);border:1px solid var(--border);border-top:3px solid var(--subtle);border-radius:5px;padding:20px 22px;}
+.joke-hdr{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.joke-hdr::before{content:'😄  ';}
+.joke-body{font-family:'Noto Serif SC',serif;font-size:13.5px;line-height:1.72;color:var(--cream);}
+.joke-body p{margin-bottom:8px;}
+.joke-body p:last-child{margin-bottom:0;}
+.punchline{color:var(--gold);font-style:italic;}
+
+/* ── LOCAL BRIEF ── */
+.local{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;padding:15px 18px;margin-bottom:14px;}
+.local-t{font-family:'Noto Serif SC',serif;font-size:15px;font-weight:600;color:var(--cream);margin-bottom:6px;}
+.local-b{font-family:'Noto Serif SC',serif;font-size:13px;color:var(--muted);line-height:1.65;}
+
+/* ── STAT PILLS ── */
+.pill{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-family:'Inter',sans-serif;font-size:12px;margin:3px 3px 3px 0;}
+.pill .v{font-weight:700;}
+.pill .v.r{color:var(--red);}.pill .v.o{color:var(--gold);}.pill .v.b{color:var(--blue);}
+
+/* ── CHARTS ── */
+.chart-box{background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:4px;padding:18px;margin:18px 0;}
+.chart-ttl{font-family:'Inter',sans-serif;font-size:10px;color:var(--muted);margin-bottom:14px;letter-spacing:.08em;}
+
+/* CPI bar chart */
+.cpi-chart{position:relative;height:90px;display:flex;align-items:center;overflow:hidden;}
+.zero-line{position:absolute;left:22px;right:0;top:33%;height:1px;background:rgba(255,255,255,.2);z-index:1;}
+.zero-lbl{position:absolute;left:0;top:33%;font-family:'Inter',sans-serif;font-size:8px;color:var(--subtle);transform:translateY(-50%);}
+.bars{display:flex;gap:3px;align-items:center;width:100%;height:90px;padding-left:24px;position:relative;z-index:2;}
+.b-up{display:flex;flex-direction:column;justify-content:flex-end;height:100%;flex:1;}
+.b-up div{background:var(--green);opacity:.65;border-radius:2px 2px 0 0;}
+.b-dn{display:flex;flex-direction:column;justify-content:flex-start;height:100%;flex:1;padding-top:33%;}
+.b-dn div{background:var(--red);border-radius:0 0 2px 2px;}
+.b-dn.latest div{background:var(--red);box-shadow:0 0 6px rgba(218,54,51,.6);}
+
+/* Horizontal bar (AI states) */
+.hbar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
+.hbar-lbl{font-family:'Inter',sans-serif;font-size:10px;color:var(--muted);width:30px;text-align:right;flex-shrink:0;}
+.hbar-track{flex:1;height:13px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden;}
+.hbar-fill{height:100%;border-radius:2px;}
+.hbar-val{font-family:'Inter',sans-serif;font-size:10px;color:var(--muted);width:28px;flex-shrink:0;}
+
+/* Risk bar */
+.rbar-row{margin-bottom:10px;}
+.rbar-top{display:flex;justify-content:space-between;margin-bottom:4px;}
+.rbar-name{font-family:'Inter',sans-serif;font-size:10px;color:var(--muted);}
+.rbar-num{font-family:'Inter',sans-serif;font-size:12px;font-weight:700;}
+.rbar-track{height:4px;background:var(--border);border-radius:2px;}
+.rbar-fill{height:100%;border-radius:2px;}
+
+/* ── HORMUZ VISUAL ── */
+.hormuz{width:100%;height:155px;background:linear-gradient(180deg,#0c1e3a 0%,#0a2d55 40%,#051525 100%);border-radius:4px;margin:15px 0;position:relative;overflow:hidden;border:1px solid var(--border);}
+.wave{position:absolute;width:200%;height:55px;background:rgba(56,139,253,.12);border-radius:50%;top:40%;animation:wv 9s ease-in-out infinite;left:-50%;}
+.wave:nth-child(2){animation-delay:-3s;opacity:.65;top:50%;}
+.wave:nth-child(3){animation-delay:-6s;opacity:.45;top:60%;}
+@keyframes wv{0%,100%{transform:translateY(0) scaleX(1);}50%{transform:translateY(-12px) scaleX(1.02);}}
+.ship{position:absolute;font-size:22px;animation:sh 14s linear infinite;filter:drop-shadow(0 0 8px rgba(56,139,253,.5));}
+.ship:nth-child(4){animation-delay:-5s;top:32%;font-size:17px;}
+.ship:nth-child(5){animation-delay:-10s;top:22%;font-size:20px;}
+@keyframes sh{0%{left:-40px;}100%{left:110%;}}
+.h-lbl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.3em;color:rgba(255,255,255,.3);text-transform:uppercase;}
+.h-alert{position:absolute;top:10px;right:10px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:var(--red);border:1px solid var(--red);padding:3px 8px;border-radius:3px;background:rgba(218,54,51,.15);letter-spacing:.08em;}
+.h-ins{position:absolute;bottom:10px;left:12px;font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,.35);}
+
+/* ── SOURCES ── */
+.sources{background:var(--bg-card);border-top:2px solid var(--gold);margin-top:44px;padding:30px 0;}
+.src-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:14px;}
+.src-grp h4{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.src-list{list-style:none;}
+.src-list li{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:7px;}
+.src-list li::before{content:'→';color:var(--subtle);font-size:9px;flex-shrink:0;}
+
+/* footer */
+.footer{background:#0a0d14;border-top:1px solid var(--border);padding:18px 0;text-align:center;font-family:'Inter',sans-serif;font-size:11px;color:var(--subtle);}
+
+/* hr */
+.hr{border:none;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:18px 0;}
+
+/* sidebar stack */
+.sidebar{display:flex;flex-direction:column;gap:18px;}
+
+/* spacing helpers */
+.mt16{margin-top:16px;}
+.mb16{margin-bottom:16px;}
+.pb28{padding-bottom:28px;}
+
+@media(max-width:900px){
+  .grid-2-1,.grid-2,.grid-3,.src-grid{grid-template-columns:1fr;}
+  .pub-zh{font-size:36px;}
+  .mh-top{flex-direction:column;gap:3px;font-size:10px;}
+}
+
+.fic-tag{display:inline-block;margin-left:.5em;padding:.1em .5em;border:1px solid currentColor;border-radius:4px;font-size:.68em;font-weight:600;opacity:.8;vertical-align:middle;letter-spacing:.02em;white-space:nowrap;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;}
+</style>
+</head>
+<body>
+
+<!-- ═══ MASTHEAD ═══ -->
+<header class="masthead">
+  <div class="mh-top">
+    <span>深度周报 · 创刊于2024年</span>
+    <span>独立分析 · 不代表任何政府或机构立场</span>
+    <span>订阅价：概念上免费，阅读需消耗脑细胞</span>
+  </div>
+  <div class="mh-main">
+    <span class="pub-zh">深度周报</span>
+    <div class="pub-divider">
+      <span class="pub-en">The Deep Brief Weekly</span>
+    </div>
+    <div class="mh-meta">
+      <span>2026年8月22日 · 星期六</span>
+      <span>第十二卷 第三十四期</span>
+      <span>Vol. XII · No. 34</span>
+      <span>中英双语版</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ TICKER ═══ -->
+<div class="ticker-wrap">
+  <span class="ticker-label">⚡ 实时简讯</span>
+  <span class="ticker-track">
+    中国7月CPI同比 -0.8%，连续18个月负值 &nbsp;|&nbsp; 霍尔木兹保险溢价上浮300-400bps，连续12周高警戒 &nbsp;|&nbsp; 美国已有32州出台AI监管法规 &nbsp;|&nbsp; OpenAI + Anthropic Q2游说支出合计逾2800万美元 &nbsp;|&nbsp; 伊朗权力过渡机制持续运行，IRGC影响力上升 &nbsp;|&nbsp; WTI原油 $89.4 ↑2.3% 周内 &nbsp;|&nbsp; 中国土地出让金同比跌47%，较峰值缩水65% &nbsp;|&nbsp; 多伦多Ontario Line第四次延期，目标调整为2027年底 &nbsp;|&nbsp; 阿尔伯塔1.2亿加元AI补贴计划落地 &nbsp;|&nbsp; 温哥华7月房价同比涨6.7%，全球通缩背景下逆势上行 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>
+</div>
+
+<!-- ═══ INDEX BAR ═══ -->
+<div class="index-bar">
+  <div class="ix"><span class="ix-label">中国CPI 同比</span><span class="ix-val r">-0.8%</span><span class="ix-chg">↓ 连续18个月负值</span></div>
+  <div class="ix"><span class="ix-label">霍尔木兹风险等级</span><span class="ix-val o">高警戒</span><span class="ix-chg">↑ 连续12周</span></div>
+  <div class="ix"><span class="ix-label">美国AI立法州数</span><span class="ix-val b">32州</span><span class="ix-chg">↑ 本月新增2州</span></div>
+  <div class="ix"><span class="ix-label">WTI 原油 (USD/桶)</span><span class="ix-val g">$89.4</span><span class="ix-chg">↑ +2.3% 周内</span></div>
+  <div class="ix"><span class="ix-label">土地出让金 同比</span><span class="ix-val r">-47%</span><span class="ix-chg">↓ 较峰值缩水65%</span></div>
+  <div class="ix"><span class="ix-label">AI游说Q2合计</span><span class="ix-val o">$2,800万</span><span class="ix-chg">OpenAI+Anthropic</span></div>
+</div>
+
+<!-- ═══ MAIN ═══ -->
+<div class="wrap">
+
+  <div class="sec-hdr"><span class="sec-lbl">本期焦点 · COVER STORIES</span></div>
+
+  <!-- ══ ARTICLE 1: CHINA ══ -->
+  <div class="grid-2-1" style="padding-bottom:30px;">
+
+    <div class="card gold-l">
+      <span class="badge b-cn">中国经济 · CHINA</span>
+      <h1 class="t-zh xl">通缩漩涡中的财政重构</h1>
+      <span class="t-en">China's Deflationary Spiral and the End of the Land-Revenue Model</span>
+      <div class="byline">
+        <span>深度周报 编辑部</span><span>·</span><span>2026年8月22日</span><span>·</span><span>约1,800字</span>
+      </div>
+
+      <!-- CSS CPI Chart -->
+      <div class="chart-box">
+        <div class="chart-ttl">中国 CPI 同比变动 · 2024Q1 → 2026年8月（数据来源：国家统计局）</div>
+        <div class="cpi-chart">
+          <span class="zero-lbl">0%</span>
+          <div class="zero-line"></div>
+          <div class="bars">
+            <div class="b-up"><div style="height:38%;"></div></div>
+            <div class="b-up"><div style="height:28%;"></div></div>
+            <div class="b-up"><div style="height:15%;"></div></div>
+            <div class="b-up"><div style="height:5%;opacity:.4;background:rgba(255,255,255,.3);"></div></div>
+            <div class="b-dn"><div style="height:11%;opacity:.6;"></div></div>
+            <div class="b-dn"><div style="height:16%;opacity:.65;"></div></div>
+            <div class="b-dn"><div style="height:20%;opacity:.7;"></div></div>
+            <div class="b-dn"><div style="height:23%;opacity:.72;"></div></div>
+            <div class="b-dn"><div style="height:26%;opacity:.75;"></div></div>
+            <div class="b-dn"><div style="height:28%;opacity:.78;"></div></div>
+            <div class="b-dn"><div style="height:30%;opacity:.8;"></div></div>
+            <div class="b-dn"><div style="height:31%;opacity:.82;"></div></div>
+            <div class="b-dn"><div style="height:33%;opacity:.85;"></div></div>
+            <div class="b-dn"><div style="height:35%;opacity:.88;"></div></div>
+            <div class="b-dn"><div style="height:36%;opacity:.9;"></div></div>
+            <div class="b-dn"><div style="height:37%;opacity:.92;"></div></div>
+            <div class="b-dn"><div style="height:38%;opacity:.95;"></div></div>
+            <div class="b-dn"><div style="height:39%;opacity:.97;"></div></div>
+            <div class="b-dn latest" style="position:relative;">
+              <div style="height:40%;position:relative;">
+                <div style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:9px;color:var(--gold);white-space:nowrap;font-weight:700;">▼ -0.8%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding-left:24px;margin-top:3px;">
+          <span style="font-family:'Inter',sans-serif;font-size:9px;color:var(--subtle);">2024年3月</span>
+          <span style="font-family:'Inter',sans-serif;font-size:9px;color:var(--subtle);">→</span>
+          <span style="font-family:'Inter',sans-serif;font-size:9px;color:var(--gold);">2026年8月</span>
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="art-sec">事件概述</div>
+        <p>2026年8月，中国国家统计局公布最新数据：CPI同比跌幅扩大至<span class="num">-0.8%</span>，连续<span class="num">18</span>个月处于负值区间。PPI（生产者价格指数）同比跌幅达<span class="num">-2.3%</span>，工厂端通缩向消费端的传导链条仍未切断。消费零售总额同比增速滑落至<span class="num">1.9%</span>，扣除价格因素后实际增长接近停滞。</p>
+
+        <p>与此同时，全国300个主要城市土地出让金收入同比下降<span class="num">47%</span>，较2021年峰值累计缩水逾<span class="em-r">65%</span>。已有<span class="num">12</span>个省份出现不同程度的财政缺口，部分地区公务员薪资发放出现延迟。"土地财政"这一支撑中国地方政府运转逾二十年的收入模式，正在加速瓦解。</p>
+
+        <div class="pq"><p>"当私人部门同时选择还债而非扩张，货币政策便如同推绳——利率降至历史低位，却无人借贷，总需求收缩成为系统性命题。"</p></div>
+
+        <div class="art-sec">底层逻辑</div>
+        <p>理解当前中国经济困境，经济学家辜朝明（Richard Koo）提出的"资产负债表衰退"（Balance Sheet Recession）框架提供了最简洁的切入点。当私人部门在资产价格大幅下跌后，将行为重心从"利润最大化"转为"债务最小化"，总需求必然内生性收缩。此时传统货币政策失效：央行可以降息，但无法强迫企业借贷与居民消费。</p>
+
+        <p>中国当前面临的叠加困境更为复杂。第一，房产作为家庭最主要财富储备（占居民总资产约<span class="num">70%</span>），其价格大幅回调已深度损伤居民净资产，引发消费意愿的结构性下降。第二，大型房企债务危机尚未出清，银行系统惜贷情绪使信用创造渠道收窄。第三，地方政府通过城投债（LGFV）积累的隐性债务面临巨大滚续压力。第四，劳动年龄人口自2012年起持续下降，人口红利消退削弱长期潜在增速。</p>
+
+        <div class="chain">
+          <span class="ch-it">房价↓</span><span class="ch-ar">→</span>
+          <span class="ch-it">居民净资产↓</span><span class="ch-ar">→</span>
+          <span class="ch-it">消费意愿↓</span><span class="ch-ar">→</span>
+          <span class="ch-it">CPI↓</span><span class="ch-ar">→</span>
+          <span class="ch-it">实际债务↑</span><span class="ch-ar">→</span>
+          <span class="ch-it">消费进一步收缩</span>
+        </div>
+
+        <p>土地财政转型的方向已可见端倪。部分城市试点将数据资产入账为政府资产科目；多省加速推进国有资产证券化；消费税改革中，属地化征收方案（将税收从生产地转移至消费地）被认为可为地方政府增辟税源。但这些措施的增量贡献，短期内难以填补土地收入的结构性缺口——<span class="num">2021年</span>土地出让金峰值逾<span class="num">8.7万亿元</span>，任何替代性税源要在规模上靠近这一数字，都需要数年乃至十年以上的制度建设周期。</p>
+
+        <div class="art-sec">发散联想</div>
+        <div class="div-list">
+          <div class="div-item">
+            <span class="div-ar">→</span>
+            <div class="div-txt"><strong>日本"失落三十年"的镜像与差异</strong>中国拥有比日本更强的国家调控能力，但也面临更大的人口基数和更深的城乡二元结构。若北京的行政动员能力能加速不良资产出清，或许能压缩"失落"的时间跨度——但代价尚不清晰。</div>
+          </div>
+          <div class="div-item">
+            <span class="div-ar">→</span>
+            <div class="div-txt"><strong>省级财政破产与有序重组机制</strong>美国底特律市的破产重组为"有序违约"提供了案例参照。中国能否在维护央地关系稳定的前提下，建立类似的省级债务重组机制？这在政治上极为敏感，但在经济上或许必要。</div>
+          </div>
+          <div class="div-item">
+            <span class="div-ar">→</span>
+            <div class="div-txt"><strong>出口导向2.0能否承接增长引擎？</strong>新能源车、光伏、锂电池——中国新"三大件"已在全球市场取得份额优势。但贸易摩擦加剧与内需疲软并存，这条路的天花板比许多人预期的更低。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div>
+        <div class="sec-hdr" style="padding:8px 0 8px;"><span class="sec-lbl">本地简报 · LOCAL BRIEF<span class="fic-tag">虚构 · 非真实新闻</span></span></div>
+        <div class="local">
+          <span class="badge b-lo">多伦多 · TORONTO</span><span class="fic-tag">虚构 · 非真实新闻</span>
+          <div class="local-t">Ontario Line 第四次跳票：2027年，我们等着</div>
+          <div class="local-b">安省交通部长本周宣布，Ontario Line通车时间调整为"2027年底前后"，为该项目第四次正式延期。承建方解释称地下岩层"比预期更顽固"。多伦多通勤者协会表示，他们已不设期待——每天地铁不晚点才算惊喜。</div>
+        </div>
+      </div>
+
+      <div class="joke">
+        <div class="joke-hdr">本周笑话 · JOKE OF THE WEEK</div>
+        <div class="joke-body">
+          <p>记者问经济学家："中国通缩怎么解决？"</p>
+          <p>经济学家："很简单，多发货币。"</p>
+          <p>记者："发了没用怎么办？"</p>
+          <p>经济学家："那就更大力度地发货币。"</p>
+          <p>记者："再没用呢？"</p>
+          <p class="punchline">经济学家沉默三秒："那就说'底部已经确认，回暖在望'，然后出一本书。"</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">数据快照 · DATA SNAPSHOT</div>
+        <span class="pill"><span class="v r">-65%</span> 土地出让金较峰值</span>
+        <span class="pill"><span class="v r">18个月</span> CPI持续为负</span>
+        <span class="pill"><span class="v o">12省</span> 出现财政缺口</span>
+        <span class="pill"><span class="v r">-2.3%</span> PPI同比</span>
+        <span class="pill"><span class="v o">8.7万亿</span> 2021年峰值</span>
+        <div class="hr"></div>
+        <div style="font-family:'Noto Serif SC',serif;font-size:13px;color:var(--muted);line-height:1.7;">"卖地财政"的本质，是将未来土地增值收益提前变现。当增值预期消失，模式便失去基础。问题从不是"会不会崩溃"，而是"崩溃之后，谁来填坑"。</div>
+      </div>
+
+    </div>
+  </div><!-- /grid -->
+
+  <!-- ══ ARTICLE 2: US AI ══ -->
+  <div style="border-top:1px solid var(--border);padding:30px 0;">
+    <div class="card blue-l" style="position:relative;overflow:hidden;">
+
+      <!-- Decorative background circles -->
+      <div style="position:absolute;top:-40px;right:-40px;width:260px;height:260px;border-radius:50%;border:1px solid rgba(56,139,253,.07);pointer-events:none;"></div>
+      <div style="position:absolute;top:-10px;right:-10px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(56,139,253,.06);pointer-events:none;"></div>
+      <div style="position:absolute;top:20px;right:20px;width:100px;height:100px;border-radius:50%;border:1px solid rgba(56,139,253,.05);pointer-events:none;"></div>
+
+      <span class="badge b-us">美国 / 加拿大 · NORTH AMERICA</span>
+      <h2 class="t-zh">三十二面镜子：美国AI监管的碎片化困局</h2>
+      <span class="t-en">Thirty-Two Mirrors: The Fragmented Reality of U.S. AI Regulation</span>
+      <div class="byline"><span>深度周报 编辑部</span><span>·</span><span>2026年8月22日</span></div>
+
+      <div class="grid-2">
+        <div class="body">
+          <div class="art-sec">事件概述</div>
+          <p>截至2026年8月，美国已有<span class="num">32</span>个州通过了各自的AI相关立法，内容涵盖面部识别禁令（伊利诺伊、德克萨斯）、算法审计要求（纽约、科罗拉多）、AI生成内容披露义务（加利福尼亚）、AI招聘工具限制（马里兰）等，形成一张标准不一、甚至相互矛盾的监管拼图。联邦层面，《美国人工智能责任法》（ARIA）在参议院依然陷于两党僵局——民主党倾向"安全优先"，共和党坚持"创新优先"，拉锯已逾两年，预计年内仍无望通过。</p>
+
+          <p>与此同时，根据联邦选举委员会（FEC）公开数据，OpenAI与Anthropic在2026年Q2的游说支出分别创下单季历史纪录。OpenAI单季游说支出逾<span class="num">1,600万美元</span>，Anthropic逾<span class="num">1,200万美元</span>，两家合计突破<span class="num">2,800万美元</span>——已与谷歌、Meta的传统季度游说体量相当。"AI安全"旗帜下的资本，正在深度涉足华盛顿的政策角力场。</p>
+
+          <div class="pq"><p>"科技公司表面上呼吁统一联邦框架，实则希望通过影响联邦立法来预先排除更严苛的州级规定——这正是'联邦预占'策略的现代版本。"</p></div>
+
+          <div class="art-sec">底层逻辑</div>
+          <p>美国的联邦制天然为监管碎片化创造了制度空间。当国会无法形成共识时，各州填补真空是宪政逻辑的必然结果，而非异常。问题在于，AI系统的网络外部性极强——一个部署于全美的语言模型，面临32套不同的合规标准，意味着监管套利与市场分割并行产生。对初创公司而言，这已成为融资估值之外最隐性却最显著的成本。</p>
+
+          <p>游说资本的注入揭示了另一层博弈。参与者的真实策略，并非简单的"反对监管"，而是<em>塑造监管的形态与归属层级</em>。若联邦法律能以较宽松的标准"预占"（Preempt）州级立法，企业便能以单一合规体系覆盖全国。这与1990年代金融行业游说推动《格拉姆-里奇-布莱利法》取代各州银行法的历史路径，有惊人的结构性相似之处。</p>
+
+          <div class="chain">
+            <span class="ch-it">联邦立法僵局</span><span class="ch-ar">→</span>
+            <span class="ch-it">各州自行立法</span><span class="ch-ar">→</span>
+            <span class="ch-it">标准碎片化</span><span class="ch-ar">→</span>
+            <span class="ch-it">合规成本↑</span><span class="ch-ar">→</span>
+            <span class="ch-it">AI公司游说↑</span><span class="ch-ar">→</span>
+            <span class="ch-it">推动宽松联邦法预占各州</span>
+          </div>
+
+          <div class="art-sec">发散联想</div>
+          <div class="div-list">
+            <div class="div-item">
+              <span class="div-ar">→</span>
+              <div class="div-txt"><strong>欧盟AI Act与"布鲁塞尔效应"的极限</strong>欧盟通过严格法规倒逼全球企业采用欧洲标准的"布鲁塞尔效应"在GDPR上奏效。但AI监管的技术复杂性远超数据隐私，欧盟这次能否再次输出标准，尚有争议。</div>
+            </div>
+            <div class="div-item">
+              <span class="div-ar">→</span>
+              <div class="div-txt"><strong>开源AI的监管特例困境</strong>开源模型（如Meta的Llama系列）一旦发布即不可召回，传统"事前许可"监管逻辑在此面临根本性失效。各州法规如何处理开源模型，是当前立法中最具争议的空白地带。</div>
+            </div>
+            <div class="div-item">
+              <span class="div-ar">→</span>
+              <div class="div-txt"><strong>AI侵权的跨州司法管辖噩梦</strong>当一个在德克萨斯州合法运行的AI招聘工具，在加利福尼亚州被认定违法时，侵权诉讼应适用哪个州的法律？这个问题尚无定论，且预计将引发大量商业诉讼。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <!-- AI States Chart -->
+          <div class="chart-box">
+            <div class="chart-ttl">美国AI立法州数 · 逐年累积</div>
+            <div class="hbar-row"><span class="hbar-lbl">2023</span><div class="hbar-track"><div class="hbar-fill" style="width:25%;background:var(--blue);opacity:.5;"></div></div><span class="hbar-val" style="color:var(--muted);font-family:'Inter',sans-serif;font-size:10px;">8州</span></div>
+            <div class="hbar-row"><span class="hbar-lbl">2024</span><div class="hbar-track"><div class="hbar-fill" style="width:50%;background:var(--blue);opacity:.65;"></div></div><span class="hbar-val" style="color:var(--muted);font-family:'Inter',sans-serif;font-size:10px;">16州</span></div>
+            <div class="hbar-row"><span class="hbar-lbl">2025</span><div class="hbar-track"><div class="hbar-fill" style="width:85%;background:var(--blue);opacity:.8;"></div></div><span class="hbar-val" style="color:var(--muted);font-family:'Inter',sans-serif;font-size:10px;">28州</span></div>
+            <div class="hbar-row"><span class="hbar-lbl" style="color:var(--gold);">2026</span><div class="hbar-track"><div class="hbar-fill" style="width:100%;background:var(--blue);"></div></div><span class="hbar-val" style="color:var(--gold);font-family:'Inter',sans-serif;font-size:10px;font-weight:700;">32州▲</span></div>
+            <div class="hr"></div>
+            <div style="font-family:'Inter',sans-serif;font-size:10px;color:var(--muted);margin-bottom:8px;">Q2游说支出 (季度, USD)</div>
+            <div style="display:flex;gap:8px;">
+              <div style="flex:1;text-align:center;padding:8px 6px;background:rgba(255,255,255,.04);border-radius:3px;border:1px solid var(--border);">
+                <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--blue);">$1,600万</div>
+                <div style="font-family:'Inter',sans-serif;font-size:10px;color:var(--muted);">OpenAI</div>
+              </div>
+              <div style="flex:1;text-align:center;padding:8px 6px;background:rgba(255,255,255,.04);border-radius:3px;border:1px solid var(--border);">
+                <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--blue);">$1,200万</div>
+                <div style="font-family:'Inter',sans-serif;font-size:10px;color:var(--muted);">Anthropic</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JOKE 2 -->
+          <div class="joke">
+            <div class="joke-hdr">本周笑话 · JOKE OF THE WEEK</div>
+            <div class="joke-body">
+              <p>OpenAI代表和Anthropic代表在DC走廊相遇。</p>
+              <p>OpenAI："我们Q2游说支出破纪录了。"</p>
+              <p>Anthropic："我们也是。"</p>
+              <p>两人沉默了一会儿。</p>
+              <p>OpenAI："你说，我们是在游说政府监管AI，还是在用AI级别的钱，游说政府不要用人类的方式监管AI？"</p>
+              <p class="punchline">Anthropic想了想："两者都有。我们叫它'负责任的游说'。"</p>
+            </div>
+          </div>
+
+          <!-- Local Brief 2 -->
+          <div class="local">
+            <span class="badge b-lo">卡尔加里 · CALGARY</span><span class="fic-tag">虚构 · 非真实新闻</span>
+            <div class="local-t">阿尔伯塔"AI之都"争夺战：五家公司争相搬迁，三家创始人承认从未去过</div>
+            <div class="local-b">阿尔伯塔省本周宣布1.2亿加元AI企业补贴计划，要求受补贴公司将"实质性业务"设在卡尔加里。截至周五，已有五家AI初创公司宣布将其设为加拿大总部，其中三家创始人接受采访时承认，此前从未到访过卡尔加里。</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div><!-- /article 2 -->
+
+  <!-- ══ ARTICLE 3: IRAN ══ -->
+  <div style="border-top:1px solid var(--border);padding:30px 0;">
+    <div class="card red-l">
+      <span class="badge b-gl">全球地缘 · GEOPOLITICS</span>
+      <h2 class="t-zh">霍尔木兹的船期表，由谁来掌控？</h2>
+      <span class="t-en">Who Controls the Schedule? Post-War Iran and the Hormuz Standoff</span>
+      <div class="byline"><span>深度周报 编辑部</span><span>·</span><span>2026年8月22日</span></div>
+
+      <!-- Animated Hormuz visual -->
+      <div class="hormuz">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="ship" style="top:35%;">🛢️</div>
+        <div class="ship" style="top:55%;">⛴️</div>
+        <div class="ship" style="top:22%;">🚢</div>
+        <div class="h-lbl">STRAIT OF HORMUZ · 霍尔木兹海峡</div>
+        <div class="h-alert">⚠ HIGH ALERT</div>
+        <div class="h-ins">保险溢价 +300~400bps · Lloyd's List 风险指数</div>
+      </div>
+
+      <div class="grid-3">
+        <!-- Main body (2 cols) -->
+        <div class="body" style="grid-column:span 2;">
+          <div class="art-sec">事件概述</div>
+          <p>2025年秋季以色列—伊朗冲突在卡塔尔调停下达成停火协议，但伊朗内部政治生态已深度重塑。最高领袖哈梅内伊在冲突后期身体状况急剧恶化，权力过渡机制启动，专家委员会就继承人问题陷入持续博弈。伊斯兰革命卫队（IRGC）借助冲突期间积累的政治资本，在国内政策制定中的话语权显著上升。</p>
+
+          <p>根据Lloyd's List追踪的霍尔木兹航运风险指数，该指标已连续<span class="num">12</span>周处于"高警戒"区间。航运保险溢价较基准水平上浮<span class="num">300至400个基点</span>，部分超大型油轮（VLCC）船东已要求额外战争险溢价，导致每桶原油运输成本实际上涨约<span class="num">1.8至2.5美元</span>。这一"隐形关税"正悄然重塑全球能源定价的底层结构。</p>
+
+          <div class="pq"><p>"霍尔木兹的最佳市场状态，是'永远快要封锁，但从未真正封锁'——这个持续的不确定性本身，就是对全球能源市场的系统性冲击。"</p></div>
+
+          <div class="art-sec">底层逻辑</div>
+          <p>霍尔木兹海峡的战略价值源于其无可替代性。全球约<span class="num">20%</span>的石油贸易、<span class="num">30%</span>的LNG贸易经此通过。即便存在绕行路线——如沙特延布管道或阿联酋哈布珊管道——其总产能也仅能覆盖约<span class="num">30%</span>的过境石油量，且需要数周调配时间。真正的封锁，在技术意义上难以实现，但"准封锁"状态已足以产生显著的价格与保险效应。</p>
+
+          <p>对中国而言，约<span class="num">40%</span>的原油进口经由霍尔木兹。这与其内需疲软形成了一个罕见的双重脆弱性结构：内需不足削弱了对能源成本上升的吸收能力，而能源进口对单一通道的依赖，又将地缘政治风险直接传导至工业成本。通缩与能源冲击的叠加，对本已处于去库存周期的中国制造业而言，时机尤为不利。</p>
+
+          <p>后哈梅内伊时代的权力结构尚未稳固，IRGC内部存在温和路线（强调经济重建）与强硬路线（维持对抗以保持谈判筹码）的深层分歧，使得伊朗对外政策的可预测性大幅下降。这种不确定性本身，就是对航运方的持续冲击——企业无法基于稳定预期制定战略，只能将风险溢价常态化地纳入定价模型。</p>
+
+          <div class="chain">
+            <span class="ch-it">伊朗权力过渡</span><span class="ch-ar">→</span>
+            <span class="ch-it">政策不可预测↑</span><span class="ch-ar">→</span>
+            <span class="ch-it">霍尔木兹风险溢价↑</span><span class="ch-ar">→</span>
+            <span class="ch-it">油价↑</span><span class="ch-ar">→</span>
+            <span class="ch-it">中国能源成本↑</span><span class="ch-ar">+</span>
+            <span class="ch-it">内需疲软</span><span class="ch-ar">→</span>
+            <span class="ch-it">双重挤压</span>
+          </div>
+
+          <div class="art-sec">发散联想</div>
+          <div class="div-list">
+            <div class="div-item">
+              <span class="div-ar">→</span>
+              <div class="div-txt"><strong>中国能源安全的战略重配</strong>北京正加速推进非洲采购多元化（安哥拉、尼日利亚）并增加俄罗斯管道依赖。但后者带来新的地缘依赖风险，并非真正意义上的分散化。</div>
+            </div>
+            <div class="div-item">
+              <span class="div-ar">→</span>
+              <div class="div-txt"><strong>2023年北京斡旋协议的后续效力存疑</strong>沙特—伊朗和解协议由北京牵头，曾被视为中国中东外交重大突破。但以色列—伊朗冲突后，协议的实质约束力备受质疑，中国调解者角色面临重新定位。</div>
+            </div>
+            <div class="div-item">
+              <span class="div-ar">→</span>
+              <div class="div-txt"><strong>美国页岩油与战略杠杆的角色转变</strong>美国因页岩油革命已成净出口国，霍尔木兹对其能源安全的直接威胁大幅下降。但日本、韩国等亚太盟友仍高度依赖海湾能源，形成间接安全承诺义务。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right mini col -->
+        <div>
+          <div class="card" style="padding:16px;margin-bottom:16px;">
+            <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.15em;color:var(--red);margin-bottom:12px;text-transform:uppercase;">航运风险指标</div>
+            <div class="rbar-row">
+              <div class="rbar-top"><span class="rbar-name">高警戒周数</span><span class="rbar-num" style="color:var(--red);">12周</span></div>
+              <div class="rbar-track"><div class="rbar-fill" style="width:80%;background:var(--red);"></div></div>
+            </div>
+            <div class="rbar-row">
+              <div class="rbar-top"><span class="rbar-name">保险溢价 (bps)</span><span class="rbar-num" style="color:var(--gold);">+300~400</span></div>
+              <div class="rbar-track"><div class="rbar-fill" style="width:65%;background:var(--gold);"></div></div>
+            </div>
+            <div class="rbar-row">
+              <div class="rbar-top"><span class="rbar-name">中国原油过境依赖</span><span class="rbar-num" style="color:var(--blue);">~40%</span></div>
+              <div class="rbar-track"><div class="rbar-fill" style="width:40%;background:var(--blue);"></div></div>
+            </div>
+            <div class="rbar-row">
+              <div class="rbar-top"><span class="rbar-name">全球石油过境占比</span><span class="rbar-num" style="color:var(--txt);">~20%</span></div>
+              <div class="rbar-track"><div class="rbar-fill" style="width:20%;background:var(--muted);"></div></div>
+            </div>
+            <div class="rbar-row">
+              <div class="rbar-top"><span class="rbar-name">全球LNG过境占比</span><span class="rbar-num" style="color:var(--txt);">~30%</span></div>
+              <div class="rbar-track"><div class="rbar-fill" style="width:30%;background:var(--muted);"></div></div>
+            </div>
+          </div>
+
+          <!-- JOKE 3 -->
+          <div class="joke" style="margin-bottom:16px;">
+            <div class="joke-hdr">本周笑话 · JOKE</div>
+            <div class="joke-body">
+              <p>石油交易员小张的早晨决策树：</p>
+              <p>伊朗有声明但没动作 → 买入。</p>
+              <p>伊朗有动作但没声明 → 卖出。</p>
+              <p>没声明也没动作 → 买入，这太反常，一定有事。</p>
+              <p>同事问："那什么时候你不操作？"</p>
+              <p class="punchline">小张：去厕所的时候。但我最近开始带手机进厕所了。</p>
+            </div>
+          </div>
+
+          <!-- Local Brief 3 -->
+          <div class="local">
+            <span class="badge b-lo">温哥华 · VANCOUVER</span><span class="fic-tag">虚构 · 非真实新闻</span>
+            <div class="local-t">全球通缩"豁免区"：温哥华房价7月再涨</div>
+            <div class="local-b">全球通缩压力蔓延之际，温哥华7月独立屋中位价环比上涨1.2%，同比涨幅6.7%。本地房产经纪表示："温哥华不参与全球经济规律。这不是骄傲，这是地理。"</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div><!-- /article 3 -->
+
+  <!-- ══ FINAL JOKE ══ -->
+  <div class="sec-hdr" style="margin-top:10px;"><span class="sec-lbl">本周彩蛋 · PARTING JOKE</span></div>
+  <div class="joke" style="max-width:640px;margin:0 auto 36px;">
+    <div class="joke-hdr">本周最后一个笑话 · FINAL JOKE</div>
+    <div class="joke-body">
+      <p>一位工程师同时负责公司三个AI产品的合规工作：一个在德克萨斯，一个在加利福尼亚，一个在纽约。</p>
+      <p>有人问他："你觉得哪个州的AI法规最合理？"</p>
+      <p>他盯着屏幕上的三份合规清单沉默了十秒。</p>
+      <p class="punchline">然后说："我觉得我应该去卡尔加里。"</p>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<!-- ═══ SOURCES ═══ -->
+<div class="sources">
+  <div class="wrap">
+    <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;">信源列表 · SOURCES &amp; REFERENCES</div>
+    <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--subtle);margin-bottom:20px;">本期内容基于以下公开来源综合分析。部分数据经过估算，具体数字以原始来源为准。</div>
+    <div class="src-grid">
+      <div class="src-grp">
+        <h4>中国经济 · 地产财政</h4>
+        <ul class="src-list">
+          <li>每经网（National Business Daily）— CPI/PPI月度数据</li>
+          <li>中华网 — 地方财政与城投债分析</li>
+          <li>Forbes — 中国通缩深度报道</li>
+          <li>Statistics of the World — 宏观数据追踪</li>
+          <li>中国国家统计局 — 官方月度数据发布</li>
+          <li>Wind资讯 — 土地出让金统计与历史数据</li>
+        </ul>
+      </div>
+      <div class="src-grp">
+        <h4>美国AI监管 · 游说资本</h4>
+        <ul class="src-list">
+          <li>Digital Applied — 各州AI立法动态追踪</li>
+          <li>Axis Intelligence — AI政策与监管分析</li>
+          <li>CNBC — OpenAI / Anthropic游说支出报道</li>
+          <li>QZ (Quartz) — 科技监管深度分析</li>
+          <li>联邦选举委员会 (FEC) — 游说支出公开数据库</li>
+          <li>National Conference of State Legislatures — 州立法数据库</li>
+        </ul>
+      </div>
+      <div class="src-grp">
+        <h4>伊朗 · 霍尔木兹 · 能源地缘</h4>
+        <ul class="src-list">
+          <li>Lloyd's List — 航运风险指数与保险溢价数据</li>
+          <li>Iran International — 伊朗内政与权力结构分析</li>
+          <li>The Diplomat — 中东地缘政治深度分析</li>
+          <li>CNBC — 原油价格与能源市场</li>
+          <li>美国能源信息署 (EIA) — 原油贸易流向数据</li>
+          <li>国际能源署 (IEA) — 全球能源供应分析报告</li>
+        </ul>
+      </div>
+    </div>
+    <div class="hr"></div>
+    <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--subtle);line-height:1.65;">
+      <strong style="color:var(--muted);">免责声明：</strong>本刊所有内容为编辑部独立分析观点，不构成任何投资建议，亦不代表任何政府、机构或企业立场。"本地简报"内容为基于真实背景的虚构叙事，旨在提供轻松的阅读体验。部分前瞻性分析基于2026年8月22日前的可用信息，不构成对未来事件的预测。
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="wrap">
+    <div>深度周报 The Deep Brief Weekly &nbsp;·&nbsp; Vol. XII &nbsp;No. 34 &nbsp;·&nbsp; 2026年8月22日 &nbsp;·&nbsp; 星期六</div>
+    <div style="margin-top:5px;">知识产权归属编辑部 &nbsp;·&nbsp; 转载请注明出处 &nbsp;·&nbsp; Reproduction requires attribution</div>
+  </div>
+</div>
+
+</body>
+</html>

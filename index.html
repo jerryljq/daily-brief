@@ -122,6 +122,26 @@
 
   a { color: var(--accent); }
 
+  .brief-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .brief-title a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .kind {
+    display: inline-block;
+    margin-left: 0.6rem;
+    padding: 0.05rem 0.45rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+
   @media (max-width: 480px) {
     body { font-size: 16px; }
     .wrap { padding: 2.5rem 1rem 3.5rem; }
@@ -138,7 +158,7 @@
     </header>
 
     <section class="intro">
-      <p>这里以后会展示每天的简报内容。<br>每日更新，记录当天值得留意的信息与想法。</p>
+      <p>每天早上一份热点简报，每周六一份深度周报。<br>覆盖中国、美加与全球三条线，5 分钟读完。</p>
     </section>
 
     <section>
@@ -147,14 +167,59 @@
       <!-- 以后按天新增：复制下面一个 <li> 块，改标题、日期和摘要，放到列表最上面即可 -->
       <ul class="briefs">
         <li>
-          <h3 class="brief-title">示例简报：第二期</h3>
-          <time class="brief-date" datetime="2026-08-29">2026-08-29</time>
-          <p class="brief-summary">这是一条示例摘要，用来演示列表的排版效果。正式内容发布后替换掉即可。</p>
+          <h3 class="brief-title"><a href="briefs/weekly_brief_20260829.html">深度周报 · 第1期 · 2026年8月29日</a></h3>
+          <time class="brief-date" datetime="2026-08-29">2026-08-29<span class="kind">周报</span></time>
+          <p class="brief-summary">反内卷元年：一场自上而下的&quot;止血&quot;实验；循环的钱，两年半的芯片；四十亿美元贸易额，一夜之间破裂的谈判桌。</p>
         </li>
         <li>
-          <h3 class="brief-title">示例简报：第一期</h3>
-          <time class="brief-date" datetime="2026-08-28">2026-08-28</time>
-          <p class="brief-summary">这是另一条示例摘要，标题 + 日期 + 摘要就是每条简报的基本格式。</p>
+          <h3 class="brief-title"><a href="briefs/daily_brief_20260829.html">今日简报 · 2026年8月29日</a></h3>
+          <time class="brief-date" datetime="2026-08-29">2026-08-29<span class="kind">日报</span></time>
+          <p class="brief-summary">台风&quot;沙德尔&quot;两次登陆浙江，创下年度登陆最多纪录；西藏吉隆泥石流灾害救援持续，李强赴现场指导；上半年我国数字产业收入同比增长超13%。</p>
+        </li>
+        <li>
+          <h3 class="brief-title"><a href="briefs/daily_brief_20260828.html">今日简报 · 2026年8月28日</a></h3>
+          <time class="brief-date" datetime="2026-08-28">2026-08-28<span class="kind">日报</span></time>
+          <p class="brief-summary">未来五年新兴产业布局明确：集成电路、低空经济、具身智能等成重点；西藏吉隆泥石流灾害救援新进展，专家解读堰塞湖处置难点；腾讯发布混元Hy4 preview大模型，总参数达770B。</p>
+        </li>
+        <li>
+          <h3 class="brief-title"><a href="briefs/daily_brief_20260827.html">今日简报 · 2026年8月27日</a></h3>
+          <time class="brief-date" datetime="2026-08-27">2026-08-27<span class="kind">日报</span></time>
+          <p class="brief-summary">台风&quot;紫檀&quot;两日内两度登陆，华南暴雨预警持续；安世半导体中国实现自主可控，产品降价20%-30%；中方在联合国安理会呼吁乌克兰问题达成全面持久和平协议。</p>
+        </li>
+        <li>
+          <h3 class="brief-title"><a href="briefs/daily_brief_20260826.html">今日简报 · 2026年8月26日</a></h3>
+          <time class="brief-date" datetime="2026-08-26">2026-08-26<span class="kind">日报</span></time>
+          <p class="brief-summary">俄远东天然气化工项目大火致6名中国公民遇难；内蒙古兴和县山洪灾害致5人遇难；苹果秋季发布会定档9月9日，折叠屏iPhone首秀。</p>
+        </li>
+        <li>
+          <h3 class="brief-title"><a href="briefs/daily_brief_20260825.html">今日简报 · 2026年8月25日</a></h3>
+          <time class="brief-date" datetime="2026-08-25">2026-08-25<span class="kind">日报</span></time>
+          <p class="brief-summary">台风&quot;沙德尔&quot;来袭，福建浙江启动四级应急响应；住房公积金迎27年来第三次系统性大修，9月20日起施行；第三轮中美1.5轨对话在北京举行。</p>
+        </li>
+        <li>
+          <h3 class="brief-title"><a href="briefs/daily_brief_20260824.html">今日简报 · 2026年8月24日</a></h3>
+          <time class="brief-date" datetime="2026-08-24">2026-08-24<span class="kind">日报</span></time>
+          <p class="brief-summary">中央政治局会议部署西部大开发新政策；年内首次&quot;四台风共舞&quot;，21号台风&quot;艾莎尼&quot;生成；&quot;高铁无座票与二等座同价&quot;冲上热搜。</p>
+        </li>
+        <li>
+          <h3 class="brief-title"><a href="briefs/daily_brief_20260823.html">今日简报 · 2026年8月23日</a></h3>
+          <time class="brief-date" datetime="2026-08-23">2026-08-23<span class="kind">日报</span></time>
+          <p class="brief-summary">公积金新政来了！住房公积金存贷利率决定权收归国务院；胖东来许昌生活广场店将于12月闭店，因房东涨租；《欢迎来龙餐馆》票房破15亿，跻身年度前五。</p>
+        </li>
+        <li>
+          <h3 class="brief-title"><a href="briefs/weekly_brief_issue0_20260822.html">深度周报 · 第0期 · 创刊预备号</a></h3>
+          <time class="brief-date" datetime="2026-08-22">2026-08-22<span class="kind">周报</span></time>
+          <p class="brief-summary">通缩的深渊：资产负债表衰退与中国&quot;后卖地时代&quot;的财政迷局；32场独角戏：美国AI监管碎片化与硅谷的游说豪赌；霍尔木兹绞索：后哈梅内伊时代的权力真空与中国的能源两难。</p>
+        </li>
+        <li>
+          <h3 class="brief-title"><a href="briefs/weekly_brief_20260822.html">深度周报 · 第34期 · 2026年8月22日</a></h3>
+          <time class="brief-date" datetime="2026-08-22">2026-08-22<span class="kind">周报</span></time>
+          <p class="brief-summary">通缩漩涡中的财政重构；三十二面镜子：美国AI监管的碎片化困局；霍尔木兹的船期表，由谁来掌控？。</p>
+        </li>
+        <li>
+          <h3 class="brief-title"><a href="briefs/daily_brief_20260822.html">今日简报 · 2026年8月22日</a></h3>
+          <time class="brief-date" datetime="2026-08-22">2026-08-22<span class="kind">日报</span></time>
+          <p class="brief-summary">第二届世界人形机器人运动会在京开幕；航天功勋荣誉授予：张陆获二级航天功勋奖章；过境免签&quot;朋友圈&quot;扩容至57国。</p>
         </li>
       </ul>
     </section>
