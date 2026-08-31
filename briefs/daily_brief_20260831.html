@@ -9,6 +9,7 @@
     --cn-bg:#fff1f0; --cn-accent:#e0432b;
     --us-bg:#eef4ff; --us-accent:#2f5fd6;
     --gl-bg:#eefaf1; --gl-accent:#1f9d55;
+    --ec-bg:#e6f7f5; --ec-accent:#0f9488;
     --joke-bg:#fff8e1; --joke-accent:#e8a400;
     --local-bg:#f3ecff; --local-accent:#7c4dff;
     --ink:#1c1c1e; --sub:#6b6b70; --paper:#ffffff;
@@ -45,14 +46,19 @@
   .cn .card{background:var(--cn-bg); border-left-color:var(--cn-accent);}
   .us .card{background:var(--us-bg); border-left-color:var(--us-accent);}
   .gl .card{background:var(--gl-bg); border-left-color:var(--gl-accent);}
+  .ec .card{background:var(--ec-bg); border-left-color:var(--ec-accent);}
+  .local .card{background:var(--local-bg); border-left-color:var(--local-accent);}
   .card a.title{
     font-size:15.5px; font-weight:700; color:var(--ink); text-decoration:none;
   }
   .card a.title:hover{text-decoration:underline;}
   .card p{margin:6px 0 0; font-size:14px; color:#3a3a3c;}
+  .card p.note{margin-top:6px; font-size:12.5px; color:#8a8a90; font-style:italic;}
   .cn .track-header{color:var(--cn-accent);}
   .us .track-header{color:var(--us-accent);}
   .gl .track-header{color:var(--gl-accent);}
+  .ec .track-header{color:var(--ec-accent);}
+  .local .track-header{color:var(--local-accent);}
 
   .joke-card{
     background:var(--joke-bg);
@@ -65,18 +71,6 @@
   .joke-card .label{
     font-weight:700; color:var(--joke-accent); font-size:13px; margin-bottom:6px; display:block;
   }
-
-  .local-card{
-    background:var(--local-bg);
-    border-radius:14px;
-    padding:16px 18px;
-    margin:22px 0;
-    border-left:5px solid var(--local-accent);
-  }
-  .local-card .label{
-    font-weight:700; color:var(--local-accent); font-size:13px; margin-bottom:6px; display:block;
-  }
-  .local-card p{margin:4px 0 0; font-size:14.5px;}
 
   footer{
     margin-top:30px;
@@ -126,114 +120,144 @@
   <header>
     <div class="date">2026年8月31日 · 星期一</div>
     <h1>☀️ 今日简报</h1>
-    <div class="tagline">5分钟，读懂今天的世界</div>
+    <div class="tagline">5-8分钟，读懂今天的世界</div>
   </header>
 
   <section class="track cn">
     <div class="track-header">🇨🇳 中国热点</div>
 
     <div class="card">
-      <a class="title" href="https://news.sina.com.cn/c/xl/2026-08-31/doc-iniqfqsm7138160.shtml" target="_blank" rel="noopener">习近平抵达比什凯克，将出席上合组织峰会并与吉方领导人会晤</a>
-      <p>习近平主席抵达吉尔吉斯斯坦首都比什凯克，将出席2026年上海合作组织峰会，并与吉方领导人举行会晤，深化两国经贸与人文合作。</p>
+      <a class="title" href="https://news.cctv.com/2026/08/30/ARTIuIvpDuMbl3e0JnvK5272260830.shtml" target="_blank" rel="noopener">尼泊尔冰川崩塌引发泥石流冲击西藏吉隆，16人遇难546人失联</a>
+      <p>尼泊尔境内冰川断裂引发的巨型泥石流沿河谷冲出22公里直抵吉隆口岸，约0.7平方公里区域内27处建筑被夷平；截至8月31日，救援人员仍在核心区搜寻幸存者与遗物。</p>
     </div>
 
     <div class="card">
-      <a class="title" href="https://news.cctv.com/2026/08/31/ARTIwkqwJILPYIjbUHZfJqo6260831.shtml" target="_blank" rel="noopener">西藏吉隆泥石流灾害最新通报：16人遇难，546人失联</a>
-      <p>央视新闻通报，吉隆"8·26"泥石流灾害已造成16人遇难、546人失联，堰塞湖排险与核心受灾区搜救工作仍在紧张推进。</p>
+      <a class="title" href="https://news.cctv.com/2026/08/31/ARTIVXAkxD12jFgdVjKMq2so260831.shtml" target="_blank" rel="noopener">习近平出席上合组织峰会，赴吉尔吉斯斯坦、埃及进行国事访问</a>
+      <p>习近平8月30日至9月3日出席在比什凯克举行的2026年上合组织峰会，并对吉尔吉斯斯坦、埃及进行国事访问，双方签署睦邻友好合作条约等20余份合作文件。</p>
     </div>
 
     <div class="card">
-      <a class="title" href="https://news.sina.com.cn/c/2026-08-31/doc-iniqexut7373707.shtml" target="_blank" rel="noopener">尼泊尔洪灾致近百名中国公民失联，外交部持续核实情况</a>
-      <p>尼泊尔与中国边境地区洪灾造成人员伤亡持续攀升，中国外交部通报称近百名中国公民在尼方一侧失联，相关部门正全力核查并协调救援。</p>
+      <a class="title" href="https://mil.news.sina.com.cn/2026-08-31/doc-iniqfeap4610969.shtml" target="_blank" rel="noopener">中国羽毛球协会副主席夏煊泽、原副主席王伟同日被查</a>
+      <p>两人因涉嫌严重违纪违法接受审查调查，此前羽协主席张军已于今年4月落马，体育系统反腐持续发酵。</p>
     </div>
 
     <div class="card">
-      <a class="title" href="https://news.qq.com/rain/a/20260831A06HLT00" target="_blank" rel="noopener">AI造富效应显著，全球亿万富翁人数创新高达3795人，总财富15.1万亿美元</a>
-      <p>最新报告显示，受人工智能产业带动，全球亿万富翁数量刷新纪录达到3795人，合计财富达15.1万亿美元，科技与AI相关企业家占比明显上升。</p>
+      <a class="title" href="https://news.qq.com/rain/a/20260831A0CWL500" target="_blank" rel="noopener">39岁梅西宣布退出阿根廷国家队</a>
+      <p>梅西结束21年国脚生涯，此前一届世界杯决赛成为他的国家队谢幕战，球迷反响热烈。</p>
     </div>
 
     <div class="card">
-      <a class="title" href="https://www.163.com/dy/article/L5K6P01L0514R9KQ.html" target="_blank" rel="noopener">2比3不敌泰国女排，中国女排无缘奥运直通资格</a>
-      <p>中国女排在关键一役中以2比3不敌泰国队，未能拿到奥运直通名额，球队后续将尝试通过其他途径争取参赛资格。</p>
+      <a class="title" href="https://news.qq.com/rain/a/20260831A06WWV00" target="_blank" rel="noopener">台风路径大拐弯或复活，福建将迎强降雨</a>
+      <p>气象部门预计台风路径出现明显转向，福建等东南沿海地区需防范短时强降雨与地质灾害风险。</p>
     </div>
   </section>
 
   <div class="joke-card">
     <span class="label">😄 冷笑话一枚<span class="fic-tag">虚构</span></span>
-    面包师为什么总是很冷静？<br>因为不管发生什么事，他都能"淡定地揉面"。
+    理发师为什么从不担心失业？<br>因为他们的生意，总能"从头再来"。
   </div>
 
   <section class="track us">
     <div class="track-header">🇺🇸🇨🇦 美加热点</div>
 
     <div class="card">
-      <a class="title" href="https://www.cbc.ca/news/canada/google-updates-maps-lake-ontario-9.7325922" target="_blank" rel="noopener">谷歌地图在美区将"安大略湖"标注为"美利坚湖"，引发加拿大网民不满</a>
-      <p>谷歌地图更新后，美国境内用户看到安大略湖被标注为"Lake America"，这一改动被视为美加贸易与外交摩擦的又一注脚，加拿大网民反应强烈。</p>
+      <a class="title" href="https://www.cnbc.com/2026/08/31/g20-finance-meeting-live-updates.html" target="_blank" rel="noopener">G20财长会议在美国北卡召开，关税与对伊制裁成焦点</a>
+      <p>财长贝森特与美联储理事沃什在阿什维尔与会并发表讲话，本次会议首次邀请高盛、摩根大通等企业CEO参加，美国关税政策及对伊朗制裁是核心议题。</p>
     </div>
 
     <div class="card">
-      <a class="title" href="https://www.cbc.ca/news/world/trump-venezuela-oil-deal-explainer-9.7325621" target="_blank" rel="noopener">特朗普宣布委内瑞拉石油协议，分析称或影响加拿大油气产业</a>
-      <p>特朗普政府达成的委内瑞拉石油协议细节逐步披露，分析人士认为这可能改变全球原油供应格局，并对加拿大油气出口产生连带影响。</p>
+      <a class="title" href="https://www.cnn.com/2026/08/27/politics/judge-pauses-usps-plan-restrict-mail-voting" target="_blank" rel="noopener">联邦法官暂停美国邮政推行特朗普邮寄投票新限制</a>
+      <p>波士顿一名联邦法官对USPS要求各州提前提交选民名单、使用专属条码信封的新规发出两周临时限制令，此前多个民主党州及维权组织提起诉讼。</p>
     </div>
 
     <div class="card">
-      <a class="title" href="https://www.cnbc.com/2026/08/31/g20-finance-meeting-live-updates.html" target="_blank" rel="noopener">G20财长会议开幕，贝森特、沃什以"增长优先"基调发表讲话</a>
-      <p>二十国集团财长会议正式开幕，美国财政部长贝森特与美联储候任官员沃什在开场发言中强调以增长为优先目标，市场关注后续政策表态。</p>
-    </div>
-
-    <div class="card">
-      <a class="title" href="https://www.cnbc.com/2026/08/31/5-things-to-know-before-the-stock-market-opens.html" target="_blank" rel="noopener">周一开盘前必读：五件事影响今日美股走势</a>
-      <p>CNBC盘前综述指出，投资者本周一将持续关注最新经济数据、企业财报及地缘局势进展，这些因素预计将左右美股开盘后的表现。</p>
-    </div>
-
-    <div class="card">
-      <a class="title" href="https://www.cbc.ca/news/world/grand-canyon-flash-flood-9.7326093" target="_blank" rel="noopener">大峡谷国家公园突发山洪，致1人死亡，多人失踪或下落不明</a>
-      <p>美国大峡谷国家公园管理处证实，一场突发山洪已造成至少1人死亡，另有多人失踪或下落不明，公园方面正协同展开搜救。</p>
+      <a class="title" href="https://www.cnn.com/2026/08/29/us/gravel-teens-openai-cec" target="_blank" rel="noopener">曾批判硅谷权力过度集中的"格拉维尔青年团"如今加盟OpenAI</a>
+      <p>七年前曾公开批评企业权力集中与贫富分化的这群年轻人，如今加入估值超8500亿美元的OpenAI，折射出硅谷对AI社会影响话语权的转变。</p>
     </div>
   </section>
-
-  <div class="local-card">
-    <span class="label">🍁 多伦多/加拿大趣闻<span class="fic-tag">虚构 · 非真实新闻</span></span>
-    <p>有安省小镇居民"投诉"称，本地一只松鼠最近迷上了在便利店门口的自动感应门前反复横跳，只为体验门"自动打开又关上"的乐趣，路过的顾客都得等它"玩腻了"才能进店，被网友戏称为多伦多最敬业的"看门鼠"。</p>
-  </div>
 
   <section class="track gl">
     <div class="track-header">🌍 全球热点</div>
 
     <div class="card">
-      <a class="title" href="https://www.aljazeera.com/news/2026/8/31/uae-intercepts-drone-after-us-and-iran-exchange-attacks" target="_blank" rel="noopener">美伊互相攻击后，阿联酋拦截一架来袭无人机</a>
-      <p>阿联酋方面证实拦截了一架源自伊朗方向的无人机，并否认此前有关其阿勒门哈德空军基地遭袭的说法，地区局势持续紧张。</p>
+      <a class="title" href="https://www.cnbc.com/2026/08/30/rescuers-race-to-find-thousands-after-nepal-china-glacier-collapse.html" target="_blank" rel="noopener">尼泊尔-中国边境冰川洪灾遇难近800人，逾3000人失踪</a>
+      <p>8月26日冰川崩塌引发的泥石流洪水席卷尼泊尔与西藏边境水电站区域，红十字会估计逾9万人受灾，救援人员正钻入水电站隧道搜救被困工人。</p>
     </div>
 
     <div class="card">
-      <a class="title" href="https://www.aljazeera.com/news/2026/8/31/nepal-races-to-rescue-hydropower-workers-as-flood-death-toll-reaches-903" target="_blank" rel="noopener">尼泊尔洪灾遇难人数升至903人，救援人员争分夺秒营救被困水电站工人</a>
-      <p>尼泊尔洪灾遇难人数已上升至903人，救援队伍正全力营救被困于水电站隧道内的工人，当局已发布新一轮洪水预警。</p>
+      <a class="title" href="https://www.aljazeera.com/news/2026/8/30/us-strikes-irans-lark-island-in-first-attack-in-weeks" target="_blank" rel="noopener">美军空袭伊朗拉拉克岛，系数周来首次对伊动武</a>
+      <p>美军8月30日袭击伊朗南部拉拉克岛的火箭发射装置，德黑兰誓言报复，外界担忧地区冲突再度升级并推高国际油价。</p>
     </div>
 
     <div class="card">
-      <a class="title" href="https://www.aljazeera.com/news/2026/8/31/niger-mutiny-puts-russias-expanding-role-in-the-sahel-to-the-test" target="_blank" rel="noopener">尼日尔发生兵变，俄罗斯在萨赫勒地区不断扩大的影响力受到考验</a>
-      <p>尼日尔近期一场未遂兵变暴露出当地军方内部紧张关系，也让外界重新审视俄罗斯在萨赫勒地区安全事务中日益扩大的角色。</p>
+      <a class="title" href="https://www.cbc.ca/news/world/iceland-votes-against-eu-accession-talks-9.7325797" target="_blank" rel="noopener">冰岛公投否决重启欧盟入盟谈判</a>
+      <p>冰岛民众以52.5%的反对票否决政府重启欧盟入盟谈判的提案，担忧渔业水域主权受损，冰岛将暂不推进入盟进程。</p>
     </div>
 
     <div class="card">
-      <a class="title" href="https://www.cbc.ca/news/world/switzerland-rave-shooting-aarau-9.7326329" target="_blank" rel="noopener">瑞士阿劳一场锐舞派对发生枪击致人死亡，警方已拘捕嫌疑人</a>
-      <p>瑞士阿劳市一场锐舞派对上发生枪击事件并造成人员死亡，当地警方已迅速拘捕一名嫌疑人，案件调查正在进行中。</p>
-    </div>
-
-    <div class="card">
-      <a class="title" href="https://www.cbc.ca/news/world/ferry-capsize-cyprus-9.7325792" target="_blank" rel="noopener">一艘载有近270名乘客船员的渡轮在北塞浦路斯附近倾覆，至少8人遇难</a>
-      <p>一艘载有近270名乘客和船员的渡轮在北塞浦路斯附近海域倾覆，目前已确认至少8人遇难，搜救工作仍在持续。</p>
+      <a class="title" href="https://www.cbc.ca/news/world/ferry-capsize-cyprus-9.7325792" target="_blank" rel="noopener">北塞浦路斯附近渡轮倾覆，至少8人死亡</a>
+      <p>一艘载有近270名乘客和船员的渡轮8月30日在北塞浦路斯附近海域倾覆，搜救工作仍在进行。</p>
     </div>
   </section>
 
   <div class="joke-card">
     <span class="label">😄 再来一个笑话<span class="fic-tag">虚构</span></span>
-    气象员为什么总能第一时间发现感情问题？<br>因为他最擅长的就是判断"阴晴不定"。
+    为什么老股民看盘也很淡定？<br>因为他们早把K线看成了"过山车年卡"，天天坐、不晕。
   </div>
 
+  <section class="track ec">
+    <div class="track-header">💹 经济/市场</div>
+
+    <div class="card">
+      <a class="title" href="https://www.cnbc.com/2026/08/30/stock-market-today-live-updates.html" target="_blank" rel="noopener">美伊冲突升级致期货走低，华尔街8月仍将收官上涨</a>
+      <p>美国对伊朗发动打击的消息拖累8月最后一个交易日的美股期货，能源板块受益油价走高领涨；10年期美债收益率维持在4.7%附近高位。</p>
+      <p class="note">简要分析：若中东局势持续升级，短期波动和避险资产需求可能上升，能源与国防板块或相对受关注；不构成投资建议。</p>
+    </div>
+
+    <div class="card">
+      <a class="title" href="https://www.cnbc.com/2026/08/31/5-things-to-know-before-the-stock-market-opens.html" target="_blank" rel="noopener">库克卸任苹果CEO最后一天，纳指8月涨约4%</a>
+      <p>CNBC盘前提示显示，纳指、标普500在8月分别上涨约4%和3%，道指涨约2%；今日也是蒂姆·库克卸任苹果CEO的最后一天，本周还将迎来戴尔、博通财报及周五非农就业数据。</p>
+      <p class="note">简要分析：管理层交接叠加财报与就业数据密集期，短期内科技股波动可能放大；不构成投资建议。</p>
+    </div>
+
+    <div class="card">
+      <a class="title" href="https://www.cnbc.com/2026/08/25/canada-trump-tariffs-trade-carney-leblanc.html" target="_blank" rel="noopener">加拿大对约200亿美元美国商品实施对等报复性关税</a>
+      <p>因美加贸易谈判破裂，加拿大对乳制品、海鲜、家电等美国商品征收15%-50%报复性关税；分析机构预计此举可能拖累加拿大GDP约2个百分点，加元汇率或持续承压。</p>
+    </div>
+
+    <div class="card">
+      <a class="title" href="https://finance.sina.com.cn/headline/2026-08-30/doc-iniqazcm8194465.shtml" target="_blank" rel="noopener">中国：房贷期限延至40年，证监会支持房企再融资并购</a>
+      <p>国内将个人住房贷款最长期限由30年延至40年，证监会同时支持上市房企通过再融资、发行股份及可转债收购涉房资产，意在稳定房地产融资环境。</p>
+    </div>
+  </section>
+
+  <section class="track local">
+    <div class="track-header">🐿️ 本地趣闻<span class="fic-tag">虚构 · 非真实新闻</span></div>
+
+    <div class="card">
+      <a class="title" href="https://www.cbc.ca/news/canada/british-columbia/floating-island-williston-lake-bc-9.7324586" target="_blank" rel="noopener">温哥华：BC水库现身"神秘小岛"，出现又消失连水电公司都懵了</a>
+      <p>一座来历不明的小岛在BC省威利斯顿水库（距WAC班尼特水坝约100公里处）被船员发现，随后又神秘消失；BC Hydro表示正持续监测它是否会再次出现。</p>
+    </div>
+
+    <div class="card">
+      <a class="title" href="https://www.cbc.ca/news/canada/google-updates-maps-lake-ontario-9.7325922" target="_blank" rel="noopener">多伦多：Google地图把安大略湖改名"美国湖"，市长怒了</a>
+      <p>因特朗普签署行政令，Google地图美国用户端将安大略湖标注为"Lake America"，连安省政府、GO Transit等加拿大官网一度也误显示该名称；多伦多市长奥利维娅·周公开表达不满，网友调侃这像《周六夜现场》的段子。</p>
+    </div>
+
+    <div class="card">
+      <a class="title" href="https://www.fox13seattle.com/news/base-jumpers-space-needle" target="_blank" rel="noopener">西雅图：两名男子买票混入太空针塔，翻越护栏跳伞逃逸</a>
+      <p>两名男子买票进入太空针塔观景台后翻越玻璃护栏，从605英尺高空跳伞降落，全程被游客拍下传上网络；警方仍在通缉两名身份不明的嫌疑人。</p>
+    </div>
+
+    <div class="card">
+      <a class="title" href="https://news.qq.com/rain/a/20260807A0AHWC00" target="_blank" rel="noopener">中国大陆：上海顾客大盘鸡里吃出土豆报警"维权"，老板免单后他把整盘吃完</a>
+      <p>顾客认为68元的大盘鸡不该配土豆、比店内38元"土豆烧鸡块"还贵，报警指控"欺诈"；民警到场说明并不构成法定欺诈，老板主动免单，顾客接受调解后仍把整盘菜吃光。</p>
+    </div>
+  </section>
+
   <footer>
-    <p class="quote">"创新决定了谁是领导者，谁是跟随者。"</p>
-    <p class="quote-author">—— 史蒂夫·乔布斯（Steve Jobs）</p>
+    <p class="quote">"在别人贪婪时恐惧，在别人恐惧时贪婪。"</p>
+    <p class="quote-author">—— 沃伦·巴菲特（Warren Buffett）</p>
     <div class="sign">今日简报 · 祝你有美好的一天 🌤️</div>
   </footer>
 
