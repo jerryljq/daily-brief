@@ -1,0 +1,10 @@
+{
+  "_comment": "星期几 → 特刊类型。类型的写作要求在 specials/<kind>.md。改排期只动这个文件。",
+  "mon": "week_ahead",
+  "tue": "venture",
+  "wed": "deep_dive",
+  "thu": "local_events",
+  "fri": "venture",
+  "sat": "deep_dive",
+  "sun": "week_review"
+}
