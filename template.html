@@ -9,6 +9,7 @@
     --paper:#FBF9F4; --paper-edge:#F1EEE5; --ink:#20201D; --ink-soft:#55534C;
     --ink-muted:#8C8A80; --rule:#D8D4C8; --rule-hair:#E8E5DB; --rule-heavy:#20201D;
     --link:#1B4F8A; --mark:#FBF0C4; --red:#A81C16;
+    --hol-cn:#8F6200; --hol-ca:#B32820; --hol-us:#17539B;
     --cn:#9B2C24; --us:#1B4F8A; --gl:#1F6B54; --ec:#8A5A12; --lo:#8C3A63; --jk:#4A4590;
     --shadow:0 1px 2px rgba(28,26,20,.05), 0 12px 32px -12px rgba(28,26,20,.18);
     /* 报头：魏碑打头，退到隶书类，再退到宋体。Android 基本没有书法体，兜到 serif */
@@ -24,6 +25,7 @@
     --paper:#191917; --paper-edge:#121211; --ink:#E9E6DD; --ink-soft:#B0ADA3;
     --ink-muted:#7C7A72; --rule:#37362F; --rule-hair:#2A2925; --rule-heavy:#6E6B61;
     --link:#7FB3E8; --mark:#3D3617; --red:#E4695C;
+      --hol-cn:#E0B341; --hol-ca:#E8887C; --hol-us:#7FB3E8;
     --cn:#E07268; --us:#7FB3E8; --gl:#5FC49F; --ec:#D9A340; --lo:#DE8AB4; --jk:#A29CE8;
     --shadow:0 0 0 1px rgba(255,255,255,.04);
   }
@@ -32,6 +34,7 @@
       --paper:#191917; --paper-edge:#121211; --ink:#E9E6DD; --ink-soft:#B0ADA3;
       --ink-muted:#7C7A72; --rule:#37362F; --rule-hair:#2A2925; --rule-heavy:#6E6B61;
       --link:#7FB3E8; --mark:#3D3617; --red:#E4695C;
+      --hol-cn:#E0B341; --hol-ca:#E8887C; --hol-us:#7FB3E8;
       --cn:#E07268; --us:#7FB3E8; --gl:#5FC49F; --ec:#D9A340; --lo:#DE8AB4; --jk:#A29CE8;
       --shadow:0 0 0 1px rgba(255,255,255,.04);
     }
@@ -81,10 +84,15 @@
   .hol{display:flex; align-items:baseline; gap:6px; padding:7px 15px;
     border-right:1px solid var(--rule-hair);}
   .hol:last-child{border-right:none;}
-  .hol b{color:var(--ink-soft); font-weight:600; letter-spacing:.1em;}
+  .hol-cn{--hol:var(--hol-cn);}
+  .hol-ca{--hol:var(--hol-ca);}
+  .hol-us{--hol:var(--hol-us);}
+  .hol b{color:var(--hol,var(--ink-soft)); font-weight:600; letter-spacing:.1em;}
+  .hol-name{color:var(--hol,inherit);}
   .hol i{font-style:normal; font-variant-numeric:tabular-nums; color:var(--ink-soft);}
   .hol em{font-style:normal; opacity:.72;}
-  .hol-scope{border:1px solid var(--rule); padding:0 4px; font-size:9px; letter-spacing:.04em;}
+  .hol-scope{border:1px solid currentColor; color:var(--hol,var(--ink-muted)); opacity:.72;
+    padding:0 4px; font-size:9px; letter-spacing:.04em;}
 
   /* ── 索引条 ── */
   .indexbar{display:flex; flex-wrap:wrap; align-items:center; gap:2px;
@@ -241,7 +249,7 @@
       <span class="mast-rule"></span>
     </div>
     <p class="mast-en">WORLD NEWS DIGEST</p>
-    <p class="subtitle">天下事 一笑之</p>
+    <p class="subtitle">环球要闻 · 每日一览</p>
     <div class="rule-double"></div>
   </header>
 
@@ -396,7 +404,8 @@ __BRIEF_DATA_JSON__
       var when = h.days === 0 ? '就是今天'
                : h.days === 1 ? '明天'
                : '还有 ' + h.days + ' 天';
-      return '<span class="hol"><b>' + esc(h.label) + '</b>' + esc(h.name) +
+      return '<span class="hol hol-' + esc(h.region || '') + '"><b>' + esc(h.label) + '</b>' +
+        '<span class="hol-name">' + esc(h.name) + '</span>' +
         (h.scope ? '<span class="hol-scope">' + esc(h.scope) + '</span>' : '') +
         '<i>' + esc(md) + '</i><em>' + when + '</em></span>';
     }).join('');
