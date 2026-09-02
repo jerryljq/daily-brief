@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>嘻嘻哈哈报</title>
+<style>
+  :root{
+    --bg:#FCFCFB; --surface:#FFFFFF; --surface-1:#F4F3EF;
+    --ink:#2E2C27; --ink-soft:#6B6A63; --ink-muted:#B4B3A8;
+    --border:#E4E3DC; --border-strong:#C9C7BD; --border-stronger:#8A8880;
+    --link:#185FA5;
+    --blue-bg:#E6F1FB; --blue-tx:#0C447C;
+    --coral-bg:#FAECE7; --coral-tx:#993C1D;
+    --teal-bg:#E1F5EE; --teal-tx:#085041;
+    --amber-bg:#FAEEDA; --amber-tx:#854F0B;
+    --pink-bg:#FBEAF0; --pink-tx:#993556;
+    --purple-bg:#EEEDFE; --purple-tx:#534AB7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#1C1B18; --surface:#242320; --surface-1:#2B2A26;
+      --ink:#EDEBE4; --ink-soft:#B4B2A9; --ink-muted:#7A7871;
+      --border:#3A3934; --border-strong:#4A4944; --border-stronger:#65635C;
+      --link:#7DB2E8;
+      --blue-bg:#132E45; --blue-tx:#85B7EB;
+      --coral-bg:#3A2216; --coral-tx:#F0997B;
+      --teal-bg:#0F2B24; --teal-tx:#5DCAA5;
+      --amber-bg:#332406; --amber-tx:#EF9F27;
+      --pink-bg:#33141F; --pink-tx:#ED93B1;
+      --purple-bg:#211D3D; --purple-tx:#AFA9EC;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+    display:flex; justify-content:center; padding:24px 12px;
+  }
+  .paper{width:100%; max-width:720px; background:var(--surface); border:1px solid var(--border-strong);}
+
+  /* 报头 */
+  .masthead{padding:18px 20px 12px; border-bottom:4px double var(--border-stronger); font-family:Georgia,"Songti SC","SimSun",serif;}
+  .meta-row{display:flex; justify-content:space-between; font-size:10.5px; color:var(--ink-muted); font-family:-apple-system,sans-serif;}
+  .title-cn{text-align:center; margin:8px 0 4px; font-size:38px; font-weight:600; letter-spacing:5px;}
+  .subtitle{text-align:center; font-size:11px; color:var(--ink-soft); letter-spacing:1.5px;}
+
+  /* 三栏 */
+  .cols{display:grid; grid-template-columns:1fr 1fr 1fr; border-bottom:2px solid var(--border-stronger);}
+  .col{padding:12px 14px; border-right:1px solid var(--border); border-bottom:1px solid var(--border);}
+  .col:last-child{border-right:none;}
+  .sechead{font-size:15px; font-weight:600; border-bottom:2px solid currentColor; padding-bottom:6px; margin-bottom:4px;}
+
+  /* 条目（可展开） */
+  details.item{border-bottom:1px solid var(--border);}
+  details.item:last-child{border-bottom:none;}
+  details.item summary{list-style:none; cursor:pointer; padding:8px 0; font-size:12.5px; line-height:1.6; display:flex; justify-content:space-between; gap:8px; align-items:flex-start;}
+  details.item summary::-webkit-details-marker{display:none;}
+  details.item summary .chev{flex-shrink:0; font-size:11px; color:var(--ink-muted); transition:transform .15s ease; margin-top:3px;}
+  details.item[open] summary .chev{transform:rotate(180deg);}
+  details.item .body{font-size:12px; color:var(--ink-soft); line-height:1.8; padding:0 0 10px 0;}
+  details.item .body a{color:var(--link);}
+  .tag-fiction{display:inline-block; font-size:10px; border:1px solid var(--border-strong); color:var(--ink-muted); padding:0px 5px; border-radius:2px; margin-left:6px; vertical-align:1px;}
+
+  /* 经济板块通栏 */
+  .economy{padding:12px 20px; border-bottom:1px solid var(--border);}
+
+  /* 特刊 */
+  details.special{border-bottom:1px solid var(--border);}
+  details.special > summary{padding:9px 20px; background:var(--surface-1); display:flex; align-items:center; gap:8px; font-size:11.5px; color:var(--ink-soft); cursor:pointer; list-style:none;}
+  details.special > summary::-webkit-details-marker{display:none;}
+  details.special .badge{font-size:10.5px; border:1px solid var(--border-strong); padding:1px 7px; border-radius:2px; color:var(--ink-muted); flex-shrink:0;}
+  details.special .chev{margin-left:auto; font-size:12px; color:var(--ink-muted); transition:transform .15s ease;}
+  details.special[open] .chev{transform:rotate(180deg);}
+  .special-body{padding:10px 20px 16px; font-size:13px; color:var(--ink); line-height:1.9;}
+  .special-body h4{font-size:13.5px; margin:14px 0 4px;}
+  .special-body h4:first-child{margin-top:0;}
+
+  /* 趣闻+笑话 */
+  .jokebox{display:grid; grid-template-columns:1.3fr 1fr; border-bottom:1px solid var(--border);}
+  .jokebox .col{border-bottom:none;}
+  .jokebox .col:first-child{border-right:1px solid var(--border);}
+  .subhead{font-size:13.5px; font-weight:600; margin-bottom:4px;}
+
+  .quote{padding:14px 20px; text-align:center; font-family:Georgia,"Songti SC","SimSun",serif;}
+  .quote p{margin:0; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .c-blue{background:var(--blue-bg); color:var(--blue-tx);}
+  .c-coral{background:var(--coral-bg); color:var(--coral-tx);}
+  .c-teal{background:var(--teal-bg); color:var(--teal-tx);}
+  .c-amber{background:var(--amber-bg); color:var(--amber-tx);}
+  .c-pink{background:var(--pink-bg); color:var(--pink-tx);}
+  .c-purple{background:var(--purple-bg); color:var(--purple-tx);}
+
+  @media (max-width:640px){
+    .cols{grid-template-columns:1fr;}
+    .jokebox{grid-template-columns:1fr;}
+    .jokebox .col:first-child{border-right:none; border-bottom:1px solid var(--border);}
+    .title-cn{font-size:30px !important; letter-spacing:3px !important;}
+    .meta-row{flex-direction:column; gap:2px; text-align:center;}
+  }
+  .empty-note{padding:16px 20px; font-size:12.5px; color:var(--ink-muted); text-align:center;}
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <div class="meta-row">
+      <span>总第 <span id="issue-no">--</span> 期</span>
+      <span id="date-line">--</span>
+      <span>今日<span id="ban-count">--</span>版</span>
+    </div>
+    <div class="title-cn">嘻嘻哈哈报</div>
+    <div class="subtitle">天下事 一笑之 · 温哥华 · 多伦多 · 西雅图 · 中国大陆</div>
+  </div>
+
+  <div class="cols" id="cols-section"></div>
+
+  <div class="economy c-amber" id="economy-section" style="display:none;"></div>
+
+  <details class="special" id="special-section" style="display:none;">
+    <summary>
+      <span class="badge">特刊</span>
+      <span id="special-title-preview"></span>
+      <i class="chev">▾</i>
+    </summary>
+    <div class="special-body" id="special-body"></div>
+  </details>
+
+  <div class="jokebox">
+    <div class="col c-pink">
+      <div class="subhead">🐿️ 本地趣闻</div>
+      <div id="local-fun-section"></div>
+    </div>
+    <div class="col c-purple">
+      <div class="subhead">😂 冷笑话</div>
+      <div id="jokes-section"></div>
+    </div>
+  </div>
+
+  <div class="quote">
+    <p id="quote-line">""</p>
+  </div>
+
+</div>
+
+<script id="brief-data" type="application/json">
+__BRIEF_DATA_JSON__
+</script>
+<script>
+(function(){
+  var raw = document.getElementById('brief-data').textContent.trim();
+  var data;
+  try { data = JSON.parse(raw); } catch(e) { document.querySelector('.paper').innerHTML = '<p style="padding:20px;">数据加载失败</p>'; return; }
+
+  function esc(s){
+    var d = document.createElement('div');
+    d.textContent = (s === undefined || s === null) ? '' : String(s);
+    return d.innerHTML;
+  }
+
+  function renderItems(list, opts){
+    opts = opts || {};
+    if(!list || !list.length) return '';
+    return list.map(function(it, i){
+      var openAttr = (opts.firstOpen && i === 0) ? ' open' : '';
+      var titleLink = it.url
+        ? '<a href="' + esc(it.url) + '" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">' + esc(it.title) + '</a>'
+        : esc(it.title);
+      var fictionTag = it.fictional ? '<span class="tag-fiction">虚构</span>' : '';
+      return '<details class="item"' + openAttr + '>' +
+        '<summary><span>' + titleLink + fictionTag + '</span><i class="chev">▾</i></summary>' +
+        '<div class="body">' + esc(it.summary || '') + (it.url ? ' <a href="' + esc(it.url) + '" target="_blank" rel="noopener">原文</a>' : '') + '</div>' +
+      '</details>';
+    }).join('');
+  }
+
+  // 日期行
+  document.getElementById('date-line').textContent =
+    (data.date || '') + (data.weekday ? ' · ' + data.weekday : '') + (data.lunar ? ' · ' + data.lunar : '');
+  document.getElementById('issue-no').textContent = data.issue_no != null ? data.issue_no : '--';
+
+  // 三栏
+  var sec = data.sections || {};
+  var colsHtml = '';
+  var colDefs = [
+    {key:'china', label:'中国热点', cls:'c-blue'},
+    {key:'us_ca', label:'美加热点', cls:'c-coral'},
+    {key:'global', label:'全球热点', cls:'c-teal'}
+  ];
+  var banCount = 0;
+  colDefs.forEach(function(c){
+    var items = sec[c.key] || [];
+    if(items.length) banCount++;
+    colsHtml += '<div class="col ' + c.cls + '">' +
+      '<div class="sechead">' + c.label + '</div>' +
+      (items.length ? renderItems(items, {firstOpen:true}) : '<div style="font-size:12px;color:var(--ink-muted);">今日暂无</div>') +
+      '</div>';
+  });
+  document.getElementById('cols-section').innerHTML = colsHtml;
+
+  // 经济板块
+  var econ = sec.economy || [];
+  if(econ.length){
+    banCount++;
+    document.getElementById('economy-section').style.display = '';
+    document.getElementById('economy-section').innerHTML =
+      '<div class="sechead" style="border-bottom:none;margin-bottom:2px;">💹 经济 · 市场</div>' +
+      renderItems(econ, {firstOpen:true});
+  }
+
+  // 特刊
+  if(data.special && data.special.html){
+    banCount++;
+    var specEl = document.getElementById('special-section');
+    specEl.style.display = '';
+    document.getElementById('special-title-preview').textContent = data.special.title || '今日特刊';
+    document.getElementById('special-body').innerHTML = data.special.html;
+  }
+
+  // 本地趣闻 / 笑话
+  var fun = sec.local_fun || [];
+  var jokes = sec.jokes || [];
+  if(fun.length) banCount++;
+  if(jokes.length) banCount++;
+  document.getElementById('local-fun-section').innerHTML = fun.length
+    ? renderItems(fun, {firstOpen:true})
+    : '<div style="font-size:12px;color:var(--ink-muted);">今日暂无</div>';
+  document.getElementById('jokes-section').innerHTML = jokes.length
+    ? renderItems(jokes, {firstOpen:false})
+    : '<div style="font-size:12px;color:var(--ink-muted);">今日暂无</div>';
+
+  document.getElementById('ban-count').textContent = banCount || 1;
+
+  // 语录
+  document.getElementById('quote-line').textContent = data.quote ? ('"' + data.quote + '"') : '';
+})();
+</script>
+</body>
+</html>
