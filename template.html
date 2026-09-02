@@ -141,6 +141,7 @@
   .special-body h4{font-family:var(--serif); font-size:14px; margin:18px 0 6px;
     padding-bottom:4px; border-bottom:1px solid var(--rule-hair);}
   .special-body h4:first-child{margin-top:0;}
+  .pending-note{margin:0; color:var(--ink-muted);}
   .special-body p{margin:0 0 10px;}
   .special-body a{color:var(--link);}
 
@@ -208,8 +209,8 @@
     <button class="jump" data-target="sec-china" hidden>中国</button>
     <button class="jump" data-target="sec-us_ca" hidden>美加</button>
     <button class="jump" data-target="sec-global" hidden>全球</button>
-    <button class="jump" data-target="sec-economy" hidden>经济</button>
-    <button class="jump" data-target="sec-special" hidden>特刊</button>
+    <button class="jump" data-target="economy-section" hidden>经济</button>
+    <button class="jump" data-target="special-section" hidden>特刊</button>
     <button class="jump" data-target="sec-local" hidden>趣闻</button>
     <button class="jump" data-target="sec-jokes" hidden>笑话</button>
     <span class="tools">
@@ -224,7 +225,7 @@
     <section class="band" id="economy-section" hidden></section>
     <details class="special" id="special-section" hidden>
       <summary>
-        <span class="kicker">特刊</span>
+        <span class="kicker" id="special-kicker">特刊</span>
         <span class="special-title" id="special-title"></span>
         <span class="chev"></span>
       </summary>
@@ -312,13 +313,20 @@ __BRIEF_DATA_JSON__
       '<div class="items">' + list(econ, {firstOpen:true}) + '</div>';
   }
 
-  // 特刊
-  if(data.special && data.special.html){
-    ban++;
+  // 特刊：status 为 "pending" 时只挂占位，正文等特刊任务跑完由 merge_special.py 补进来
+  var spd = data.special;
+  var spPending = !!(spd && spd.status === 'pending');
+  var spReady   = !!(spd && spd.html && !spPending);
+  if(spPending || spReady){
     var sp = document.getElementById('special-section');
-    sp.hidden = false; sp.open = true;
-    document.getElementById('special-title').textContent = data.special.title || '今日特刊';
-    document.getElementById('special-body').innerHTML = data.special.html;
+    sp.hidden = false;
+    sp.open = spReady;                    // 占位没正文可读，默认收起
+    document.getElementById('special-kicker').textContent = spPending ? '筹备中' : '特刊';
+    document.getElementById('special-title').textContent = spd.title || '今日特刊';
+    document.getElementById('special-body').innerHTML = spReady
+      ? spd.html
+      : '<p class="pending-note">本期特刊仍在筹备中，稍后会更新到本页。</p>';
+    if(spReady) ban++;                    // 占位不计入版数
   }
 
   // 趣闻 / 笑话
@@ -337,8 +345,8 @@ __BRIEF_DATA_JSON__
 
   // 索引：只显示真有内容的板块
   [['sec-china',(sec.china||[]).length],['sec-us_ca',(sec.us_ca||[]).length],
-   ['sec-global',(sec.global||[]).length],['sec-economy',econ.length],
-   ['sec-special',(data.special&&data.special.html)?1:0],
+   ['sec-global',(sec.global||[]).length],['economy-section',econ.length],
+   ['special-section',(spPending||spReady)?1:0],
    ['sec-local',fun.length],['sec-jokes',jokes.length]].forEach(function(p){
     var btn = document.querySelector('.jump[data-target="' + p[0] + '"]');
     if(btn && p[1]) btn.hidden = false;
