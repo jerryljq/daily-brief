@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>嘻嘻哈哈报</title>
+<title>世界新闻摘要</title>
 <style>
   :root{
     --paper:#FBF9F4; --paper-edge:#F1EEE5; --ink:#20201D; --ink-soft:#55534C;
     --ink-muted:#8C8A80; --rule:#D8D4C8; --rule-hair:#E8E5DB; --rule-heavy:#20201D;
-    --link:#1B4F8A; --mark:#FBF0C4;
+    --link:#1B4F8A; --mark:#FBF0C4; --red:#A81C16;
     --cn:#9B2C24; --us:#1B4F8A; --gl:#1F6B54; --ec:#8A5A12; --lo:#8C3A63; --jk:#4A4590;
     --shadow:0 1px 2px rgba(28,26,20,.05), 0 12px 32px -12px rgba(28,26,20,.18);
     /* 报头：魏碑打头，退到隶书类，再退到宋体。Android 基本没有书法体，兜到 serif */
@@ -23,7 +23,7 @@
   :root[data-theme="night"]{
     --paper:#191917; --paper-edge:#121211; --ink:#E9E6DD; --ink-soft:#B0ADA3;
     --ink-muted:#7C7A72; --rule:#37362F; --rule-hair:#2A2925; --rule-heavy:#6E6B61;
-    --link:#7FB3E8; --mark:#3D3617;
+    --link:#7FB3E8; --mark:#3D3617; --red:#E4695C;
     --cn:#E07268; --us:#7FB3E8; --gl:#5FC49F; --ec:#D9A340; --lo:#DE8AB4; --jk:#A29CE8;
     --shadow:0 0 0 1px rgba(255,255,255,.04);
   }
@@ -31,7 +31,7 @@
     :root:not([data-theme="day"]){
       --paper:#191917; --paper-edge:#121211; --ink:#E9E6DD; --ink-soft:#B0ADA3;
       --ink-muted:#7C7A72; --rule:#37362F; --rule-hair:#2A2925; --rule-heavy:#6E6B61;
-      --link:#7FB3E8; --mark:#3D3617;
+      --link:#7FB3E8; --mark:#3D3617; --red:#E4695C;
       --cn:#E07268; --us:#7FB3E8; --gl:#5FC49F; --ec:#D9A340; --lo:#DE8AB4; --jk:#A29CE8;
       --shadow:0 0 0 1px rgba(255,255,255,.04);
     }
@@ -53,16 +53,24 @@
     box-shadow:var(--shadow); border:1px solid var(--rule);}
 
   /* ── 报头 ── */
-  .masthead{padding:22px 26px 0; text-align:center;}
+  .masthead{padding:20px 26px 0; text-align:center;}
   .folio{display:flex; justify-content:space-between; align-items:baseline;
     font-size:10.5px; letter-spacing:.14em; color:var(--ink-muted);
-    text-transform:uppercase; padding-bottom:12px;}
+    font-variant-numeric:tabular-nums;
+    padding-bottom:11px; margin-bottom:17px; border-bottom:1px solid var(--rule-hair);}
   .folio span{white-space:nowrap;}
-  .wordmark{font-family:var(--display); font-size:clamp(36px,10vw,58px); font-weight:700;
-    letter-spacing:.1em; margin:0; line-height:1.15; text-indent:.1em;}
-  .subtitle{font-family:var(--serif); font-size:12px; letter-spacing:.34em;
-    color:var(--ink-soft); margin:9px 0 0; text-indent:.34em;}
-  .rule-double{margin:16px 0 0; border-top:3px solid var(--rule-heavy);}
+  .folio b{color:var(--ink-soft); font-weight:600;}
+  /* 报名两侧引出细红线，中文报头的老做法 */
+  .mast-line{display:flex; align-items:center; gap:clamp(10px,4vw,28px);}
+  .mast-rule{flex:1 1 0; min-width:14px; height:1px; background:var(--red); opacity:.45;}
+  .wordmark{font-family:var(--display); font-size:clamp(30px,9vw,54px); font-weight:700;
+    letter-spacing:.14em; margin:0; line-height:1.2; text-indent:.14em;
+    color:var(--red); white-space:nowrap;}
+  .mast-en{font-family:var(--sans); font-size:9.5px; letter-spacing:.4em;
+    color:var(--red); opacity:.7; margin:11px 0 0; text-indent:.4em;}
+  .subtitle{font-family:var(--serif); font-size:11.5px; letter-spacing:.3em;
+    color:var(--ink-soft); margin:8px 0 0; text-indent:.3em;}
+  .rule-double{margin:17px 0 0; border-top:3px solid var(--red);}
   .rule-double::after{content:""; display:block; margin-top:2px;
     border-top:1px solid var(--rule-heavy);}
 
@@ -185,6 +193,9 @@
     .masthead{padding:18px 16px 0;}
     .folio{flex-direction:column; align-items:center; gap:3px; font-size:10px;}
     .subtitle{font-size:10.5px; letter-spacing:.2em; text-indent:.2em;}
+    .mast-line{gap:9px;}
+    .mast-rule{min-width:8px;}
+    .mast-en{font-size:8.5px; letter-spacing:.28em; text-indent:.28em;}
     .holiday-bar{flex-direction:column;}
     .hol{border-right:none; border-bottom:1px solid var(--rule-hair);
       justify-content:center; padding:6px 12px;}
@@ -224,7 +235,12 @@
       <span id="date-line"></span>
       <span>今日 <b id="ban-count">1</b> 版</span>
     </div>
-    <h1 class="wordmark">嘻嘻哈哈报</h1>
+    <div class="mast-line">
+      <span class="mast-rule"></span>
+      <h1 class="wordmark">世界新闻摘要</h1>
+      <span class="mast-rule"></span>
+    </div>
+    <p class="mast-en">WORLD NEWS DIGEST</p>
     <p class="subtitle">天下事 一笑之</p>
     <div class="rule-double"></div>
   </header>
@@ -279,7 +295,7 @@
       <p class="poem-note" id="poem-note"></p>
     </div>
     <p class="quote" id="quote-line"></p>
-    <p class="imprint">嘻嘻哈哈报 · 每日出版</p>
+    <p class="imprint">世界新闻摘要 · 每日出版</p>
   </footer>
 </div>
 
