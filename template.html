@@ -66,6 +66,18 @@
   .rule-double::after{content:""; display:block; margin-top:2px;
     border-top:1px solid var(--rule-heavy);}
 
+  /* ── 假期带 ── */
+  .holiday-bar{display:flex; flex-wrap:wrap; justify-content:center;
+    border-bottom:1px solid var(--rule); font-size:10.5px; letter-spacing:.06em;
+    color:var(--ink-muted);}
+  .hol{display:flex; align-items:baseline; gap:6px; padding:7px 15px;
+    border-right:1px solid var(--rule-hair);}
+  .hol:last-child{border-right:none;}
+  .hol b{color:var(--ink-soft); font-weight:600; letter-spacing:.1em;}
+  .hol i{font-style:normal; font-variant-numeric:tabular-nums; color:var(--ink-soft);}
+  .hol em{font-style:normal; opacity:.72;}
+  .hol-scope{border:1px solid var(--rule); padding:0 4px; font-size:9px; letter-spacing:.04em;}
+
   /* ── 索引条 ── */
   .indexbar{display:flex; flex-wrap:wrap; align-items:center; gap:2px;
     padding:9px 26px; border-bottom:1px solid var(--rule); font-size:11px;}
@@ -173,6 +185,10 @@
     .masthead{padding:18px 16px 0;}
     .folio{flex-direction:column; align-items:center; gap:3px; font-size:10px;}
     .subtitle{font-size:10.5px; letter-spacing:.2em; text-indent:.2em;}
+    .holiday-bar{flex-direction:column;}
+    .hol{border-right:none; border-bottom:1px solid var(--rule-hair);
+      justify-content:center; padding:6px 12px;}
+    .hol:last-child{border-bottom:none;}
     .indexbar{padding:8px 12px; gap:1px;}
     .indexbar .lbl{width:100%; margin:0 0 4px;}
     .tools{margin-left:0; width:100%; margin-top:6px;}
@@ -212,6 +228,8 @@
     <p class="subtitle">天下事 一笑之</p>
     <div class="rule-double"></div>
   </header>
+
+  <div class="holiday-bar" id="holiday-bar" hidden></div>
 
   <nav class="indexbar">
     <span class="lbl">本期索引</span>
@@ -351,6 +369,22 @@ __BRIEF_DATA_JSON__
   if(jokes.length) ban++;
   document.getElementById('local-fun-section').innerHTML = list(fun, {firstOpen:true});
   document.getElementById('jokes-section').innerHTML = list(jokes, {});
+
+  // 假期带：数据由 special_helper.py 从 holidays.json 算好写进来
+  var hol = Array.isArray(data.holidays) ? data.holidays : [];
+  if(hol.length){
+    var hb = document.getElementById('holiday-bar');
+    hb.hidden = false;
+    hb.innerHTML = hol.map(function(h){
+      var md = h.date ? h.date.slice(5).replace('-', '/') : '';
+      var when = h.days === 0 ? '就是今天'
+               : h.days === 1 ? '明天'
+               : '还有 ' + h.days + ' 天';
+      return '<span class="hol"><b>' + esc(h.label) + '</b>' + esc(h.name) +
+        (h.scope ? '<span class="hol-scope">' + esc(h.scope) + '</span>' : '') +
+        '<i>' + esc(md) + '</i><em>' + when + '</em></span>';
+    }).join('');
+  }
 
   // 报头信息
   document.getElementById('date-line').textContent =

@@ -1,0 +1,54 @@
+{
+  "_comment": "报头假期条的数据源。假期是确定性的，不让 routine 每天去搜——搜错一天会连错好几周。",
+  "_maintenance": {
+    "cn": "国务院节假日通知一般在前一年 11 月发布。2027 年的出来后补进来。",
+    "verified_through": {
+      "cn": "2027-01-01（2026 年安排已由国办发明电〔2025〕7 号公布；之后只列法定固定日期）",
+      "ca": "2027-09-06",
+      "us": "2027-09-06"
+    },
+    "scope_note": "ca 只覆盖 BC 与安省；us 只覆盖联邦假期与 WA/CA/NY 的州假期。"
+  },
+
+  "cn": [
+    {"date": "2026-09-25", "name": "中秋节", "note": "放假 9/25–9/27"},
+    {"date": "2026-10-01", "name": "国庆节", "note": "放假 10/1–10/7"},
+    {"date": "2027-01-01", "name": "元旦"}
+  ],
+
+  "ca": [
+    {"date": "2026-09-07", "name": "劳动节", "en": "Labour Day", "scope": "BC · 安省"},
+    {"date": "2026-09-30", "name": "全国真相与和解日", "en": "Truth and Reconciliation", "scope": "BC"},
+    {"date": "2026-10-12", "name": "感恩节", "en": "Thanksgiving", "scope": "BC · 安省"},
+    {"date": "2026-11-11", "name": "国殇纪念日", "en": "Remembrance Day", "scope": "BC"},
+    {"date": "2026-12-25", "name": "圣诞节", "en": "Christmas Day", "scope": "BC · 安省"},
+    {"date": "2026-12-26", "name": "节礼日", "en": "Boxing Day", "scope": "安省"},
+    {"date": "2027-01-01", "name": "元旦", "en": "New Year's Day", "scope": "BC · 安省"},
+    {"date": "2027-02-15", "name": "家庭日", "en": "Family Day", "scope": "BC · 安省"},
+    {"date": "2027-03-26", "name": "耶稣受难日", "en": "Good Friday", "scope": "BC · 安省"},
+    {"date": "2027-05-24", "name": "维多利亚日", "en": "Victoria Day", "scope": "BC · 安省"},
+    {"date": "2027-07-01", "name": "加拿大日", "en": "Canada Day", "scope": "BC · 安省"},
+    {"date": "2027-08-02", "name": "不列颠哥伦比亚日", "en": "BC Day", "scope": "BC"},
+    {"date": "2027-09-06", "name": "劳动节", "en": "Labour Day", "scope": "BC · 安省"}
+  ],
+
+  "us": [
+    {"date": "2026-09-07", "name": "劳动节", "en": "Labor Day", "scope": "联邦"},
+    {"date": "2026-09-25", "name": "原住民日", "en": "Native American Day", "scope": "加州"},
+    {"date": "2026-10-12", "name": "哥伦布日", "en": "Columbus Day", "scope": "联邦 · 华州 · 纽约州"},
+    {"date": "2026-11-03", "name": "大选日", "en": "Election Day", "scope": "纽约州"},
+    {"date": "2026-11-11", "name": "退伍军人节", "en": "Veterans Day", "scope": "联邦"},
+    {"date": "2026-11-26", "name": "感恩节", "en": "Thanksgiving", "scope": "联邦"},
+    {"date": "2026-11-27", "name": "感恩节次日", "en": "Day after Thanksgiving", "scope": "加州 · 华州"},
+    {"date": "2026-12-25", "name": "圣诞节", "en": "Christmas Day", "scope": "联邦"},
+    {"date": "2027-01-01", "name": "元旦", "en": "New Year's Day", "scope": "联邦"},
+    {"date": "2027-01-18", "name": "马丁·路德·金日", "en": "MLK Jr. Day", "scope": "联邦"},
+    {"date": "2027-02-12", "name": "林肯诞辰", "en": "Lincoln's Birthday", "scope": "纽约州"},
+    {"date": "2027-02-15", "name": "总统日", "en": "Presidents' Day", "scope": "联邦"},
+    {"date": "2027-03-31", "name": "查韦斯纪念日", "en": "César Chávez Day", "scope": "加州"},
+    {"date": "2027-05-31", "name": "阵亡将士纪念日", "en": "Memorial Day", "scope": "联邦"},
+    {"date": "2027-06-19", "name": "六月节", "en": "Juneteenth", "scope": "联邦"},
+    {"date": "2027-07-04", "name": "独立日", "en": "Independence Day", "scope": "联邦"},
+    {"date": "2027-09-06", "name": "劳动节", "en": "Labor Day", "scope": "联邦"}
+  ]
+}

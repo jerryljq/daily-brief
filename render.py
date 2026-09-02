@@ -29,6 +29,9 @@ data JSON 结构（Claude 每天只需要产出这个，不需要重写HTML/CSS�
     "html": "<h4>本周财报日历</h4><p>...</p>",   // status 为 pending 时可省略
     "status": "pending" | "ready"       // pending 只出占位卡片，不计入版数
   },
+  "holidays": [                         // 报头假期带，由 special_helper.py apply 自动写入
+    {"region":"cn","label":"中国","name":"中秋节","date":"2026-09-25","days":23}
+  ],
   "poem": {                             // 报尾的诗词赏析，取代旧的 quote
     "title": "鹿柴", "author": "王维", "dynasty": "唐",
     "lines": ["空山不见人，但闻人语响。", "返景入深林，复照青苔上。"],

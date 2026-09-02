@@ -7,6 +7,9 @@
     python3 special_helper.py save --html-file frag.html [--title "..."]
         把特刊片段存成 data/special/YYYYMMDD.json（特刊任务用）。
 
+    python3 special_helper.py holidays
+        打印中国/加拿大/美国各自最近的下一个假期。
+
     python3 special_helper.py apply --data data/YYYYMMDD.json
         把今天的特刊并进简报数据：文件在就是 ready，不在就是 pending，
         今天排期本来就没有特刊则不放 special 字段（简报任务用）。
@@ -19,6 +22,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent
 SCHEDULE = REPO / "special_schedule.json"
+HOLIDAYS = REPO / "holidays.json"
 SPEC_DIR = REPO / "specials"
 OUT_DIR = REPO / "data" / "special"
 WEEKDAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
@@ -65,6 +69,38 @@ def last_same_kind(kind, before):
         if j.get("kind") == kind and stem < before:
             dates.append(stem)
     return max(dates) if dates else None
+
+
+REGION_LABEL = {"cn": "中国", "ca": "加拿大", "us": "美国"}
+
+
+def next_holidays(now):
+    """每个地区取最近的下一个假期。表里排完了就跳过该地区并提醒。"""
+    table = json.loads(HOLIDAYS.read_text(encoding="utf-8"))
+    stamp = now.strftime("%Y-%m-%d")
+    out, exhausted = [], []
+    for region in ("cn", "ca", "us"):
+        upcoming = [h for h in table.get(region, []) if h["date"] >= stamp]
+        if not upcoming:
+            exhausted.append(region)
+            continue
+        h = min(upcoming, key=lambda x: x["date"])
+        y, m, d = (int(x) for x in h["date"].split("-"))
+        days = (datetime(y, m, d, tzinfo=now.tzinfo).date() - now.date()).days
+        item = {"region": region, "label": REGION_LABEL[region],
+                "name": h["name"], "date": h["date"], "days": days}
+        for k in ("en", "scope", "note"):
+            if h.get(k):
+                item[k] = h[k]
+        out.append(item)
+    return out, exhausted
+
+
+def cmd_holidays():
+    out, exhausted = next_holidays(today())
+    print(json.dumps(out, ensure_ascii=False, indent=2))
+    for r in exhausted:
+        print(f"⚠ {REGION_LABEL[r]} 的假期表已排完，请更新 holidays.json", file=sys.stderr)
 
 
 def cmd_plan():
@@ -125,18 +161,26 @@ def cmd_apply(args):
         data["special"] = {"title": spec_title(kind), "status": "pending"}
         state = f"特刊（{kind}）还没到，status=pending"
 
+    hol, exhausted = next_holidays(d)
+    data["holidays"] = hol
+
     data_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(state)
+    print("假期条: " + " / ".join(f"{h['label']} {h['name']} {h['date']}" for h in hol))
+    for r in exhausted:
+        print(f"⚠ {REGION_LABEL[r]} 的假期表已排完，请更新 holidays.json", file=sys.stderr)
 
 
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("plan")
+    sub.add_parser("holidays")
     s = sub.add_parser("save"); s.add_argument("--html-file", required=True); s.add_argument("--title")
     a = sub.add_parser("apply"); a.add_argument("--data", required=True)
     args = ap.parse_args()
     if args.cmd == "plan":  cmd_plan()
+    elif args.cmd == "holidays": cmd_holidays()
     elif args.cmd == "save": cmd_save(args)
     elif args.cmd == "apply": cmd_apply(args)
 
