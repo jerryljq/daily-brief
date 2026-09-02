@@ -14,7 +14,7 @@
     /* 报头：魏碑打头，退到隶书类，再退到宋体。Android 基本没有书法体，兜到 serif */
     --display:"Weibei SC","STWeibeiSC","Baoli SC","STBaoliSC","STLiti","华文隶书",
       "LiSu","隶书","Songti SC","SimSun",serif;
-    /* 正文：楷体。macOS/iOS 走 Kaiti SC，Windows 走 KaiTi，其余兜到 serif */
+    /* 楷体：只用在引文、特刊、副刊——报纸的惯例位置。整篇正文用楷体在屏幕上会发灰 */
     --kai:"Kaiti SC","STKaiti","KaiTi","楷体","BiauKai","TW-Kai","Songti SC","SimSun",serif;
     /* 标题：宋体，与楷体正文形成对比 */
     --serif:"Songti SC","SimSun",Georgia,"Times New Roman",serif;
@@ -106,8 +106,10 @@
     border-bottom:1.5px solid var(--ink-muted); transform:rotate(45deg);
     transition:transform .2s ease;}
   details.item[open] > summary .chev{transform:rotate(-135deg);}
-  .body{font-family:var(--kai); font-size:14px; color:var(--ink-soft); line-height:1.95;
-    padding:0 0 12px; text-align:justify;}
+  .body{font-family:var(--serif); font-size:12.5px; color:var(--ink-soft); line-height:1.85;
+    padding:0 0 11px; text-align:justify;}
+  /* 副刊（趣闻/笑话）用楷体：报纸副刊的传统做法，也把软内容和硬新闻分开 */
+  .duo .body{font-family:var(--kai); font-size:13.5px; line-height:1.95;}
   .body a{color:var(--link);}
   details.item.dropcap[open] .body::first-letter{
     font-family:var(--serif); font-size:2.9em; font-weight:700; float:left;
