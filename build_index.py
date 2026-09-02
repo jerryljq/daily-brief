@@ -113,8 +113,9 @@ def meta(path):
                 if t:
                     heads.append(t)
         no = data.get('issue_no')
+        # 目录页每行都跟着报名是冗余的，那页本身就是这份报纸的
         return dict(file=name, date=date,
-                    title=(f"第 {no} 期 · {title}" if no else title),
+                    title=(f"第 {no} 期" if no else title),
                     kind="日报",
                     summary=("；".join(heads[:3]) + "。") if heads else "本期内容见全文。")
 
