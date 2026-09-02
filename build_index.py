@@ -246,7 +246,8 @@ def audit_json(data):
         frag = sp['html']
         text = html.unescape(re.sub(r'<[^>]+>', ' ', frag))
         if TELL_BLOCK.search(text) and 'href="http' not in frag:
-            blocking.append(f"[special] {re.sub(r'\s+', ' ', text).strip()[:120]} —— 无出处链接")
+            clean = re.sub(r'\s+', ' ', text).strip()[:120]
+            blocking.append(f"[special] {clean} —— 无出处链接")
 
     return blocking, warnings
 
