@@ -36,6 +36,7 @@ sys.path.insert(0, REPO)
 import build_index
 
 DRY     = "--dry-run" in sys.argv
+REPO_STATUS = {}   # 文件名 → git 状态码，用来区分“新增”和“补更新”
 IN_REPO = "--in-repo" in sys.argv
 
 
@@ -65,14 +66,21 @@ def git(*args, check=True):
 
 
 def collect_in_repo():
-    """简报已经在 briefs/ 里，认 git 眼中的未跟踪文件。"""
+    """简报已经在 briefs/ 里，认 git 眼中的新增或修改。
+
+    merge_special.py 补特刊时改的是一个已跟踪的文件，git 报 " M" 而不是 "??"，
+    只认未跟踪的话这次更新会被静默跳过。
+    """
     out = []
     for line in git("status", "--porcelain", "--", "briefs").splitlines():
-        status, _, path = line.partition(" ")
-        name = os.path.basename(path.strip())
-        if line.startswith("??") and name.endswith(".html") and re.search(r"\d{8}", name):
+        code, path = line[:2], line[3:].strip()
+        name = os.path.basename(path)
+        if not (name.endswith(".html") and re.search(r"\d{8}", name)):
+            continue
+        if code == "??" or "M" in code or "A" in code:
+            REPO_STATUS[name] = code
             out.append(name)
-    return sorted(out)
+    return sorted(set(out))
 
 
 def collect():
@@ -115,14 +123,16 @@ def main():
     for name, x in warnings:
         log(f"  提示 {name}: {x[:110]}")
 
-    git("add", "briefs", "index.html")
-    if not git("status", "--porcelain", "--", "briefs", "index.html"):
+    git("add", "briefs", "index.html", "data")
+    if not git("status", "--porcelain", "--", "briefs", "index.html", "data"):
         log("文件无变化，跳过提交")
         return 0
 
-    subject = f"Add {', '.join(n.replace('.html', '') for n in fresh)}"
+    # 合并特刊后是补更新，不是新增，提交历史里要分得开
+    verb = "Update" if fresh and all(REPO_STATUS.get(n, "??") != "??" for n in fresh) else "Add"
+    subject = f"{verb} {', '.join(n.replace('.html', '') for n in fresh)}"
     if len(subject) > 68:
-        subject = f"Add {len(fresh)} briefs ({fresh[0][:22]}…)"
+        subject = f"{verb} {len(fresh)} briefs ({fresh[0][:22]}…)"
     body = "\n".join(f"- {n}" for n in fresh)
     if blocking:
         body += ("\n\nNOT PUSHED — the fiction audit found passages that read as "

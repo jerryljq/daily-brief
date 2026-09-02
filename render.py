@@ -24,12 +24,20 @@ data JSON 结构（Claude 每天只需要产出这个，不需要重写HTML/CSS�
     "local_fun": [{"title": "...", "summary": "...", "url": "...", "fictional": false}, ...],
     "jokes":     [{"title": "今日一则", "summary": "笑话正文"}, ...]
   },
-  "special": {                          // 可选，只有周一/三/四/六/日才有
+  "special": {                          // 可选，按 special_schedule.json 排期
     "title": "本周财经展望",
-    "html": "<h4>本周财报日历</h4><p>...</p><h4>本周关键事件</h4><p>...</p>"
+    "html": "<h4>本周财报日历</h4><p>...</p>",   // status 为 pending 时可省略
+    "status": "pending" | "ready"       // pending 只出占位卡片，不计入版数
   },
-  "quote": "..."
+  "poem": {                             // 报尾的诗词赏析，取代旧的 quote
+    "title": "鹿柴", "author": "王维", "dynasty": "唐",
+    "lines": ["空山不见人，但闻人语响。", "返景入深林，复照青苔上。"],
+    "note": "赏析文字……"
+  }
 }
+
+安全闸（publish.py 会跑）要求：china / us_ca / global / economy / local_fun
+里的每一条，必须有 url，或者标 "fictional": true。两者都没有就拒绝发布。
 
 版数（"今日X版"）会由模板自动根据有内容的板块数量计算，不需要在数据里指定。
 期号（"总第X期"）由本脚本自动维护，不需要在数据里指定。
@@ -74,6 +82,11 @@ def main():
 
     if "issue_no" not in data:
         data["issue_no"] = 0 if args.dry_run else next_issue_no()
+        if not args.dry_run:
+            # 写回数据文件：merge_special.py 之后要靠它沿用同一个期号，
+            # 只留在内存里的话合并后会渲染成“总第 -- 期”
+            data_path.write_text(
+                json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
     if not TEMPLATE_PATH.exists():
         print(f"找不到模板文件: {TEMPLATE_PATH}", file=sys.stderr)

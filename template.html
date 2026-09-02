@@ -152,6 +152,15 @@
 
   /* ── 报尾 ── */
   .colophon{border-top:3px double var(--rule-heavy); padding:20px 26px 22px; text-align:center;}
+  .poem{max-width:540px; margin:0 auto;}
+  .poem-head{font-family:var(--serif); margin-bottom:11px;}
+  .poem-title{font-size:16.5px; font-weight:700; letter-spacing:.08em;}
+  .poem-title::before{content:"【";} .poem-title::after{content:"】";}
+  .poem-by{font-size:12px; color:var(--ink-muted); margin-left:8px; letter-spacing:.08em;}
+  .poem-lines{font-family:var(--kai); font-size:16px; line-height:2.15; letter-spacing:.06em;}
+  .poem-note{font-family:var(--kai); font-size:13px; color:var(--ink-soft);
+    line-height:1.95; margin:14px 0 0; text-align:justify;
+    padding-top:12px; border-top:1px solid var(--rule-hair);}
   .quote{font-family:var(--kai); font-size:15px; font-style:normal;
     color:var(--ink-soft); margin:0; line-height:1.8;}
   .imprint{font-size:10px; letter-spacing:.18em; color:var(--ink-muted);
@@ -244,6 +253,13 @@
   </main>
 
   <footer class="colophon">
+    <div class="poem" id="poem-block" hidden>
+      <div class="poem-head">
+        <span class="poem-title" id="poem-title"></span><span class="poem-by" id="poem-by"></span>
+      </div>
+      <div class="poem-lines" id="poem-lines"></div>
+      <p class="poem-note" id="poem-note"></p>
+    </div>
     <p class="quote" id="quote-line"></p>
     <p class="imprint">嘻嘻哈哈报 · 每日出版</p>
   </footer>
@@ -341,7 +357,21 @@ __BRIEF_DATA_JSON__
     (data.date || '') + (data.weekday ? ' · ' + data.weekday : '') + (data.lunar ? ' · ' + data.lunar : '');
   document.getElementById('issue-no').textContent = data.issue_no != null ? data.issue_no : '--';
   document.getElementById('ban-count').textContent = ban || 1;
-  document.getElementById('quote-line').textContent = data.quote ? ('“' + data.quote + '”') : '';
+  // 报尾：诗词赏析。没有 poem 时退回旧的 quote 字段，老数据不会开天窗
+  var poem = data.poem;
+  if(poem && (poem.title || poem.lines)){
+    document.getElementById('poem-block').hidden = false;
+    document.getElementById('poem-title').textContent = poem.title || '';
+    document.getElementById('poem-by').textContent =
+      [poem.dynasty, poem.author].filter(Boolean).join(' · ');
+    var pl = Array.isArray(poem.lines) ? poem.lines : (poem.lines ? [poem.lines] : []);
+    document.getElementById('poem-lines').innerHTML = pl.map(esc).join('<br>');
+    var noteEl = document.getElementById('poem-note');
+    noteEl.textContent = poem.note || '';
+    if(!poem.note) noteEl.hidden = true;
+  } else {
+    document.getElementById('quote-line').textContent = data.quote ? ('“' + data.quote + '”') : '';
+  }
 
   // 索引：只显示真有内容的板块
   [['sec-china',(sec.china||[]).length],['sec-us_ca',(sec.us_ca||[]).length],

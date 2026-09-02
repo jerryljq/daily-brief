@@ -12,7 +12,7 @@ Run this after dropping a new brief HTML into briefs/. It is idempotent:
 audit() is exported for publish.py, which refuses to push when it returns
 anything blocking.
 """
-import re, os, glob, html, sys
+import re, os, glob, html, json, sys
 
 REPO   = os.path.dirname(os.path.abspath(__file__))
 BRIEFS = os.path.join(REPO, "briefs")
@@ -52,6 +52,12 @@ def tag(label="虚构 · 非真实新闻"):
 def prepare(path):
     h = open(path, encoding="utf-8").read()
     changed = False
+
+    # 新格式的简报自己按 fictional 字段逐条打标签，而且本身就是响应式的。
+    # 旧的正则标注器只会认字面，把索引按钮「趣闻」「笑话」和栏目标题「本地趣闻」
+    # 也当成虚构内容标上——那等于把一整栏真新闻标成编的。这里直接放行。
+    if brief_data(h) is not None:
+        return False, 0
 
     styles = []
     h = re.sub(r'<style.*?</style>',
@@ -96,6 +102,22 @@ def meta(path):
     name = os.path.basename(path)
     date = "-".join(re.search(r'(\d{4})(\d{2})(\d{2})', name).groups())
     title = text(re.search(r'<title>(.*?)</title>', h, re.S).group(1))
+
+    data = brief_data(h)
+    if data is not None:
+        sec = data.get('sections') or {}
+        heads = []
+        for key in ('china', 'us_ca', 'global', 'economy'):
+            for it in sec.get(key) or []:
+                t = (it.get('title') or '').strip()
+                if t:
+                    heads.append(t)
+        no = data.get('issue_no')
+        return dict(file=name, date=date,
+                    title=(f"第 {no} 期 · {title}" if no else title),
+                    kind="日报",
+                    summary=("；".join(heads[:3]) + "。") if heads else "本期内容见全文。")
+
     if name.startswith("daily"):
         kind = "日报"
         items = [text(t) for _, t in
@@ -165,10 +187,62 @@ def _covered(node):
     if any(a.has(_has_fic) for a in anc): return True
     return bool(anc) and anc[0].has(_has_link)
 
+
+# ── 新格式：内容在 <script id="brief-data"> 的 JSON 里，不在 HTML 正文 ──
+BRIEF_DATA = re.compile(r'<script id="brief-data"[^>]*>(.*?)</script>', re.S)
+
+def brief_data(html_text):
+    """新版简报返回 dict，旧版（内容直接写在 HTML 里）返回 None。"""
+    m = BRIEF_DATA.search(html_text)
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(1).strip())
+    except ValueError:
+        return None
+
+# 必须“有出处或已标虚构”的板块。笑话不要求链接，诗词赏析不是报道。
+SOURCED_KEYS = ('china', 'us_ca', 'global', 'economy', 'local_fun')
+
+def audit_json(data):
+    blocking, warnings = [], []
+    sec = data.get('sections') or {}
+
+    for key in SOURCED_KEYS:
+        for it in sec.get(key) or []:
+            txt = (it.get('title') or '') + ' ' + (it.get('summary') or '')
+            sourced, flagged = bool(it.get('url')), bool(it.get('fictional'))
+            if not sourced and not flagged:
+                blocking.append(f"[{key}] {txt.strip()[:120]} —— 既无原文链接，也没标 fictional")
+            elif sourced and TELL_BLOCK.search(txt) and not flagged:
+                warnings.append(f"[{key}] {txt.strip()[:120]}")
+
+    # 笑话一律要标 fictional：笑话本来就不是报道，而“给真实主体编台词”
+    # （记者问美联储主席…、审计师问 CFO…）靠关键词根本认不出来，
+    # 与其猜，不如要求全部标注。
+    for it in sec.get('jokes') or []:
+        if not it.get('fictional'):
+            txt = (it.get('title') or '') + ' ' + (it.get('summary') or '')
+            blocking.append(f"[jokes] {txt.strip()[:120]} —— 笑话必须标 fictional")
+
+    # 特刊是 HTML 片段，按有无出处链接判断
+    sp = data.get('special') or {}
+    if sp.get('html'):
+        frag = sp['html']
+        text = html.unescape(re.sub(r'<[^>]+>', ' ', frag))
+        if TELL_BLOCK.search(text) and 'href="http' not in frag:
+            blocking.append(f"[special] {re.sub(r'\s+', ' ', text).strip()[:120]} —— 无出处链接")
+
+    return blocking, warnings
+
 def audit(path):
     """→ (blocking, warnings)，各是一串文字片段。"""
-    src = re.sub(r'<style.*?</style>|<script.*?</script>', '',
-                 open(path, encoding="utf-8").read(), flags=re.S)
+    raw = open(path, encoding="utf-8").read()
+    data = brief_data(raw)
+    if data is not None:
+        return audit_json(data)
+    # 旧版简报：内容就在 HTML 正文里
+    src = re.sub(r'<style.*?</style>|<script.*?</script>', '', raw, flags=re.S)
     p = _P(); p.feed(src)
     blocking, warnings = [], []
     def walk(n):
