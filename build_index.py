@@ -106,12 +106,15 @@ def meta(path):
     data = brief_data(h)
     if data is not None:
         sec = data.get('sections') or {}
+        # 三条轨道各取头条一条。原来是把各板块首尾相连再截前三条，
+        # 中国板块条目最多，结果预览里全是中国新闻。
         heads = []
-        for key in ('china', 'us_ca', 'global', 'economy'):
+        for key in ('china', 'us_ca', 'global'):
             for it in sec.get(key) or []:
                 t = (it.get('title') or '').strip()
                 if t:
                     heads.append(t)
+                    break
         no = data.get('issue_no')
         # 目录页每行都跟着报名是冗余的，那页本身就是这份报纸的
         return dict(file=name, date=date,
@@ -121,9 +124,20 @@ def meta(path):
 
     if name.startswith("daily"):
         kind = "日报"
-        items = [text(t) for _, t in
-                 re.findall(r'<a\s[^>]*href="(http[^"]*)"[^>]*>(.*?)</a>', body, re.S)]
-        items = [i for i in items if 8 < len(i) < 80][:3]
+        anchors = [(m.start(), text(m.group(2))) for m in
+                   re.finditer(r'<a\s[^>]*href="(http[^"]*)"[^>]*>(.*?)</a>', body, re.S)]
+        anchors = [(pos, t) for pos, t in anchors if 8 < len(t) < 80]
+        # 同样三条轨道各取一条：找到栏目标记的位置，取它之后的第一个链接
+        items = []
+        for marker in ('中国热点', '美加热点', '全球热点'):
+            at = body.find(marker)
+            if at < 0:
+                continue
+            nxt = next((t for pos, t in anchors if pos > at), None)
+            if nxt and nxt not in items:
+                items.append(nxt)
+        if not items:
+            items = [t for _, t in anchors][:3]
     else:
         kind = "周报"
         items = [text(t) for t in re.findall(r'<h[123][^>]*>(.*?)</h[123]>', body, re.S)]
@@ -268,18 +282,42 @@ def main():
     rows = sorted((meta(f) for f in files),
                   key=lambda r: (r["date"], r["kind"] == "周报"), reverse=True)
 
-    li = ['        <li>\n'
-          f'          <h3 class="brief-title"><a href="briefs/{r["file"]}">{html.escape(r["title"])}</a></h3>\n'
-          f'          <time class="brief-date" datetime="{r["date"]}">{r["date"]}<span class="kind">{r["kind"]}</span></time>\n'
-          f'          <p class="brief-summary">{html.escape(r["summary"])}</p>\n'
-          '        </li>' for r in rows]
-    block = '      <ul class="briefs">\n' + "\n".join(li) + '\n      </ul>'
+    # 按月分组，最新的月份排最前且默认展开
+    groups = []
+    for r in rows:
+        ym = r["date"][:7]
+        if not groups or groups[-1][0] != ym:
+            groups.append((ym, []))
+        groups[-1][1].append(r)
+
+    def entry(r):
+        return ('            <li>\n'
+                f'              <h3 class="brief-title"><a href="briefs/{r["file"]}">{html.escape(r["title"])}</a></h3>\n'
+                f'              <time class="brief-date" datetime="{r["date"]}">{r["date"]}'
+                f'<span class="kind">{r["kind"]}</span></time>\n'
+                f'              <p class="brief-summary">{html.escape(r["summary"])}</p>\n'
+                '            </li>')
+
+    blocks = []
+    for i, (ym, items) in enumerate(groups):
+        y, m = ym.split("-")
+        label = f"{y} 年 {int(m)} 月"
+        blocks.append(
+            f'        <details class="month"{" open" if i == 0 else ""}>\n'
+            f'          <summary><span class="m-label">{label}</span>'
+            f'<span class="m-count">{len(items)} 期</span><i class="chev"></i></summary>\n'
+            '          <ul class="briefs">\n'
+            + "\n".join(entry(r) for r in items) + '\n'
+            '          </ul>\n'
+            '        </details>')
+    block = ('      <!-- BRIEFS:START -->\n' + "\n".join(blocks) +
+             '\n      <!-- BRIEFS:END -->')
 
     idx = os.path.join(REPO, "index.html")
     src = open(idx, encoding="utf-8").read()
-    pat = re.compile(r'      <ul class="briefs">.*?</ul>', re.S)
+    pat = re.compile(r'      <!-- BRIEFS:START -->.*?<!-- BRIEFS:END -->', re.S)
     if not pat.search(src):
-        sys.exit('index.html 里找不到 <ul class="briefs"> 标记')
+        sys.exit('index.html 里找不到 <!-- BRIEFS:START/END --> 标记')
     new = pat.sub(lambda _: block, src)
     open(idx, "w", encoding="utf-8").write(new)
     print(f"index.html 已更新，共 {len(rows)} 期")

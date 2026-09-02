@@ -61,7 +61,20 @@
   .sechead .en{font-family:var(--sans); font-size:9px; letter-spacing:.2em;
     color:var(--ink-muted); display:block; margin-top:3px; font-weight:400;}
 
-  ul.briefs{list-style:none; margin:0; padding:0;}
+  details.month{border-bottom:1px solid var(--rule);}
+  details.month:last-of-type{border-bottom:none;}
+  details.month > summary{list-style:none; cursor:pointer; display:flex;
+    align-items:center; gap:10px; padding:12px 0;}
+  details.month > summary::-webkit-details-marker{display:none;}
+  details.month > summary:focus-visible{outline:2px solid var(--link); outline-offset:2px;}
+  .m-label{font-family:var(--serif); font-size:14.5px; font-weight:700; letter-spacing:.06em;}
+  .m-count{font-size:10px; color:var(--ink-muted); letter-spacing:.08em;}
+  .chev{margin-left:auto; width:8px; height:8px; flex-shrink:0;
+    border-right:1.5px solid var(--ink-muted); border-bottom:1.5px solid var(--ink-muted);
+    transform:rotate(45deg); transition:transform .2s ease;}
+  details.month[open] > summary .chev{transform:rotate(-135deg);}
+
+  ul.briefs{list-style:none; margin:0; padding:0 0 8px;}
   ul.briefs > li{padding:15px 0; border-bottom:1px solid var(--rule-hair);}
   ul.briefs > li:last-child{border-bottom:none;}
   .brief-title{font-family:var(--serif); font-size:15px; font-weight:700;
@@ -116,78 +129,88 @@
 
   <section class="archive">
     <div class="sechead">往期目录<span class="en">BACK ISSUES</span></div>
-      <ul class="briefs">
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260901.html">今日简报 · 2026年9月1日</a></h3>
-          <time class="brief-date" datetime="2026-09-01">2026-09-01<span class="kind">日报</span></time>
-          <p class="brief-summary">习近平出席上合组织成员国元首理事会第二十六次会议；罕见！&quot;沙德尔&quot;停止编号后再度加强为台风，最新路径公布；全国中小学&quot;阳光招生&quot;新政9月1日起实行，居住证成入学主要依据。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260831.html">今日简报 · 2026年8月31日</a></h3>
-          <time class="brief-date" datetime="2026-08-31">2026-08-31<span class="kind">日报</span></time>
-          <p class="brief-summary">尼泊尔冰川崩塌引发泥石流冲击西藏吉隆，16人遇难546人失联；习近平出席上合组织峰会，赴吉尔吉斯斯坦、埃及进行国事访问；中国羽毛球协会副主席夏煊泽、原副主席王伟同日被查。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260830.html">今日简报 · 2026年8月30日</a></h3>
-          <time class="brief-date" datetime="2026-08-30">2026-08-30<span class="kind">日报</span></time>
-          <p class="brief-summary">习近平抵达比什凯克，出席上合组织峰会并对吉尔吉斯斯坦进行国事访问；西藏吉隆&quot;8·26&quot;泥石流灾害原因查明，16人遇难546人失联；2比3不敌泰国女排，中国女排无缘奥运直通资格。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/weekly_brief_20260829.html">深度周报 · 第1期 · 2026年8月29日</a></h3>
-          <time class="brief-date" datetime="2026-08-29">2026-08-29<span class="kind">周报</span></time>
-          <p class="brief-summary">反内卷元年：一场自上而下的&quot;止血&quot;实验；循环的钱，两年半的芯片；四十亿美元贸易额，一夜之间破裂的谈判桌。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260829.html">今日简报 · 2026年8月29日</a></h3>
-          <time class="brief-date" datetime="2026-08-29">2026-08-29<span class="kind">日报</span></time>
-          <p class="brief-summary">台风&quot;沙德尔&quot;两次登陆浙江，创下年度登陆最多纪录；西藏吉隆泥石流灾害救援持续，李强赴现场指导；上半年我国数字产业收入同比增长超13%。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260828.html">今日简报 · 2026年8月28日</a></h3>
-          <time class="brief-date" datetime="2026-08-28">2026-08-28<span class="kind">日报</span></time>
-          <p class="brief-summary">未来五年新兴产业布局明确：集成电路、低空经济、具身智能等成重点；西藏吉隆泥石流灾害救援新进展，专家解读堰塞湖处置难点；腾讯发布混元Hy4 preview大模型，总参数达770B。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260827.html">今日简报 · 2026年8月27日</a></h3>
-          <time class="brief-date" datetime="2026-08-27">2026-08-27<span class="kind">日报</span></time>
-          <p class="brief-summary">台风&quot;紫檀&quot;两日内两度登陆，华南暴雨预警持续；安世半导体中国实现自主可控，产品降价20%-30%；中方在联合国安理会呼吁乌克兰问题达成全面持久和平协议。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260826.html">今日简报 · 2026年8月26日</a></h3>
-          <time class="brief-date" datetime="2026-08-26">2026-08-26<span class="kind">日报</span></time>
-          <p class="brief-summary">俄远东天然气化工项目大火致6名中国公民遇难；内蒙古兴和县山洪灾害致5人遇难；苹果秋季发布会定档9月9日，折叠屏iPhone首秀。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260825.html">今日简报 · 2026年8月25日</a></h3>
-          <time class="brief-date" datetime="2026-08-25">2026-08-25<span class="kind">日报</span></time>
-          <p class="brief-summary">台风&quot;沙德尔&quot;来袭，福建浙江启动四级应急响应；住房公积金迎27年来第三次系统性大修，9月20日起施行；第三轮中美1.5轨对话在北京举行。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260824.html">今日简报 · 2026年8月24日</a></h3>
-          <time class="brief-date" datetime="2026-08-24">2026-08-24<span class="kind">日报</span></time>
-          <p class="brief-summary">中央政治局会议部署西部大开发新政策；年内首次&quot;四台风共舞&quot;，21号台风&quot;艾莎尼&quot;生成；&quot;高铁无座票与二等座同价&quot;冲上热搜。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260823.html">今日简报 · 2026年8月23日</a></h3>
-          <time class="brief-date" datetime="2026-08-23">2026-08-23<span class="kind">日报</span></time>
-          <p class="brief-summary">公积金新政来了！住房公积金存贷利率决定权收归国务院；胖东来许昌生活广场店将于12月闭店，因房东涨租；《欢迎来龙餐馆》票房破15亿，跻身年度前五。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/weekly_brief_20260822.html">深度周报 · 第34期 · 2026年8月22日</a></h3>
-          <time class="brief-date" datetime="2026-08-22">2026-08-22<span class="kind">周报</span></time>
-          <p class="brief-summary">通缩漩涡中的财政重构；三十二面镜子：美国AI监管的碎片化困局；霍尔木兹的船期表，由谁来掌控？。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/weekly_brief_issue0_20260822.html">深度周报 · 第0期 · 创刊预备号</a></h3>
-          <time class="brief-date" datetime="2026-08-22">2026-08-22<span class="kind">周报</span></time>
-          <p class="brief-summary">通缩的深渊：资产负债表衰退与中国&quot;后卖地时代&quot;的财政迷局；32场独角戏：美国AI监管碎片化与硅谷的游说豪赌；霍尔木兹绞索：后哈梅内伊时代的权力真空与中国的能源两难。</p>
-        </li>
-        <li>
-          <h3 class="brief-title"><a href="briefs/daily_brief_20260822.html">今日简报 · 2026年8月22日</a></h3>
-          <time class="brief-date" datetime="2026-08-22">2026-08-22<span class="kind">日报</span></time>
-          <p class="brief-summary">第二届世界人形机器人运动会在京开幕；航天功勋荣誉授予：张陆获二级航天功勋奖章；过境免签&quot;朋友圈&quot;扩容至57国。</p>
-        </li>
-      </ul>
+      <!-- BRIEFS:START -->
+        <details class="month" open>
+          <summary><span class="m-label">2026 年 9 月</span><span class="m-count">1 期</span><i class="chev"></i></summary>
+          <ul class="briefs">
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260901.html">今日简报 · 2026年9月1日</a></h3>
+              <time class="brief-date" datetime="2026-09-01">2026-09-01<span class="kind">日报</span></time>
+              <p class="brief-summary">习近平出席上合组织成员国元首理事会第二十六次会议；霍尔木兹海峡两艘油轮遇袭，特朗普誓言&quot;狠狠打击&quot;伊朗；以色列空袭加沙城西部，至少4人死亡包括儿童。</p>
+            </li>
+          </ul>
+        </details>
+        <details class="month">
+          <summary><span class="m-label">2026 年 8 月</span><span class="m-count">13 期</span><i class="chev"></i></summary>
+          <ul class="briefs">
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260831.html">今日简报 · 2026年8月31日</a></h3>
+              <time class="brief-date" datetime="2026-08-31">2026-08-31<span class="kind">日报</span></time>
+              <p class="brief-summary">尼泊尔冰川崩塌引发泥石流冲击西藏吉隆，16人遇难546人失联；G20财长会议在美国北卡召开，关税与对伊制裁成焦点；尼泊尔-中国边境冰川洪灾遇难近800人，逾3000人失踪。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260830.html">今日简报 · 2026年8月30日</a></h3>
+              <time class="brief-date" datetime="2026-08-30">2026-08-30<span class="kind">日报</span></time>
+              <p class="brief-summary">习近平抵达比什凯克，出席上合组织峰会并对吉尔吉斯斯坦进行国事访问；安大略省长在温诺纳揭幕&quot;Lake Ontario&quot;标牌，美加贸易紧张持续升级；尼泊尔-中国边境洪灾遇难人数升至750人，多人仍失踪。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/weekly_brief_20260829.html">深度周报 · 第1期 · 2026年8月29日</a></h3>
+              <time class="brief-date" datetime="2026-08-29">2026-08-29<span class="kind">周报</span></time>
+              <p class="brief-summary">反内卷元年：一场自上而下的&quot;止血&quot;实验；循环的钱，两年半的芯片；四十亿美元贸易额，一夜之间破裂的谈判桌。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260829.html">今日简报 · 2026年8月29日</a></h3>
+              <time class="brief-date" datetime="2026-08-29">2026-08-29<span class="kind">日报</span></time>
+              <p class="brief-summary">台风&quot;沙德尔&quot;两次登陆浙江，创下年度登陆最多纪录；特朗普宣布美委石油大协议，储量超650亿桶；加沙人道局势持续恶化，银行系统濒临崩溃。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260828.html">今日简报 · 2026年8月28日</a></h3>
+              <time class="brief-date" datetime="2026-08-28">2026-08-28<span class="kind">日报</span></time>
+              <p class="brief-summary">未来五年新兴产业布局明确：集成电路、低空经济、具身智能等成重点；苹果CEO换帅：库克卸任，约翰·特尔努斯9月1日接棒；尼泊尔洪水灾害：军方从被淹水电站隧道救出数百人，仍有逾千人失踪。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260827.html">今日简报 · 2026年8月27日</a></h3>
+              <time class="brief-date" datetime="2026-08-27">2026-08-27<span class="kind">日报</span></time>
+              <p class="brief-summary">台风&quot;紫檀&quot;两日内两度登陆，华南暴雨预警持续；英伟达据报以129亿美元收购开源AI平台Hugging Face；联合国安理会就乌克兰局势举行紧急会议。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260826.html">今日简报 · 2026年8月26日</a></h3>
+              <time class="brief-date" datetime="2026-08-26">2026-08-26<span class="kind">日报</span></time>
+              <p class="brief-summary">俄远东天然气化工项目大火致6名中国公民遇难；乡村音乐传奇Dolly Parton病逝，享年80岁；美方称近期不会对伊朗采取新军事行动。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260825.html">今日简报 · 2026年8月25日</a></h3>
+              <time class="brief-date" datetime="2026-08-25">2026-08-25<span class="kind">日报</span></time>
+              <p class="brief-summary">台风&quot;沙德尔&quot;来袭，福建浙江启动四级应急响应；美股温和收涨，比特币重返8.1万美元上方。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260824.html">今日简报 · 2026年8月24日</a></h3>
+              <time class="brief-date" datetime="2026-08-24">2026-08-24<span class="kind">日报</span></time>
+              <p class="brief-summary">中央政治局会议部署西部大开发新政策；美加贸易谈判破裂，安省省长呼吁强硬回应；莫斯科高档餐厅爆炸致5死数十伤。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260823.html">今日简报 · 2026年8月23日</a></h3>
+              <time class="brief-date" datetime="2026-08-23">2026-08-23<span class="kind">日报</span></time>
+              <p class="brief-summary">公积金新政来了！住房公积金存贷利率决定权收归国务院；美加贸易谈判破裂，新一轮关税生效；热带风暴&quot;Moke&quot;逼近夏威夷大岛。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/weekly_brief_20260822.html">深度周报 · 第34期 · 2026年8月22日</a></h3>
+              <time class="brief-date" datetime="2026-08-22">2026-08-22<span class="kind">周报</span></time>
+              <p class="brief-summary">通缩漩涡中的财政重构；三十二面镜子：美国AI监管的碎片化困局；霍尔木兹的船期表，由谁来掌控？。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/weekly_brief_issue0_20260822.html">深度周报 · 第0期 · 创刊预备号</a></h3>
+              <time class="brief-date" datetime="2026-08-22">2026-08-22<span class="kind">周报</span></time>
+              <p class="brief-summary">通缩的深渊：资产负债表衰退与中国&quot;后卖地时代&quot;的财政迷局；32场独角戏：美国AI监管碎片化与硅谷的游说豪赌；霍尔木兹绞索：后哈梅内伊时代的权力真空与中国的能源两难。</p>
+            </li>
+            <li>
+              <h3 class="brief-title"><a href="briefs/daily_brief_20260822.html">今日简报 · 2026年8月22日</a></h3>
+              <time class="brief-date" datetime="2026-08-22">2026-08-22<span class="kind">日报</span></time>
+              <p class="brief-summary">第二届世界人形机器人运动会在京开幕；加美贸易谈判破裂，加拿大宣布9月8日起报复性加税；伊朗军方誓言&quot;绝不屈服&quot;，美国酝酿新一轮经济制裁。</p>
+            </li>
+          </ul>
+        </details>
+      <!-- BRIEFS:END -->
   </section>
 
   <footer class="colophon">
