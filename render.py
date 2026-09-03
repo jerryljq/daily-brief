@@ -95,13 +95,19 @@ def main():
         print(f"找不到模板文件: {TEMPLATE_PATH}", file=sys.stderr)
         sys.exit(1)
 
+    date_str = data.get("date", "").replace("-", "")
+
     template_html = TEMPLATE_PATH.read_text(encoding="utf-8")
     injected = template_html.replace(
         "__BRIEF_DATA_JSON__",
         json.dumps(data, ensure_ascii=False, indent=2),
+    ).replace(
+        # 访客统计像素要知道自己是哪一页；--out 只用于预览，统计路径始终按正式位置写
+        "__PAGE_PATH__", f"/briefs/daily_brief_{date_str}.html",
     )
+    if "__PAGE_PATH__" in injected:
+        print("警告: 模板里的 __PAGE_PATH__ 没有被替换", file=sys.stderr)
 
-    date_str = data.get("date", "").replace("-", "")
     out_path = Path(args.out) if args.out else BRIEFS_DIR / f"daily_brief_{date_str}.html"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(injected, encoding="utf-8")

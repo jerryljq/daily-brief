@@ -58,6 +58,9 @@ def main():
     injected = template_html.replace(
         "__BRIEF_DATA_JSON__",
         json.dumps(data, ensure_ascii=False, indent=2),
+    ).replace(
+        # 和 render.py 保持一致：不替换的话合并后的页面里会留下字面量
+        "__PAGE_PATH__", f"/briefs/daily_brief_{args.date}.html",
     )
     out_path = BRIEFS_DIR / f"daily_brief_{args.date}.html"
     out_path.write_text(injected, encoding="utf-8")
