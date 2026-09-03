@@ -123,8 +123,10 @@ def main():
     for name, x in warnings:
         log(f"  提示 {name}: {x[:110]}")
 
-    git("add", "briefs", "index.html", "data")
-    if not git("status", "--porcelain", "--", "briefs", "index.html", "data"):
+    # issue_no.txt 必须一起提交：render.py 消耗掉的期号只写在本地，
+    # 不提交的话下一次运行又从同一个号开始
+    git("add", "briefs", "index.html", "data", "issue_no.txt")
+    if not git("status", "--porcelain", "--", "briefs", "index.html", "data", "issue_no.txt"):
         log("文件无变化，跳过提交")
         return 0
 
