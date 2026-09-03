@@ -10,6 +10,7 @@
     --ink-muted:#8C8A80; --rule:#D8D4C8; --rule-hair:#E8E5DB; --rule-heavy:#20201D;
     --link:#1B4F8A; --mark:#FBF0C4; --red:#A81C16;
     --hol-cn:#8F6200; --hol-ca:#B32820; --hol-us:#17539B;
+    --sp-tint:rgba(168,28,22,.045);
     --cn:#9B2C24; --us:#1B4F8A; --gl:#1F6B54; --ec:#8A5A12; --lo:#8C3A63; --jk:#4A4590;
     --shadow:0 1px 2px rgba(28,26,20,.05), 0 12px 32px -12px rgba(28,26,20,.18);
     /* 报头：魏碑打头，退到隶书类，再退到宋体。Android 基本没有书法体，兜到 serif */
@@ -26,6 +27,7 @@
     --ink-muted:#7C7A72; --rule:#37362F; --rule-hair:#2A2925; --rule-heavy:#6E6B61;
     --link:#7FB3E8; --mark:#3D3617; --red:#E4695C;
       --hol-cn:#E0B341; --hol-ca:#E8887C; --hol-us:#7FB3E8;
+      --sp-tint:rgba(228,105,92,.075);
     --cn:#E07268; --us:#7FB3E8; --gl:#5FC49F; --ec:#D9A340; --lo:#DE8AB4; --jk:#A29CE8;
     --shadow:0 0 0 1px rgba(255,255,255,.04);
   }
@@ -35,6 +37,7 @@
       --ink-muted:#7C7A72; --rule:#37362F; --rule-hair:#2A2925; --rule-heavy:#6E6B61;
       --link:#7FB3E8; --mark:#3D3617; --red:#E4695C;
       --hol-cn:#E0B341; --hol-ca:#E8887C; --hol-us:#7FB3E8;
+      --sp-tint:rgba(228,105,92,.075);
       --cn:#E07268; --us:#7FB3E8; --gl:#5FC49F; --ec:#D9A340; --lo:#DE8AB4; --jk:#A29CE8;
       --shadow:0 0 0 1px rgba(255,255,255,.04);
     }
@@ -96,7 +99,10 @@
 
   /* ── 索引条 ── */
   .indexbar{display:flex; flex-wrap:wrap; align-items:center; gap:2px;
-    padding:9px 26px; border-bottom:1px solid var(--rule); font-size:11px;}
+    padding:9px 26px; border-bottom:1px solid var(--rule); font-size:11px;
+    position:sticky; top:0; z-index:40; background:var(--paper);}
+  .indexbar.stuck{box-shadow:0 6px 14px -10px rgba(0,0,0,.45);}
+  .indexbar.stuck .lbl{display:none;}
   .indexbar .lbl{font-family:var(--serif); letter-spacing:.2em;
     color:var(--ink-muted); margin-right:8px;}
   .jump{background:none; border:0; padding:3px 7px; cursor:pointer;
@@ -157,13 +163,17 @@
   }
 
   /* ── 特刊 ── */
-  details.special{border-top:1px solid var(--rule); background:var(--paper);}
+  details.special{border-top:3px solid var(--red); background:var(--sp-tint);}
+  details.special.pending{border-top:1px solid var(--rule); background:none;}
   details.special > summary{list-style:none; cursor:pointer; padding:12px 26px;
     display:flex; align-items:center; gap:10px;}
   details.special > summary::-webkit-details-marker{display:none;}
-  .kicker{font-size:9.5px; letter-spacing:.2em; border:1px solid var(--rule);
-    padding:2px 8px; color:var(--ink-muted); flex-shrink:0;}
-  .special-title{font-family:var(--serif); font-size:15px; font-weight:700; flex:1;}
+  .kicker{font-size:9.5px; letter-spacing:.2em; padding:2px 9px; flex-shrink:0;
+    background:var(--red); color:var(--paper); font-weight:600; border:1px solid var(--red);}
+  details.special.pending .kicker{background:none; border-color:var(--rule); color:var(--ink-muted); font-weight:400;}
+  .special-title{font-family:var(--serif); font-size:16px; font-weight:700; flex:1;
+    color:var(--red); letter-spacing:.02em;}
+  details.special.pending .special-title{color:var(--ink-soft); font-size:15px;}
   .special-body{font-family:var(--kai); padding:0 26px 20px; font-size:14.5px;
     line-height:2.05; color:var(--ink);}
   .special-body h4{font-family:var(--serif); font-size:14px; margin:18px 0 6px;
@@ -580,6 +590,7 @@
   if(spPending || spReady){
     var sp = document.getElementById('special-section');
     sp.hidden = false;
+    sp.classList.toggle('pending', spPending);
     sp.open = spReady;                    // 占位没正文可读，默认收起
     document.getElementById('special-kicker').textContent = spPending ? '筹备中' : '特刊';
     document.getElementById('special-title').textContent = spd.title || '今日特刊';
@@ -681,9 +692,11 @@
 
   // 阅读进度
   var bar = document.getElementById('progress');
+  var navEl = document.querySelector('.indexbar');
   function tick(){
     var h = document.documentElement.scrollHeight - innerHeight;
     bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
+    if(navEl) navEl.classList.toggle('stuck', navEl.getBoundingClientRect().top <= 0.5);
   }
   addEventListener('scroll', tick, {passive:true});
   addEventListener('resize', tick);
