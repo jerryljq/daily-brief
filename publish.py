@@ -161,7 +161,10 @@ def main():
         return 1
 
     log(f"✓ 安全闸通过（{len(warnings)} 条提示）")
-    git("push", "origin", "main")
+    # 用 HEAD:main 而不是 main：云端沙箱克隆出来 HEAD 是 detached 的，
+    # 本地 main 分支指针不会跟着推进，push "main" 推的是那个过期指针，
+    # 在 origin/main 已被其它流程（如特刊任务）推进后就会变成 non-fast-forward。
+    git("push", "origin", "HEAD:main")
     log("✓ 已推送 https://jerryljq.github.io/daily-brief/")
     return 0
 
