@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界新闻摘要</title>
+<style>
+  :root{
+    --paper:#FBF9F4; --paper-edge:#F1EEE5; --ink:#20201D; --ink-soft:#55534C;
+    --ink-muted:#8C8A80; --rule:#D8D4C8; --rule-hair:#E8E5DB; --rule-heavy:#20201D;
+    --link:#1B4F8A; --mark:#FBF0C4; --red:#A81C16;
+    --hol-cn:#8F6200; --hol-ca:#B32820; --hol-us:#17539B;
+    --sp-tint:rgba(168,28,22,.045);
+    --cn:#9B2C24; --us:#1B4F8A; --gl:#1F6B54; --ec:#8A5A12; --lo:#8C3A63; --jk:#4A4590;
+    --shadow:0 1px 2px rgba(28,26,20,.05), 0 12px 32px -12px rgba(28,26,20,.18);
+    /* 报头：魏碑打头，退到隶书类，再退到宋体。Android 基本没有书法体，兜到 serif */
+    --display:"Weibei SC","STWeibeiSC","Baoli SC","STBaoliSC","STLiti","华文隶书",
+      "LiSu","隶书","Songti SC","SimSun",serif;
+    /* 楷体：只用在引文、特刊、副刊——报纸的惯例位置。整篇正文用楷体在屏幕上会发灰 */
+    --kai:"Kaiti SC","STKaiti","KaiTi","楷体","BiauKai","TW-Kai","Songti SC","SimSun",serif;
+    /* 标题：宋体，与楷体正文形成对比 */
+    --serif:"Songti SC","SimSun",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+  }
+  :root[data-theme="night"]{
+    --paper:#191917; --paper-edge:#121211; --ink:#E9E6DD; --ink-soft:#B0ADA3;
+    --ink-muted:#7C7A72; --rule:#37362F; --rule-hair:#2A2925; --rule-heavy:#6E6B61;
+    --link:#7FB3E8; --mark:#3D3617; --red:#E4695C;
+      --hol-cn:#E0B341; --hol-ca:#E8887C; --hol-us:#7FB3E8;
+      --sp-tint:rgba(228,105,92,.075);
+    --cn:#E07268; --us:#7FB3E8; --gl:#5FC49F; --ec:#D9A340; --lo:#DE8AB4; --jk:#A29CE8;
+    --shadow:0 0 0 1px rgba(255,255,255,.04);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="day"]){
+      --paper:#191917; --paper-edge:#121211; --ink:#E9E6DD; --ink-soft:#B0ADA3;
+      --ink-muted:#7C7A72; --rule:#37362F; --rule-hair:#2A2925; --rule-heavy:#6E6B61;
+      --link:#7FB3E8; --mark:#3D3617; --red:#E4695C;
+      --hol-cn:#E0B341; --hol-ca:#E8887C; --hol-us:#7FB3E8;
+      --sp-tint:rgba(228,105,92,.075);
+      --cn:#E07268; --us:#7FB3E8; --gl:#5FC49F; --ec:#D9A340; --lo:#DE8AB4; --jk:#A29CE8;
+      --shadow:0 0 0 1px rgba(255,255,255,.04);
+    }
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--paper-edge); color:var(--ink);
+    font-family:var(--sans); line-height:1.6;
+    display:flex; justify-content:center; padding:28px 14px 56px;
+  }
+
+  /* ── 阅读进度：贴在窗口顶端的一条细线 ── */
+  #progress{position:fixed; top:0; left:0; height:2px; width:0;
+    background:var(--ink); opacity:.55; z-index:50; transition:width .1s linear;}
+
+  .paper{width:100%; max-width:760px; background:var(--paper);
+    box-shadow:var(--shadow); border:1px solid var(--rule);}
+
+  /* ── 报头 ── */
+  .masthead{padding:20px 26px 0; text-align:center;}
+  .folio{display:flex; justify-content:space-between; align-items:baseline;
+    font-size:10.5px; letter-spacing:.14em; color:var(--ink-muted);
+    font-variant-numeric:tabular-nums;
+    padding-bottom:11px; margin-bottom:17px; border-bottom:1px solid var(--rule-hair);}
+  .folio span{white-space:nowrap;}
+  .folio b{color:var(--ink-soft); font-weight:600;}
+  /* 报名两侧引出细红线，中文报头的老做法 */
+  .mast-line{display:flex; align-items:center; gap:clamp(10px,4vw,28px);}
+  .mast-rule{flex:1 1 0; min-width:14px; height:1px; background:var(--red); opacity:.45;}
+  .wordmark{font-family:var(--display); font-size:clamp(30px,9vw,54px); font-weight:700;
+    letter-spacing:.14em; margin:0; line-height:1.2; text-indent:.14em;
+    color:var(--red); white-space:nowrap;}
+  .mast-en{font-family:var(--sans); font-size:9.5px; letter-spacing:.4em;
+    color:var(--red); opacity:.7; margin:11px 0 0; text-indent:.4em;}
+  .subtitle{font-family:var(--serif); font-size:11.5px; letter-spacing:.3em;
+    color:var(--ink-soft); margin:8px 0 0; text-indent:.3em;}
+  .rule-double{margin:17px 0 0; border-top:3px solid var(--red);}
+  .rule-double::after{content:""; display:block; margin-top:2px;
+    border-top:1px solid var(--rule-heavy);}
+
+  /* ── 假期带 ── */
+  .holiday-bar{display:flex; flex-wrap:wrap; justify-content:center;
+    border-bottom:1px solid var(--rule); font-size:10.5px; letter-spacing:.06em;
+    color:var(--ink-muted);}
+  .hol{display:flex; align-items:baseline; gap:6px; padding:7px 15px;
+    border-right:1px solid var(--rule-hair);}
+  .hol:last-child{border-right:none;}
+  .hol-cn{--hol:var(--hol-cn);}
+  .hol-ca{--hol:var(--hol-ca);}
+  .hol-us{--hol:var(--hol-us);}
+  .hol b{color:var(--hol,var(--ink-soft)); font-weight:600; letter-spacing:.1em;}
+  .hol-name{color:var(--hol,inherit);}
+  .hol i{font-style:normal; font-variant-numeric:tabular-nums; color:var(--ink-soft);}
+  .hol em{font-style:normal; opacity:.72;}
+  .hol-scope{border:1px solid currentColor; color:var(--hol,var(--ink-muted)); opacity:.72;
+    padding:0 4px; font-size:9px; letter-spacing:.04em;}
+
+  /* ── 索引条 ── */
+  .indexbar{display:flex; flex-wrap:wrap; align-items:center; gap:2px;
+    padding:9px 26px; border-bottom:1px solid var(--rule); font-size:11px;
+    position:sticky; top:0; z-index:40; background:var(--paper);}
+  .indexbar.stuck{box-shadow:0 6px 14px -10px rgba(0,0,0,.45);}
+  .indexbar.stuck .lbl{display:none;}
+  .indexbar .lbl{font-family:var(--serif); letter-spacing:.2em;
+    color:var(--ink-muted); margin-right:8px;}
+  .jump{background:none; border:0; padding:3px 7px; cursor:pointer;
+    font:inherit; color:var(--ink-soft); border-bottom:2px solid transparent;}
+  .jump:hover{color:var(--ink); border-bottom-color:currentColor;}
+  .jump[hidden]{display:none;}
+  .tools{margin-left:auto; display:flex; gap:2px;}
+  .tool{background:none; border:1px solid var(--rule); padding:3px 9px;
+    cursor:pointer; font:inherit; font-size:10.5px; color:var(--ink-soft);}
+  .tool:hover{border-color:var(--ink-muted); color:var(--ink);}
+
+  /* ── 三栏 ── */
+  .cols{display:grid; grid-template-columns:repeat(3,1fr);}
+  .col{padding:16px 18px 18px; border-right:1px solid var(--rule-hair);}
+  .col:last-child{border-right:none;}
+  .sechead{font-family:var(--serif); font-size:16px; font-weight:700;
+    letter-spacing:.08em; color:var(--accent,var(--ink));
+    padding-bottom:7px; margin-bottom:2px;
+    border-bottom:2px solid currentColor;}
+  .sechead .en{font-family:var(--sans); font-size:9px; letter-spacing:.2em;
+    color:var(--ink-muted); display:block; margin-top:3px; font-weight:400;}
+
+  /* ── 条目 ── */
+  details.item{border-bottom:1px solid var(--rule-hair);}
+  details.item:last-child{border-bottom:none;}
+  details.item > summary{list-style:none; cursor:pointer; padding:9px 0 8px;
+    display:flex; gap:8px; align-items:flex-start;}
+  details.item > summary::-webkit-details-marker{display:none;}
+  details.item > summary:focus-visible{outline:2px solid var(--link); outline-offset:2px;}
+  .hl{font-family:var(--serif); font-size:14px; font-weight:600; line-height:1.45;
+    flex:1; letter-spacing:.01em;}
+  .hl a{color:inherit; text-decoration:none;}
+  .hl a:hover{text-decoration:underline; text-underline-offset:2px;}
+  .chev{flex-shrink:0; width:9px; height:9px; margin-top:6px; border-right:1.5px solid var(--ink-muted);
+    border-bottom:1.5px solid var(--ink-muted); transform:rotate(45deg);
+    transition:transform .2s ease;}
+  details.item[open] > summary .chev{transform:rotate(-135deg);}
+  .body{font-family:var(--serif); font-size:12.5px; color:var(--ink-soft); line-height:1.85;
+    padding:0 0 11px; text-align:justify;}
+  /* 副刊（趣闻/笑话）用楷体：报纸副刊的传统做法，也把软内容和硬新闻分开 */
+  .duo .body{font-family:var(--kai); font-size:13.5px; line-height:1.95;}
+  .body a{color:var(--link);}
+  /* 首字下沉只给“本期两个重点”：头条 + 特刊。
+     每条都加的话，28 条里有 28 个下沉，三栏窄栏里一个 2.9em 的汉字要吃掉三行。 */
+  details.item.dropcap[open] .body::first-letter,
+  .special-body > p:first-of-type::first-letter{
+    font-family:var(--serif); font-size:2.9em; font-weight:700; float:left;
+    line-height:.86; padding:2px 7px 0 0; color:var(--ink);}
+  details.special.pending .special-body > p:first-of-type::first-letter{
+    font-size:inherit; float:none; padding:0; font-weight:inherit;}
+  .tag-fiction{display:inline-block; font-family:var(--sans); font-size:9.5px;
+    letter-spacing:.1em; border:1px solid currentColor; color:var(--lo);
+    padding:0 5px; margin-left:7px; vertical-align:2px; white-space:nowrap;}
+  .empty{font-size:11.5px; color:var(--ink-muted); padding:10px 0; font-style:italic;}
+
+  /* ── 通栏板块 ── */
+  .band{padding:16px 26px 18px; border-top:1px solid var(--rule);}
+  .band .sechead{margin-bottom:4px;}
+  .band .items{column-gap:26px;}
+  @media (min-width:641px){
+    .band .items{columns:2; column-rule:1px solid var(--rule-hair);}
+    .band details.item{break-inside:avoid;}
+  }
+
+  /* ── 特刊 ── */
+  details.special{border-top:3px solid var(--red); background:var(--sp-tint);}
+  details.special.pending{border-top:1px solid var(--rule); background:none;}
+  details.special > summary{list-style:none; cursor:pointer; padding:12px 26px;
+    display:flex; align-items:center; gap:10px;}
+  details.special > summary::-webkit-details-marker{display:none;}
+  .kicker{font-size:9.5px; letter-spacing:.2em; padding:2px 9px; flex-shrink:0;
+    background:var(--red); color:var(--paper); font-weight:600; border:1px solid var(--red);}
+  details.special.pending .kicker{background:none; border-color:var(--rule); color:var(--ink-muted); font-weight:400;}
+  .special-title{font-family:var(--serif); font-size:16px; font-weight:700; flex:1;
+    color:var(--red); letter-spacing:.02em;}
+  details.special.pending .special-title{color:var(--ink-soft); font-size:15px;}
+  .special-body{font-family:var(--kai); padding:0 26px 20px; font-size:14.5px;
+    line-height:2.05; color:var(--ink);}
+  .special-body h4{font-family:var(--serif); font-size:14px; margin:18px 0 6px;
+    padding-bottom:4px; border-bottom:1px solid var(--rule-hair);}
+  .special-body h4:first-child{margin-top:0;}
+  .pending-note{margin:0; color:var(--ink-muted);}
+  .special-body p{margin:0 0 10px;}
+  .special-body a{color:var(--link);}
+
+  /* ── 趣闻 / 笑话 ── */
+  .duo{display:grid; grid-template-columns:1.25fr 1fr; border-top:1px solid var(--rule);}
+  .duo .col{border-right:1px solid var(--rule-hair);}
+  .duo .col:last-child{border-right:none;}
+
+  /* ── 报尾 ── */
+  .colophon{border-top:3px double var(--rule-heavy); padding:20px 26px 22px; text-align:center;}
+  .poem{max-width:540px; margin:0 auto;}
+  .poem-head{font-family:var(--serif); margin-bottom:11px;}
+  .poem-title{font-size:16.5px; font-weight:700; letter-spacing:.08em;}
+  .poem-title::before{content:"【";} .poem-title::after{content:"】";}
+  .poem-by{font-size:12px; color:var(--ink-muted); margin-left:8px; letter-spacing:.08em;}
+  .poem-lines{font-family:var(--kai); font-size:16px; line-height:2.15; letter-spacing:.06em;}
+  .poem-note{font-family:var(--kai); font-size:13px; color:var(--ink-soft);
+    line-height:1.95; margin:14px 0 0; text-align:justify;
+    padding-top:12px; border-top:1px solid var(--rule-hair);}
+  .quote{font-family:var(--kai); font-size:15px; font-style:normal;
+    color:var(--ink-soft); margin:0; line-height:1.8;}
+  .imprint{font-size:10px; letter-spacing:.18em; color:var(--ink-muted);
+    margin:14px 0 0; text-transform:uppercase;}
+
+  /* ── 响应式 ── */
+  @media (max-width:640px){
+    body{padding:0;}
+    .paper{border:none; box-shadow:none;}
+    .masthead{padding:18px 16px 0;}
+    .folio{flex-direction:column; align-items:center; gap:3px; font-size:10px;}
+    .subtitle{font-size:10.5px; letter-spacing:.2em; text-indent:.2em;}
+    .mast-line{gap:9px;}
+    .mast-rule{min-width:8px;}
+    .mast-en{font-size:8.5px; letter-spacing:.28em; text-indent:.28em;}
+    .holiday-bar{flex-direction:column;}
+    .hol{border-right:none; border-bottom:1px solid var(--rule-hair);
+      justify-content:center; padding:6px 12px;}
+    .hol:last-child{border-bottom:none;}
+    .indexbar{padding:8px 12px; gap:1px;}
+    .indexbar .lbl{width:100%; margin:0 0 4px;}
+    .tools{margin-left:0; width:100%; margin-top:6px;}
+    .cols,.duo{grid-template-columns:1fr;}
+    .col{border-right:none; border-bottom:1px solid var(--rule); padding:14px 16px 16px;}
+    .cols .col:last-child,.duo .col:last-child{border-bottom:none;}
+    .band{padding:14px 16px 16px;}
+    details.special > summary,.special-body{padding-left:16px; padding-right:16px;}
+    .colophon{padding:18px 16px 20px;}
+    .body{text-align:left;}
+  }
+
+  /* ── 打印 ── */
+  @media print{
+    body{background:#fff; padding:0;}
+    .paper{max-width:none; border:none; box-shadow:none;}
+    .indexbar,#progress,.chev{display:none !important;}
+    details.item > summary{cursor:default;}
+    .body{display:block !important;}
+    a{color:inherit; text-decoration:none;}
+    .body a[href]::after{content:" (" attr(href) ")"; font-size:9px; color:#666;}
+  }
+  @media (prefers-reduced-motion:reduce){ *{transition:none !important;} }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<div class="paper">
+  <header class="masthead">
+    <div class="folio">
+      <span>总第 <b id="issue-no">--</b> 期</span>
+      <span id="date-line"></span>
+      <span>今日 <b id="ban-count">1</b> 版</span>
+    </div>
+    <div class="mast-line">
+      <span class="mast-rule"></span>
+      <h1 class="wordmark">世界新闻摘要</h1>
+      <span class="mast-rule"></span>
+    </div>
+    <p class="mast-en">WORLD NEWS DIGEST</p>
+    <p class="subtitle">环球要闻 · 每日一览</p>
+    <div class="rule-double"></div>
+  </header>
+
+  <div class="holiday-bar" id="holiday-bar" hidden></div>
+
+  <nav class="indexbar">
+    <span class="lbl">本期索引</span>
+    <button class="jump" data-target="sec-china" hidden>中国</button>
+    <button class="jump" data-target="sec-us_ca" hidden>美加</button>
+    <button class="jump" data-target="sec-global" hidden>全球</button>
+    <button class="jump" data-target="economy-section" hidden>经济</button>
+    <button class="jump" data-target="special-section" hidden>特刊</button>
+    <button class="jump" data-target="sec-local" hidden>趣闻</button>
+    <button class="jump" data-target="sec-jokes" hidden>笑话</button>
+    <span class="tools">
+      <button class="tool" id="toggle-all">展开全部</button>
+      <button class="tool" id="toggle-theme">夜间</button>
+      <button class="tool" id="do-print">打印</button>
+    </span>
+  </nav>
+
+  <main>
+    <div class="cols" id="cols-section"></div>
+    <section class="band" id="economy-section" hidden></section>
+    <details class="special" id="special-section" hidden>
+      <summary>
+        <span class="kicker" id="special-kicker">特刊</span>
+        <span class="special-title" id="special-title"></span>
+        <span class="chev"></span>
+      </summary>
+      <div class="special-body" id="special-body"></div>
+    </details>
+    <div class="duo">
+      <div class="col" id="sec-local" style="--accent:var(--lo)">
+        <div class="sechead">本地趣闻<span class="en">LOCAL</span></div>
+        <div id="local-fun-section"></div>
+      </div>
+      <div class="col" id="sec-jokes" style="--accent:var(--jk)">
+        <div class="sechead">今日一笑<span class="en">LAUGH</span></div>
+        <div id="jokes-section"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <div class="poem" id="poem-block" hidden>
+      <div class="poem-head">
+        <span class="poem-title" id="poem-title"></span><span class="poem-by" id="poem-by"></span>
+      </div>
+      <div class="poem-lines" id="poem-lines"></div>
+      <p class="poem-note" id="poem-note"></p>
+    </div>
+    <p class="quote" id="quote-line"></p>
+    <p class="imprint">世界新闻摘要 · 每日出版</p>
+  </footer>
+</div>
+
+<script id="brief-data" type="application/json">
+{
+  "date": "2026-09-27",
+  "weekday": "星期日",
+  "lunar": "农历八月十七",
+  "sections": {
+    "china": [
+      {
+        "title": "名古屋亚运会过半，中国代表团狂揽107金",
+        "summary": "名古屋亚运会赛程过半，中国代表团已斩获107金41银28铜，金牌数接近赛会总数的一半。19岁游泳选手张展硕单届豪取7金创中国亚运历史纪录，中国女排横扫全场卫冕\"十冠王\"，男足时隔28年重返四强；815名运动员中548人为首次参赛，\"00后\"挑大梁的同时，男女篮无缘决赛、乒乓球男团意外失金也暴露出部分优势项目新老交替的隐忧。",
+        "url": "https://news.qq.com/rain/a/20260927A05WLQ00"
+      },
+      {
+        "title": "大熊猫\"平平\"\"福双\"启程赴美，开启十年旅居",
+        "summary": "9月27日凌晨，大熊猫\"平平\"（雄性，2020年3月生）与\"福双\"（雌性，2020年10月生）从成都双流机场启程飞赴美国亚特兰大动物园，开启为期十年的旅居生活。中方配备新鲜竹笋竹子及应急药物，全程保持舱内适宜温湿度，美方兽医随机陪同，抵美后将接受隔离检疫。中美大熊猫保护合作已逾二十年，累计繁育成活7崽。",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-27/10704316.shtml"
+      },
+      {
+        "title": "南部战区在黄岩岛周边海空域组织联合演训",
+        "summary": "9月27日，中国人民解放军南部战区在黄岩岛周边海空域组织海空联合演训。战区方面表示，这是\"针对当前个别国家破坏地区和平稳定的必要行动\"，旨在检验提升部队维护国家领土主权和海洋权益的实战能力，向外界释放维权决心的信号。",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-27/10704317.shtml"
+      },
+      {
+        "title": "福建罗源发生滑坡泥石流险情，3人失联",
+        "summary": "9月26日17时03分，福州市罗源县碧里乡一土地平整项目发生滑坡泥石流险情，造成3人暂未联系上、2处房屋受损。当地迅速启动应急响应，组织6支专业力量共116人开展人员搜救和应急抢险，受阻道路已恢复通行，事故原因正在调查中。",
+        "url": "https://k.sina.cn/article_6192937794_17120bb4202002us7o.html"
+      },
+      {
+        "title": "全国国庆文旅消费月启动，发放超3.1亿元消费券",
+        "summary": "文化和旅游部9月22日在云南弥勒启动2026年全国国庆文化和旅游消费月，活动持续至10月底，将发放超3.1亿元消费券等补贴，全国举办超2万场次文旅活动，涵盖游历山河、中秋团圆、红色旅游、夜间经济等七大主题，助力中秋国庆双节及秋季文旅消费。",
+        "url": "https://www.163.com/dy/article/L7E1MEH70534A4SC.html"
+      },
+      {
+        "title": "交通运输部：国庆假期预计出行21.3亿人次，自驾占九成",
+        "summary": "交通运输部副部长李扬介绍，中秋3天假期预计出行6.5亿人次，国庆7天预计21.3亿人次、日均3亿人次，其中首日出行量将达3.4亿人次，为平常近2倍；自驾和公路出行占比超九成，新能源车出行量增长明显，全国铁路预计发送旅客2.84亿人次，单日最高超2440万人。",
+        "url": "https://www.163.com/dy/article/L7KBP34L0512D03F.html"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "强力\"东北风暴\"袭击美国东北部，致1人死亡、逾8万户断电",
+        "summary": "一场强力\"东北风暴\"9月26日袭击纽约、新泽西等美国东北部地区，造成沿海洪涝，1人死亡，高峰时逾11.9万户断电（周六下午降至约8.8万户），逾400架航班取消。纽约州长霍楚警告\"这个周末靠近或进入水域就是在拿生命冒险\"，多地宣布进入紧急状态，包括埃德・希兰演唱会在内的多场活动被迫取消。",
+        "url": "https://www.aljazeera.com/news/2026/9/26/powerful-storm-brings-flooding-power-outages-to-northeastern-united-states"
+      },
+      {
+        "title": "特朗普拒绝伊朗\"七天路线图\"，霍尔木兹海峡僵局持续",
+        "summary": "伊朗提出以美方解除海军封锁、豁免石油制裁、解冻约120亿美元资产及观察黎巴嫩也门停火为条件，换取重新开放霍尔木兹海峡并启动最终谈判，特朗普9月26日明确表示\"拒绝\"，称伊朗因\"输得太惨\"才求和，寄望封锁与孤立最终迫使德黑兰接受对美更有利的条件。分析人士警告，双方都在赌拖延对己方有利，僵局可能延长，能源价格及海湾盟友压力将随之升温。",
+        "url": "https://www.aljazeera.com/news/2026/9/27/better-deal-whats-behind-trumps-rejection-of-irans-truce-offer"
+      },
+      {
+        "title": "白宫将CNN逐出\"空军一号\"记者团，四大电视网拒绝顶替",
+        "summary": "特朗普赴田纳西州出席大学橄榄球赛期间，白宫将CNN排除在\"空军一号\"随行记者团之外，改由保守派媒体Real America's Voice News顶替，此前一周CNN、MS NOW及Politico已被白宫以\"国家安全\"为由整体禁止采访。福克斯、ABC、CBS、NBC四家电视网拒绝在CNN恢复准入前参与记者团。三家媒体已提起诉讼，联邦法官暂时叫停禁令，指白宫\"未能提供任何证据\"证明相关报道损害国家安全。",
+        "url": "https://www.aljazeera.com/news/2026/9/26/white-house-bars-cnn-from-air-force-one-for-trumps-upcoming-trip"
+      },
+      {
+        "title": "特朗普宣布放宽燃油经济性标准，终结\"电动车强制令\"",
+        "summary": "特朗普政府宣布放宽拜登时期制定的企业平均燃油经济性（CAFE）标准，新规将2031年车队燃效目标从约50.4英里/加仑降至约34.5英里/加仑，降幅超三成。特朗普称新规将\"为家庭购车节省数千美元\"，并把拜登旧规定框定为不公平的\"电动车强制令\"；但国会此前已取消联邦电动车税收抵免，环保方面对放松排放标准的担忧在其表态中未被提及。",
+        "url": "https://www.aljazeera.com/news/2026/9/26/trump-says-he-is-rolling-back-biden-era-us-fuel-economy-rules-for-cars"
+      },
+      {
+        "title": "魁北克大选提前投票9月27日开始，魁人党民调持续领先",
+        "summary": "魁北克大选提前投票9月27日（周日）启动，正式投票日为10月5日。据Léger民调，魁人党（PQ）以约29%的支持率领先，执政联盟党（CAQ）与魁北克自由党分别约24%与22%，争夺\"第二名\"的竞争趋于胶着，且逾四成受访选民表示投票意向尚未最终确定，选情仍存变数。",
+        "url": "https://www.cbc.ca/news/canada/montreal/polls-quebec-election-9.7352162"
+      }
+    ],
+    "global": [
+      {
+        "title": "埃塞俄比亚提格雷冲突再起，军方称将\"克制\"应对",
+        "summary": "埃塞俄比亚陆军参谋长贝尔哈努·朱拉称军方正以\"智慧与克制\"应对紧张局势，而提格雷人民解放阵线（TPLF）称一场涉及步兵、机械化部队与无人机的\"全面攻势\"正在展开。埃军此前宣称在北沃洛地区反攻中击毙272名、击伤260名提格雷武装人员；朱拉指责厄立特里亚\"资助武装团体削弱埃塞俄比亚\"，厄方否认。7个武装团体已组成\"埃塞俄比亚人民生存力量联盟\"，2022年结束两年内战的《比勒陀利亚协议》正面临严峻考验，冲突已蔓延至提格雷、阿姆哈拉、阿法尔三地。",
+        "url": "https://www.aljazeera.com/news/2026/9/27/ethiopias-army-promises-restraint-amid-fears-of-new-civil-war"
+      },
+      {
+        "title": "雅典市中心疑似煤气泄漏爆炸致6人死亡，含4名美国游客",
+        "summary": "9月26日，雅典历史街区普拉卡一栋两层建筑发生疑似煤气泄漏爆炸并倒塌，造成6人死亡，其中包括4名美国游客（两男两女）及一对居住在楼内的英国男子和希腊女子老年夫妇，另有相邻建筑内2名女子受伤。雅典市长杜卡斯称起因疑为重大煤气泄漏，此前已有居民反映\"闻到煤气味数周\"并向当局示警，但泄漏物质性质当时未获确认。",
+        "url": "https://www.aljazeera.com/news/2026/9/26/four-american-tourists-among-6-killed-in-suspected-gas-leak-blast-in-athens"
+      },
+      {
+        "title": "委内瑞拉再释放39名政治犯，美方推动的\"后马杜罗\"谈判持续",
+        "summary": "委内瑞拉过渡政府（由马杜罗前副总统德尔西·罗德里格斯领导）9月25至26日释放39名政治异见人士，包括8名2021年被控\"毒品恐怖主义\"的女性及6名被控参与2020年针对马杜罗未遂政变的人员，系美方批准下与反对派第二轮谈判的成果。人权组织称截至9月中旬仍有344人被列为政治犯，较8月的391人有所下降，但释放节奏依然缓慢。",
+        "url": "https://www.aljazeera.com/news/2026/9/27/venezuela-frees-39-political-prisoners-after-post-maduro-talks"
+      },
+      {
+        "title": "也门政府军扩大对胡塞武装攻势，塔伊兹省战事升级",
+        "summary": "也门政府军近24小时内在西南部塔伊兹省对胡塞武装发起多线空袭与地面行动，打击5处胡塞据点并在多个地区展开军事行动；胡塞武装则已占领红海沿岸城市摩卡并扩大对曼德海峡的控制。冲突自2026年7月2022年停火后重燃以来，联合国儿基会证实至少15名儿童死亡、14人受伤，三周内逾14.6万人流离失所，全国2200万人需要人道援助。",
+        "url": "https://www.aljazeera.com/news/2026/9/27/yemen-government-forces-widen-attacks-against-houthis-what-we-know"
+      },
+      {
+        "title": "德俄外长四年来首次直接会晤，气氛僵硬无实质突破",
+        "summary": "德国外长瓦德富尔与俄罗斯外长拉夫罗夫9月26日在纽约联大期间举行会谈，这是俄乌战争爆发以来两国外长的首次直接会面，由德方主动提议。双方讨论俄军事升级、乌克兰停火、黑海粮食与能源出口等议题，瓦德富尔敦促俄方放弃\"危险的升级路线\"，拉夫罗夫则态度强硬，称战争将\"持续到底\"，并质疑德国是否从二战中吸取教训，会谈未取得实质进展。",
+        "url": "https://www.aljazeera.com/news/2026/9/27/german-russian-foreign-ministers-hold-rare-talks-amid-rising-tensions"
+      }
+    ],
+    "economy": [
+      {
+        "title": "10年期美债收益率升至金融危机以来新高，30年房贷破7.49%",
+        "summary": "美股三大指数上周五（9/25）收官上涨（道指51828.62点+0.93%、标普7743.41点+0.51%、纳指27068.72点+0.48%），本周三大指数均录得周线上涨，道指结束三连跌。但10年期美债收益率攀升至5.18%，创金融危机以来新高，30年期固定房贷利率升至7.49%；分析师称此轮抛售\"不是危机，但是个警钟\"。投资启示：利率敏感型板块（地产、高杠杆成长股）估值承压风险上升，若收益率继续走高，需警惕股债跷跷板效应对科技股估值的反噬。",
+        "url": "https://www.cnbc.com/2026/09/24/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "中美同意互降300亿美元商品关税，设立AI事件沟通渠道",
+        "summary": "北京方面表示，习近平访美期间中美就非敏感类商品互降关税达成共识，涉及金额约300亿美元，双方并建立人工智能对话机制及AI事件专项沟通渠道，加快推进军事危机沟通机制建设。此外中方承诺2027至2028年进口至少1000万吨美国煤炭，双方还就农产品市场准入、联合禁毒执法等达成\"八点共识\"。投资启示：关税缓和对跨太平洋供应链、大宗商品（煤炭、农产品）及AI基础设施类股构成边际利好，但\"非敏感类\"表述意味着核心科技管制大概率维持，短期更多是情绪面提振而非结构性反转。",
+        "url": "https://www.cnbc.com/2026/09/26/china-us-tariff-cut-ai-dialogue.html"
+      },
+      {
+        "title": "A股节前缩量整理，机构看好节后\"吃饭行情\"",
+        "summary": "9月23日A股三大指数集体下跌，上证指数报3936.52点跌0.39%，深证成指跌0.64%，创业板指跌0.6%，沪深京三市成交额合计1.78万亿元，较前一交易日骤降3700亿元，显示节前资金趋于谨慎。华安证券预期四季度\"有望出现幅度可观的吃饭行情\"，光大证券则认为美联储加息落地、国际油价下行及中美经贸磋商释放的积极信号，将支持A股延续回升态势。投资启示：当前缩量调整更偏技术性回撤而非趋势逆转，节前观望情绪浓厚，为节后逢低布局提供了潜在窗口，但仍需关注海外美债收益率飙升对全球风险偏好的外溢影响。",
+        "url": "https://finance.sina.com.cn/stock/roll/2026-09-23/doc-inisvcqc5372180.shtml"
+      },
+      {
+        "title": "下周美股迎\"最重要一周\"：非农、PCE、ISM密集来袭",
+        "summary": "9月28日至10月2日当周，美国将公布JOLTS职位空缺、谘商会消费者信心、ADP就业、PCE物价指数（美联储最看重的通胀指标）、ISM制造业和服务业PMI，并于周五压轴公布9月非农就业报告，市场称其为\"本周最重要的数据\"。当前纳指屡创新高与10年期美债收益率破5%并存，形成'经济数据越强、股市承压风险越大'的微妙局面。投资启示：若就业与通胀数据继续偏强，市场对美联储偏鹰立场的定价可能升温，成长股估值的高位波动风险将上升，建议关注数据公布窗口前后的仓位管理。",
+        "url": "https://www.cnbc.com/2026/09/25/stock-market-next-week-outlook-for-sept-28-oct-2-2026.html"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "纽约鸸鹋从宠物动物园出逃，警方出动无人机才擒获",
+        "summary": "9月14日，一只鸸鹋从纽约州罗克兰县拉马波的一处宠物动物园出逃，引发警方追捕。警方出动无人机从空中追踪其行踪，警方打趣说\"说服一只鸸鹋冒险结束需要一点团队合作\"。鸸鹋最终被安全擒获并送回动物园，未受伤。",
+        "url": "https://www.upi.com/Odd_News/2026/09/14/emu-chase-petting-zoo-Ramapo-New-York/4691789392344"
+      },
+      {
+        "title": "多伦多附近浣熊头卡排水篦子，安省警方封路施救",
+        "summary": "9月23日，安大略省警方在伯灵顿403号公路通往407号公路的匝道上，解救一只头部卡在排水篦子里的浣熊。警方封闭左侧车道以便掀起篦子，这只被昵称为\"洛基\"的浣熊看起来毫发无损，获救后\"徒步逃离现场\"。事件由细心的过路司机报警发现。",
+        "url": "https://www.upi.com/Odd_News/2026/09/23/canada-raccoon-highway-sewer-grate-Burlington/2841790175647"
+      },
+      {
+        "title": "西雅图老便利店变身\"不便利商店\"艺术展，USB线故意打结出售",
+        "summary": "西雅图市中心一间原7-Eleven便利店9月21日起变身互动艺术展\"不便利商店\"，出售刻意设计得不方便的商品：预先打结的USB数据线、薯片袋做的手提包，以及只播放U2乐队歌曲的\"座机版iPhone\"。展览由约70位本地艺术家参与、分14个\"部门\"，定价从1美元到1万美元不等，主创称希望借此让艺术购买\"变得更平易近人\"。",
+        "url": "https://www.upi.com/Odd_News/2026/09/22/Inconvenience-store-seattle-art-exhibit/1271790098025/"
+      },
+      {
+        "title": "湖南男子流浪拾荒21年，社会救助部门帮他查出42万元养老金",
+        "summary": "71岁的株洲茹先生曾是国企职工，企业破产后\"买断工龄\"获补偿金，但很快花光并与亲戚生债务矛盾，此后流浪拾荒长达21年。2024年冬，常德市社会救助事务中心工作人员在关爱流浪人员活动中发现他，经数月劝说获取信息后核查发现其有30多年工龄、符合领取养老金条件，多部门耗时1年办理手续。9月24日，他领到社保卡，月养老金约3700元，已累计结存42万余元，目前仍住楼道拾荒，计划租房。",
+        "url": "https://www.163.com/dy/article/L7S0DIPI0534P59R.html"
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "老板问程序员：\"这个功能什么时候能上线？\"程序员淡定回答：\"理论上现在就能上线。\"老板追问：\"那实际上呢？\"程序员：\"实际上'理论上'这三个字很重要。\"",
+        "fictional": true
+      },
+      {
+        "title": "今日一则",
+        "summary": "医生对病人说：\"你这是典型的'假期综合症'，建议多休息。\"病人苦笑：\"医生，可我这假期还没开始呢。\"医生：\"那就是'盼假期综合症'，同样建议多休息。\"",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "山居秋暝",
+    "author": "王维",
+    "dynasty": "唐",
+    "lines": [
+      "空山新雨后，天气晚来秋。",
+      "明月松间照，清泉石上流。",
+      "竹喧归浣女，莲动下渔舟。",
+      "随意春芳歇，王孙自可留。"
+    ],
+    "note": "这首诗写于王维隐居辋川期间，秋雨初霁后的山林傍晚：明月清泉、竹喧莲动，动静相生却处处透着静谧。尾联反用《楚辞·招隐士》\"王孙兮归来，山中兮不可久留\"之意，说纵使春芳消歇，山中秋色依然值得久留，流露出诗人对官场之外这份清新自在生活的由衷眷恋。值此双节将至、举国收假出行之际，读来别有一份'不妨慢下来'的秋日心境。"
+  },
+  "special": {
+    "title": "本周回顾与下周展望",
+    "html": "<h4>本周主线</h4>\n\n<p><strong>中美关系从磋商走向元首会晤落地。</strong>本周一，何立峰率团在纽约与美方展开新一轮经贸磋商（<a href=\"https://finance.sina.com.cn/jjxw/2026-09-20/doc-inisnwys9209157.shtml\" target=\"_blank\">磋商启动</a>）；周二第八轮磋商收官，双方称\"审慎乐观\"，同时官宣习近平将于9月24日启程访美，中方同步扩大大豆采购并签订天然气长约（<a href=\"https://original.ifeng.com/c/8wbEKGqXlqf\" target=\"_blank\">磋商收官</a>）。周四习近平抵达华盛顿开启国事访问（<a href=\"https://news.qq.com/rain/a/20260924A04BSK00\" target=\"_blank\">抵达华盛顿</a>），周五出席国宴，特朗普称两国关系\"从未如此友好\"（<a href=\"https://www.aljazeera.com/news/2026/9/25/trump-praises-us-china-friendship-at-state-dinner-with-xi-jinping\" target=\"_blank\">国宴</a>），周六双方在白宫正式举行会谈（<a href=\"https://news.cctv.com/2026/09/25/ARTIpSWNZb9BAL796QIiCdky260925.shtml\" target=\"_blank\">白宫会谈</a>）。贸易休战已延长两个月，一周之内完成了从磋商桌到白宫会谈的整条链路。</p>\n\n<p><strong>名古屋亚运会，中国代表团一路碾压。</strong>周一开赛首日狂揽11金断层领跑（<a href=\"https://www.163.com/dy/article/L7A50DU405566VBM.html\" target=\"_blank\">首日11金</a>）；周二累计23金10银5铜（<a href=\"https://finance.sina.com.cn/tech/roll/2026-09-22/doc-inisscmm8849089.shtml\" target=\"_blank\">23金</a>）；周三女排23天复仇夺金（<a href=\"https://k.sina.com.cn/article_7879995911_1d5af320706802ktji.html\" target=\"_blank\">女排夺金</a>）；周五游泳收官，19岁张展硕拿到个人第七金（<a href=\"https://sports.cctv.com/2026/09/25/ARTIGfRQ9p6dO7WqU6asaQ6s260925.shtml\" target=\"_blank\">游泳收官</a>）；周六单日再夺18金，累计98金稳居金牌榜首（<a href=\"https://news.qq.com/rain/a/20260926A018RK00\" target=\"_blank\">98金</a>）。</p>\n\n<p><strong>白宫媒体禁令，一周内走完颁布到被叫停的全程。</strong>周一特朗普以\"假新闻\"为由禁止CNN、MS NOW、Politico进入白宫，并取消CNN电视轮值采访资格（<a href=\"https://www.cnn.com/2026/09/20/media/cnn-trump-white-house-pool-ban\" target=\"_blank\">轮值资格被取消</a>）；周二三家媒体联合起诉，指控禁令违宪（<a href=\"https://www.aljazeera.com/news/2026/9/21/cnn-politico-ms-now-to-sue-trump-administration-over-white-house-ban\" target=\"_blank\">联合起诉</a>）；周三案件开庭，同期CNN民调显示特朗普支持率跌至任内新低（<a href=\"https://www.cnbc.com/2026/09/23/trump-white-house-ban-media-doj-cnn-msnow-politico.html\" target=\"_blank\">开庭</a>）；周四联邦法官叫停禁令（<a href=\"https://www.aljazeera.com/news/2026/9/24/us-judge-blocks-trumps-white-house-ban-on-cnn-ms-now-and-politico\" target=\"_blank\">禁令被叫停</a>）。从颁布到被司法叫停只用了三天。</p>\n\n<p><strong>伊朗与霍尔木兹海峡的博弈持续升级。</strong>周一伊朗军方警告美国正准备重启打击（<a href=\"https://www.aljazeera.com/news/2026/9/21/irans-military-says-us-preparing-to-resume-strikes\" target=\"_blank\">伊朗警告</a>）；周三特朗普在联大威胁\"毁灭\"伊朗，同时美伊纽约秘密会谈又现转机（<a href=\"https://www.aljazeera.com/news/2026/9/23/annihilate-vs-crushing-attacks-why-iran-us-up-rhetoric-amid-talks\" target=\"_blank\">威胁与秘密会谈</a>）；周四伊朗称不会被\"霸凌\"，但若再遭袭将把冲突扩大至印度洋（<a href=\"https://www.aljazeera.com/news/liveblog/2026/9/24/iran-war-live-tehran-says-it-wont-be-bullied-remains-open-for-talks\" target=\"_blank\">伊朗表态</a>）；周五伊朗正式提出\"七天路线图\"，以换取重开霍尔木兹海峡（<a href=\"https://www.aljazeera.com/news/2026/9/25/whats-in-irans-seven-day-plan-to-reopen-the-strait-of-hormuz\" target=\"_blank\">七天路线图</a>）；周六特朗普据报拒绝了这一提议，海峡局势仍然紧张（<a href=\"https://www.aljazeera.com/news/2026/9/26/trump-reportedly-rejects-irans-seven-day-ceasefire-proposal-whats-next\" target=\"_blank\">遭拒</a>）。今天（周日）的最新消息显示，特朗普明确表态\"我拒绝了他们的方案\"，称该协议\"不可接受\"，并指伊朗提议是因为\"输得太惨了\"；伊朗外长阿拉格齐则回应称选择权在美国手中，德黑兰强调\"只有外交才可解决冲突\"（<a href=\"https://news.ifeng.com/c/8wkjxapz9sR\" target=\"_blank\">特朗普拒绝方案</a>）。这条线索仍未闭合，下周会否有新动作是关键看点。</p>\n\n<h4>被低估的一条</h4>\n\n<p>周一夹在亚运会开幕、中美磋商这些大新闻中间，还有一条不太起眼的消息：中国房屋养老金制度正式落地，中国楼市迈入\"养房时代\"（<a href=\"https://news.qq.com/rain/a/20260921A058M000\" target=\"_blank\">房屋养老金</a>）。背景是2005年前后建成的高层住宅陆续老龄化，电梯更换等单项维修动辄花费三四十万元，原有住宅专项维修资金已难以为继。新制度由业主原维修资金账户、以土地出让金等财政渠道出资设立的公共账户，以及业主自愿补缴三部分构成，上海领衔、另有21个城市参与试点。这条消息之所以容易被忽略，是因为它没有明确的冲突或悬念，读起来更像一则政策通稿；但它牵动的盘子并不小——全国现有维修资金结余超1万亿元，公积金结余约10万亿元，全国约20%的城镇住房建于1992年前，约3500万套住房存在维修需求，涉及近1亿居民。随着试点从21个城市向外扩围，资金账户如何筹措、业主补缴是否会成为新的强制性支出，都可能在未来几周到几个月内成为持续报道的题材。</p>\n\n<h4>下周展望</h4>\n\n<ul>\n<li><strong>国庆黄金周（10月1日—10月7日）。</strong>中秋假期已于本周日（9月27日）结束，9月28日至30日正常上班，10月1日起进入为期7天的国庆假期，10月10日（周六）调休上班。这将是下周国内新闻节奏的最大变量，出行、消费类报道会明显增多。</li>\n<li><strong>美国关键经济数据周，检验这周加息之后的下一步。</strong>本周美联储三年多来首次加息至3.75%-4.00%，下周随即迎来一连串数据验证：9月30日（周三）公布8月核心PCE物价指数、美光科技公布2026财年第四季度业绩；10月1日（周四）公布9月ISM制造业指数、耐克公布财报；10月2日（周五）公布9月非农就业报告，这是\"最后也是最重要的市场事件之一\"，将为美联储后续利率路径提供关键依据（<a href=\"https://www.fx168news.com/article/1097372\" target=\"_blank\">一周前瞻</a>）。</li>\n<li><strong>伊朗-霍尔木兹海峡对峙悬而未决。</strong>特朗普已明确拒绝伊朗的\"七天路线图\"，白宫方面表态\"并不着急\"，伊朗则坚持\"选择权在美国手中\"。这条本周留下的悬念——双方是否会有新一轮秘密接触，或局势进一步升级——大概率会在下周继续发酵。</li>\n</ul>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "国庆节",
+      "date": "2026-10-01",
+      "days": 4,
+      "note": "放假 10/1–10/7"
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "National Day for Truth and Reconciliation",
+      "date": "2026-09-30",
+      "days": 3,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Columbus Day",
+      "date": "2026-10-12",
+      "days": 15,
+      "scope": "Federal · WA · NY"
+    }
+  ],
+  "issue_no": 34
+}
+</script>
+<script>
+(function(){
+  var raw = document.getElementById('brief-data').textContent.trim();
+  var data;
+  try { data = JSON.parse(raw); }
+  catch(e){ document.querySelector('main').innerHTML =
+    '<p class="empty" style="padding:40px 26px;text-align:center;">数据加载失败</p>'; return; }
+
+  function esc(s){
+    var d = document.createElement('div');
+    d.textContent = (s === undefined || s === null) ? '' : String(s);
+    return d.innerHTML;
+  }
+
+  function item(it, i, opts){
+    opts = opts || {};
+    var open = (opts.firstOpen && i === 0) ? ' open' : '';
+    var lead = (opts.dropcap && i === 0) ? ' dropcap' : '';
+    var title = it.url
+      ? '<a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a>'
+      : esc(it.title);
+    var tag = it.fictional ? '<span class="tag-fiction">虚构</span>' : '';
+    var src = it.url
+      ? ' <a href="' + esc(it.url) + '" target="_blank" rel="noopener">原文 &rsaquo;</a>' : '';
+    return '<details class="item' + lead + '"' + open + '>' +
+      '<summary><span class="hl">' + title + tag + '</span><i class="chev"></i></summary>' +
+      '<div class="body">' + esc(it.summary || '') + src + '</div></details>';
+  }
+
+  function list(arr, opts){
+    if(!arr || !arr.length) return '<div class="empty">今日暂无</div>';
+    return arr.map(function(it, i){ return item(it, i, opts); }).join('');
+  }
+
+  var sec = data.sections || {}, ban = 0;
+
+  // 三栏
+  var defs = [
+    {k:'china',  zh:'中国热点', en:'CHINA',  v:'--cn'},
+    {k:'us_ca',  zh:'美加热点', en:'US · CA', v:'--us'},
+    {k:'global', zh:'全球热点', en:'WORLD',  v:'--gl'}
+  ];
+  document.getElementById('cols-section').innerHTML = defs.map(function(c){
+    var arr = sec[c.k] || [];
+    if(arr.length) ban++;
+    return '<div class="col" id="sec-' + c.k + '" style="--accent:var(' + c.v + ')">' +
+      '<div class="sechead">' + c.zh + '<span class="en">' + c.en + '</span></div>' +
+      list(arr, {firstOpen:true, dropcap:c.k === 'china'}) + '</div>';
+  }).join('');
+
+  // 经济
+  var econ = sec.economy || [];
+  if(econ.length){
+    ban++;
+    var el = document.getElementById('economy-section');
+    el.hidden = false;
+    el.style.setProperty('--accent', 'var(--ec)');
+    el.innerHTML = '<div class="sechead">经济 · 市场<span class="en">MARKETS</span></div>' +
+      '<div class="items">' + list(econ, {firstOpen:true}) + '</div>';
+  }
+
+  // 特刊：status 为 "pending" 时只挂占位，正文等特刊任务跑完由 merge_special.py 补进来
+  var spd = data.special;
+  var spPending = !!(spd && spd.status === 'pending');
+  var spReady   = !!(spd && spd.html && !spPending);
+  if(spPending || spReady){
+    var sp = document.getElementById('special-section');
+    sp.hidden = false;
+    sp.classList.toggle('pending', spPending);
+    sp.open = spReady;                    // 占位没正文可读，默认收起
+    document.getElementById('special-kicker').textContent = spPending ? '筹备中' : '特刊';
+    document.getElementById('special-title').textContent = spd.title || '今日特刊';
+    document.getElementById('special-body').innerHTML = spReady
+      ? spd.html
+      : '<p class="pending-note">本期特刊仍在筹备中，稍后会更新到本页。</p>';
+    if(spReady) ban++;                    // 占位不计入版数
+  }
+
+  // 趣闻 / 笑话
+  var fun = sec.local_fun || [], jokes = sec.jokes || [];
+  if(fun.length) ban++;
+  if(jokes.length) ban++;
+  document.getElementById('local-fun-section').innerHTML = list(fun, {firstOpen:true});
+  document.getElementById('jokes-section').innerHTML = list(jokes, {});
+
+  // 假期带：数据由 special_helper.py 从 holidays.json 算好写进来
+  var hol = Array.isArray(data.holidays) ? data.holidays : [];
+  if(hol.length){
+    var hb = document.getElementById('holiday-bar');
+    hb.hidden = false;
+    hb.innerHTML = hol.map(function(h){
+      var md = h.date ? h.date.slice(5).replace('-', '/') : '';
+      var when = h.days === 0 ? '就是今天'
+               : h.days === 1 ? '明天'
+               : '还有 ' + h.days + ' 天';
+      return '<span class="hol hol-' + esc(h.region || '') + '"><b>' + esc(h.label) + '</b>' +
+        '<span class="hol-name">' + esc(h.name) + '</span>' +
+        (h.scope ? '<span class="hol-scope">' + esc(h.scope) + '</span>' : '') +
+        '<i>' + esc(md) + '</i><em>' + when + '</em></span>';
+    }).join('');
+  }
+
+  // 报头信息
+  document.getElementById('date-line').textContent =
+    (data.date || '') + (data.weekday ? ' · ' + data.weekday : '') + (data.lunar ? ' · ' + data.lunar : '');
+  document.getElementById('issue-no').textContent = data.issue_no != null ? data.issue_no : '--';
+  document.getElementById('ban-count').textContent = ban || 1;
+  // 报尾：诗词赏析。没有 poem 时退回旧的 quote 字段，老数据不会开天窗
+  var poem = data.poem;
+  if(poem && (poem.title || poem.lines)){
+    document.getElementById('poem-block').hidden = false;
+    document.getElementById('poem-title').textContent = poem.title || '';
+    document.getElementById('poem-by').textContent =
+      [poem.dynasty, poem.author].filter(Boolean).join(' · ');
+    var pl = Array.isArray(poem.lines) ? poem.lines : (poem.lines ? [poem.lines] : []);
+    document.getElementById('poem-lines').innerHTML = pl.map(esc).join('<br>');
+    var noteEl = document.getElementById('poem-note');
+    noteEl.textContent = poem.note || '';
+    if(!poem.note) noteEl.hidden = true;
+  } else {
+    document.getElementById('quote-line').textContent = data.quote ? ('“' + data.quote + '”') : '';
+  }
+
+  // 索引：只显示真有内容的板块
+  [['sec-china',(sec.china||[]).length],['sec-us_ca',(sec.us_ca||[]).length],
+   ['sec-global',(sec.global||[]).length],['economy-section',econ.length],
+   ['special-section',(spPending||spReady)?1:0],
+   ['sec-local',fun.length],['sec-jokes',jokes.length]].forEach(function(p){
+    var btn = document.querySelector('.jump[data-target="' + p[0] + '"]');
+    if(btn && p[1]) btn.hidden = false;
+  });
+  document.querySelectorAll('.jump').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var t = document.getElementById(btn.dataset.target);
+      if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  // 展开 / 收起全部
+  var allBtn = document.getElementById('toggle-all');
+  allBtn.addEventListener('click', function(){
+    var items = document.querySelectorAll('details.item');
+    var expand = allBtn.textContent === '展开全部';
+    items.forEach(function(d){ d.open = expand; });
+    allBtn.textContent = expand ? '收起全部' : '展开全部';
+  });
+
+  // 日间 / 夜间：记住选择，读不到就跟随系统
+  var root = document.documentElement, themeBtn = document.getElementById('toggle-theme');
+  function paint(){
+    var night = root.dataset.theme
+      ? root.dataset.theme === 'night'
+      : matchMedia('(prefers-color-scheme:dark)').matches;
+    themeBtn.textContent = night ? '日间' : '夜间';
+  }
+  try{ var saved = localStorage.getItem('xxhh-theme'); if(saved) root.dataset.theme = saved; }catch(e){}
+  paint();
+  themeBtn.addEventListener('click', function(){
+    var night = root.dataset.theme
+      ? root.dataset.theme === 'night'
+      : matchMedia('(prefers-color-scheme:dark)').matches;
+    root.dataset.theme = night ? 'day' : 'night';
+    try{ localStorage.setItem('xxhh-theme', root.dataset.theme); }catch(e){}
+    paint();
+  });
+
+  document.getElementById('do-print').addEventListener('click', function(){ window.print(); });
+
+  // 阅读进度
+  var bar = document.getElementById('progress');
+  var navEl = document.querySelector('.indexbar');
+  function tick(){
+    var h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
+    if(navEl) navEl.classList.toggle('stuck', navEl.getBoundingClientRect().top <= 0.5);
+  }
+  addEventListener('scroll', tick, {passive:true});
+  addEventListener('resize', tick);
+  tick();
+})();
+</script>
+
+<!-- 访客统计 · GoatCounter 像素：不加载任何第三方 JS -->
+<img src="https://jrstdio.goatcounter.com/count?p=/briefs/daily_brief_20260927.html"
+     alt="" width="1" height="1" aria-hidden="true"
+     style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
+</body>
+</html>
