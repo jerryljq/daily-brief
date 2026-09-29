@@ -1,0 +1,196 @@
+{
+  "date": "2026-09-29",
+  "weekday": "星期二",
+  "lunar": "农历八月十九",
+  "sections": {
+    "china": [
+      {
+        "title": "国常会：加大宏观政策逆周期调节力度",
+        "summary": "9月28日国务院常务会议决定\"存量与增量政策并举\"推动经济增长，加快债券发行和重大工程项目建设，并研究房地产、就业促进等新增量举措。",
+        "url": "https://finance.sina.com.cn/tech/roll/2026-09-29/doc-initmzhm9331900.shtml"
+      },
+      {
+        "title": "央行连发四项增量政策",
+        "summary": "9月29日央行宣布四项结构性货币政策：PSL一年期利率下调至1.5%并纳入\"六张网\"支持范围，科技创新再贷款额度增加2000亿元、支持比例提至100%，支农支小再贷款增加5000亿元（其中民营企业再贷款增3000亿元）。",
+        "url": "https://finance.sina.com.cn/jjxw/2026-09-29/doc-initpatz6112554.shtml"
+      },
+      {
+        "title": "房贷贴息新政10月1日起实施，这些人优先受益",
+        "summary": "中央财政自10月1日起对符合条件的首套房购买者实施贴息1个百分点、期限不超过5年、单户贷款规模上限100万元的贴息政策，覆盖面积120平方米以下、总价不超150万元的首套住房，中小三四线城市刚需群体最直接受益。",
+        "url": "https://finance.sina.com.cn/tech/roll/2026-09-29/doc-initpatt7624983.shtml"
+      },
+      {
+        "title": "第48届世界技能大赛，中国代表团居金牌榜首位",
+        "summary": "中国代表团在第48届世界技能大赛64个项目中共获41枚金牌，第五次位居金牌榜和团体总分世界第一，其中数控铣项目实现六连冠、砌筑项目五连冠。",
+        "url": "https://news.cctv.com/2026/09/28/ARTIZ8fL425Kqr0VDmoTTQjY260928.shtml"
+      },
+      {
+        "title": "中秋假期消费市场需求旺盛",
+        "summary": "商务部数据显示，中秋假期期间全国消费市场需求旺盛，生活必需品供应充足、价格总体稳定。",
+        "url": "https://news.cctv.com/2026/09/28/ARTIhEMRpVuqbWfIILfwSlBC260928.shtml"
+      },
+      {
+        "title": "中秋假期结束：交通出行需求保持高位，短途出行活跃",
+        "summary": "中秋假期最后一天（9月27日）交通运输部门数据显示，假期全程交通出行需求维持高位，短途出行表现尤为活跃。",
+        "url": "https://news.cctv.com/2026/09/28/ARTIooEyjeNo3DSgBsYFxiN4260928.shtml"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "特朗普案前特别检察官杰克·史密斯参议院作证：调查\"排除合理怀疑\"证明特朗普涉严重罪行",
+        "summary": "9月29日，前联邦特别检察官杰克·史密斯在参议院司法委员会听证会上作证，称其对2021年1月6日国会山骚乱的调查已\"排除合理怀疑\"地证明特朗普从事了\"严重犯罪\"，共和党参议员约翰·肯尼迪当场斥责其证词。",
+        "url": "https://www.cnn.com/2026/09/29/politics/live-news/jack-smith-testifies-senate"
+      },
+      {
+        "title": "FBI遭黑客组织ShinyHunters入侵，全体雇员数据或被窃取",
+        "summary": "黑客组织ShinyHunters约一周前攻破了FBI一个求职者信息门户，窃取了社会安全号码、紧急联系人及住址等敏感信息，波及负责中国、俄罗斯等事务的敏感部门人员，FBI目前按\"全体雇员数据均已泄露\"的最坏情况处置。",
+        "url": "https://www.cnn.com/2026/09/28/politics/fbi-fallout-data-breach-hacking"
+      },
+      {
+        "title": "大法官阿利托因持有石油股遭质疑，宣布回避重大气候变化案",
+        "summary": "美国最高法院大法官塞缪尔·阿利托9月28日宣布回避博尔德市诉森科能源（Suncor）气候变化案的审理，此前他因持有石油相关股票而受到外界对其潜在利益冲突的质疑。",
+        "url": "https://www.cnn.com/2026/09/28/politics/justice-alito-recuses-climate-change-boulder-suncor"
+      },
+      {
+        "title": "美国参议院以77票对22票通过《保护大学体育法案》",
+        "summary": "美国参议院9月28日以77比22的压倒性票数通过《保护大学体育法案》，旨在为大学体育的名利权（NIL）等问题建立全国统一规则，法案能否在众议院通过仍存不确定性。",
+        "url": "https://www.cnn.com/2026/09/28/politics/senate-college-sports-bill"
+      },
+      {
+        "title": "壳牌斥资230亿美元将加拿大LNG项目产能翻倍，卡尼称\"历史性投资\"",
+        "summary": "壳牌公司9月29日作出最终投资决定，将斥资约230亿美元把不列颠哥伦比亚省基蒂马特的LNG Canada项目产能翻倍至每年2800万吨，加拿大总理马克·卡尼称此举为加拿大能源领域的\"历史性投资\"。",
+        "url": "https://www.cbc.ca/news/canada/british-columbia/carney-lng-canada-announcement-9.7361817"
+      },
+      {
+        "title": "美国对加拿大摩托车、多数酒类实施进口禁令，贸易战反制措施生效",
+        "summary": "美国9月29日正式对加拿大制造的摩托车及大部分酒类产品实施进口限制，作为美加贸易争端中的反制措施，标志着两国贸易摩擦进一步升级。",
+        "url": "https://www.cnbc.com/2026/09/29/canada-import-ban-trade-war.html"
+      }
+    ],
+    "global": [
+      {
+        "title": "以色列定居者纵火焚烧约旦河西岸村庄民宅",
+        "summary": "9月29日，以色列定居者袭击约旦河西岸纳布卢斯以南的贾卢德村，纵火焚烧塔巴西家族两处住宅；此前该家族刚因法院裁决结束近两个月的被迫流离失所，随后以军又将其重新强制驱离。",
+        "url": "https://www.aljazeera.com/news/2026/9/29/israeli-settlers-attack-jalud-village-in-occupied-west-bank-torch-homes"
+      },
+      {
+        "title": "缅甸军方空袭若开邦市场致至少33人死亡",
+        "summary": "9月28日，缅甸军方战机向若开邦皎漂镇一处主要批发市场投掷两枚炸弹，造成至少33人死亡、36人受伤，若开军证实了这起针对平民聚集地的袭击。",
+        "url": "https://www.aljazeera.com/news/2026/9/28/myanmar-army-air-strike-kills-dozens-in-rakhine-state"
+      },
+      {
+        "title": "俄罗斯持续空袭基辅，科学院大楼遇袭致2人死亡",
+        "summary": "9月29日，俄罗斯对基辅及第聂伯罗、扎波罗热等地发动新一轮导弹和无人机袭击，乌克兰国家科学院大楼被击中造成2人死亡，全国范围内袭击共致9人以上死亡、80多人受伤。",
+        "url": "https://www.aljazeera.com/news/2026/9/29/russian-strike-hits-ukraines-academy-of-sciences-in-kyiv-killing-2"
+      },
+      {
+        "title": "伊朗外长纽约会晤卡塔尔斡旋方，美伊就霍尔木兹海峡僵局展开磋商",
+        "summary": "伊朗外长阿拉格奇9月29日在纽约与卡塔尔斡旋人员会面，就重新开放霍尔木兹海峡的方案寻求解决办法，但美方此前已拒绝伊朗提出的解除制裁换取通航条件，海峡仍处于关闭状态，国际油价已升至每桶100美元以上。",
+        "url": "https://www.aljazeera.com/news/2026/9/29/irans-araghchi-meets-qatari-mediators-as-us-insists-on-nuclear-talks"
+      },
+      {
+        "title": "菲律宾数万司机罢工抗议油价飞涨",
+        "summary": "受中东局势影响，菲律宾燃油价格大幅上涨，9月29日起至少7万名非正规公共交通司机及运营商发起为期两天的罢工，要求政府将油价降至冲突前水平，马尼拉和比科尔地区爆发多场集会。",
+        "url": "https://www.aljazeera.com/news/2026/9/29/thousands-of-drivers-strike-in-the-philippines-over-rising-fuel-prices"
+      },
+      {
+        "title": "阿根廷米莱就福克兰群岛石油项目威胁对英采取法律行动",
+        "summary": "阿根廷总统米莱9月29日向英国发出两周最后通牒，要求停止福克兰群岛附近由以色列Navitas公司与英国Rockhopper公司联合运营的\"海狮\"石油项目，否则将诉诸国际海事法庭，指责该项目是\"非法掠夺\"阿根廷资源。",
+        "url": "https://www.aljazeera.com/news/2026/9/29/argentinas-milei-threatens-legal-action-over-falklands-oil-project"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美债收益率飙升拖累美股三大指数集体收跌，英伟达逆势上涨",
+        "summary": "9月28日（周一）美股三大指数集体下跌：道琼斯指数跌347点，跌幅0.67%；标普500指数跌0.77%；纳斯达克综合指数跌0.92%。主因是10年期美债收益率攀升至5.2%以上、30年期突破5.5%，均处多年高位，压制风险资产估值。\"科技七巨头\"多数下跌：Meta重挫4.79%、特斯拉跌3.94%，但英伟达逆势上涨1.68%，因公司宣布追加1500亿美元股票回购（累计授权达2350亿美元）。投资启示：美债收益率飙升是当前压制美股估值的核心变量，投资者应关注长端利率走势对成长股（尤其高估值AI股）的压力，英伟达大规模回购则显示龙头公司现金流仍具韧性，可作为板块内结构性配置参考。",
+        "url": "https://finance.sina.com.cn/stock/usstock/c/2026-09-29/doc-initmqsq2673314.shtml"
+      },
+      {
+        "title": "中国1-8月规上工业企业利润同比增长15.7%",
+        "summary": "国家统计局9月28日发布数据，2026年1-8月全国规模以上工业企业利润总额52719.8亿元，同比增长15.7%；其中8月当月利润同比增长4.2%。分行业看，采矿业利润增长35.1%，制造业增长17.4%；计算机、通信和其他电子设备制造业利润同比增长1.1倍，有色金属冶炼加工业增长82.9%，煤炭开采业增长51.6%。投资启示：工业企业利润增速持续处于较快区间，电子制造、有色金属等高景气行业盈利改善明显，可关注电子信息、有色资源等板块的盈利驱动型投资机会。",
+        "url": "https://finance.sina.com.cn/tech/roll/2026-09-28/doc-initiwif8759136.shtml"
+      },
+      {
+        "title": "AMD斥资82亿美元收购李飞飞创立的World Labs，加码AI世界模型竞赛",
+        "summary": "9月29日消息，AMD宣布以全股票交易方式收购AI初创公司World Labs，交易金额82亿美元，为AMD史上第二大收购。World Labs由\"AI教母\"李飞飞创立，主攻空间智能模型，可根据文本、图像和视频生成、重建并模拟可交互的三维环境。交易完成后，李飞飞将出任AMD执行副总裁兼首席科学官，直接向CEO苏姿丰汇报，交易预计2026年底完成，尚待监管批准。投资启示：芯片巨头通过收购AI模型研发能力向\"全栈AI\"布局延伸，显示AI竞争正从算力芯片向世界模型、具身智能等上游研发环节扩展，投资者可关注AMD在物理AI、机器人仿真赛道的长期战略价值重估，以及英伟达生态护城河是否面临实质挑战。",
+        "url": "https://news.qq.com/rain/a/20260929A01ZCB00"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "旧金山百人海边\"尖叫大会\"释放压力",
+        "summary": "9月14日，逾百人聚集在旧金山Ocean Beach举行\"对着大海怒吼\"活动，还设有尖叫比赛，按音量、时长和风格评分，冠军以121.9分贝的成绩夺魁（世界纪录为129分贝），组织者称活动是为了释放房租、AI焦虑等各种压力。",
+        "url": "https://www.upi.com/Odd_News/2026/09/14/Guttural-scream-at-the-sea-San-Francisco/6761789408160/"
+      },
+      {
+        "title": "纽约女子生日当天后院突陷地洞",
+        "summary": "9月21日，纽约长岛Bohemia一名47岁女子生日当天在自家后院突然踩空跌入约2.4米深的地洞（疑似废弃水井），急救人员用梯子将她救出并在现场为她唱生日歌，她只受了轻伤。",
+        "url": "https://www.upi.com/Odd_News/2026/09/21/backyard-hole-rescue-Bohemia-New-York/4781790010310/"
+      },
+      {
+        "title": "大温高尔夫球场遭\"黑熊球童\"光顾，直接叼走一整袋球杆",
+        "summary": "加拿大卑诗省大温哥华地区Pitt Meadows的Golden Eagle高尔夫球场近期屡有黑熊出没，7月中旬一头黑熊直接从球车上叼走整袋球杆扬长而去，另一头熊在旁\"望风\"，球杆最终是否追回不得而知。",
+        "url": "https://www.upi.com/Odd_News/2026/07/13/bear-golf-clubs-Golden-Eagle-Golf-Club-Pitt-Meadows/7131783961633/"
+      },
+      {
+        "title": "济南地铁\"惊现黑豹\"？虚惊一场竟是一只豹纹行李箱",
+        "summary": "国庆假期前夕，山东济南地铁内一名乘客携带的豹纹拉杆箱因过于逼真，一度被周围乘客误认成真豹子引发惊慌，视频在网络走红。济南地铁客服回应称，只要尺寸和重量符合规定，此类行李箱可以正常乘坐地铁。",
+        "url": "https://www.163.com/dy/article/L80VOMMT0514CFC7.html"
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "国庆假期临近，同事问：\"高速免费你打算几点出发？\"另一位答：\"打算掐点出发——掐着堵车最狠的那个点。\"",
+        "fictional": true
+      },
+      {
+        "title": "今日一则",
+        "summary": "理财顾问问客户：\"最近美债收益率涨这么高，你紧张吗？\"客户说：\"不紧张，我早就把钱都花在国庆机票上了，现在连本金都没有了。\"",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "山行",
+    "author": "杜牧",
+    "dynasty": "唐",
+    "lines": [
+      "远上寒山石径斜，白云生处有人家。",
+      "停车坐爱枫林晚，霜叶红于二月花。"
+    ],
+    "note": "这首小诗写深秋山行所见：石径蜿蜒直上寒山，白云缭绕处隐约可见人家，诗人却在傍晚时分为满山枫叶停车驻足，只因经霜的枫叶比二月春花还要艳红。全诗没有一字悲秋，反倒把萧瑟深秋写得热烈明媚，是唐诗里少见的\"秋日胜春朝\"式豁达。眼下正值国庆黄金周将至、各地筹备出行的时节，不妨学一学杜牧这份心境：与其赶路，不如像他一样，为沿途风景停一停车。"
+  },
+  "special": {
+    "title": "创投观察",
+    "html": "<p>本期创投观察覆盖 9 月 25 日之后到今天（9 月 29 日）这几天。这几天最大的一笔交易是并购：AMD 以 82 亿美元收购李飞飞的世界模型公司 World Labs；融资端最大的一笔不是传统创投轮，而是英国\"新云\"公司 Nscale 在赴美 IPO 前拿到的 33.6 亿美元可转换融资。软件端还有个人 AI 代理 Instinct 的 10 亿美元 C 轮（估值冲到 100 亿美元）、海事监控硬件公司 Quartermaster 的 1.4 亿美元 B 轮，以及保险经纪自动化公司 Outmarket 四个月内的第二轮融资。检索范围内没有找到可独立核实的机器人、生物医药大额交易，本期不勉强凑数。</p>\n\n<h4>AMD 82 亿美元收购李飞飞的世界模型公司 World Labs</h4>\n<p>公司做什么：World Labs 由李飞飞联合创立，做的是\"世界模型\"——让 AI 理解三维空间、物理规律和动态场景，而不只是处理文本和图片。首款产品 Marble 能从一张图片生成可交互的 3D 场景，用途包括娱乐内容制作和机器人训练用的仿真环境。</p>\n<p>这块业务在行业里的位置：大模型竞赛主流集中在语言和多模态生成，World Labs 押注的是\"空间智能\"这条支线——AI 要能理解物理世界、生成可供机器人训练的仿真环境，而不是聊天问答。这条赛道上英伟达、Yann LeCun 的 AMI Labs、谷歌的 Project Genie 都在做类似的事，World Labs 的差异化在于更早把技术产品化给娱乐和机器人客户用。</p>\n<p>交易本身：收购价 82 亿美元，预计 2026 年底前完成交割，需通过监管审批；报道未披露现金与股票的具体拆分比例。</p>\n<p>竞争对手：英伟达——被文中称为 AMD\"长期对手\"，已经开源了自己的世界模型 Cosmos，这也是 AMD 急于补上这块拼图的原因；Yann LeCun 的 AMI Labs——今年 3 月刚融资 10.3 亿美元、估值目标超过 50 亿美元，同做世界模型；谷歌 Project Genie——自家的 AI 世界生成器，目前仍是 DeepMind 内部项目而非独立公司。</p>\n<p>前景：判断——AMD 买的不是现成收入，而是\"懂物理世界的 AI 技术和人才\"，目的是给自家芯片路线图找方向、卡位机器人这个潜在的未来算力大客户，正面追赶英伟达在世界模型上的先发优势。李飞飞自己的说法是\"需要扩大规模、拓宽影响力、更贴近硬件\"，也印证了这更像是技术和方向的收购，而非收入并表。能证伪这个判断的信号：如果一年后 AMD 的芯片路线图和机器人生态里看不到 World Labs 技术的具体落地（比如没有对应的芯片设计决策或机器人客户订单），说明这笔交易更多是防御性、叙事性的收购。</p>\n<p><a href=\"https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/\" target=\"_blank\">TechCrunch：AMD will acquire Fei-Fei Li's World Labs for $8.2 billion</a></p>\n\n<h4>英国\"新云\"公司 Nscale 赴美 IPO 前拿到 33.6 亿美元可转换融资</h4>\n<p>公司做什么：Nscale 是一家英国\"新云\"（neocloud）公司，专门为 AI 训练和推理建数据中心并出租算力，目前在挪威和美国西弗吉尼亚有大型数据中心园区在建，两年前从澳大利亚加密货币矿企 Arkon Energy 分拆而来。</p>\n<p>这块业务在行业里的位置：切的是\"AI 算力基础设施\"这一段——和 CoreWeave、Applied Digital 一样，靠绑定一到两个超大 AI/云客户的长期算力合同把公司规模做起来，而不是像传统云厂商那样服务分散的中小客户。Nscale 迄今已签下累计 1030 亿美元的合同。</p>\n<p>交易本身：33.6 亿美元可转换融资，其中 23.6 亿美元即时到账，英伟达追加的 10 亿美元预计 11 月中到位；领投方为对冲基金 Third Point，英伟达作为老股东跟投。公司已提交纽交所上市申请，目标募资 30 亿美元，预期估值 350 亿美元。</p>\n<p>竞争对手：CoreWeave——同为 AI 新云，67% 的收入来自微软一家；Applied Digital——67% 收入来自甲骨文、另有 30% 来自 CoreWeave。这个行业几乎所有玩家都靠一到两个大客户撑起收入表。</p>\n<p>前景：判断——这轮融资和即将到来的 IPO，本质是在给\"客户集中度风险\"打补丁。Nscale 1030 亿美元合同里约 85% 来自微软（438 亿美元，合同期至 2033 年）和 Anthropic（446 亿美元）两家，而 Anthropic 这笔合同附带\"苛刻的里程碑条件\"，对方有权中途退出；公司今年上半年营收从 1040 万美元猛增到 1.406 亿美元，但净亏损也从 3.69 亿美元扩大到 10.2 亿美元。能证伪乐观判断的信号：如果 Anthropic 真的触发退出条款，或者 IPO 定价大幅低于 350 亿美元目标，说明市场已经不认\"新云\"故事里能扛住的客户集中度风险。</p>\n<p><a href=\"https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/\" target=\"_blank\">TechCrunch：Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing</a></p>\n<p><a href=\"https://techcrunch.com/2026/09/22/nscales-ipo-will-test-wall-streets-appetite-for-concentrated-ai-bets-once-again/\" target=\"_blank\">TechCrunch：Nscale's IPO will test Wall Street's appetite for concentrated AI bets once again</a></p>\n\n<h4>个人 AI 代理 Instinct 一个月内估值翻两番，10 亿美元 C 轮冲到 100 亿美元</h4>\n<p>公司做什么：Instinct 是一款个人 AI 代理，能帮用户订餐厅、订机票、缴账单、退订阅、点外卖、做调研，还能用自己的电话号码替用户打电话预约（比如约不能在线预订的场所）。9 月新上线\"可信联系人网络\"，让用户的 AI 代理和朋友的 AI 代理互相协作办事。</p>\n<p>这块业务在行业里的位置：切的是消费端\"帮我把杂事办掉\"的个人生活助理型 AI 代理，跟处理报销、客服等工作流的企业级 AI 代理不是一条线。今年 8 月才邀请制上线，随即病毒式走红。</p>\n<p>交易本身：C 轮融资 10 亿美元，估值 100 亿美元，投资方包括红杉资本、Benchmark、Coatue；上一轮是 8 月的 3.5 亿美元融资（估值 25 亿美元），一个月内估值翻了两番。</p>\n<p>竞争对手：Meta 的 Muse——功能类似且深度绑定 Instagram 私信、Facebook 群组、Marketplace 监控等 Meta 自有生态，9 月已升至美国 App Store 第二名；隐私优先的 Ollie——走差异化路线，主打\"AI 处理你最私密的事务但不留数据\"来抢用户信任。</p>\n<p>前景：判断——Instinct 现在的估值主要靠病毒式增长故事支撑，产品同质化风险不低：它和 Meta 的 Muse 几乎同时上线\"打电话\"功能，说明短期护城河更多在获客速度而非技术壁垒，而 Muse 背靠 Meta 自带的 Instagram、Facebook 流量，已经是美国 App Store 第二名，大厂流量优势不可小觑。能证伪判断的信号：如果接下来 Instinct 能靠\"可信联系人网络\"这类社交裂变机制把留存率明显甩开 Muse，就说明这个赛道确实能撑起一家独立公司，而不会被大厂内卷吃掉。</p>\n<p><a href=\"https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/\" target=\"_blank\">TechCrunch：Viral AI agent Instinct raises $1B Series C at a $10B valuation</a></p>\n<p><a href=\"https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/\" target=\"_blank\">TechCrunch：Meta's AI agent Muse is now the No. 2 app in the US</a></p>\n\n<h4>海事监控硬件公司 Quartermaster 追加融资 1.4 亿美元</h4>\n<p>公司做什么：Quartermaster 做的是装在船只桅杆上的硬件 SmartMast，集成摄像头和电台，实时采集海况和船只动态数据（单套设备每天记录数十 GB），弥补传统船舶自动识别系统（AIS）的盲区，用于防碰撞、航道拥堵监测和海上救援。</p>\n<p>这块业务在行业里的位置：切的是海事情报与监控这个细分，客户覆盖政府、航运公司和保险公司。目前已在 25 个国家部署超过 650 艘船、发货超过 800 台设备，正在推进整支船队级别的部署。</p>\n<p>交易本身：B 轮融资 1.4 亿美元，领投方 Insight Partners，新进投资方 Overmatch Ventures，老股东 First Round Capital 跟投，另有 Stifel 提供 4000 万美元债务融资；今年 5 月刚完成 4300 万美元 A 轮。</p>\n<p>竞争对手：Orca AI——同样把计算机视觉装上货轮，靠国防业务和 Starlink 合作在去年拿到 7250 万美元融资，走的是\"自主航行辅助\"路线；Windward——2015 年就在做船舶数据分析的老牌选手，技术路线更偏纯数据和 AIS 信号处理，而非 Quartermaster 这种硬件传感器直采路线。</p>\n<p>前景：判断——CEO Neil Sobin 自己说\"海事 AI 领域没什么先例可循\"，这既是机会也是风险：海事监控数据传统上稀缺，Quartermaster 靠自建硬件网络抢先建立数据壁垒是聪明打法，但 650 艘船的覆盖率相对全球数万艘商船的规模仍然很小。能证伪判断的信号：如果 12 个月内它拿不到大型航运联盟或保险巨头的整队采购合同，只停留在单船零星部署，说明这套硬件路线的规模化速度跟不上预期。</p>\n<p><a href=\"https://techcrunch.com/2026/09/28/ocean-surveillance-startup-quartermaster-raises-another-140m/\" target=\"_blank\">TechCrunch：Exclusive: Ocean surveillance startup Quartermaster raises another $140M</a></p>\n\n<h4>保险经纪自动化公司 Outmarket 四个月内连融两轮</h4>\n<p>公司做什么：Outmarket 为保险经纪商提供 AI 自动化工具，处理 250 多种险种的投保申请表格、文件审核和保单评估，把经纪人从繁琐文书里解放出来去做客户服务。</p>\n<p>这块业务在行业里的位置：切的是商业保险经纪的后台自动化——美国 95% 的保险仍靠人工经纪销售，流程高度手工化，Outmarket 想用 AI 替掉文书环节，而不是革掉经纪人这个角色。新产品上线 14 个月已被超过 300 家经纪机构使用，包括美国百强经纪商中的 25%。</p>\n<p>交易本身：B 轮融资 3450 万美元，投后估值 3.55 亿美元，领投方 SignalFire，跟投方包括 Fika Ventures、Permanent Capital Ventures、TTV Capital、Dash Fund；今年 5 月才完成 1700 万美元 A 轮，四个月内连融两轮。</p>\n<p>竞争对手：Fulcrum AI 和 Further AI，同做保险经纪自动化，报道未展开具体产品差异。</p>\n<p>前景：判断——四个月内融两轮、估值冲到 3.55 亿美元,更多说明资本在追\"AI 改造传统经纪\"这类沉闷行业自动化故事,而不完全是 Outmarket 自身特别突出;300 家经纪机构、25% 的美国百强经纪商已经用上产品是不错的早期信号,但保险行业的客户粘性和监管合规壁垒都很高。能证伪乐观判断的信号:如果下一轮融资节奏明显放缓,或者头部经纪商流失,说明这波\"AI 保险科技\"追捧已经降温。</p>\n<p><a href=\"https://techcrunch.com/2026/09/28/insuretech-outmarket-raises-34-5m-just-months-after-prior-round/\" target=\"_blank\">TechCrunch：Insuretech Outmarket raises $34.5M just months after prior round</a></p>\n\n<h4>其他值得一提的交易</h4>\n<ul>\n<li>Modulate + 2500 万美元：语音智能分析平台再融资，用 100 多个小模型做深度伪造检测、AI 客服质检和合规执法，此前估值 1.7 亿美元。<a href=\"https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite/\" target=\"_blank\">TechCrunch</a></li>\n</ul>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "国庆节",
+      "date": "2026-10-01",
+      "days": 2,
+      "note": "放假 10/1–10/7"
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "National Day for Truth and Reconciliation",
+      "date": "2026-09-30",
+      "days": 1,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Columbus Day",
+      "date": "2026-10-12",
+      "days": 13,
+      "scope": "Federal · WA · NY"
+    }
+  ],
+  "issue_no": 36
+}
