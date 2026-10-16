@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-16",
+  "weekday": "星期五",
+  "lunar": "农历九月初七",
+  "sections": {
+    "china": [
+      {
+        "title": "中朝新鸭绿江大桥开通仪式举行",
+        "summary": "据新华社快讯，10月15日上午中朝新鸭绿江大桥开通仪式举行。大桥全长约3公里、连接丹东与新义州，中方一侧2014年即已竣工，朝方配套工程长期未完成，今年6月后恢复施工。现有老桥承担了中朝官方贸易七成以上。仪式具体出席人员本期未能核实。",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-15/10714841.shtml"
+      },
+      {
+        "title": "前三季度外贸“成绩单”：量质齐升",
+        "summary": "海关总署14日公布，前三季度货物贸易进出口39.94万亿元，同比增长18.8%。多家媒体15日跟进解读，称进出口规模和结构同步改善。",
+        "url": "https://politics.gmw.cn/2026-10/15/content_39047253.htm"
+      },
+      {
+        "title": "第140届广交会15日开幕，迎来创办70周年",
+        "summary": "据21财经早报，本届广交会15日在广州开幕，今年恰逢广交会创办70周年。",
+        "url": "https://m.21jingji.com/article/20261015/herald/12d455cc7133dc2ada713c51140b3da8.html"
+      },
+      {
+        "title": "国新办：第九届进博会筹备情况通报",
+        "summary": "据21财经早间新闻预告，国新办15日上午10时举行发布会，由商务部副部长鄢东、上海市副市长卢山介绍第九届中国国际进口博览会筹备情况。发布会实际内容本期未能核实。",
+        "url": "https://m.21jingji.com/article/20261015/herald/12d455cc7133dc2ada713c51140b3da8.html"
+      },
+      {
+        "title": "国新办系列发布会聚焦“十五五”就业和社保",
+        "summary": "国新办“开局起步‘十五五’”系列主题发布会介绍了“十五五”时期推进就业和社会保障高质量发展的有关情况，强调实施就业优先战略、织密社会保障网络。",
+        "url": "https://www.news.cn/20261010/5bfccc0e51274fa784bb3d88d95034cf/c.html"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "美9月CPI高于预期，加息押注升温",
+        "summary": "9月CPI环比涨0.6%，同比3.7%（8月为3.4%），汽油价格单月上涨7.1%。10年期美债收益率一度升破5.3%，随后回落；标普500单日跌1.11%，为50多个交易日来首次跌幅超1%。",
+        "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
+      },
+      {
+        "title": "俄勒冈州本德市校园枪击：三名儿童一名教师遇难",
+        "summary": "半岛电视台报道，本德警方称枪手为16岁少年，被一名路人击毙。具体细节以警方后续通报为准，本期未能与第二信源交叉核实。",
+        "url": "https://www.aljazeera.com/news/2026/10/15/at-least-4-including-3-children-killed-in-us-elementary-school-shooting"
+      },
+      {
+        "title": "卡尼就阿尔伯塔公投向民众喊话",
+        "summary": "阿尔伯塔省10月19日就“留在加拿大还是启动脱离程序”举行非约束性公投。总理卡尼在感恩节讲话中呼吁团结，并受邀出席卡尔加里（15日）和埃德蒙顿（16日）的“永远加拿大人”集会。",
+        "url": "https://www.cp24.com/news/canada/2026/10/12/the-prime-minister-urges-albertans-to-choose-prosperity/"
+      },
+      {
+        "title": "胡塞武装袭击沙特能源设施，特朗普称中期选举前无意新开战",
+        "summary": "据美联社系报道，胡塞武装袭击沙特多座城市和能源设施，致70多人受伤，油价升至六周高位。特朗普称无意在11月中期选举前发动新的打击，白宫否认其与内塔尼亚胡讨论恢复军事行动。",
+        "url": "https://wlos.com/news/nation-world/trump-faces-new-iran-war-challenges-as-houthi-attacks-threaten-energy-supplies-airports-oil-infrastructure-saudi-arabia-strait-hormuz"
+      }
+    ],
+    "global": [
+      {
+        "title": "也门战事升级：胡塞称导弹袭击利雅得机场",
+        "summary": "半岛电视台报道，胡塞武装称以弹道导弹袭击包括利雅得哈立德国王机场在内的多个沙特目标，另有至少5人在亚丁总统府遇袭中丧生。",
+        "url": "https://www.aljazeera.com/news/2026/10/15/fighting-in-yemen-intensifies-whats-the-latest-on-the-battlefield"
+      },
+      {
+        "title": "伊朗：已准备好回应美国对能源设施的威胁",
+        "summary": "半岛电视台直播称，伊朗代理石油部长表示将在适当时机采取“精准的报复措施”；沙特谴责胡塞战争罪行，美方警告沙特机场面临风险。",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/10/16/iran-war-live-saudi-blasts-houthi-war-crimes-us-warns-on-saudi-airports"
+      },
+      {
+        "title": "Citizen Lab：以色列广告技术公司协助在半岛电视台设备植入间谍软件",
+        "summary": "调查称Discover-Tech通过广告投放将间谍软件植入包括半岛电视台在内多家机构的数十台设备，半岛电视台对此予以谴责。",
+        "url": "https://www.aljazeera.com/news/2026/10/15/israeli-ad-tech-firm-helped-spy-on-al-jazeera-devices"
+      },
+      {
+        "title": "中朝新鸭绿江大桥迟到十余年终开通",
+        "summary": "半岛电视台与美联社均报道了这座连接丹东与新义州的大桥开通，称其比原定时间晚了十多年。",
+        "url": "https://www.aljazeera.com/news/2026/10/14/china-and-north-korea-to-open-new-yalu-river-bridge-state-media-reports"
+      },
+      {
+        "title": "韩国综指两日剧烈震荡，三星、SK海力士领跌",
+        "summary": "10月13日韩国综指收跌5.46%至6035.35点，三星电子跌7.39%，SK海力士跌10.09%；CNBC报道15日亚洲科技股再度重挫，市场担忧AI融资。",
+        "url": "https://cnbc.com/2026/10/15/sk-hynix-samsung-softbank-stocks-asia-tech-rout-ai-funding-worries.html"
+      }
+    ],
+    "economy": [
+      {
+        "title": "CPI超预期：加息预期回潮，科技股领跌",
+        "summary": "14日标普500收7718.94点（-1.11%），纳指收26692.87点（-1.88%），科技板块跌2.62%，医疗、必需消费上涨。投资含义：利率敏感的高估值成长股承压，防御板块相对占优；10年期收益率在5.2%上方，债券与房贷利率短期难降。",
+        "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
+      },
+      {
+        "title": "美股15日：道指反弹、科技股抛售“转向”",
+        "summary": "TheStreet称道指小幅走高，标普约涨0.1%-0.3%，纳指大致持平；各来源数字不一（有报道称道指收52048点、涨约427点），收盘价请以交易所为准。",
+        "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026"
+      },
+      {
+        "title": "AI估值焦虑蔓延亚洲：韩国综指大跌",
+        "summary": "存储芯片龙头连续重挫，市场对AI资本开支能否转化为盈利的疑虑上升。对投资者：高集中度的AI主题ETF波动加大，需关注仓位集中度与美元/韩元风险。",
+        "url": "https://www.outlookbusiness.com/markets/kospi-tumbles-10-samsung-and-sk-hynix-sink-as-ai-rally-faces-reality-check"
+      },
+      {
+        "title": "中国前三季度外贸增长18.8%",
+        "summary": "进出口规模同比增长18.8%，利好港口、航运与出口链；但高基数与外部需求变化仍是下季度变量。加元方面，加拿大央行市场预期年内仍可能至少加息一次（据Reuters 10月5日报道）。",
+        "url": "https://politics.gmw.cn/2026-10/15/content_39047253.htm"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "【虚构】温哥华浣熊集体抗议新版垃圾桶",
+        "summary": "据不存在的“本地野生动物观察站”报道，市政厅换装防浣熊垃圾桶一周后，数只浣熊在Kitsilano排队围观，并带头在盖子上留下爪印“差评”。",
+        "fictional": true
+      },
+      {
+        "title": "【虚构】西雅图咖啡店推出“已读不回”拿铁",
+        "summary": "一家虚构的Capitol Hill咖啡店推出“已读不回”拿铁，杯上奶泡图案会在喝到一半时自动消失。店主称灵感来自员工的工作群。",
+        "fictional": true
+      },
+      {
+        "title": "【虚构】多伦多地铁因“礼貌过度”延误",
+        "summary": "虚构新闻：TTC一列车因所有乘客都在互相让座，在车厢中央僵持了六分钟。",
+        "fictional": true
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "问：为什么程序员总分不清万圣节和圣诞节？答：因为 Oct 31 == Dec 25。",
+        "fictional": true
+      },
+      {
+        "title": "再来一则",
+        "summary": "老板：你怎么又迟到？员工：路上红灯太多。老板：那你可以走绿灯啊。员工：……我还真没想到。",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "破阵子·为陈同甫赋壮词以寄之",
+    "author": "辛弃疾",
+    "dynasty": "南宋",
+    "lines": [
+      "醉里挑灯看剑，梦回吹角连营。",
+      "八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。",
+      "马作的卢飞快，弓如霹雳弦惊。",
+      "了却君王天下事，赢得生前身后名。可怜白发生！"
+    ],
+    "note": "这首词作于淳熙十五年（1188）前后，辛弃疾被罢官闲居上饶，友人陈亮（字同甫）来访，两人纵论抗金大计，临别后他写下此词寄赠。上片写醉中挑灯看剑，梦里仍回到号角连营的军营，分肉犒军、秋日点兵，一派豪壮；下片写战马疾驰、弓弦如雷的冲锋场景，意气飞扬，至“了却君王天下事，赢得生前身后名”达到顶点。最后一句“可怜白发生”陡然一转，前面九句原来都是梦中之景，现实是壮志难酬、年华已老。全词前九句写梦、末一句写醒，形成强烈反差，豪放与悲慨并存。比起近来所选多为清淡、秋思之作，此篇正好换换基调：它提醒我们，真正的豪情往往藏着不甘，而恰恰是这份不甘，让这首词读来格外有力量。"
+  },
+  "special": {
+    "title": "创投观察",
+    "html": "<p>覆盖 10 月 13 日至 16 日。本期说明：TechCrunch 的 Ramp、Bumble、Zenzap 三篇正文这次没能取到，只有标题和第三方报道的标题层信息，所以这三笔不展开，只在末尾列出已确认的部分；详细数字请点原文核对。</p>\n\n<h4>Scimplify：用 AI 做特种化学品与关键材料，对冲中国供应集中</h4>\n<p><strong>公司做什么：</strong>总部在班加罗尔，2023 年成立。用名为 Scinode 的 AI 代理平台做研发、制造和质检：选工艺路线、选工厂、跟踪法规。工艺先在班加罗尔和海得拉巴的研发设施里跑通，再转给合作工厂量产，目前管理着 500 多家制造设施。客户包括 TDK、BASF、日立，公司称客户逾 1000 家、产品已送达 40 多个国家，在做的项目包括用废料和稀土原料制备钨衍生物。</p>\n<p><strong>行业位置：</strong>它不自建重资产工厂，而是做“研发加编排”的轻资产中间层，主打帮客户找到替代中国集中供应的来源，半导体、国防、能源是重点增长方向。这和传统化工厂的重资产路线不同。</p>\n<p><strong>交易：</strong>2500 万美元全股权战略轮，由 Hitachi Ventures 领投；Henkel 和 Teknor Apex（两家都是客户）新进；Accel India、Bertelsmann India Investments、Omnivore、3one4 Capital 跟投。上一轮是 2025 年 3 月的 4000 万美元 B 轮，累计股权融资 8000 万美元。投后估值 2.5 亿美元，来自一位知情人士，公司拒绝披露；上一轮估值为 1.5 亿美元。联合创始人 Sachin Santhosh 称年化收入约 2 亿美元、同比约三倍，美国部分约 6000 万美元（一年前约 1000 万），目标一年内到 4 亿美元，近两个月 EBITDA 为正。</p>\n<p><strong>竞争对手：</strong>原文没有点名竞争对手，我这次没有检索到可靠来源，不在此编造。</p>\n<p><strong>前景判断（我的看法）：</strong>客户即投资人（Henkel、Teknor Apex）说明需求是真的，估值相对 2 亿美元的年化收入并不激进。但这些收入数字都是公司自述，且轻资产模式的毛利取决于合作工厂的议价权。要看的证伪信号：美国收入能否持续放量、EBITDA 能否在扩张后保持为正、关键材料项目（如钨）能否从试产走到稳定供货。</p>\n<p><a href=\"https://techcrunch.com/2026/10/14/scimplify-raises-25m-to-challenge-chinas-grip-on-critical-materials-with-ai/\" target=\"_blank\">TechCrunch 原文</a></p>\n\n<h4>其他值得一提的交易</h4>\n<ul>\n<li><strong>Ramp</strong>：TechCrunch 标题称估值达到 600 亿美元，并加码 AI。第三方报道称本轮约 18.5 亿美元、由 Dragoneer 和 Thrive 领投，我未能核对原文，请以原文为准。<a href=\"https://techcrunch.com/2026/10/15/ramp-reaches-60b-valuation-as-it-pushes-deeper-into-ai/\" target=\"_blank\">TechCrunch</a></li>\n<li><strong>Bumble</strong>：TechCrunch 标题称同意以 13 亿美元被收购。第三方报道标题称收购方为 Ithaca Holdings、现金支付，其余条款未核实。<a href=\"https://techcrunch.com/2026/10/13/bumble-agrees-to-a-1-3b-acquisition-deal-as-online-dating-faces-a-reset/\" target=\"_blank\">TechCrunch</a></li>\n<li><strong>Zenzap</strong>：4400 万美元，主打取代 WhatsApp 的职场 AI 聊天应用；轮次和投资方未取到原文，不写。<a href=\"https://techcrunch.com/2026/10/14/zenzap-raises-44m-for-its-ai-chat-app-that-aims-to-replace-whatsapp-in-the-workplace/\" target=\"_blank\">TechCrunch</a></li>\n</ul>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 77
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Remembrance Day",
+      "date": "2026-11-11",
+      "days": 26,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Election Day",
+      "date": "2026-11-03",
+      "days": 18,
+      "scope": "NY"
+    }
+  ],
+  "issue_no": 53
+}
