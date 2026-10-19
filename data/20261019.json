@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-19",
+  "weekday": "星期一",
+  "lunar": "农历九月初十",
+  "sections": {
+    "china": [
+      {
+        "title": "习近平在内蒙古乌兰察布考察：因地制宜推动高质量发展",
+        "summary": "据新华社报道，习近平在乌兰察布察看黄旗海自然保护区，并到察哈尔高新技术开发区了解“东数西算”枢纽节点和绿色算力产业发展，强调各地要立足自身条件、发挥比较优势。",
+        "url": "http://cpc.people.com.cn/n1/2026/1017/c435113-40816401.html"
+      },
+      {
+        "title": "国际消除贫困日：回顾习近平推动全球减贫的主张",
+        "summary": "10月17日是国际消除贫困日，中国外交学会网站刊文回顾习近平主席推动全球减贫事业的主张与实践。",
+        "url": "https://cn.chinadiplomacy.org.cn/2026-10/17/content_118737608.shtml"
+      },
+      {
+        "title": "A股周五小幅收涨，沪指报3716点",
+        "summary": "10月16日上证指数收涨0.24%至3716.28点，深证成指跌0.12%，创业板指跌0.39%；全市场成交额约1.57万亿元，较前一日缩量。前一交易日沪指曾大跌1.59%。",
+        "url": "https://cbgc.scol.com.cn/news/8065148"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "阿尔伯塔省今日公投：留在加拿大，还是启动脱离程序",
+        "summary": "据CTV报道，省级公投今天（10月19日）举行。主问题是留在加拿大，还是启动第二次有约束力的脱离公投；总理卡尼上周在卡尔加里、埃德蒙顿连日呼吁选民留下，省长史密斯也表示自己投了留下。结果尚未公布，本条不作预测。",
+        "url": "https://www.ctvnews.ca/canada/alberta-referendum/article/smith-urges-albertans-to-remain-in-canada-while-pm-carney-says-lets-move-forward-together-live-updates/"
+      },
+      {
+        "title": "卡尼在埃德蒙顿收官“挺加拿大”巡回",
+        "summary": "据CP24，卡尼称有人想“拆散我们再占有我们”，指美国在设法削弱加拿大（据美联社转述）；此前在卡尔加里他称分离是“危险的虚张声势”。",
+        "url": "https://www.cp24.com/news/canada/2026/10/17/carney-wraps-up-pro-canada-barnstorming-tour-in-hometown-of-edmonton/"
+      },
+      {
+        "title": "特朗普豁免国会刚通过的对俄新制裁",
+        "summary": "据CNN，特朗普16日签署行政令，称豁免“符合美国国家利益”，使上月成法的对俄制裁在生效前被搁置；国会议员批评，乌克兰方面强烈不满。",
+        "url": "https://www.cnn.com/2026/10/16/europe/us-ukraine-russia-sanctions-intl-hnk"
+      },
+      {
+        "title": "中期选举提前投票：民主党在两州显现优势",
+        "summary": "CNN报道，爱荷华和北卡罗来纳的提前现场投票数据显示民主党选民更积极。中期选举将于11月3日举行。",
+        "url": "https://www.cnn.com/2026/10/16/politics/live-news/midterm-election-congress"
+      }
+    ],
+    "global": [
+      {
+        "title": "法国学生抗议扩大：工会加入，内政部称16万人、工会称48万人",
+        "summary": "抗议自9月下旬在克雷泰伊一所高中起步，诉求从学校经费不足扩展到更广的不满。据阿拉伯新闻，内政部统计参与者16.15万人，工会称48万人；马克龙称年轻人的关切正当，但被政治力量利用并演变为城市暴力。",
+        "url": "https://www.arabnews.pk/world/demonstrations-backing-frances-protesting-students-gather-strength-3004083"
+      },
+      {
+        "title": "法国周六抗议夜间演变为骚乱",
+        "summary": "据CNN，周六各地抗议规模据报达数十万，160多人被拘留；马克龙警告袭击警察局、商铺和市政厅者将被起诉。",
+        "url": "https://www.cnn.com/2026/10/17/world/live-news/france-protests-paris-intl"
+      },
+      {
+        "title": "Z世代抗议在多国同时出现",
+        "summary": "CNN视频报道，学生与Z世代主导的抗议在阿尔巴尼亚、法国、印度、意大利等地同时出现。具体细节未逐条核实。",
+        "url": "https://www.cnn.com/2026/10/17/world/video/albania-protests-gen-z-france-protests-rome-protests-new-d"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美股周五收跌：芯片股领跌，纳指周跌4.5%",
+        "summary": "10月16日标普500跌1.1%至7659.44，道指跌0.3%至52002.41，纳指跌2.1%至26140.03。标普与纳指录得6月以来最差一周，市场担忧AI投资热潮能持续多久：美光跌5.6%，英特尔跌5.8%。年内标普仍涨约11.9%。对投资的含义：科技权重高的组合本周波动会更大，道指相对抗跌，可留意仓位集中度。",
+        "url": "https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-friday-10162026-nid16102026/"
+      },
+      {
+        "title": "多伦多股指周五走高，加拿大央行加息预期升温",
+        "summary": "据Trading Economics，S&P/TSX综合指数周五涨超0.5%，站上36000点，银行与能源股领涨。行长麦克勒姆提醒能源价格高企的时间越长压力越大，市场定价显示下次议息可能加息（属市场预期，非定论）。对房贷浮动利率持有人是需要留意的信号。",
+        "url": "https://tradingeconomics.com/canada/stock-market/news/592822"
+      },
+      {
+        "title": "A股：沪指险守3700点",
+        "summary": "10月15日沪指放量跌1.59%至3707.48点，次日小幅反弹至3716点。短线情绪偏谨慎，成交额仍在1.5万亿元以上。",
+        "url": "https://stock.10jqka.com.cn/20261015/c680727240.shtml"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "【虚构】温哥华：浣熊集体“加入”垃圾分类志愿队，因分错被投诉",
+        "summary": "本条为虚构段子：据称某社区的浣熊每晚准时开箱“检查分类”，居民投诉它们只分走了好吃的那一类。",
+        "fictional": true
+      },
+      {
+        "title": "【虚构】多伦多：地铁临时停运公告写得比通勤故事还长",
+        "summary": "本条为虚构段子：乘客表示，公告里的“预计延误”四个字终于有了与实际同步的一天——都是“很久”。",
+        "fictional": true
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一笑",
+        "summary": "问：为什么股民周一早上特别精神？答：因为周末已经把能想的坏消息都想完了。",
+        "fictional": true
+      },
+      {
+        "title": "再来一个",
+        "summary": "同事问我为什么总带伞，我说：我是投资者，擅长在下雨之前买伞，下雨之后拿着伞。",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "将进酒（节选）",
+    "author": "李白",
+    "dynasty": "唐",
+    "lines": [
+      "君不见黄河之水天上来，奔流到海不复回。",
+      "君不见高堂明镜悲白发，朝如青丝暮成雪。",
+      "人生得意须尽欢，莫使金樽空对月。",
+      "天生我材必有用，千金散尽还复来。"
+    ],
+    "note": "《将进酒》约作于天宝十一载（752年）前后，李白已被赐金放还数年，与友人岑勋、元丹丘在嵩山脚下宴饮，借酒抒怀。“将进酒”本是汉乐府旧题，意为“请饮酒”，李白借旧题写新意：开篇以黄河奔流入海、青丝顿成白雪两组长句，把时间的不可逆压到最重，却在“人生得意须尽欢”处陡然翻转，不是消沉，而是在自知时光有限之后选择豪放。“天生我材必有用”一句，既是自负，也带着仕途受挫后的倔强，所谓千金散尽，是对世俗得失的不屑。全诗句式长短错落，如大河奔涌，情绪由悲转狂、再转愤激，是盛唐气象里个体情感的最高音。为什么值得一读：近日选诗多取秋思与怀古，今天换一口气，在周一开场读一读这种不被时间吓住的态度，倒也合适。"
+  },
+  "special": {
+    "title": "本周财经展望",
+    "html": "<p>覆盖 10 月 12 日之后到今天，展望 10 月 19 日至 23 日（美东时间）。财报日期以各家财经媒体日历为准，日历本身标注可能有出入，下单前请以公司投资者关系页为准。</p>\n\n<h4>一、本周财报日历</h4>\n<ul>\n<li><strong>周二 10 月 20 日盘后 · Netflix</strong>：市场预期营收约 129 亿美元；分析师想看到赢回观众的可信方案，Kiplinger 提到内容储备偏薄、裁员约 1000 人、首席内容官更换，股价今年以来跌约 24.7%（<a href=\"https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks\" target=\"_blank\">Kiplinger</a>）。</li>\n<li><strong>周二盘前 · GE 航空航天、通用汽车、RTX、3M、诺斯罗普·格鲁曼</strong>：工业、汽车与国防的集中读数；通用汽车结果约美东 6:30 公布（<a href=\"https://www.marketscreener.com/news/week-s-earnings-calendar-cac-stocks-meta-tesla-sap-and-nestle-in-the-spotlight-ce785cdade80f623\" target=\"_blank\">MarketScreener</a>、<a href=\"https://www.stocktitan.net/articles/earnings-calendar-week-of-october-19-2026\" target=\"_blank\">StockTitan</a>）。</li>\n<li><strong>周三 10 月 21 日盘后 · Meta</strong>：Kiplinger 列示的营收预期约 633.5 亿美元；看点是资本开支计划，以及 Muse AI 智能体能否印证 AI 投入换来增长（<a href=\"https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks\" target=\"_blank\">Kiplinger</a>）。</li>\n<li><strong>周三盘后 · 特斯拉</strong>：排在 Meta 之后约一小时；Kiplinger 列示营收预期约 281 亿美元，并提到第三季度交付量 486,532 辆高于预期区间；另一家预览认为利润率、FSD 与 Cybercab 的表述可能比数字更重要（<a href=\"https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-10-19/\" target=\"_blank\">HeyGoTrade</a>）。各家的每股收益预期差异较大，此处不引用。</li>\n<li><strong>周三盘后 · IBM、德州仪器、泛林集团、SAP</strong>：企业 IT 与半导体设备的读数，恰好接在上周亚洲芯片股暴跌之后（<a href=\"https://www.stocktitan.net/articles/earnings-calendar-week-of-october-19-2026\" target=\"_blank\">StockTitan</a>）。</li>\n<li><strong>周四 10 月 22 日盘前 · 宝洁</strong>：观察能源价格居高时美国消费者是否还在花钱（<a href=\"https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-10-19/\" target=\"_blank\">HeyGoTrade</a>）。同日盘前还有洛克希德·马丁、霍尼韦尔、Spotify、黑石、康卡斯特，盘后有西部数据、纽蒙特（<a href=\"https://www.stocktitan.net/articles/earnings-calendar-week-of-october-19-2026\" target=\"_blank\">StockTitan</a>）。</li>\n<li><strong>周五 10 月 23 日盘前 · 美国运通、SLB</strong>（<a href=\"https://www.stocktitan.net/articles/earnings-calendar-week-of-october-19-2026\" target=\"_blank\">StockTitan</a>）。</li>\n</ul>\n<p>中概股：本次检索没有取到本周中概股财报的可靠日期，故不列。</p>\n\n<h4>二、本周关键事件</h4>\n<ul>\n<li><strong>周一 10 月 19 日</strong>：中国第三季度及 9 月经济活动数据、加拿大 9 月 CPI（<a href=\"https://thriveinmarkets.com/calendar/2026-10-19/\" target=\"_blank\">Thrive in Markets</a>）；中国 10 月贷款市场报价利率（LPR）也在本周日程内（<a href=\"https://www.newsquawk.com/headlines/newsquawk-calendar-of-key-events---october-2026\" target=\"_blank\">Newsquawk</a>）。</li>\n<li><strong>周二 10 月 20 日</strong>：美国新屋开工与营建许可；英国失业率（<a href=\"https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-10-19/\" target=\"_blank\">HeyGoTrade</a>、<a href=\"https://thriveinmarkets.com/calendar/2026-10-19/\" target=\"_blank\">Thrive in Markets</a>）。</li>\n<li><strong>周三 10 月 21 日</strong>：英国 CPI（<a href=\"https://thriveinmarkets.com/calendar/2026-10-19/\" target=\"_blank\">Thrive in Markets</a>）。</li>\n<li><strong>周四 10 月 22 日</strong>：美国初请失业金人数，预期从 19.9 万小幅升至约 20 万（<a href=\"https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-10-19/\" target=\"_blank\">HeyGoTrade</a>）。</li>\n<li><strong>周五 10 月 23 日</strong>：全球 10 月初值 PMI；密歇根大学消费者信心，关注通胀预期（<a href=\"https://thriveinmarkets.com/calendar/2026-10-19/\" target=\"_blank\">Thrive in Markets</a>、<a href=\"https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-10-19/\" target=\"_blank\">HeyGoTrade</a>）。</li>\n<li><strong>美联储静默期</strong>：10 月 17 日至 29 日，本周预计没有美联储官员公开讲话；10 月 27 至 28 日的利率决议在下周（<a href=\"https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-10-19/\" target=\"_blank\">HeyGoTrade</a>）。</li>\n</ul>\n\n<h4>三、看点</h4>\n<p>判断（编辑推断）：本周的主线是 AI 投入能否经得起上周的估值冲击。上周美股因 CPI 偏热与亚洲芯片股暴跌而下挫，本周 Meta、特斯拉、IBM、德州仪器、泛林集中在周三盘后发布，是检验 AI 资本开支与芯片需求的最密集窗口。</p>\n<p>第二条线索是能源与利率。周一早盘 WTI 约 100.50 美元、布伦特约 108.20 美元，英国海军称上周霍尔木兹海峡附近有 10 起商船遇袭（<a href=\"https://www.thestreet.com/stock-market-today/stock-market-today-oct-19-2026-nasdaq-futures-climb-as-tech-rebound-from-sell-off\" target=\"_blank\">TheStreet</a>）；加上美联储静默期，本周市场只能靠宝洁、密歇根信心指数与 PMI 来判断消费与通胀预期，直到下周的议息会议。</p>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 74
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Remembrance Day",
+      "date": "2026-11-11",
+      "days": 23,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Election Day",
+      "date": "2026-11-03",
+      "days": 15,
+      "scope": "NY"
+    }
+  ],
+  "issue_no": 56
+}
