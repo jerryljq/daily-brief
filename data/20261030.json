@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-30",
+  "weekday": "星期五",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "中共中央召开党外人士座谈会，习近平主持并讲话",
+        "summary": "会议征求各民主党派、全国工商联和无党派人士对中央关于全面从严治党重大问题决定稿的意见，与会人士普遍表示赞同。习近平强调要依靠党的自我革命和人民监督解决党内突出问题，并希望各界发挥参政议政与民主监督作用。",
+        "url": "https://news.sina.com.cn/c/xl/2026-10-30/doc-iniwziir8148778.shtml"
+      },
+      {
+        "title": "习近平会见德国总统施泰因迈尔、瑞士联邦主席帕姆兰",
+        "summary": "习近平同德国总统施泰因迈尔举行会谈，并会见瑞士联邦主席帕姆兰；另据报道，奥地利总理施托克尔将访华。具体成果请见官方通稿。",
+        "url": "https://news.sina.com.cn/xw/2026-10-30/doc-iniwziin5461340.shtml"
+      },
+      {
+        "title": "央行宣布：11月2日起隔夜逆回购成为主要政策利率",
+        "summary": "自11月2日起每个工作日开展隔夜逆回购操作，利率1.25%，取代7天期逆回购（1.40%）成为主要政策利率；7天期转为税期、月末等时点的补位工具。由于利率水平未变，市场认为不宜简单视为降息。",
+        "url": "https://finance.sina.com.cn/stock/zqgd/2026-10-30/doc-iniwziir8135300.shtml"
+      },
+      {
+        "title": "外交部驳斥《纽约时报》涉华为英伟达高管报道",
+        "summary": "《纽约时报》称一名与黄仁勋关系密切的中国女性高管被美国情报机构认为是中方情报人员。外交部发言人郭嘉昆在例行记者会上称该报道“捕风捉影，纯属对中国的污蔑抹黑”。",
+        "url": "https://news.sina.com.cn/c/2026-10-30/doc-iniwywts5476272.shtml"
+      },
+      {
+        "title": "四川舰上首型舰载察打一体隐身无人机成功起降",
+        "summary": "我国首艘076型两栖攻击舰四川舰近日开展海上试验，“攻击-21”隐身无人机首次在该舰成功起降，显示海军已具备让固定翼隐身无人机在大型海上平台起降的能力。",
+        "url": "https://news.sina.com.cn/c/2026-10-30/doc-iniwywtv8234122.shtml"
+      },
+      {
+        "title": "五部门发文，消费、投资领域将迎利好",
+        "summary": "新浪财经报道，五部门联合发文，涉及多个消费与投资领域的支持措施。具体条款以官方文件为准。",
+        "url": "https://finance.sina.com.cn/jjxw/2026-10-30/doc-iniwzazs2249652.shtml"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "期中选举前四天，特朗普取消爱荷华、堪萨斯集会改“电话集会”",
+        "summary": "共和党全国委员会称，特朗普将以覆盖近20个州的“电话集会”取代两场现场活动；CNN后续报道称其又恢复了两场红州集会。哈佛ElectIt模型给民主党控制众议院94%、参议院74%的概率；CNN民调显示堪萨斯州民主党人汉密尔顿以49%对45%领先现任参议员马歇尔。",
+        "url": "https://www.aljazeera.com/news/2026/10/30/trump-cancels-iowa-kansas-midterm-events-opting-for-tele-rallies"
+      },
+      {
+        "title": "司法部火速调查阿拉斯加“第二个丹·沙利文”参选事件",
+        "summary": "CNN报道，司法部就民主党人是否招募同名候选人混淆选民展开刑事调查，玛丽·佩尔托拉否认涉入。",
+        "url": "https://www.cnn.com/2026/10/30/politics/live-news/midterm-election-congress"
+      },
+      {
+        "title": "田纳西死刑失败幸存者克丽丝塔·派克首次公开发声",
+        "summary": "上月遭遇注射死刑失败的派克发表首份公开声明，称“痊愈不等于没事”；州长比尔·李已下令调查。",
+        "url": "https://www.cnn.com/2026/10/30/us/christa-pike-case-first-statement"
+      },
+      {
+        "title": "加拿大央行三年来首次加息",
+        "summary": "加拿大央行10月28日宣布加息，结束近三年的暂停；同期加拿大与阿联酋签署贸易协定，寻求美国以外的市场。",
+        "url": "https://www.aljazeera.com/economy/2026/10/28/bank-of-canada-raises-interest-rates-for-the-first-time-in-three-years"
+      },
+      {
+        "title": "预测市场Kalshi两位联合创始人在犹他州被刑事起诉",
+        "summary": "半岛电视台报道，Kalshi联合创始人在美国犹他州面临刑事指控，细节请见原文。",
+        "url": "https://www.aljazeera.com/economy/2026/10/29/kalshi-co-founders-hit-with-criminal-charges-in-us-state-of-utah"
+      }
+    ],
+    "global": [
+      {
+        "title": "伊朗称四艘油轮在霍尔木兹海峡触雷",
+        "summary": "伊朗革命卫队海军称拦停两艘油轮，并称一艘超级油轮触水雷起火；阿曼海军另称在穆桑达姆以外约196公里海域救起一艘“遭袭”船只的25名船员。",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/10/30/iran-war-live-irgc-says-four-tankers-struck-mines-in-strait-of-hormuz"
+      },
+      {
+        "title": "美国权衡新一轮对伊打击，万斯同时伸出橄榄枝",
+        "summary": "万斯提出愿与伊朗的穆赫辛·礼萨伊面谈以结束战争，分析人士称互不信任是最大障碍；伊方要求尽快解除制裁与美国海上封锁。据报道卡塔尔官员正赴伊朗斡旋恢复停火。",
+        "url": "https://www.aljazeera.com/news/2026/10/30/us-weighs-new-iran-strikes-as-vance-reaches-out-is-war-or-a-deal-closer"
+      },
+      {
+        "title": "特朗普称伊朗战事将“很快结束”",
+        "summary": "新浪新闻转述特朗普表态，称对伊战事将很快结束；与上述打击与谈判并行的信号相互矛盾。",
+        "url": "https://news.sina.com.cn/w/2026-10-30/doc-iniwziir8103285.shtml"
+      },
+      {
+        "title": "以色列大选无一方获61席，在野阵营探讨组阁",
+        "summary": "半岛电视台称选举未产生明确多数，反对派正研究组阁方案；选情不明一度令特拉维夫125指数下跌逾3%。",
+        "url": "https://news.sina.com.cn/w/2026-10-30/doc-iniwziiq2263960.shtml"
+      },
+      {
+        "title": "也门塔伊兹战事不断，联合国呼吁开放人道通道",
+        "summary": "联合国人道协调厅称，8月初以来也门已有超过28.1万人流离失所。",
+        "url": "https://aljazeera.com/news/2026/10/29/fighting-rages-near-yemens-taiz-as-un-urges-humanitarian-access"
+      },
+      {
+        "title": "亚美尼亚议会爆发群殴",
+        "summary": "新浪新闻报道亚美尼亚议会内议员“打成一团”，起因与细节请见原文。",
+        "url": "https://news.sina.com.cn/w/2026-10-30/doc-iniwywtv8179308.shtml"
+      }
+    ],
+    "economy": [
+      {
+        "title": "华尔街抛售延续：AI投入回报遭质疑，英特尔盘前重挫25%",
+        "summary": "大型科技股财报引发对巨额AI开支回报的担忧，CNN称英特尔盘前跌约25%、亚马逊跌约7%。最近一个已确认收盘数据（10月28日）：标普500报7,720.39点（-0.3%），纳指26,184.72点（-1.38%），道指52,342.56点（-0.25%）；10月30日收盘数据本稿截止时未取得。影响：持仓集中于AI龙头的投资者需关注回撤，分散与现金比例值得复查。",
+        "url": "https://edition.cnn.com/2026/10/30/investing/us-stocks-ai-investment"
+      },
+      {
+        "title": "华尔街为民主党在期中选举中获胜做准备",
+        "summary": "CNBC称市场正为民主党夺回国会席位定价，政策不确定性（关税、财政、监管）可能抬升短期波动。叠加霍尔木兹局势，油价与通胀预期是主要风险变量。",
+        "url": "https://www.cnbc.com/2026/10/30/2026-midterm-election-wall-street-prepares-for-democratic-gains.html"
+      },
+      {
+        "title": "美联储按兵不动，加拿大央行三年来首次加息",
+        "summary": "美联储10月28日维持利率不变；加拿大央行则转向加息。两国政策分化可能支撑加元，但加息抬高加拿大房贷利率，对房市与高杠杆家庭不利。",
+        "url": "https://www.aljazeera.com/economy/2026/10/28/fed-leaves-interest-rates-unchanged-despite-inflation-in-the-us"
+      },
+      {
+        "title": "中国央行11月起以隔夜逆回购1.25%为主要政策利率",
+        "summary": "利率水平未变，更多是政策利率体系的调整；对A股/港股情绪影响有限，关键看后续LPR与降准动向。",
+        "url": "https://finance.sina.com.cn/stock/zqgd/2026-10-30/doc-iniwziir8135300.shtml"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "【虚构】温哥华一只浣熊连续三晚潜入咖啡馆，只偷燕麦奶",
+        "summary": "据称店主调出监控后发现，这位“顾客”每晚凌晨准时到访，从不碰牛奶，疑似已转型为素食主义者。店员表示打算给它办张会员卡。",
+        "fictional": true
+      },
+      {
+        "title": "【虚构】西雅图通勤者发现：地铁延误公告比列车先到站",
+        "summary": "有乘客称，每日上班路上最准时的就是“预计延误十分钟”的广播，已有人建议把它列为通勤KPI。",
+        "fictional": true
+      },
+      {
+        "title": "【虚构】纽约一位房客为租到“带窗户的卧室”举办乔迁派对",
+        "summary": "派对来宾们围观了那扇窗，并一致认为窗外那堵砖墙“视野相当开阔”。",
+        "fictional": true
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一笑",
+        "summary": "问：为什么程序员总分不清万圣节和圣诞节？答：因为 Oct 31 = Dec 25。",
+        "fictional": true
+      },
+      {
+        "title": "再来一个",
+        "summary": "股民对朋友说：我的投资组合很稳定。朋友：真的？股民：嗯，稳定地往下走。",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "岳阳楼记（节选）",
+    "author": "范仲淹",
+    "dynasty": "宋",
+    "lines": [
+      "不以物喜，不以己悲。居庙堂之高则忧其民，处江湖之远则忧其君。",
+      "是进亦忧，退亦忧。然则何时而乐耶？其必曰：先天下之忧而忧，后天下之乐而乐乎！"
+    ],
+    "note": "庆历五年（1045），范仲淹因推行“庆历新政”失败被贬邓州，好友滕子京同样谪守巴陵郡，重修岳阳楼后请他作记。范仲淹并未亲临洞庭，是对着一幅《洞庭晚秋图》落笔的。文章先写洞庭“阴风怒号”与“春和景明”两幅图景，对照迁客骚人“览物之情，得无异乎”的悲喜，再陡然翻出“古仁人之心”：不因外物得失而喜悲，无论在朝在野都心系天下。末句“先天下之忧而忧，后天下之乐而乐”成为千古名训。此文值得一读，一在骈散相间、写景与议论转换自如；二在它是写给同样失意的朋友的劝勉，把个人贬谪的苦闷升华为士大夫的担当。近日世事纷扰，读来更觉其格局开阔。"
+  },
+  "special": {
+    "title": "创投观察",
+    "html": "<p>覆盖区间：10 月 27 日至 10 月 30 日。信源以 TechCrunch、CNBC 为主；个别报道页面未能取回正文，只引用标题已有信息，文中会注明。</p>\n<h4>1. Bedrock Robotics：6 亿美元 C 轮，估值 41 亿美元（机器人）</h4>\n<ul>\n<li><strong>公司做什么：</strong>为工程车辆提供可加装的自动驾驶套件，主打全自动挖掘机，成立于 2024 年，创始团队来自 Waymo 和机器人领域。已在内华达州一座水处理设施、得克萨斯州一处土方工地和一个 120 万立方码的民用工程项目中商业运营，新合作方是亚利桑那州总承包商 Haydon。</li>\n<li><strong>行业位置：</strong>走的是“加装套件”路线，改造现有设备，而不是造新机器。报道给出的需求背景是：熟练挖掘机操作员要练五年以上，美国建筑业大批工人即将退休。</li>\n<li><strong>交易：</strong>C 轮 6 亿美元，投后估值 41 亿美元，CapitalG 与 Emergence Capital 联合领投；新投资方有 US Innovative Technology Fund、Bessemer、Temasek，老股东包括 8VC、Georgian、Valor、Nvidia 等。</li>\n<li><strong>竞争对手：</strong>原文没有点名对手，这里不凭印象补。</li>\n<li><strong>判断：</strong>这是我的判断，不是报道结论。真实工地上已有商业运营，比多数机器人公司的“演示阶段”更进一步，估值有依据。接下来的钱会花在把单点项目复制到更多承包商上，CEO Boris Sofman 也说“下一步挑战是把这种能力交付给更多承包商”。能证伪的信号：新增客户停留在个别大项目，复购和多台部署上不去。</li>\n<li>来源：<a href=\"https://techcrunch.com/2026/10/26/this-startups-self-driving-excavators-help-dig-up-600m-in-new-funding/\" target=\"_blank\">TechCrunch</a></li>\n</ul>\n<h4>2. Upwind：4 亿美元 C 轮，估值 38 亿美元，拒绝 Datadog 收购（软件）</h4>\n<ul>\n<li><strong>公司做什么：</strong>旧金山云安全公司，做“运行时”安全，即对运行中的服务实时检测并处置攻击和漏洞。创始人 Amiram Shachar 此前把 Spot.io 以 4.5 亿美元卖给 NetApp。</li>\n<li><strong>行业位置：</strong>切的是云安全中“服务已上线之后”的那一段。报道提到，它的估值约为预测年化经常性收入（ARR）的 40 倍以上，低于同类快速增长的 Cyera 的约 80 倍。</li>\n<li><strong>交易：</strong>C 轮 4 亿美元，估值 38 亿美元，Bessemer 领投，Greylock、Craft Ventures 跟投。约九个月前的上一轮为 2.5 亿美元、估值 15 亿美元。公司每季度新增 2000 万至 3000 万美元 ARR，预计年底约 9000 万美元。据知情人士，上市公司 Datadog 的收购报价没有在 38 亿美元估值之上给出溢价，Upwind 因此选择独立。</li>\n<li><strong>竞争对手：</strong>文章只拿 Cyera 作估值对比，没有列直接对手；收购方 Datadog 做可观测性。</li>\n<li><strong>判断：</strong>我的判断：九个月估值翻 2.5 倍，ARR 却只有约 9000 万美元，增速必须维持才能消化 40 倍以上的倍数。拒绝没有溢价的报价是合理的，但报道记者也认为，近年上市的网络安全公司不多，被收购仍是最可能的结局。能证伪的信号：季度新增 ARR 掉到 2000 万美元以下，或下一轮出现平价甚至折价。</li>\n<li>来源：<a href=\"https://techcrunch.com/2026/10/28/upwind-raises-400m-after-walking-away-from-datadog-acquisition-offer/\" target=\"_blank\">TechCrunch</a></li>\n</ul>\n<h4>3. Thrive Holdings 收购 ADT：企业价值 153 亿美元（并购）</h4>\n<ul>\n<li><strong>公司做什么：</strong>收购方 Thrive Holdings 由 OpenAI 支持，长期持有传统企业并用 AI 改造，旗下已有 75 家以上公司，OpenAI 既是合作伙伴也是投资方，会提供模型、技术和“前线部署工程师”。标的 ADT 是实体安防公司。</li>\n<li><strong>交易：</strong>每股 10 美元，股权价值约 76 亿美元，含债务的企业价值 153 亿美元，10 月 29 日宣布。报道没有说明支付方式。新闻稿称 ADT 将成为 Thrive Holdings 智能家居安防业务的基础。</li>\n<li><strong>竞争对手：</strong>报道提到 Apple（与 LG、Schneider Electric 合作的家居安防产品线）、Amazon（含新的 AI 家用摄像头）以及用机器狗巡逻的初创公司 Asylon。</li>\n<li><strong>判断：</strong>我的判断：企业价值约为股权价值的两倍，说明 ADT 带着大量债务，AI 改造要先养得起这笔负债。双方还没公布具体的 AI 安防产品，这是最大的不确定性。能证伪的信号：收购后一两个季度内拿不出可量化的成本下降或新产品。</li>\n<li>来源：<a href=\"https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/\" target=\"_blank\">TechCrunch</a></li>\n</ul>\n<h4>4. Guidewire 收购 Hyperexponential：17 亿美元现金（软件）</h4>\n<ul>\n<li><strong>公司做什么：</strong>Hyperexponential 是 2017 年成立的英国 AI 初创公司，做智能核保软件，据其自述约 600 家保险公司、分布在 40 个国家的承保机构在用。据 PitchBook，累计融资近 9000 万美元，投资方包括 Andreessen Horowitz 和 Battery Ventures。</li>\n<li><strong>交易：</strong>收购价 17 亿美元，现金支付；文章称含只在达到营收目标时才支付的约 4 亿美元，交易总价约 20 亿美元。预计明年完成交割。收购目的是“让 AI 智能体与人类协同完成核保、分析和定价决策”。</li>\n<li><strong>判断：</strong>我的判断：累计融资不到 9000 万美元而卖出 17 亿美元，投资人回报很高；约 4 亿美元的对赌说明买方对收入增长仍要看兑现。报道没有给出竞争对手，这里不补。</li>\n<li>来源：<a href=\"https://techcrunch.com/2026/10/27/guidewire-buys-hyperexponential-for-1-7b-in-cash\" target=\"_blank\">TechCrunch</a></li>\n</ul>\n<h4>其他值得一提的交易</h4>\n<ul>\n<li><strong>DoorDash 拟收购 Instacart</strong>，标题称 170 亿美元。我只取到标题和搜索结果，正文未能取回，对价结构、溢价和审批都未核实，此处不展开。<a href=\"https://techcrunch.com/2026/10/29/doordash-to-acquire-instacart-for-17b/\" target=\"_blank\">TechCrunch</a>｜<a href=\"https://www.cnbc.com/2026/10/28/doordash-instacart-maplebear.html\" target=\"_blank\">CNBC</a></li>\n<li><strong>Wabi</strong>：做能生成小应用的 AI 智能体，最新一轮后估值 12.5 亿美元，仅取到标题，轮次金额未核实。<a href=\"https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/\" target=\"_blank\">TechCrunch</a></li>\n<li><strong>Dream</strong>：前 Palantir 高管创办，获 a16z 1700 万美元，做面向建筑业的 AI 世界模型。<a href=\"https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/\" target=\"_blank\">TechCrunch</a></li>\n<li><strong>SuperMe</strong>：2000 万美元，做 AI 专家档案网络。<a href=\"https://techcrunch.com/2026/10/29/superme-raises-20m-for-its-network-of-ai-expert-profiles/\" target=\"_blank\">TechCrunch</a></li>\n<li><strong>Mintive</strong>：智能体身份初创公司，投资方含 Cowboy Ventures、Coatue，天使含 Jeff Dean、Andrej Karpathy，金额未取到。<a href=\"https://techcrunch.com/2026/10/29/agent-identity-startup-mintive-lands-cowboy-ventures-coatue-angels-jeff-dean-andrej-karpathy/\" target=\"_blank\">TechCrunch</a></li>\n<li><strong>Deepgram 收购 Daily</strong>（Pipecat 开发商），用于加强语音 AI 基础设施，正文未取回，金额不详。<a href=\"https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure\" target=\"_blank\">TechCrunch</a></li>\n</ul>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 63
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Remembrance Day",
+      "date": "2026-11-11",
+      "days": 12,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Election Day",
+      "date": "2026-11-03",
+      "days": 4,
+      "scope": "NY"
+    }
+  ],
+  "issue_no": 67
+}
