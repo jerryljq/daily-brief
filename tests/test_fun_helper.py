@@ -91,6 +91,14 @@ class Check(Base):
         self.assertIn("要写 year", text)
         self.assertIn("同一种 kind", text)
 
+    def test_more_than_two_wikipedia_links_a_day_is_a_warning(self):
+        items = [dict(it, url=f"https://zh.wikipedia.org/wiki/{i}") for i, it in enumerate(good_items())]
+        errors, warnings = self.check(issue(items[:2] + good_items()[2:]))
+        self.assertEqual((errors, warnings), ([], []))
+        errors, warnings = self.check(issue(items[:3] + good_items()[3:]))
+        self.assertEqual(errors, [])
+        self.assertIn("3 条来自维基百科", warnings[0])
+
     def test_missing_kinds_are_a_warning_not_an_error(self):
         errors, warnings = self.check(issue(good_items()[:2]))
         self.assertEqual(errors, [])

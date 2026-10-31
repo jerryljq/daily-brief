@@ -65,6 +65,7 @@ SIMILAR_SUMMARY = 0.35   # 字符二元组 Jaccard；2026-10 的复读笑话两�
 SIMILAR_TITLE = 0.5
 SIMILAR_NEWS_TITLE = 0.6
 HISTORY_DAYS = 60
+WIKI_MAX = 2             # 每天超过这么多条维基来源就提示（大陆打不开）
 UA = "Mozilla/5.0 (compatible; daily-brief-fun-check/1.0)"
 
 
@@ -284,6 +285,9 @@ def check_issue(data, day, data_dir=DATA, fetcher=fetch):
                     err("来源页面上找不到 evidence 这段文字：确认这一页确实说了这件事，并原样复制")
                 elif kind in TODAY_KINDS and isinstance(year, int) and str(year) not in page:
                     err(f"来源页面上找不到年份 {year}")
+    wiki = sum(1 for it in jokes if re.match(r"^https?://[^/]*\.(wikipedia|wikiquote)\.org/", str(it.get("url") or "")))
+    if wiki > WIKI_MAX:
+        warnings.append(f"jokes：{wiki} 条来自维基百科/维基语录，中国大陆读者打不开，尽量换成大陆能打开的来源（fun.md）")
     missing = [k for k in KINDS if k not in seen]
     if missing:
         warnings.append(f"jokes：今天缺 {'、'.join(KINDS[k] for k in missing)}（找不到合格的可以不登）")
