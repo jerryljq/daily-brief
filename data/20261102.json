@@ -1,0 +1,181 @@
+{
+  "date": "2026-11-02",
+  "weekday": "星期一",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "习近平同阿曼苏丹海赛姆会谈",
+        "summary": "11月2日，习近平在北京人民大会堂同阿曼苏丹海赛姆会谈。这是阿曼国家元首自两国建交48年来首次访华，双方见证供应链、绿色发展、数字金融等合作文件签署，并发表深化战略伙伴关系的联合声明。",
+        "url": "https://www.163.com/news/article/LAOPVGQ0000189FH.html"
+      },
+      {
+        "title": "第九届进博会11月5日至10日在沪举行，首批展品已入馆",
+        "summary": "本届进博会有162个国家、地区和国际组织参与，展览面积首次突破44万平方米，480余项代表性创新成果集中亮相。今年前9个月我国进口16.7万亿元，创同期历史新高。",
+        "url": "https://www.163.com/news/article/LAOOQ319000189FH.html"
+      },
+      {
+        "title": "沪深上市公司三季报：前三季度净利润5.1万亿元，同比增8.5%",
+        "summary": "截至10月31日，5224家沪深上市公司披露三季报，前三季度营收56.6万亿元（+5.8%），净利润5.1万亿元（+8.5%），73%的公司盈利。AI相关行业净利润增281.0%，油气石化因上游能源价格上涨利润增32.9%。",
+        "url": "https://www.163.com/dy/article/LAON60GL05346RC6.html"
+      },
+      {
+        "title": "2026年“互联网之光”博览会在乌镇开幕",
+        "summary": "来自54个国家和地区的671家企业展示1000余项新产品新技术，卫星互联网、6G首次亮相，另有百余款具身智能机器人，展期至11月5日。",
+        "url": "https://www.163.com/news/article/LAOODIN2000189FH.html"
+      },
+      {
+        "title": "国际观察：德国总统施泰因迈尔访华",
+        "summary": "网易转载的国际观察文章，评述德国总统访华对巩固中德互信的意义（摘要基于标题，细节请看原文）。",
+        "url": "https://www.163.com/dy/article/LAOCNQNS0514R9M0.html"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "中期选举前夜：特朗普在艾奥瓦、堪萨斯举行最后两场造势",
+        "summary": "11月1日特朗普重复称密歇根民主党参议员候选人El-Sayed是“圣战分子”，并对Ilhan Omar作出未经证实的指控。半岛电视台称民调显示民主党有望在两州翻盘。选举日为11月3日。",
+        "url": "https://www.aljazeera.com/news/2026/11/2/trump-leans-into-islamophobia-and-conspiracy-in-last-ditch-campaign-rallies"
+      },
+      {
+        "title": "美伊信号：鲁比奥称特朗普“尚未决定”是否攻击伊朗",
+        "summary": "伊朗外长阿拉格齐称，只要美方展现诚意就有达成协议的可能，德黑兰要求解除制裁、美军事存在回到此前水平并结束封锁。伊朗称已通过卡塔尔斡旋方提交方案，特朗普称战争将“很快结束”，否则将“动用重锤”。半岛电视台另报道有油轮在霍尔木兹起火。",
+        "url": "https://www.cnbc.com/2026/11/02/oil-prices-fall-as-iran-us-pursue-diplomacy.html"
+      },
+      {
+        "title": "佛罗里达一架商务喷气机坠入居民区，9人遇难",
+        "summary": "一架Learjet 60从得州奥斯汀飞往巴哈马途中，11月1日坠入南佛州居民区。座舱录音显示机组曾称结冰问题“可控”，随后飞机迅速失高。州长德桑蒂斯称地面似无伤亡，NTSB将调查。",
+        "url": "https://www.aljazeera.com/news/2026/11/2/nine-die-in-cataclysmic-florida-business-jet"
+      }
+    ],
+    "global": [
+      {
+        "title": "欧洲多国超市冷柜疑遭网络攻击失控",
+        "summary": "比利时、爱沙尼亚、爱尔兰、卢森堡、瑞典的超市冷藏系统一夜升温，数周前法国也曾发生类似事件。爱尔兰SuperValu 223家店中13家受影响；比、爱方面称蒸发器被切到除霜模式并设定为50°C。尚无组织认领，欧盟称是破坏食品供应的蓄意攻击。",
+        "url": "https://www.aljazeera.com/news/2026/11/2/freezers-in-sweden-belgium-overheat-following-possible-cyberattacks"
+      },
+      {
+        "title": "以色列大选僵局：选举官员称结果不会推翻，内塔尼亚胡称选举被“偷走”",
+        "summary": "选举官员表示，即便外国干预指控属实，也不会推翻当前结果。此前各阵营均未过半数，组阁谈判即将开始。",
+        "url": "https://www.aljazeera.com/news/2026/11/2/israeli-officials-say-results-stand-as-netanyahu-claims-election-stolen"
+      },
+      {
+        "title": "孟加拉国成衣厂抗议进入第三天，约500家工厂停工",
+        "summary": "工人要求最低月薪由1.25万塔卡提高到3万塔卡（约242美元）。警方使用催泪弹，政府周日成立工资委员会，厂方警告可能援引“不工作不付薪”。",
+        "url": "https://www.aljazeera.com/news/2026/11/2/bangladesh-garment-factories-disrupted-as-protests-continue-for-third-day"
+      },
+      {
+        "title": "俄乌互联网空袭警报应用遭攻击，乌克兰用户收到虚假核威胁警报",
+        "summary": "停火结束后，乌方指责俄罗斯，莫斯科否认。",
+        "url": "https://www.aljazeera.com/news/2026/11/2/ukraine-blames-russia-after-air-alert-app-sends-out-false-warnings"
+      },
+      {
+        "title": "也门焦夫省成新热点，沙特领衔联军拦截导弹",
+        "summary": "政府军与胡塞武装在焦夫省战斗升级，沙特领衔的联军称拦截了一枚导弹。",
+        "url": "https://www.aljazeera.com/news/2026/11/2/saudi-led-coalition-intercepts-a-missile-as-fighting-rages-in-yemens-al-jawf"
+      },
+      {
+        "title": "希伯伦：以军结束10天围困后撤出",
+        "summary": "据当地省长称，以军已从希伯伦撤出。",
+        "url": "https://www.aljazeera.com/news/2026/11/2/hebron-governor-says-israeli-forces-withdraw-from-city-after-10-day-siege"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美股盘中大涨，油价重挫：道指一度涨574点",
+        "summary": "周一上午约10:42（美东），标普500涨约1%，纳指涨1.3%，道指涨574点（1.1%），非收盘数据。ISM制造业指数10月升至55.5，高于预期的54.5。10月标普和纳指下跌，道指涨近2%。",
+        "url": "https://www.cnbc.com/2026/11/01/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "油价暴跌逾6%：布油约106美元、WTI约97美元",
+        "summary": "美伊双方释放外交信号令原油大跌，市场此前已计入选后升级风险。冲突已扰乱能源市场八个月。对投资者而言，油价回落利好航空和消费，但回落依赖谈判，反复风险仍高，加拿大能源板块则承压。",
+        "url": "https://www.cnbc.com/2026/11/02/oil-prices-fall-as-iran-us-pursue-diplomacy.html"
+      },
+      {
+        "title": "Marvell拟全股票收购Lumentum；Oracle拟发行200亿美元股债",
+        "summary": "据CNBC报道，Marvell收购规模约1150亿美元，押注AI互联；Oracle计划各发行100亿美元普通股与债券为AI建设融资，股价一度跌逾5%。AI资本开支的融资压力正在显现。",
+        "url": "https://www.cnbc.com/2026/11/02/marvell-lumentum-ai-deal.html"
+      },
+      {
+        "title": "Anthropic修订版S-1：三季度收入约170亿美元",
+        "summary": "CNBC报道，前三季度收入332.4亿美元；三季度增速降至约47%（二季度144%）；三季度净亏损232.9亿美元，主要来自公允价值变动，采购与租赁承诺约8954亿美元。",
+        "url": "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html"
+      },
+      {
+        "title": "“普通股票”十几年来相对表现最佳，AI交易降温",
+        "summary": "10月标普500跌0.9%，等权重指数却涨4.9%，相对跑赢5.8个百分点，为2009年4月以来最大。标普上周五收7580.07点。分散配置与等权重策略的价值上升，但科技仍占标普市值37%。",
+        "url": "https://www.cnbc.com/2026/11/02/the-average-stock-is-having-its-best-relative-performance-in-decades-as-the-ai-trade-falters.html"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "【虚构】温哥华一只乌鸦坚持刷Compass卡乘SkyTrain，拒绝补票",
+        "summary": "据说该乌鸦每天准点上车，只在Commercial-Broadway站下车啄一口薯条。运营方称“我们对鸟类的乘车权利保持开放态度”。",
+        "fictional": true
+      },
+      {
+        "title": "【虚构】多伦多一居民搬家时发现租客多出一个房间，房东表示“一直都有”",
+        "summary": "该房间据称有窗，但窗外是邻居的客厅。房租已按“三居室”调整。",
+        "fictional": true
+      },
+      {
+        "title": "【虚构】西雅图咖啡馆推出“第四杯免费、第五杯得谈谈人生”套餐",
+        "summary": "店员称第五杯起会附赠十分钟深度谈话，目前已有顾客因此主动少点一杯。",
+        "fictional": true
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "问：为什么程序员总分不清万圣节和圣诞节？答：因为 Oct 31 == Dec 25。",
+        "fictional": true
+      },
+      {
+        "title": "再来一则",
+        "summary": "选民对候选人说：“我保证投你一票。”候选人大喜：“真的？”选民：“嗯，只要你保证别再给我打电话。”",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "青玉案·元夕",
+    "author": "辛弃疾",
+    "dynasty": "宋",
+    "lines": [
+      "东风夜放花千树，更吹落、星如雨。",
+      "宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。",
+      "蛾儿雪柳黄金缕，笑语盈盈暗香去。",
+      "众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。"
+    ],
+    "note": "这首词作于南宋，约在辛弃疾南归后赋闲之时。词的上阕极写元宵之夜：烟花如东风催开千树花，又如流星坠雨；宝马香车、箫声月色、鱼龙灯舞，一派繁华喧闹。下阕笔锋一转，写盛装的女子笑语远去，而词人苦苦寻觅的那个人，却独自站在灯火稀疏处。前人多认为这个“那人”是词人自况：身负恢复中原之志，却不愿与朝中苟安逐利者同流，宁可守着清冷。全词以闹写静，以繁华衬孤高，末三句被王国维在《人间词话》中引作治学的第三重境界。值得一读，是因为它既是最美的元宵词，也让人在热闹与浮躁里想起自己真正要找的东西。"
+  },
+  "special": {
+    "title": "本周财经展望",
+    "status": "pending"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 60
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Remembrance Day",
+      "date": "2026-11-11",
+      "days": 9,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Election Day",
+      "date": "2026-11-03",
+      "days": 1,
+      "scope": "NY"
+    }
+  ],
+  "issue_no": 70
+}
