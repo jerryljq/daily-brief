@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-03",
+  "weekday": "星期二",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "刘延东同志遗体在京火化，习近平等到八宝山革命公墓送别",
+        "summary": "网易报道，刘延东同志遗体在北京火化，习近平等党和国家领导人到八宝山革命公墓送别。",
+        "url": "https://www.163.com/news/article/LARADIHV000189FH.html"
+      },
+      {
+        "title": "党的二十届五中全会《决定》是怎样诞生的",
+        "summary": "网易刊发的解读文章，回顾全会《决定》的起草与形成过程（摘要依据标题，细节请看原文）。",
+        "url": "https://www.163.com/news/article/LARAGMQE000189FH.html"
+      },
+      {
+        "title": "小米YU7撞水马后前轮脱落、车身连续翻滚，视频流出",
+        "summary": "网传视频显示一辆小米YU7撞上水马后前轮瞬间脱落并失控翻滚，事故原因与责任尚待官方说明。",
+        "url": "https://www.163.com/v/video/VD9S5VUQH.html"
+      },
+      {
+        "title": "美国三季度GDP年化增长3.4%，AI资本开支成主要驱动",
+        "summary": "网易转载报道：美国三季度GDP年化增长3.4%，人工智能相关资本开支是关键推手，对中国出口与科技产业链亦有外溢影响。",
+        "url": "https://www.163.com/dy/article/LAEH8J1T05198NMR.html"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "美国中期选举投票开始，被视为对特朗普的“期中公投”",
+        "summary": "11月3日投票站陆续开门，初步结果当晚陆续公布，最终计票可能拖数日。预测市场给民主党拿下参议院约75%的概率。",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/11/3/us-midterm-elections-live-polls-due-to-open-in-test-for-trump"
+      },
+      {
+        "title": "特朗普：美将在年底后停止对以色列援助",
+        "summary": "特朗普称他与内塔尼亚胡已同意，年底后美国不再提供约每年40亿美元的援助，理由是“他们不需要”。援助形式尚不清楚，国务院未回应置评请求。",
+        "url": "https://www.aljazeera.com/news/2026/11/3/trump-announces-that-us-will-stop-paying-israel-after-year-end"
+      },
+      {
+        "title": "特朗普称昨夜对伊朗打击“很小，不是战争”",
+        "summary": "美媒报道美军在霍尔木兹一带发动打击，伊朗格什姆岛传出爆炸。特朗普淡化为有限行动，万斯称谈判有进展，德黑兰称“球在美方一边”。",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/11/3/iran-war-live-vance-sees-progress-in-talks-tehran-says-ball-in-us-court"
+      },
+      {
+        "title": "湾区多城叫停新建数据中心，成中期选举议题",
+        "summary": "尽管身处AI产业中心，湾区数个城市已对新建数据中心设限，居民对用电、用水与电价的担忧进入选举辩论。",
+        "url": "https://www.aljazeera.com/news/2026/11/3/californias-bay-area-debates-data-centres-ahead-of-us-midterm-elections"
+      },
+      {
+        "title": "疑朝鲜黑客与币安被盗有关",
+        "summary": "CNBC报道称，据Elliptic、Chainalysis等分析机构，币安相关被盗事件疑与朝鲜有关（细节请看原文，具体金额页面未确认）。",
+        "url": "https://www.cnbc.com/2026/11/03/north-korea-binance-elliptic-chainalysis.html"
+      }
+    ],
+    "global": [
+      {
+        "title": "俄军空袭乌克兰医院和电厂，至少73人受伤",
+        "summary": "半岛电视台报道，俄罗斯对乌克兰医院和发电设施发动袭击。此前扎波罗热一处人道援助中心遇袭，据称造成31人死亡，美方宣布将有新一轮和谈。",
+        "url": "https://www.aljazeera.com/news/2026/11/3/at-least-73-injured-as-russia-bombs-ukrainian-hospital-and-power-plants"
+      },
+      {
+        "title": "伊朗指挥官提出地区安全“五项条件”",
+        "summary": "伊朗军方公布实现地区持久和平的五项原则，与美伊一边打一边谈的局势并行。",
+        "url": "https://www.aljazeera.com/news/2026/11/3/iran-commander-sets-out-five-conditions-for-regional-security"
+      },
+      {
+        "title": "尼泊尔珠峰附近两架直升机相撞，1人死亡",
+        "summary": "两架直升机在珠峰地区空中相撞，造成1人死亡，事故原因待查。",
+        "url": "https://www.aljazeera.com/news/2026/11/3/one-dead-after-two-helicopters-collide-near-mount-everest-in-nepal"
+      },
+      {
+        "title": "气旋“Murasu”在印度东海岸登陆",
+        "summary": "气旋在孟加拉湾沿岸登陆，当地此前已发布暴雨预警。",
+        "url": "https://www.aljazeera.com/news/2026/11/3/cyclone-murasu-makes-landfall-on-indias-eastern-coast"
+      },
+      {
+        "title": "英国拟将永居等待期延长一倍至10年，护理人员豁免",
+        "summary": "新规下多数移民需等10年才能申请定居，护理人员获豁免，高收入者可提前获批。",
+        "url": "https://www.aljazeera.com/news/2026/11/3/uk-to-double-wait-for-permanent-residency-with-exemptions-for-care-workers"
+      },
+      {
+        "title": "澳大利亚高等法院审理16岁以下社媒禁令违宪案",
+        "summary": "Reddit与一数字权利组织主张禁令违宪，案件在高等法院开庭。",
+        "url": "https://www.aljazeera.com/news/2026/11/3/australias-high-court-hears-bid-to-overturn-under-16s-social-media-ban"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美股：纳指反弹、道指受苹果拖累",
+        "summary": "周二盘中（美东9:41）道指跌188点（-0.4%），标普500涨0.1%，纳指涨0.4%；纳指100仍较高点回落逾10%、处于调整区间。美光涨约4%，英伟达、AMD、博通、英特尔各涨约3%。10年期美债收益率约4.91%。投资含义：AI/芯片情绪仍是指数方向盘，选举日前后波动或放大；民主党若全面获胜，市场担心对AI股构成压力。",
+        "url": "https://www.cnbc.com/2026/11/02/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "苹果、Palantir财报后双双下挫",
+        "summary": "苹果财年Q4营收超预期但iPad销售不及预期、利润率指引令人失望，股价跌2%-3%（今年仍涨约25%）；这是新任CEO约翰·特纳斯（Ternus）上任后首份财报，存储成本上升是压力。Palantir三季度营收近翻倍、首次突破20亿美元，美国商业收入首次超过政府收入，但合同总价值增速放缓，股价跌约5%。",
+        "url": "https://www.cnbc.com/2026/11/03/apple-palantir-stock-earnings.html"
+      },
+      {
+        "title": "油价回落：美伊外交信号压低油价",
+        "summary": "布伦特原油盘中跌约3%至约101.5美元，WTI跌2.3%至约94.2美元，市场押注美伊谈判有进展。油价仍处高位，通胀与利率路径是投资者关注的核心；油气相关板块受益于高油价，但对外交消息高度敏感。",
+        "url": "https://www.cnbc.com/2026/11/02/oil-prices-fall-as-iran-us-pursue-diplomacy.html"
+      },
+      {
+        "title": "中国：A股三季报前三季度净利润同比增8.5%",
+        "summary": "5224家沪深上市公司披露三季报，前三季度净利润5.1万亿元（+8.5%），AI相关行业净利润增281%。对投资者而言，盈利改善集中在AI与资源品，结构性特征明显。",
+        "url": "https://www.163.com/dy/article/LAON60GL05346RC6.html"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "赣州女生赴港看演唱会，触发低保预警",
+        "summary": "网易热榜报道：江西赣州一名女生赴港看演唱会，系统出入境数据触发低保核查预警，家庭低保据称被取消。网友热议“看演唱会算不算奢侈消费”。",
+        "url": "https://www.163.com/news/article/LAQIISDD0001899O.html"
+      },
+      {
+        "title": "九寨沟排队遭老人插队，年轻人劝阻反被打",
+        "summary": "网络视频显示，游客在九寨沟排队时劝阻一名插队老人，反遭对方动手。",
+        "url": "https://www.163.com/v/video/VH9RA0EGG.html"
+      },
+      {
+        "title": "大爷坐地上表情痛苦，女子搀扶前先录像留证被骂",
+        "summary": "视频中女子在搀扶地上老人前先拍摄留证，引发网友争论：是谨慎自保还是冷漠？“扶不扶”的老问题又添新版本。",
+        "url": "https://www.163.com/v/video/VB9RGFKN3.html"
+      }
+    ],
+    "jokes": [
+      {
+        "title": "选举日冷笑话",
+        "summary": "问：选举日为什么没人敢睡午觉？答：怕一觉醒来，总统换了，咖啡价格还没涨。",
+        "fictional": true
+      },
+      {
+        "title": "程序员的闹钟",
+        "summary": "程序员设了100个闹钟，一个都没响。原因：他把它们都设成了“稍后提醒”。",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "蒹葭",
+    "author": "佚名（《诗经·秦风》）",
+    "dynasty": "先秦",
+    "lines": [
+      "蒹葭苍苍，白露为霜。",
+      "所谓伊人，在水一方。",
+      "溯洄从之，道阻且长。",
+      "溯游从之，宛在水中央。"
+    ],
+    "note": "《蒹葭》出自《诗经·秦风》，是先秦时期流传于秦地（今陕西、甘肃一带）的民歌，作者无考。全诗三章，每章只换几个字——“苍苍”到“萋萋”再到“采采”，“白露为霜”到“未晞”再到“未已”——时间在露水的变化中悄悄推移，而“伊人”始终隔水相望：逆流而上，道路险阻又漫长；顺流而下，她却仿佛在水中央。\n\n关于主旨，历来有求贤、怀人、爱情等多种解读，这种多义恰是它的魅力：诗中没有写“伊人”是谁，只写了追寻的姿态与可望不可即的距离。王国维称其“最得风人深致”，把它视为“可望而不可即”的人生境界的象征。\n\n在选举夜、战事与行情都喧嚣的一天，读一首两千多年前的小诗：真正动人的，往往不是抵达，而是那份“溯洄从之”的执着，以及秋水、白露、芦苇交织而成的、淡淡的怅惘与美。"
+  },
+  "special": {
+    "title": "创投观察",
+    "html": "<p>覆盖区间：10 月 30 日之后到今天。本期可核实的素材有限：多数信源页面在本次运行中无法完整取回，只展开写取到全文的一笔，其余仅按标题列出。</p>\n<h4>Northwood Space：3.75 亿美元 C 轮，估值 20 亿美元</h4>\n<p><b>公司做什么：</b>成立于 2022 年的太空基础设施公司，做天线、软件等技术，帮助卫星与地面通信。联合创始人 Bridgit Mendler 任 CEO。文中点名的客户是美国太空军：一份近 5000 万美元的合同，用于升级“卫星控制网络”。</p>\n<p><b>交易本身：</b>11 月 2 日宣布 C 轮 3.75 亿美元，估值 20 亿美元，由 Andreessen Horowitz 与 DFJ Growth 共同领投，融资中包含与 HSBC 的一项金融安排。公司称资金将用于扩张、招聘和履行现有合同。今年 1 月它刚完成 1 亿美元 B 轮，同样由 a16z 共同领投。</p>\n<p><b>竞争对手与行业位置：</b>报道未点名竞争对手，本期不补写。</p>\n<p><b>判断：</b>10 个月内从 B 轮到 C 轮，说明资本在押注“地面段”这一卫星产业的瓶颈。但目前公开信息里，已确认的政府合同规模（近 5000 万美元）相对 20 亿美元估值偏小，要撑住估值，需要拿到更多商业或政府订单；若后续合同没有放量，这个判断就会被证伪。</p>\n<p><a href=\"https://techcrunch.com/2026/11/02/northwood-space-raises-375m-series-c-at-a-2b-valuation-from-a16z-and-dfj-growth/\" target=\"_blank\">TechCrunch 原文</a></p>\n<h4>其他值得一提的交易（仅据标题，未取得正文）</h4>\n<ul>\n<li>Marvell 与 Lumentum：CNBC 11 月 2 日标题称 Marvell 将以 1150 亿美元收购 Lumentum，定位为 AI 数据中心布局；细节未能核实。<a href=\"https://www.cnbc.com/amp/2026/11/02/marvell-to-buy-lumentum-in-115-billion-deal-in-ai-data-center-bet-.html\" target=\"_blank\">CNBC</a></li>\n</ul>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 59
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Remembrance Day",
+      "date": "2026-11-11",
+      "days": 8,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Election Day",
+      "date": "2026-11-03",
+      "days": 0,
+      "scope": "NY"
+    }
+  ],
+  "issue_no": 71
+}
