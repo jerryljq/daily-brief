@@ -1,0 +1,232 @@
+{
+  "date": "2026-11-05",
+  "weekday": "星期四",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "第九届进博会今日在上海开幕，展前数据亮点出炉",
+        "summary": "央视报道：第九届中国国际进口博览会11月5日在上海开幕，展馆布展已完成，展前发布新数据预览本届亮点。另据网易报道，加拿大再度担任主宾国，加拿大企业积极赴约。",
+        "url": "https://news.cctv.com/2026/11/05/ARTIWb2Zx9simKUdypWoI1cP261104.shtml"
+      },
+      {
+        "title": "再次担任主宾国 加拿大企业积极赴约进博会",
+        "summary": "网易报道：加拿大企业赴沪参展，寻求在中国市场的合作与出口机会（摘要依据标题与导语）。",
+        "url": "https://www.163.com/news/article/LB0K7AQP000189FH.html"
+      },
+      {
+        "title": "人民银行加力实施股票回购增持再贷款政策",
+        "summary": "央视视频报道，央行将加大力度实施股票回购增持再贷款政策（页面仅提供标题，细节请看原文）。",
+        "url": "https://tv.cctv.com/2026/11/05/VIDECVfKfLvg42qVZ0bXWpQZ261105.shtml"
+      },
+      {
+        "title": "透过“硬核”数据看秋粮丰收已成定局",
+        "summary": "央视报道：我国正推进新一轮粮食产能提升行动，稳面积、提单产、减损失，高标准农田建设同步推进。",
+        "url": "https://news.cctv.com/2026/11/05/ARTIW056Qvcmr1kAouIHY80t261104.shtml"
+      },
+      {
+        "title": "“直通乌镇”大赛：“一人+AI智能体”创业形态走红",
+        "summary": "大赛新增OPC赛道，面向个人或极小团队借助AI智能体完成从创意到上市的全流程创业。",
+        "url": "https://news.cctv.com/2026/11/05/ARTIRMqWQmJKAvjiZgFXWnJh261105.shtml"
+      },
+      {
+        "title": "国家发改委发布会聚焦现代化基础设施建设",
+        "summary": "网易报道：国家发展改革委召开新闻发布会，主题为现代化基础设施建设（摘要依据标题）。",
+        "url": "https://www.163.com/news/article/LB0J8FJD000189FH.html"
+      },
+      {
+        "title": "“变味”的果味电子烟，监管防线需筑牢",
+        "summary": "央视视频节目关注果味电子烟乱象，呼吁加强监管（页面仅提供标题）。",
+        "url": "https://tv.cctv.com/2026/11/05/VIDEaLfJZM5HsvhJFDxBjn5v261105.shtml"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "民主党在中期选举拿下国会两院",
+        "summary": "半岛电视台、CNBC报道：民主党赢得国会控制权，被称为“蓝色浪潮”，选民被解读为否定特朗普议程。",
+        "url": "https://www.aljazeera.com/news/2026/11/4/is-trump-really-a-lame-duck-after-losing-both-houses-of-us-congress"
+      },
+      {
+        "title": "民主党能否叫停伊朗战事、推翻特朗普关税？",
+        "summary": "半岛电视台解读：新的民主党多数能走多远，仍受总统否决权和行政权限制约。",
+        "url": "https://www.aljazeera.com/news/2026/11/4/tariffs-to-iran-war-can-democrats-reverse-trump-policy-with-midterms-win"
+      },
+      {
+        "title": "阿卜杜勒·埃尔-赛义德赢得密歇根参议院席位",
+        "summary": "他击败共和党人迈克·罗杰斯，成为美国首位当选的穆斯林参议员。",
+        "url": "https://www.aljazeera.com/news/2026/11/4/rejecting-hate-abdul-el-sayed-wins-senate-seat-despite-racist-attacks"
+      },
+      {
+        "title": "新泽西州选出首位穆斯林国会众议员亚当·哈马维",
+        "summary": "前陆军外科医生哈马维曾在加沙做志愿者，竞选口号“要医疗，不要炸弹”。",
+        "url": "https://www.aljazeera.com/news/2026/11/5/healthcare-not-bombs-how-gaza-shaped-adam-hamawys-path-to-us-congress"
+      },
+      {
+        "title": "民主党接管参议院后，将重启对摩根大通与爱泼斯坦关系的调查",
+        "summary": "CNBC报道：民主党计划在中期选举胜利后展开大规模调查，包括重新审视摩根大通与爱泼斯坦的往来。",
+        "url": "https://www.cnbc.com/2026/11/05/jpmorgan-epstein-democrats-erdoes-midterm-election.html"
+      },
+      {
+        "title": "加拿大人如何看美国中期选举：“并未全部原谅”",
+        "summary": "Daily Hive汇总加拿大人对民主党大胜的反应，标题称“All is not forgiven”（摘要依据标题）。",
+        "url": "https://dailyhive.com/canada/us-canada-reaction-us-midterm-elections-results"
+      },
+      {
+        "title": "加拿大人财务状况担忧加剧，食品不安全率创四年新高",
+        "summary": "Daily Hive：更多加拿大人称财务状况比一年前更差；另一份报告显示食品不安全比例升至四年来最高。",
+        "url": "https://dailyhive.com/canada/canadians-financially-worse-off-report"
+      }
+    ],
+    "global": [
+      {
+        "title": "伊朗最高领袖警告：美国若再度攻击将遭更大范围报复",
+        "summary": "半岛电视台直播：德黑兰称已备好“最大威慑”方案应对任何新打击。",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/11/4/iran-war-live-tehran-prepares-maximum-deterrence-plan-for-any-new-attack"
+      },
+      {
+        "title": "伊朗称美国选民“拒绝战争”，哈梅内伊：敌对不会结束",
+        "summary": "伊朗欢迎美国中期选举结果，同时强调与华盛顿的敌对状态不会就此终止。",
+        "url": "https://www.aljazeera.com/news/2026/11/4/iran-hails-us-voters-rejecting-war-while-khamenei-warns-hostility-wont-end"
+      },
+      {
+        "title": "伊朗新任最高领袖能否在幕后推动和平？",
+        "summary": "半岛电视台评论：穆杰塔巴·哈梅内伊的磋商显示伊朗内部正形成新的决策体系。",
+        "url": "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes"
+      },
+      {
+        "title": "以色列联合名单将支持艾森科特组阁",
+        "summary": "阿拉伯政党在上周以色列大选中赢得创纪录的19个席位（共120席），表示支持艾森科特组建政府。",
+        "url": "https://www.aljazeera.com/news/2026/11/5/joint-list-says-it-will-back-eisenkot-to-form-israels-next-government"
+      },
+      {
+        "title": "英国法院裁定罗素·布兰德强奸及性侵罪名成立",
+        "summary": "伦敦陪审团裁定这位英国喜剧演员一项强奸罪及三项性侵罪成立。",
+        "url": "https://www.aljazeera.com/news/2026/11/5/russell-brand-found-guilty-of-rape-and-sexual-assault-by-uk-court"
+      },
+      {
+        "title": "印尼因“窃听总统”丑闻向雅加达紧急调兵数千",
+        "summary": "半岛电视台视频：印尼就一起涉嫌针对总统的窃听行动，向首都派驻数千名军人。",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/11/5/indonesia-rushes-thousands-of-troops-to-jakarta-amid-wiretap-scandal"
+      },
+      {
+        "title": "也门被围困城市塔伊兹：焚烧垃圾呛人，居民在狙击手威胁下生活",
+        "summary": "未清运的垃圾造成健康风险，居民只能在街头焚烧。",
+        "url": "https://www.aljazeera.com/features/2026/11/5/burning-rubbish-chokes-besieged-yemeni-city-of-taiz"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美股：科技股重挫，纳指盘中跌超3%",
+        "summary": "CNBC实时报道（11月5日美东上午10:09，盘中数据非收盘）：纳指跌约3.3%，标普500跌约1.9%，道指跌约489点（0.9%）。市场担忧民主党横扫国会后对AI建设和数据中心的监管加强：博通、英伟达约跌5%，特斯拉跌9%，CoreWeave跌9%。此前周三道指大涨逾1500点，为2025年4月以来最佳单日。AppLovin财报后涨32%。投资影响：AI/算力链估值对政策风险敏感，波动将加大。",
+        "url": "https://www.cnbc.com/2026/11/04/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "亚欧股市：韩国综指重挫5.28%，日经跌1.79%，恒生科技涨逾5%",
+        "summary": "CNBC盘面摘要：韩国Kospi大跌，日本日经225下跌；港股科技指数逆势大涨；英国富时100指数升至三个月高位，市场预期英国央行加息至4%。美油WTI接近90美元，布油约97美元。",
+        "url": "https://www.cnbc.com/2026/11/04/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "美联储巴金：预计未来会加息，但步伐渐进",
+        "summary": "里士满联储主席巴金在CNBC采访中表示担忧通胀，货币政策需要调整。投资影响：利率路径偏鹰，利好银行、压制长久期成长股估值。",
+        "url": "https://www.cnbc.com/2026/11/05/barkin-sees-interest-rate-hikes-ahead-but-at-a-gradual-pace.html"
+      },
+      {
+        "title": "美联储调查：银行收紧小企业和商业地产贷款",
+        "summary": "10月调查显示，银行对小企业与商业地产贷款标准趋严，次级借款人更难获得信贷。",
+        "url": "https://www.cnbc.com/2026/11/05/fed-bank-lending-standards-small-business.html"
+      },
+      {
+        "title": "民主党大胜后，加密货币行业在华盛顿处于守势",
+        "summary": "CNBC：民主党国会多数可能收紧加密监管并调查总统，行业政策环境趋难。",
+        "url": "https://www.cnbc.com/2026/11/05/crypto-midterms-democrats-clarity-act.html"
+      },
+      {
+        "title": "月之暗面据称转向欧洲租用英伟达Blackwell算力",
+        "summary": "CNBC援引消息人士：受美国出口管制所限，中国AI公司月之暗面寻求与欧洲新云厂商达成芯片租赁。",
+        "url": "https://www.cnbc.com/2026/11/05/moonshot-ai-nvidia-chips-europe-china.html"
+      },
+      {
+        "title": "温蒂汉堡拒绝特里安14亿美元收购提议",
+        "summary": "温蒂汉堡称报价未体现其转型战略的潜在收益。",
+        "url": "https://www.cnbc.com/2026/11/05/wendys-rejects-takeover-proposal.html"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "加拿大国家队将在国际冰球赛事穿“通用球衣”",
+        "summary": "Daily Hive：加拿大队被迫在即将举行的国际赛事中穿着通用款球衣（摘要依据标题）。",
+        "url": "https://dailyhive.com/vancouver/canada-forced-generic-jersey-international-hockey-tournament"
+      },
+      {
+        "title": "13岁少年“无意间”恶搞了前加人队球员罗宁",
+        "summary": "Daily Hive温哥华版：一名13岁少年意外“整蛊”了前加人队球星克利夫·罗宁（摘要依据标题）。",
+        "url": "https://dailyhive.com/vancouver/13-year-old-trolled-canucks-cliff-ronning"
+      },
+      {
+        "title": "多伦多：肯德基推出漫威联名菜单，含“毁灭博士”三明治",
+        "summary": "快餐连锁与漫威反派联名，推出以毁灭博士为灵感的汉堡。",
+        "url": "https://dailyhive.com/toronto/kfc-doctor-doom"
+      },
+      {
+        "title": "又一份请愿书要求加拿大将公共场所裸体合法化",
+        "summary": "Daily Hive报道：新请愿书继2022年那次之后再度发起。",
+        "url": "https://dailyhive.com/canada/petition-public-nudity-canada"
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "程序员的妻子对他说：“去超市买一斤包子，如果看到卖西瓜的，就买一个。”结果他回来拎着一个包子。妻子：“你怎么只买了一个？”他说：“因为我看到了卖西瓜的。”",
+        "fictional": true
+      },
+      {
+        "title": "今日二则",
+        "summary": "分析师：“我预测明天股市要么涨，要么跌。”老板：“这也叫预测？”分析师：“您看，我还没说是哪一天。”",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "醉翁亭记（节选）",
+    "author": "欧阳修",
+    "dynasty": "北宋",
+    "lines": [
+      "环滁皆山也。其西南诸峰，林壑尤美，望之蔚然而深秀者，琅琊也。",
+      "醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。",
+      "已而夕阳在山，人影散乱，太守归而宾客从也。",
+      "然而禽鸟知山林之乐，而不知人之乐；人知从太守游而乐，而不知太守之乐其乐也。"
+    ],
+    "note": "庆历五年（1045），欧阳修因支持范仲淹的“庆历新政”，新政失败后被贬为滁州太守，时年不过三十九岁。这篇文章写于次年，表面是一篇山水游记，处处写“乐”，实则是贬谪之后的自我宽解。全文二十一个“也”字，一气贯注，节奏如行云流水，是宋代古文平易流畅的代表。它值得一读，首先在于笔法：从“环滁皆山”由远及近，层层收束到一座亭、一个人，如电影镜头缓缓推近；其次在于结尾的反转——“太守之乐其乐”，众人只见他与民同乐，却不知他真正的快乐是政事清简、百姓安居。“醉翁之意不在酒”背后，是一个失意之人没有沉溺怨怼，反而在山水与民生中重新找到安放自己的方式。在一个信息嘈杂、市场震荡的日子里，读一读这种“得之心而寓之酒”的从容，也算给自己留一点余地。"
+  },
+  "special": {
+    "title": "本周末去哪儿",
+    "html": "<p>覆盖 10 月 29 日之后至今天。本期为周末活动指南（11 月 6–8 日）。<b>资料说明</b>：温哥华、旧金山湾区、西雅图三地的活动来自本地媒体或活动聚合页（Daily Hive、Funcheap SF、allevents.in）；<b>纽约、洛杉矶本次没有取到可核实的 2026 年周末活动页面，因此不列</b>，不凭印象补。西雅图的页面只覆盖周五，且为聚合页，出门前请以官方页面为准；票价、时间可能变动。</p>\n\n<h4>温哥华</h4>\n<ul>\n<li><b>Teddy Swims「The Ugly Tour」</b>——11 月 6 日（周五）晚 7 点，Rogers Arena（800 Griffiths Way）。适合想听现场流行/灵魂乐的人。<a href=\"https://rogersarena.com/event/teddy-swims/\" target=\"_blank\">官方票务</a></li>\n<li><b>Tuff Collection 开业周末</b>——11 月 7–8 日，每天上午 11 点至下午 6 点，55 W. 8th Ave（Mount Pleasant），免费入场。适合逛街、随便走走的人。<a href=\"https://dailyhive.com/vancouver/vancouver-events-november-2026\" target=\"_blank\">Daily Hive 活动汇总</a></li>\n<li><b>冬季农夫市集开张</b>——Riley Park 冬季农夫市集自 11 月 7 日起每周六 10:00–14:00（50 E 30th Ave 与 Ontario St）；Kitsilano 冬季农夫市集自 11 月 8 日起每周日 10:00–14:00（West 10th Ave 与 Trafalgar St）。<a href=\"https://dailyhive.com/vancouver/vancouver-events-november-2026\" target=\"_blank\">Daily Hive 活动汇总</a></li>\n<li><b>持续进行中</b>：Astra Lumina 灯光夜游（至 12 月 31 日，690 Pipeline Rd）、太阳马戏团 LUZIA（11 月 4 日起，Concord Pacific Place）。<a href=\"https://astralumina.com/vancouver/\" target=\"_blank\">Astra Lumina</a> · <a href=\"https://www.cirquedusoleil.com/canada/vancouver/luzia/buy-tickets\" target=\"_blank\">LUZIA 票务</a></li>\n</ul>\n\n<h4>西雅图</h4>\n<ul>\n<li><b>第 38 届 Best of the Northwest 秋季手工艺展</b>——11 月 6 日上午 11 点至 11 月 8 日下午 5 点，Magnuson Park 的 Hangar 30，票价约 6–22 美元（聚合页标注）。适合逛手作与设计。<a href=\"https://allevents.in/seattle/the-38th-annual-best-of-the-northwest-fall-show/100001994347637470\" target=\"_blank\">活动页</a></li>\n<li><b>Powaqqatsi——Philip Glass Ensemble</b>——11 月 6 日晚 8 点，Benaroya Hall 的 Taper Auditorium。<a href=\"https://allevents.in/seattle/powaqqatsi-the-philip-glass-ensemble-at-benaroya-hall-taper-auditorium/2400030506413718\" target=\"_blank\">活动页</a></li>\n<li><b>John Scofield</b>——11 月 6 日晚 8 点，Neptune Theatre，爵士吉他。<a href=\"https://allevents.in/seattle/john-scofield/2300029914438730\" target=\"_blank\">活动页</a></li>\n<li><b>The Smashing Pumpkins</b>——11 月 6 日晚 8 点，Climate Pledge Arena。<a href=\"https://allevents.in/seattle/the-smashing-pumpkins-seattle-tickets/100030138440518\" target=\"_blank\">活动页</a></li>\n</ul>\n\n<h4>旧金山湾区</h4>\n<ul>\n<li><b>旧金山咖啡节（第 10 届）</b>——11 月 7–8 日，Fort Mason Center Festival Pavilion，周六 10:00–16:30，约 29–32 美元起，含品鉴与现场音乐。适合咖啡爱好者。<a href=\"https://sf.funcheap.com/san-francisco-coffee-festival-2026-10th-annual-celebration-fort-mason/\" target=\"_blank\">活动页</a></li>\n<li><b>亡灵节 + 排灯节庆典</b>——11 月 7 日 10:00–15:00，Crissy Field Center（Presidio），免费。适合带孩子。<a href=\"https://sf.funcheap.com/sfs-free-da-de-los-muertos-diwali-celebration-fire-ceremony-presido-tunnel-tops/\" target=\"_blank\">活动页</a></li>\n<li><b>旧金山秋季苹果酒节</b>——11 月 7 日 12:00–16:00，SPARK Social SF（601 Mission Bay Blvd. North），45 美元起，21 岁以上。<a href=\"https://sf.funcheap.com/2026-san-francisco-fall-cider-fest-unlimited-tastings-of-30-ciders/\" target=\"_blank\">活动页</a></li>\n<li><b>湾区居民免费博物馆日</b>——周六 9:30–17:15，de Young 博物馆与 Legion of Honor，需提前预约限时票。<a href=\"https://sf.funcheap.com/free-de-young-museum-day-for-bay-area-residents-every-saturday-343/\" target=\"_blank\">de Young</a> · <a href=\"https://sf.funcheap.com/free-legion-of-honor-museum-day-for-bay-area-residents-every-saturday-341/\" target=\"_blank\">Legion of Honor</a></li>\n</ul>\n\n<h4>纽约、洛杉矶</h4>\n<p>本次未能取到可核实的周末活动信息，故不列。需要的读者请直接查本地媒体或场馆官网。</p>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 57
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Remembrance Day",
+      "date": "2026-11-11",
+      "days": 6,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Veterans Day",
+      "date": "2026-11-11",
+      "days": 6,
+      "scope": "Federal"
+    }
+  ],
+  "issue_no": 73
+}
