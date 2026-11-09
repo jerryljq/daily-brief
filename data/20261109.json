@@ -1,0 +1,197 @@
+{
+  "date": "2026-11-09",
+  "weekday": "星期一",
+  "lunar": "农历九月三十",
+  "sections": {
+    "china": [
+      {
+        "title": "中国发射互联网低轨卫星29组",
+        "summary": "央视：11月9日凌晨4时24分，长征十二号运载火箭在海南商业航天发射场点火升空，卫星顺利进入预定轨道。",
+        "url": "https://news.cctv.com/2026/11/09/ARTITWZYxXgni3lyWjWdeqUR261109.shtml"
+      },
+      {
+        "title": "进博会进入第四天：签约节奏快，观察成交能否转化为产业成果",
+        "summary": "央视：第九届进博会上，各方签约步伐较快，报道关注展会热度能否落到实际合作上。",
+        "url": "https://news.cctv.com/2026/11/09/ARTIhHHTw781CeD5GpcVQv7r261109.shtml"
+      },
+      {
+        "title": "10月PPI同比涨5.7%，创2022年6月以来最快；CPI涨0.7%",
+        "summary": "CNBC：生产者价格涨幅高于预期的5.3%，已连续第三个月加快，主要受矿产和原材料价格推动；消费者价格涨幅较9月的0.9%放缓，食品价格下降抵消了汽油上涨，分析人士认为房地产拖累内需。",
+        "url": "https://www.cnbc.com/2026/11/09/china-wholesale-inflation-rises-consumer.html"
+      },
+      {
+        "title": "海军第49批护航编队救治受伤商船船员",
+        "summary": "央视视频：第49批护航编队救助受伤商船船员（仅有标题信息）。",
+        "url": "https://tv.cctv.com/2026/11/09/VIDErjre02a9fdPajST90B1g261109.shtml"
+      },
+      {
+        "title": "2026年APEC领导人会议周新闻中心网站上线",
+        "summary": "央视视频：APEC领导人会议周新闻中心网站开通（仅有标题信息）。",
+        "url": "https://tv.cctv.com/2026/11/09/VIDEM95SYiPCQaA3YVqtjmtw261109.shtml"
+      },
+      {
+        "title": "立冬节气到来，冷空气明显活跃",
+        "summary": "央视视频：立冬前后冷空气活动明显增多（仅有标题信息）。",
+        "url": "https://tv.cctv.com/2026/11/09/VIDEHEDOixLAZ4iXgmfSkAum261109.shtml"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "特朗普：移民政策对选民“太强硬”，或与民主党谈交易",
+        "summary": "半岛电视台：特朗普在《60分钟》节目中承认遣返行动拖累共和党在中期选举失去参众两院，称可能与民主党主导的国会达成协议——遣返罪犯，但允许纳税的长期居民留下。此前他任命米勒出任白宫办公厅主任，舒默称之为“升职”。",
+        "url": "https://www.aljazeera.com/news/2026/11/9/trump-says-his-immigration-policy-too-tough-for-voters"
+      },
+      {
+        "title": "特朗普：若达成强有力协议，再次打击伊朗“极不可能”",
+        "summary": "CNBC：特朗普称若伊朗核问题与霍尔木兹海峡谈判有成果，新一轮打击极不可能，但未排除；美方三艘航母在区域内，对伊朗港口的海上封锁继续。",
+        "url": "https://www.cnbc.com/2026/11/08/trump-iran-strikes-unlikely-talks-hormuz.html"
+      },
+      {
+        "title": "卡塔尔首相赴华盛顿会见特朗普与万斯",
+        "summary": "半岛电视台：伊朗经卡塔尔斡旋提出为期两天的方案，美方正在研究；同时地区担忧美国重启打击。",
+        "url": "https://www.aljazeera.com/news/2026/11/9/qatar-pm-to-meet-trump-whats-the-latest-on-us-iran-negotiations"
+      },
+      {
+        "title": "卢比奥：对伊战争不得人心但“必要”",
+        "summary": "半岛电视台：卢比奥称伊朗的谈判要求“不现实”，并为战争辩护，称是为阻止核威胁。",
+        "url": "https://www.aljazeera.com/news/2026/11/9/rubio-says-war-on-iran-unpopular-but-necessary-to-stop-nuclear-threat"
+      },
+      {
+        "title": "英伟达董事会调查黄仁勋与涉嫌为中国从事间谍活动女子的关系",
+        "summary": "半岛电视台/CNBC：黄仁勋承认与一名被指为中国从事间谍活动的女子有婚外情，公司董事会展开调查，他表示将继续担任CEO；英伟达股价周一盘中下跌约5-6%。",
+        "url": "https://www.aljazeera.com/news/2026/11/8/us-chipmaker-nvidia-investigates-ceo-jensen-huang-over-affair"
+      }
+    ],
+    "global": [
+      {
+        "title": "伊拉克库尔德地区Khor Mor气田遭无人机袭击停产",
+        "summary": "半岛电视台：无人机袭击导致Khor Mor气田生产暂停，周边地区电力受影响。",
+        "url": "https://www.aljazeera.com/news/2026/11/9/drone-attack-suspends-production-at-iraqs-khor-mor-gasfield"
+      },
+      {
+        "title": "俄乌夜间互相打击，至少4人死亡",
+        "summary": "半岛电视台：俄乌双方夜间互相空袭，造成多人死亡。",
+        "url": "https://www.aljazeera.com/news/2026/11/9/at-least-one-person-killed-as-russia-and-ukraine-trade-strikes-overnight"
+      },
+      {
+        "title": "波兰克拉科夫枪击案嫌疑人医院死亡，警方另在其住所发现三具遗体",
+        "summary": "半岛电视台：警方称枪手在医院去世，并在其家中发现三具尸体。",
+        "url": "https://www.aljazeera.com/news/2026/11/9/poland-mass-shooting-assailant-dies-in-hospital-police-say"
+      },
+      {
+        "title": "墨西哥逮捕新一代哈利斯科卡特尔重要头目“R2”",
+        "summary": "半岛电视台：墨西哥军方凭美国缉毒局共享情报抓获拉斐尔·阿尔瓦雷斯。",
+        "url": "https://www.aljazeera.com/news/2026/11/9/mexico-arrests-major-leader-of-jalisco-cartel"
+      },
+      {
+        "title": "教宗良十四世访问阿根廷，近四十年来首次",
+        "summary": "半岛电视台：米莱总统迎接教宗，访问背景是教廷与米莱政府之间存在分歧。",
+        "url": "https://www.aljazeera.com/news/2026/11/8/president-milei-welcomes-pope-leo-during-historic-visit-to-argentina"
+      },
+      {
+        "title": "新德里排灯节后烟雾笼罩，空气质量严重",
+        "summary": "半岛电视台：烟花爆竹加剧了印度首都的空气污染。",
+        "url": "https://www.aljazeera.com/news/2026/11/9/smog-blankets-new-delhi-as-diwali-firecrackers-worsen-air-quality"
+      },
+      {
+        "title": "加沙难民营泥石流致5人死亡，当局批评国际社会“不作为”",
+        "summary": "半岛电视台：加沙当局称国际社会对流离失所者的处境袖手旁观。",
+        "url": "https://www.aljazeera.com/news/2026/11/9/gaza-authorities-slam-global-inaction-after-mudslide-kills-five-people"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美股周一盘中大幅反弹：道指涨约819点，纳指涨约2.1%",
+        "summary": "CNBC（上午10:06 ET盘中数据，非收盘）：道指+1.6%，标普500+1.8%，纳指+2.1%；WTI跌3%至约87美元，布伦特跌4%至约94美元。博通、AMD涨约5%，亚马逊涨约5%。亚洲市场收高：台湾加权+4.94%，日经+2.33%。上周四科技股暴跌后，这更像超跌反弹；投资者仍担忧民主党掌控国会后对数据中心和AI投资的监管。投资影响：油价回落缓解通胀担忧，但波动仍大，不宜追涨，宜控制科技仓位集中度。",
+        "url": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "英伟达盘中跌5-6%，花旗下调科技板块至中性",
+        "summary": "CNBC：董事会调查黄仁勋事件之外，花旗将美国、全球和欧洲科技板块评级从增持下调至中性，理由是仓位和情绪；Oppenheimer则上调AMD至跑赢大盘，目标价600美元。投资影响：英伟达的治理风险可能令AI龙头估值分化，但属事件驱动，需观察董事会调查结果。",
+        "url": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "中国10月PPI创近四年新高，CPI放缓",
+        "summary": "CNBC：PPI同比+5.7%，CPI +0.7%（9月为0.9%），核心CPI 0.8%。上游原材料涨价、下游内需偏弱，企业利润可能向上游资源品集中，消费类公司成本压力上升。",
+        "url": "https://www.cnbc.com/2026/11/09/china-wholesale-inflation-rises-consumer.html"
+      },
+      {
+        "title": "比特币周末跌破7.4万美元，创8月以来新低",
+        "summary": "CNBC：比特币周末一度跌破74,000美元，随后收复部分跌幅。风险资产整体波动加大，加密资产与科技股同向性较强。",
+        "url": "https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "【温哥华/西雅图】BC省改用永久夏令时，两座邻城每年半年“差一小时”",
+        "summary": "Global News：11月1日北美大部分地区把钟拨回一小时，BC省却没有——它已改为永久夏令时，于是温哥华和西雅图一年里有一半时间处在不同时区，推行过程中出了不少小乱子。想约隔壁城市的朋友吃饭，先问清是谁的一点钟。",
+        "url": "https://globalnews.ca/video/12129588/reaction-to-the-start-of-permanent-daylight-time-in-b-c/"
+      },
+      {
+        "title": "【华盛顿】UFC总裁被邀请当白宫新闻秘书",
+        "summary": "半岛电视台：特朗普邀请达纳·怀特出任白宫新闻秘书，这个岗位近两个月已换了几任，怀特周一赴白宫面谈。下一位发言人的第一课大概是：怎么回答记者的追问。",
+        "url": "https://www.aljazeera.com/news/2026/11/8/trump-asks-ufc-chief-dana-white-to-be-white-house-press-secretary"
+      },
+      {
+        "title": "【多伦多/Vaughan】有人把一只鳄龟扔在爬行动物动物园门口",
+        "summary": "Global News视频标题：有人把一只鳄龟遗弃在安省Vaughan一家爬行动物动物园外（具体日期未能确认，仅有标题信息）。龟：我只是想进去而已。",
+        "url": "https://globalnews.ca/video/11766662/someone-left-a-snapping-turtle-outside-a-reptile-zoo-in-vaughan-ont"
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "周一早上，我对闹钟说：“再给我五分钟。”闹钟说：“好的，已为您延长至周五。”——可惜这不是真的。",
+        "fictional": true
+      },
+      {
+        "title": "再来一则",
+        "summary": "朋友问我为什么买股票总是追高。我说：“我只是想让它在高处有个伴。”",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "饮酒·其五",
+    "author": "陶渊明",
+    "dynasty": "东晋",
+    "lines": [
+      "结庐在人境，而无车马喧。",
+      "问君何能尔？心远地自偏。",
+      "采菊东篱下，悠然见南山。",
+      "山气日夕佳，飞鸟相与还。",
+      "此中有真意，欲辨已忘言。"
+    ],
+    "note": "《饮酒》共二十首，约作于陶渊明辞去彭泽令、归隐田园之后。他曾几度出仕，终因不愿“为五斗米折腰”而返回故里，这组诗是他在酒后抒怀、自道心迹之作。这首诗的核心在第四句：“心远地自偏”——隐居不在于住得多远，而在于心里与名利拉开了距离，所以即使房子就盖在人来人往的地方，也听不见车马的喧闹。后四句转入具体景物：东篱采菊，抬眼忽见南山；傍晚山气清明，飞鸟结伴归巢。“见”字据说原有“望”字之争，苏轼认为“见”才是无意间的偶然相遇，才有“悠然”的味道。末两句说，这里面有人生的真意，想要说清楚，却已不必用言语。为什么今天读它？在一个信息和行情都在剧烈波动的周一，这首诗提醒我们：外界的喧嚣不由我们决定，但注意力放在哪里，可以自己选。全诗语言平淡如话，却是中国田园诗传统的源头之一。"
+  },
+  "special": {
+    "title": "本周财经展望",
+    "status": "pending"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 53
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Remembrance Day",
+      "date": "2026-11-11",
+      "days": 2,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Veterans Day",
+      "date": "2026-11-11",
+      "days": 2,
+      "scope": "Federal"
+    }
+  ],
+  "issue_no": 77
+}
