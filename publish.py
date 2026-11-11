@@ -20,7 +20,10 @@ Run by a LaunchAgent每天上午。流程：
 用法:
     python3 publish.py            # 从本机 session outputs 收
     python3 publish.py --in-repo  # 简报已在 briefs/ 里
-    python3 publish.py --dry-run  # 只看会发生什么，不碰 git
+    python3 publish.py --dry-run  # 只看会发生什么：跑安全闸、说会发布还是会拦，不改文件、不碰 git
+
+render.py 清理掉的行情 / 概览 / 特刊摘要（extras.py，存在 logs/extras-YYYYMMDD.txt）
+只打印在日志、提交说明和通知里，从不当成拦截项。
 """
 import glob, os, re, shutil, subprocess, sys, time
 
@@ -34,9 +37,11 @@ SOURCE = os.environ.get("DAILY_BRIEF_SOURCE_GLOB") or os.path.expanduser(
 
 sys.path.insert(0, REPO)
 import build_index
+import extras
 
 DRY     = "--dry-run" in sys.argv
 REPO_STATUS = {}   # 文件名 → git 状态码，用来区分“新增”和“补更新”
+FRESH_SRC = {}     # dry-run 不复制文件，安全闸要去原位置读
 IN_REPO = "--in-repo" in sys.argv
 
 
@@ -49,13 +54,16 @@ def notify(title, body):
     if DRY:
         return
     body = body.replace('"', "'")[:240]
-    subprocess.run(["osascript", "-e",
-                    f'display notification "{body}" with title "{title}"'],
-                   capture_output=True)
+    try:
+        subprocess.run(["osascript", "-e",
+                        f'display notification "{body}" with title "{title}"'],
+                       capture_output=True)
+    except OSError:
+        pass   # 云端沙箱没有 osascript：通知只是锦上添花，不能把发布搞挂
 
 
-def git(*args, check=True):
-    if DRY:
+def git(*args, check=True, read_only=False):
+    if DRY and not read_only:
         log(f"  [dry-run] git {' '.join(args)}")
         return ""
     r = subprocess.run(["git", "-C", REPO, *args],
@@ -72,7 +80,7 @@ def collect_in_repo():
     只认未跟踪的话这次更新会被静默跳过。
     """
     out = []
-    for line in git("status", "--porcelain", "--", "briefs").splitlines():
+    for line in git("status", "--porcelain", "--", "briefs", read_only=True).splitlines():
         code, path = line[:2], line[3:].strip()
         name = os.path.basename(path)
         if not (name.endswith(".html") and re.search(r"\d{8}", name)):
@@ -93,6 +101,7 @@ def collect():
             continue
         if not DRY:
             shutil.copy2(src, os.path.join(BRIEFS, name))
+        FRESH_SRC[name] = src
         have.add(name)
         fresh.append(name)
     return fresh
@@ -106,8 +115,25 @@ def main():
         return 0
     log(f"发现 {len(fresh)} 份新简报: {', '.join(fresh)}")
 
+    # render.py 清理掉的项：只提示，不拦截
+    cleaned = []
+    for name in fresh:
+        m = re.search(r"\d{8}", name)
+        cleaned += [(name, x) for x in extras.load_warnings(m.group(0))] if m else []
+    for name, x in cleaned:
+        log(f"  已清理 {name}: {x[:110]}")
+
     if DRY:
-        log("[dry-run] 后续步骤需要文件已复制，到此为止")
+        # 只读：不打补丁、不重建索引、不碰 git。新版简报的闸门结论和真跑一致；
+        # 旧版 HTML 简报没打虚构标注，可能多报
+        held = []
+        for name in fresh:
+            b, _ = build_index.audit(FRESH_SRC.get(name) or os.path.join(BRIEFS, name))
+            held += [(name, x) for x in b]
+        for name, x in held:
+            log(f"    {name}: {x[:110]}")
+        log(f"[dry-run] 会被安全闸拦下（{len(held)} 处）" if held
+            else f"[dry-run] 安全闸通过，会发布（清理提示 {len(cleaned)} 条，不影响发布）")
         return 0
 
     # 补丁 + 标注 + 索引（对全部文件幂等，只有新文件会有改动）
@@ -136,6 +162,9 @@ def main():
     if len(subject) > 68:
         subject = f"{verb} {len(fresh)} briefs ({fresh[0][:22]}…)"
     body = "\n".join(f"- {n}" for n in fresh)
+    if cleaned:
+        body += ("\n\nCleaned by extras.py before rendering (published without these):\n"
+                 + "\n".join(f"- {n}: {x[:100]}" for n, x in cleaned))
     if blocking:
         body += ("\n\nNOT PUSHED — the fiction audit found passages that read as "
                  "reporting but carry neither a 虚构 label nor a source link:\n"
@@ -154,10 +183,10 @@ def main():
             git("push", "origin", f"{branch}:{branch}")
             log(f"  已推到分支 {branch}（未合入 main）")
             notify("每日简报 · 已暂停发布",
-                   f"{len(blocking)} 处疑似虚构但无标注，见分支 {branch}")
+                   f"{len(blocking)} 处疑似虚构但无标注，见分支 {branch}" + extra_note(cleaned))
         else:
             notify("每日简报 · 已暂停发布",
-                   f"{len(blocking)} 处疑似虚构但无标注，已本地提交未推送")
+                   f"{len(blocking)} 处疑似虚构但无标注，已本地提交未推送" + extra_note(cleaned))
         return 1
 
     log(f"✓ 安全闸通过（{len(warnings)} 条提示）")
@@ -166,7 +195,16 @@ def main():
     # 在 origin/main 已被其它流程（如特刊任务）推进后就会变成 non-fast-forward。
     git("push", "origin", "HEAD:main")
     log("✓ 已推送 https://jerryljq.github.io/daily-brief/")
+    if cleaned:
+        notify("每日简报 · 已发布", extra_note(cleaned).lstrip("；"))
     return 0
+
+
+def extra_note(cleaned):
+    """通知里的一句：render.py 清理了几项、第一项是什么。"""
+    if not cleaned:
+        return ""
+    return f"；render.py 清理了 {len(cleaned)} 项（不影响发布）：{cleaned[0][1][:60]}"
 
 
 if __name__ == "__main__":
