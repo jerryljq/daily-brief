@@ -4,19 +4,22 @@
     python3 special_helper.py plan
         打印今天该出哪种特刊、写作要求在哪个文件、上一期同类是哪天。
 
-    python3 special_helper.py save --html-file frag.html [--title "..."]
-        把特刊片段存成 data/special/YYYYMMDD.json（特刊任务用）。
+    python3 special_helper.py save --html-file frag.html [--title "..."] [--summary "..."]
+        把特刊片段存成 data/special/YYYYMMDD.json（特刊任务用）。--summary 是一句话
+        （≤ 40 字）说这期写了什么，写内容不写方法；JerryStudio 首页用它。
 
     python3 special_helper.py holidays
         打印中国/加拿大/美国各自最近的下一个假期。
 
     python3 special_helper.py apply --data data/YYYYMMDD.json
         把今天的特刊并进简报数据：文件在就是 ready，不在就是 pending，
-        今天排期本来就没有特刊则不放 special 字段（简报任务用）。
+        今天排期本来就没有特刊则不放 special 字段（简报任务用）。存档里有 summary
+        就一并带进 special.summary。
 
 日期一律按温哥华时区算，不用 UTC——云端跑在 UTC，跨零点会算错天。
 """
 import argparse, glob, json, os, re, sys
+import extras
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -131,13 +134,21 @@ def cmd_save(args):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     stamp = d.strftime("%Y%m%d")
     out = OUT_DIR / f"{stamp}.json"
-    out.write_text(json.dumps({
+    record = {
         "date": stamp,
         "kind": kind,
         "title": args.title or spec_title(kind),
         "html": frag.read_text(encoding="utf-8"),
-    }, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"已保存: {out.relative_to(REPO)}")
+    }
+    summary = (args.summary or "").strip()
+    if summary:
+        record["summary"] = summary
+    out.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"已保存: {out.relative_to(REPO) if out.is_relative_to(REPO) else out}")
+    problem = summary and extras.summary_problem(summary)
+    if problem:
+        # 不拦：render.py 会把它删掉，特刊照常出
+        print(f"⚠ summary {problem}，渲染时会被删掉。要留就改短后重新 save", file=sys.stderr)
 
 
 def cmd_apply(args):
@@ -156,6 +167,8 @@ def cmd_apply(args):
         sp = json.loads(sp_path.read_text(encoding="utf-8"))
         data["special"] = {"title": sp.get("title") or spec_title(kind),
                            "html": sp.get("html", ""), "status": "ready"}
+        if sp.get("summary"):
+            data["special"]["summary"] = sp["summary"]
         state = f"特刊已就位（{sp.get('kind')}），status=ready"
     else:
         data["special"] = {"title": spec_title(kind), "status": "pending"}
@@ -177,6 +190,7 @@ def main():
     sub.add_parser("plan")
     sub.add_parser("holidays")
     s = sub.add_parser("save"); s.add_argument("--html-file", required=True); s.add_argument("--title")
+    s.add_argument("--summary", help="一句话（≤ 40 字）：这期写了什么，写内容不写方法")
     a = sub.add_parser("apply"); a.add_argument("--data", required=True)
     args = ap.parse_args()
     if args.cmd == "plan":  cmd_plan()

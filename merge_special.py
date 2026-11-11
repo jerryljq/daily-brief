@@ -11,7 +11,10 @@
 用法：
     python3 merge_special.py --date 20260907 \
         --special-title "本周财经周展望" \
-        --special-html-file special_body.html
+        --special-html-file special_body.html \
+        --special-summary "本周 5 家大厂发财报，重点看 AI 资本开支"
+
+--special-summary 可选：一句话说这期写了什么，写进 special.summary（JerryStudio 首页用）。
 
 special_body.html 是一个只包含特刊正文片段的 HTML 文件（不要整页 <html>，
 就是 <h4>...</h4><p>...</p> 这种片段，会被原样注入模板里的特刊卡片正文区域）。
@@ -20,6 +23,8 @@ import argparse
 import json
 import sys
 from pathlib import Path
+
+import extras
 
 REPO_ROOT = Path(__file__).resolve().parent
 DATA_DIR = REPO_ROOT / "data"
@@ -32,6 +37,7 @@ def main():
     parser.add_argument("--date", required=True, help="YYYYMMDD")
     parser.add_argument("--special-title", required=True)
     parser.add_argument("--special-html-file", required=True, help="特刊正文HTML片段文件路径")
+    parser.add_argument("--special-summary", help="一句话（≤ 40 字）：这期写了什么")
     args = parser.parse_args()
 
     data_path = DATA_DIR / f"{args.date}.json"
@@ -51,6 +57,13 @@ def main():
         "html": special_html_path.read_text(encoding="utf-8"),
         "status": "ready",
     }
+    if (args.special_summary or "").strip():
+        data["special"]["summary"] = args.special_summary
+    # 和 render.py 一样先清理（这里主要是查 summary），不合格的只删那一项
+    data, warnings = extras.clean(data)
+    for w in warnings:
+        print(f"已清理: {w}")
+    extras.save_warnings(args.date, warnings)
     # issue_no 沿用已有的，不重新分配
     data_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
