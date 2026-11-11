@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+# extras.py 的清理提示（render.py 写，publish.py 读），只在本机/沙箱里用
+logs/
