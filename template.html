@@ -80,6 +80,13 @@
   .rule-double::after{content:""; display:block; margin-top:2px;
     border-top:1px solid var(--rule-heavy);}
 
+  /* ── 一句话概览（overview）：报头下一行 ── */
+  .overview{margin:0; padding:10px 26px 11px; border-bottom:1px solid var(--rule);
+    font-family:var(--serif); font-size:14px; line-height:1.7; text-align:center;
+    color:var(--ink); text-wrap:balance;}
+  .overview b{font-family:var(--sans); font-size:9.5px; font-weight:600; letter-spacing:.2em;
+    color:var(--ink-muted); margin-right:10px; vertical-align:1px;}
+
   /* ── 假期带 ── */
   .holiday-bar{display:flex; flex-wrap:wrap; justify-content:center;
     border-bottom:1px solid var(--rule); font-size:10.5px; letter-spacing:.06em;
@@ -167,6 +174,21 @@
     .band details.item{break-inside:avoid;}
   }
 
+  /* ── 行情表（markets）：涨用板块色，跌用灰，不用红绿 ── */
+  .mkts{display:grid; grid-template-columns:1fr 1fr; column-gap:26px; margin:6px 0 4px;}
+  .mkt{width:100%; border-collapse:collapse; font-size:12px; font-variant-numeric:tabular-nums;}
+  .mkt td{padding:5px 0; border-bottom:1px solid var(--rule-hair); white-space:nowrap; text-align:right;}
+  .mkt td.n{text-align:left; white-space:normal; font-family:var(--serif); color:var(--ink);}
+  .mkt td.n a{color:inherit; text-decoration:none;}
+  .mkt td.n a:hover{text-decoration:underline; text-underline-offset:2px;}
+  .mkt td.c,.mkt td.t{padding-left:10px;}
+  /* 固定列宽：两张表上下叠放（手机）时数字也对得齐 */
+  .mkt td.v{width:6em;} .mkt td.c{width:6.5em;}
+  .mkt td.t{width:6.5em; font-size:10.5px; color:var(--ink-muted);}
+  .mkt .up{color:var(--accent,var(--ink));} .mkt .down{color:var(--ink-muted);} .mkt .flat{color:var(--ink-soft);}
+  .mk-d{font-family:var(--sans); font-size:9.5px; color:var(--ink-muted); margin-left:5px;}
+  .mkt-note{font-size:10.5px; color:var(--ink-muted); margin:4px 0 6px; letter-spacing:.04em;}
+
   /* ── 特刊 ── */
   details.special{border-top:3px solid var(--red); background:var(--sp-tint);}
   details.special.pending{border-top:1px solid var(--rule); background:none;}
@@ -230,6 +252,8 @@
     .col{border-right:none; border-bottom:1px solid var(--rule); padding:14px 16px 16px;}
     .cols .col:last-child,.duo .col:last-child{border-bottom:none;}
     .band{padding:14px 16px 16px;}
+    .mkts{grid-template-columns:1fr;}
+    .overview{padding:9px 16px 10px;}
     details.special > summary,.special-body{padding-left:16px; padding-right:16px;}
     .colophon{padding:18px 16px 20px;}
     .body{text-align:left;}
@@ -267,6 +291,8 @@
     <p class="subtitle">环球要闻 · 每日一览</p>
     <div class="rule-double"></div>
   </header>
+
+  <p class="overview" id="overview" hidden><b>今日</b><span id="overview-text"></span></p>
 
   <div class="holiday-bar" id="holiday-bar" hidden></div>
 
@@ -375,15 +401,50 @@ __BRIEF_DATA_JSON__
       list(arr, {firstOpen:true, dropcap:c.k === 'china'}) + '</div>';
   }).join('');
 
+  // 行情表：data.markets 已由 extras.py 清理、按固定顺序排好
+  var MK_DIGITS = {usdcny:4, usdcad:4, cadcny:4, us10y:2};   // 其余（股指、黄金）一位小数
+  function mkRow(m){
+    var d = MK_DIGITS[m.id] !== undefined ? MK_DIGITS[m.id] : 1;
+    var val = Number(m.value).toLocaleString('en-US', {minimumFractionDigits:d, maximumFractionDigits:d}) + (m.unit || '');
+    var chg = '', dir = 'flat';
+    if(typeof m.change_bp === 'number'){
+      var bp = Math.round(m.change_bp * 10) / 10;
+      dir = bp > 0 ? 'up' : bp < 0 ? 'down' : 'flat';
+      chg = (bp > 0 ? '▲' : bp < 0 ? '▼' : '') + Math.abs(bp) + ' 基点';
+    } else if(typeof m.change_pct === 'number'){
+      var pc = Number(m.change_pct.toFixed(2));
+      dir = pc > 0 ? 'up' : pc < 0 ? 'down' : 'flat';
+      chg = pc > 0 ? '▲ +' + pc.toFixed(2) + '%' : pc < 0 ? '▼ ' + pc.toFixed(2) + '%' : '0.00%';
+    }
+    var when = m.session === 'close' ? '收盘 ' + String(m.as_of || '').slice(5).replace('-', '.') : '写稿时';
+    var name = m.source
+      ? '<a href="' + esc(m.source) + '" target="_blank" rel="noopener">' + esc(m.name) + '</a>' : esc(m.name);
+    return '<tr><td class="n">' + name + (m.derived ? '<span class="mk-d">换算</span>' : '') + '</td>' +
+      '<td class="v">' + esc(val) + '</td><td class="c ' + dir + '">' + chg + '</td>' +
+      '<td class="t">' + esc(when) + '</td></tr>';
+  }
+  function marketTables(arr){
+    if(!arr.length) return '';
+    var isIdx = function(m){ return m.group === 'us' || m.group === 'cn_hk'; };
+    var table = function(rows, label){
+      return rows.length ? '<table class="mkt" aria-label="' + label + '"><tbody>' +
+        rows.map(mkRow).join('') + '</tbody></table>' : '';
+    };
+    return '<div class="mkts">' + table(arr.filter(isIdx), '股指') +
+      table(arr.filter(function(m){ return !isIdx(m); }), '汇率 · 黄金 · 美债') + '</div>' +
+      '<p class="mkt-note">仅为信息整理，不构成投资建议</p>';
+  }
+
   // 经济
   var econ = sec.economy || [];
-  if(econ.length){
+  var mk = Array.isArray(data.markets) ? data.markets : [];
+  if(econ.length || mk.length){
     ban++;
     var el = document.getElementById('economy-section');
     el.hidden = false;
     el.style.setProperty('--accent', 'var(--ec)');
     el.innerHTML = '<div class="sechead">经济 · 市场<span class="en">MARKETS</span></div>' +
-      '<div class="items">' + list(econ, {firstOpen:true}) + '</div>';
+      marketTables(mk) + (econ.length ? '<div class="items">' + list(econ, {firstOpen:true}) + '</div>' : '');
   }
 
   // 特刊：status 为 "pending" 时只挂占位，正文等特刊任务跑完由 merge_special.py 补进来
@@ -432,6 +493,10 @@ __BRIEF_DATA_JSON__
     (data.date || '') + (data.weekday ? ' · ' + data.weekday : '') + (data.lunar ? ' · ' + data.lunar : '');
   document.getElementById('issue-no').textContent = data.issue_no != null ? data.issue_no : '--';
   document.getElementById('ban-count').textContent = ban || 1;
+  if(typeof data.overview === 'string' && data.overview){
+    document.getElementById('overview').hidden = false;
+    document.getElementById('overview-text').textContent = data.overview;
+  }
   // 报尾：诗词赏析。没有 poem 时退回旧的 quote 字段，老数据不会开天窗
   var poem = data.poem;
   if(poem && (poem.title || poem.lines)){
@@ -450,7 +515,7 @@ __BRIEF_DATA_JSON__
 
   // 索引：只显示真有内容的板块
   [['sec-china',(sec.china||[]).length],['sec-us_ca',(sec.us_ca||[]).length],
-   ['sec-global',(sec.global||[]).length],['economy-section',econ.length],
+   ['sec-global',(sec.global||[]).length],['economy-section',econ.length + mk.length],
    ['special-section',(spPending||spReady)?1:0],
    ['sec-local',fun.length],['sec-jokes',jokes.length]].forEach(function(p){
     var btn = document.querySelector('.jump[data-target="' + p[0] + '"]');
