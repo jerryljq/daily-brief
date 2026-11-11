@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-11",
+  "weekday": "星期三",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "大众安徽合资工厂2027、2028年无新车型计划",
+        "summary": "据两位知情人士透露，大众与江汽的安徽合资公司对ID. UNYX系列销量预期落空，2027和2028年均无新车型计划，原定2028年的跨界车也被搁置。中国车市今年预计萎缩约20%，大众前九个月在华销量下滑30%，仅10月新能源车销量创2.8万辆新高。大众中国回应称正处于“产品攻势”中。",
+        "url": "https://www.thestandard.com.hk/finance/article/348219/Volkswagens-China-EV-venture-has-no-new-models-planned-for-next-two-years-sources-say"
+      },
+      {
+        "title": "中国大学违规购买英伟达H200芯片",
+        "summary": "路透审查记录显示，与军方关系密切、被列入美国贸易黑名单的西北工业大学上月通过国内供应商购入两块H200芯片，约12.3万美元，并通过五份合同租用英伟达算力；其他中国机构也有类似操作。此事恰逢英伟达CEO黄仁勋因私人关系问题受到公司调查。",
+        "url": "https://www.aljazeera.com/news/2026/11/11/chinese-university-buys-nvidia-ai-h200-chips-despite-us-ban-records-show"
+      },
+      {
+        "title": "斯里兰卡试飞中国亿航载人飞行器",
+        "summary": "斯里兰卡民航局批准亿航EH216-S无人驾驶两座电动垂直起降飞行器测试，港口与航空部长在科伦坡成为首批乘客。测试预计约五个月，之后再考虑商业运营，目标是连接机场与市中心。",
+        "url": "https://www.thestandard.com.hk/china/article/348198/Sri-Lanka-launches-pilot-of-Chinese-flying-taxi-service"
+      },
+      {
+        "title": "港股新股Neautus首日涨72%，恒指收跌近1%",
+        "summary": "四川Neautus中药公司在港上市首日收报69港元，较发售价40.2港元涨71.6%，零售部分超购约2191倍；同日恒生指数收跌0.98%。",
+        "url": "https://www.thestandard.com.hk/finance/article/348212/Chinese-traditional-medicine-firm-Neautus-ends-72-percent-higher-in-Hong-Kong-debut"
+      },
+      {
+        "title": "贝森特：中美须在AI领域既合作又竞争",
+        "summary": "美国财长贝森特表示，美中在人工智能领域必须“清醒地”既合作又竞争。CNBC报道将其置于特朗普—习近平峰会与英伟达芯片管制的背景下。",
+        "url": "https://www.cnbc.com/2026/11/11/trump-xi-summit-ai-nvidia-.html"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "《纽约时报》：财长贝森特因伊朗威胁被转移至军事基地",
+        "summary": "据《纽约时报》报道、CNBC转引，主管对伊朗制裁行动的贝森特已从华盛顿住所转移到军事基地，威胁严重程度尚不明确，白宫和财政部未立即置评。",
+        "url": "https://www.cnbc.com/2026/11/11/us-iran-war-trump-hormuz-bessent-threats.html"
+      },
+      {
+        "title": "白宫表示尽管选民对物价不满，关税将保留",
+        "summary": "CNBC：中期选举后，白宫称不会因选民对物价上涨的愤怒而放弃关税政策。",
+        "url": "https://www.cnbc.com/2026/11/10/trump-tariffs-midterms-gary-cohn-inflation.html"
+      },
+      {
+        "title": "乔丹、图恩当选国会共和党领导人",
+        "summary": "CNBC：众议员吉姆·乔丹和参议员约翰·图恩在中期选举后的领导层选举中胜出，分别出任共和党在两院的领导人。",
+        "url": "https://www.cnbc.com/2026/11/10/jim-jordan-congress-republicans-midterm.html"
+      },
+      {
+        "title": "密西西比州参议员选举：民主党科洛姆领先扩大",
+        "summary": "CNBC：随着选票接收截止，民主党人斯科特·科洛姆对共和党现任参议员辛迪·海德-史密斯的领先优势继续扩大。",
+        "url": "https://www.cnbc.com/2026/11/10/mississippi-senate-scott-colom-hyde-smith.html"
+      },
+      {
+        "title": "民主党若掌权或冲击特朗普政府持有企业股权的做法",
+        "summary": "CNBC：分析称，若民主党在未来取得权力，可能干预特朗普政府对私营企业的政府入股安排。",
+        "url": "https://www.cnbc.com/2026/11/11/trump-company-equity-takes.html"
+      },
+      {
+        "title": "一名驻北约军团的美军士兵因涉嫌为俄罗斯从事间谍活动在英国被捕",
+        "summary": "CNBC、半岛电视台：英国反恐警察联合FBI和美军逮捕该名士兵。",
+        "url": "https://www.cnbc.com/2026/11/11/us-army-soldier-russia-espionage-arrest.html"
+      }
+    ],
+    "global": [
+      {
+        "title": "伊朗否认与美谈判，称霍尔木兹海峡在诉求满足前继续关闭",
+        "summary": "半岛电视台：伊朗安全官员罗沙伊否认谈判，拒绝将60%浓缩铀运出境外；革命卫队称有船只触雷。特朗普称“朝着结束冲突有积极势头”，但未宣布战争结束。",
+        "url": "https://www.aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met"
+      },
+      {
+        "title": "俄乌阿布扎比会谈达成换俘协议",
+        "summary": "半岛电视台：双方在阿布扎比的会谈以换俘协议结束；同日俄乌互袭，波罗的海国家发布无人机警报。泽连斯基称乌克兰“不是用来交易的”。",
+        "url": "https://www.aljazeera.com/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement"
+      },
+      {
+        "title": "意大利至少300所学校因邮件炸弹威胁疏散",
+        "summary": "意大利与英国数百所学校收到邮件炸弹威胁后疏散，当局认为属恶作剧。",
+        "url": "https://www.aljazeera.com/news/2026/11/11/at-least-300-italian-schools-evacuated-after-email-bomb-alerts"
+      },
+      {
+        "title": "COP31上古特雷斯称“气候危机跑赢了我们”",
+        "summary": "联合国秘书长古特雷斯在COP31警告气候危机加速；格蕾塔·通贝里批评谈判，称“我们所爱的一切都危在旦夕”。",
+        "url": "https://www.aljazeera.com/news/2026/11/11/climate-crisis-is-outrunning-us-un-chief-guterres-says-at-cop31"
+      },
+      {
+        "title": "刚果（金）埃博拉病例破1.1万，死亡5387人",
+        "summary": "半岛电视台：该国有史以来最大规模的埃博拉疫情，因发现延迟和冲突而难以控制。",
+        "url": "https://www.aljazeera.com/news/2026/11/11/ebola-cases-in-dr-congo-pass-11000-with-5387-deaths"
+      },
+      {
+        "title": "西班牙为列车事故69名遇难者举行国葬",
+        "summary": "西班牙国王和王后出席国葬；西班牙另因大罢工与抗议在大选前夕与警方发生冲突。",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/11/11/spain-holds-state-funeral-for-69-victims-of-deadly-train-crash"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美股周二收跌：英伟达拖累科技，10月CPI超预期",
+        "summary": "CNBC：11月10日道指跌0.3%至52,231.89，标普500跌0.38%至7,520.93（较纪录高点低约4.1%），纳指跌0.74%至25,065.87（低约9.6%）。10月CPI环比0.4%高于预期的0.3%，市场押注12月加息25个基点的概率升至约90%；英伟达因CEO黄仁勋事件承压。CoreWeave财报强劲，盘前走高。投资影响：加息预期与科技股风险溢价同时上升，高估值AI股波动加大。",
+        "url": "https://www.cnbc.com/2026/11/10/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "油价小幅走高，布伦特约92美元",
+        "summary": "CNBC：周三亚洲时段布伦特约92美元、WTI约86美元/桶。霍尔木兹局势和美方海上封锁仍是主要变量，能源通胀压力持续。",
+        "url": "https://www.cnbc.com/2026/11/11/us-iran-war-trump-hormuz-bessent-threats.html"
+      },
+      {
+        "title": "港股收跌近1%，新股Neautus首日大涨",
+        "summary": "恒指11月11日收跌0.98%，而中药股Neautus首日涨71.6%，反映港股打新情绪仍热、大盘则偏谨慎。",
+        "url": "https://www.thestandard.com.hk/finance/article/348212/Chinese-traditional-medicine-firm-Neautus-ends-72-percent-higher-in-Hong-Kong-debut"
+      },
+      {
+        "title": "加拿大央行10月加息至2.5%，加元约1.40",
+        "summary": "Trading Economics（10月28日报道）：加央行如期加息25个基点至2.5%，多伦多综指在约36,000点附近持平，加元约1.40兑美元。美加双双处于加息周期，对房贷浮动利率借款人尤其不利。",
+        "url": "https://tradingeconomics.com/canada/currency/news/595876"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "BC省改用永久夏令时，温哥华与西雅图每年半年“差一小时”",
+        "summary": "Global News：BC省已进入永久夏令时，今后温哥华与西雅图一年中有半年处于不同时区，过渡期出现故障和混乱。",
+        "url": "https://globalnews.ca/video/12129588/reaction-to-the-start-of-permanent-daylight-time-in-b-c/"
+      },
+      {
+        "title": "（虚构）多伦多一只浣熊获评“最佳通勤者”",
+        "summary": "传闻一只浣熊每天准时搭乘TTC，只在终点站下车，已有乘客为它办了月票。此条为虚构，仅供一笑。",
+        "fictional": true
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "老板：“你为什么总是迟到？”员工：“路上的牌子写着‘前方学校，请慢行’，我就慢行了。”老板：“可那是在公司楼下。”员工：“对，我正在向公司学习。”",
+        "fictional": true
+      },
+      {
+        "title": "再来一则",
+        "summary": "加息九成概率已经确定，我的钱包说：那我先提前加个“息”——叹息。",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "定风波·莫听穿林打叶声",
+    "author": "苏轼",
+    "dynasty": "宋",
+    "lines": [
+      "莫听穿林打叶声，何妨吟啸且徐行。",
+      "竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。",
+      "料峭春风吹酒醒，微冷，山头斜照却相迎。",
+      "回首向来萧瑟处，归去，也无风雨也无晴。"
+    ],
+    "note": "这首词作于宋神宗元丰五年（1082）三月，苏轼因“乌台诗案”被贬黄州已近三年。词前小序记：春天沙湖道中遇雨，同行者狼狈，唯独他不觉。风雨既是实景，也是政治风波与人生坎坷的隐喻。“莫听”“何妨”二语，把外界喧嚣轻轻挡在耳外；“竹杖芒鞋轻胜马”以轻写重，贬谪之身反而比乘马官员更自在。下阕雨过天晴，斜阳相迎，他由此悟到：风雨与晴明本无分别，“也无风雨也无晴”并非麻木，而是不再被境遇牵着走的通达。这首词值得一读，在于它示范了一种在逆境中保持尊严与幽默的方式。读完市场与新闻里一天的风雨，不妨带着这份从容“徐行”。"
+  },
+  "special": {
+    "title": "深度分析",
+    "status": "pending"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 51
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Remembrance Day",
+      "date": "2026-11-11",
+      "days": 0,
+      "scope": "BC"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Veterans Day",
+      "date": "2026-11-11",
+      "days": 0,
+      "scope": "Federal"
+    }
+  ],
+  "issue_no": 79
+}
