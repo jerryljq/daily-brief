@@ -1,0 +1,190 @@
+{
+  "_fixture": "测试数据，不是真实简报：在 issue_full.json 基础上改坏 3 项行情和 overview。清理后应剩 7 项行情、没有 overview，恰好 4 条提示。",
+  "date": "2026-08-15",
+  "weekday": "星期六",
+  "lunar": "农历七月初三",
+  "overview": "华尔街继续抛售，详见 https://example.com/markets 的报道与分析。",
+  "sections": {
+    "china": [
+      {
+        "title": "示例：国务院出台促消费新措施",
+        "summary": "示例摘要：新措施涉及以旧换新补贴和服务消费。",
+        "url": "https://example.com/cn-1"
+      },
+      {
+        "title": "示例：长江流域进入主汛期",
+        "summary": "示例摘要：水利部启动防汛四级应急响应。",
+        "url": "https://example.com/cn-2"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "示例：美国期中选举进入最后四天",
+        "summary": "示例摘要：两党在关键州加大投放。",
+        "url": "https://example.com/us-1"
+      },
+      {
+        "title": "示例：加拿大央行维持利率不变",
+        "summary": "示例摘要：央行称通胀回落但仍需观察。",
+        "url": "https://example.com/ca-1"
+      }
+    ],
+    "global": [
+      {
+        "title": "示例：霍尔木兹海峡一艘油轮触雷",
+        "summary": "示例摘要：布伦特原油盘中上涨 4%。",
+        "url": "https://example.com/gl-1"
+      }
+    ],
+    "economy": [
+      {
+        "title": "示例：华尔街因 AI 回报存疑继续抛售",
+        "summary": "示例摘要：科技股领跌，纳指跌 1.6%。",
+        "url": "https://example.com/ec-1"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "示例：温哥华一只海狮爬上渡轮码头晒太阳",
+        "summary": "示例摘要：渡轮因此延误十分钟。",
+        "url": "https://example.com/fun-1"
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "示例笑话：程序员说他没在睡觉，是在后台加载。",
+        "fictional": true
+      }
+    ]
+  },
+  "special": {
+    "title": "创投观察",
+    "html": "<h4>示例交易</h4><p>示例正文。<a href=\"https://example.com/sp-1\" target=\"_blank\">原文</a></p>",
+    "status": "ready",
+    "summary": "本期 4 笔大额融资，机器人和能源各占一半"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "中秋节",
+      "date": "2026-09-25",
+      "days": 41
+    }
+  ],
+  "markets": [
+    {
+      "id": "spx",
+      "group": "us",
+      "name": "标普 500",
+      "value": 741.26,
+      "change_pct": -0.84,
+      "session": "close",
+      "as_of": "2026-08-14",
+      "source": "https://www.cnbc.com/quotes/.SPX"
+    },
+    {
+      "id": "ixic",
+      "group": "us",
+      "name": "纳斯达克",
+      "value": 25108.27,
+      "change_pct": -1.62,
+      "session": "close",
+      "as_of": "2026-08-14",
+      "source": "https://www.cnbc.com/quotes/.IXIC"
+    },
+    {
+      "id": "dji",
+      "group": "us",
+      "name": "道琼斯",
+      "value": 48210.47,
+      "change_pct": -0.31,
+      "session": "close",
+      "as_of": "2026-08-14",
+      "source": "https://www.cnbc.com/quotes/.DJI"
+    },
+    {
+      "id": "hsi",
+      "group": "cn_hk",
+      "name": "恒生指数",
+      "value": 27936.0,
+      "change_pct": 0.46,
+      "session": "close",
+      "as_of": "2026-08-01",
+      "source": "https://finance.sina.com.cn/realstock/company/hkHSI/nc.shtml"
+    },
+    {
+      "id": "sse",
+      "group": "cn_hk",
+      "name": "上证指数",
+      "value": 4021.71,
+      "change_pct": -0.18,
+      "session": "close",
+      "as_of": "2026-08-14",
+      "source": "https://finance.sina.com.cn/realstock/company/sh000001/nc.shtml"
+    },
+    {
+      "id": "usdcny",
+      "group": "commodities_rates_fx",
+      "name": "美元/人民币",
+      "value": 7.1235,
+      "change_pct": 0.05,
+      "session": "live",
+      "as_of": "2026-08-15",
+      "source": "https://www.cnbc.com/quotes/CNY="
+    },
+    {
+      "id": "usdcad",
+      "group": "commodities_rates_fx",
+      "name": "美元/加元",
+      "value": 1.3862,
+      "change_pct": -0.12,
+      "session": "live",
+      "as_of": "2026-08-15",
+      "source": "https://www.cnbc.com/quotes/CAD="
+    },
+    {
+      "id": "cadcny",
+      "group": "commodities_rates_fx",
+      "name": "加元/人民币",
+      "value": 5.1389,
+      "change_pct": 0.17,
+      "session": "live",
+      "as_of": "2026-08-15",
+      "derived": true,
+      "source": "https://www.cnbc.com/quotes/CNY="
+    },
+    {
+      "id": "xau",
+      "group": "commodities_rates_fx",
+      "name": "黄金（美元/盎司）",
+      "value": 4128.4,
+      "change_pct": 0.92,
+      "session": "live",
+      "as_of": "2026-08-15",
+      "source": "http://www.cnbc.com/quotes/@GC.1"
+    },
+    {
+      "id": "us10y",
+      "group": "commodities_rates_fx",
+      "name": "美债 10 年",
+      "value": 4.31,
+      "change_bp": 4,
+      "unit": "%",
+      "session": "live",
+      "as_of": "2026-08-15",
+      "source": "https://www.cnbc.com/quotes/US10Y"
+    }
+  ],
+  "poem": {
+    "title": "鹿柴",
+    "author": "王维",
+    "dynasty": "唐",
+    "lines": [
+      "空山不见人，但闻人语响。",
+      "返景入深林，复照青苔上。"
+    ],
+    "note": "示例赏析。"
+  }
+}
