@@ -1,0 +1,185 @@
+{
+  "date": "2026-11-12",
+  "weekday": "星期四",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "礼来口服GLP-1减重药在华获批，系全球首家",
+        "summary": "据香港《星岛》转载报道，礼来成为首家在中国获得GLP-1口服减重药批准的药企，中国庞大的减重与代谢疾病市场迎来口服新选择。",
+        "url": "https://www.thestandard.com.hk/china/article/348328/Eli-Lilly-becomes-first-drugmaker-to-have-a-GLP-1-weight-loss-pill-approved-in-China"
+      },
+      {
+        "title": "京东拟收购德国Ceconomy，欲做欧洲最大线上电器零售商",
+        "summary": "京东高管对路透表示，收购德国Ceconomy后将以此为基础，争取成为欧洲领先的线上电子产品零售商，中国电商出海再下一城。",
+        "url": "https://www.thestandard.com.hk/finance/article/348353/JDcom-seeks-to-lead-Europes-online-electronics-retail-with-Ceconomy-deal"
+      },
+      {
+        "title": "APEC东道主深圳：新一代创业公司仍依赖海外买家",
+        "summary": "在APEC举办城市深圳，新一代硬件与科技创业公司的订单仍高度依赖海外客户，反映出内需疲弱与出海的现实。",
+        "url": "https://www.thestandard.com.hk/china/article/348304/In-APEC-host-Shenzhen-Chinas-next-gen-startups-still-bank-on-foreign-buyers"
+      },
+      {
+        "title": "皇岗口岸通关首月接待旅客344万人次",
+        "summary": "香港《星岛》报道，重新启用的皇岗口岸首月累计通关旅客344万人次。",
+        "url": "https://www.thestandard.com.hk/news/article/348344/Huanggang-Port-welcomes-344m-travelers-in-first-month"
+      },
+      {
+        "title": "英伟达CEO黄仁勋下台，半岛电视台追问：中国情报部门可能获知什么？",
+        "summary": "英伟达称无机密泄露，但专家质疑其与据称为中国间谍的女子的关系可能暴露哪些敏感信息，事件使中美科技博弈再添变数。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/what-could-chinese-intelligence-have-learned-from-nvidia-ceos-affair"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "布鲁克林弗拉特布什楼房坍塌致至少8死",
+        "summary": "周三下午一栋三层混合用途建筑坍塌，倒向邻近施工的基坑，至少8人死亡、17人送医，其中3名是消防员。约250名消防员仍在废墟搜救，原因调查中。市长曼达尼称将持续更新。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/building-collapse-in-brooklyn-kills-two-injures-more-than-a-dozen"
+      },
+      {
+        "title": "民主党科洛姆赢得密西西比州联邦参议院席位",
+        "summary": "半岛电视台报道，民主党人斯科特·科洛姆在受关注的密西西比州参议员选举中获胜，这在该州具有历史意义。",
+        "url": "https://www.aljazeera.com/news/2026/11/11/democrat-scott-colom-wins-closely-watched-us-senate-race-in-mississippi"
+      },
+      {
+        "title": "白宫称尽管选民不满物价，关税将保留",
+        "summary": "中期选举后，白宫表示不会因选民对物价上涨的不满而放弃关税政策。",
+        "url": "https://www.cnbc.com/2026/11/10/trump-tariffs-midterms-gary-cohn-inflation.html"
+      },
+      {
+        "title": "特朗普民调低迷，美印贸易协议重新升温",
+        "summary": "CNBC报道，在民调压力下，美印关税与贸易协议谈判重获关注。",
+        "url": "https://www.cnbc.com/2026/11/12/us-india-trade-tariffs-trump-modi.html"
+      },
+      {
+        "title": "美国、墨西哥等或失麻疹消除地位",
+        "summary": "美洲一个独立委员会正审议各国是否仍符合麻疹消除标准，美国、墨西哥和危地马拉可能丧失该地位。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/why-the-us-mexico-and-guatemala-may-lose-their-measles-free-status"
+      },
+      {
+        "title": "国防部长赫格塞思随行人员在无名战士墓被卫兵训斥",
+        "summary": "半岛电视台报道，赫格塞思一行在无名战士墓的举动被现场卫兵当场纠正。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/hegseth-entourage-reprimanded-by-guard-at-tomb-of-the-unknown-soldier"
+      }
+    ],
+    "global": [
+      {
+        "title": "伊朗警告扩大报复，以色列据报加紧准备袭击",
+        "summary": "据以媒报道，内塔尼亚胡主持的安全内阁已下令军方加紧准备可能的对伊打击。伊朗官员称，若美国再度开战，从西亚到欧洲的相关军事基地皆为合法目标；伊方还拒绝将60%浓缩铀转移第三国。美军称在维持霍尔木兹海峡通航并对伊实施海上封锁。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/iran-warns-of-expanded-retaliation-as-israel-reportedly-readies-to-attack"
+      },
+      {
+        "title": "印尼副总统吉布兰辞职",
+        "summary": "法院裁定其海外学历文件不符合参选要求后，佐科之子、副总统吉布兰周四辞职。继任者将由国民协商会议在60天内从总统普拉博沃提名的两名人选中选出，国内正有关于经济、腐败的抗议。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/indonesia-vice-president-resigns-amid-dispute-over-eligibility"
+      },
+      {
+        "title": "也门战事升级，胡塞否认袭击麦加",
+        "summary": "也门战斗加剧，胡塞武装否认以麦加为目标的指称。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/fighting-intensifies-in-yemen-as-houthis-deny-targeting-mecca"
+      },
+      {
+        "title": "大赦国际：联合国与南苏丹官员未能阻止村庄屠杀",
+        "summary": "大赦国际称，联合国和南苏丹官员本可阻止一起造成重大伤亡的村庄袭击却未行动。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/amnesty-says-un-south-sudan-officials-failed-to-prevent-village-massacre"
+      },
+      {
+        "title": "意大利前红色旅成员从阿根廷软禁中攀楼逃脱",
+        "summary": "莱昂纳多·贝尔图拉齐从五楼公寓攀爬而下，逃离阿根廷的居家软禁。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/former-italian-red-brigades-member-escapes-house-arrest-in-argentina"
+      },
+      {
+        "title": "玻利维亚以涉毒逮捕前法官",
+        "summary": "玻利维亚当局拘留一名前法官，案件与美国支持的地区安全行动有关。",
+        "url": "https://www.aljazeera.com/news/2026/11/12/bolivia-arrests-former-judge-on-suspicion-of-drug-trafficking"
+      }
+    ],
+    "economy": [
+      {
+        "title": "黄仁勋辞任英伟达CEO，AI股全球重挫",
+        "summary": "英伟达宣布黄仁勋辞任，CFO克雷斯任临时CEO，此前有报道称其与被美情报部门认定为中国间谍的女子有染。英伟达盘中一度跌超11%（此前一个月已跌逾20%），AMD、博通上涨，甲骨文、美光下跌。周四盘中标普500约跌0.8%、纳指约跌1.5%、道指约涨0.2%。投资影响：AI龙头“关键人风险”被重估，集中持有AI权重的指数基金波动加大，可考虑分散至防御与价值板块；市场也在担忧监管与供应链审查升级。",
+        "url": "https://www.cnbc.com/2026/11/11/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "宏观与油价：失业金申请2万、鹰派美联储官员、10年期美债约4.99%",
+        "summary": "周四首申失业金升至20万人，高于预期的19.5万；克利夫兰联储主席哈马克支持以较小幅度继续加息；10年期美债收益率约4.99%。伊朗局势令油价居高，WTI约86美元、布伦特约93美元。上一交易日（11月9日）美股大涨，道指52,389.75点（+2.15%）、标普7,549.94点（+2.35%）、纳指25,253.14点（+2.74%）。投资影响：高利率、高油价叠加地缘风险，债券收益率已有吸引力，股市宜控制仓位。",
+        "url": "https://www.cnbc.com/2026/11/11/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "Alphabet首次发行港元和新元债券，融资38亿美元",
+        "summary": "谷歌母公司首次在香港与新加坡发行本币债券，合计约38亿美元，显示亚洲债市对高评级科技发行人的吸引力。",
+        "url": "https://www.thestandard.com.hk/finance/article/348350/Alphabet-raises-US38-billion-in-first-Hong-Kong-Singapore-dollar-bonds"
+      },
+      {
+        "title": "港股：新股Neautus首日大涨，恒指前一日跌近1%",
+        "summary": "四川中药企业Neautus港股首日涨71.6%，零售超购约2191倍；同日恒指收跌0.98%。",
+        "url": "https://www.thestandard.com.hk/finance/article/348212/Chinese-traditional-medicine-firm-Neautus-ends-72-percent-higher-in-Hong-Kong-debut"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "【虚构】温哥华：浣熊因“永久夏令时”集体迟到，被投诉“扰民”",
+        "summary": "据本报虚构消息，BC省改用永久夏令时后，市民发现垃圾桶里的浣熊每晚比平常迟一小时出场。市民称“它们也不知道现在几点，但依然很有自信”。",
+        "fictional": true
+      },
+      {
+        "title": "【虚构】西雅图：咖啡师因拉花过于抽象被邻居当成“艺术家”，被迫开展览",
+        "summary": "一名咖啡师的拉花被客人误认为“后现代作品”，三天后有画廊来电询价。他表示：“我只是奶泡打坏了。”",
+        "fictional": true
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "老板：“你为什么总迟到？”员工：“路上总有人拦我。”老板：“谁？”员工：“我的床。”",
+        "fictional": true
+      },
+      {
+        "title": "再来一则",
+        "summary": "股民对朋友说：“我终于学会止损了。”朋友：“多少点？”股民：“账户都清零了，已经不用设了。”",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "山行",
+    "author": "杜牧",
+    "dynasty": "唐",
+    "lines": [
+      "远上寒山石径斜，白云生处有人家。",
+      "停车坐爱枫林晚，霜叶红于二月花。"
+    ],
+    "note": "《山行》是杜牧的七言绝句，大约作于他赴任或游历途中的深秋。这时节常见的悲秋诗往往写“萧瑟”，杜牧却偏偏反其道而行：先写石径蜿蜒向上、白云深处有人家，铺出一幅幽远清朗的画面；再用“停车坐爱”四个字，交代诗人因贪看枫林而特意停下车来，一个“爱”字把全诗的情绪点亮。末句“霜叶红于二月花”是点睛之笔：经霜的枫叶，红得竟胜过春天盛开的鲜花。春花之红来自温暖，霜叶之红却从寒冷中淬炼而出，因而更显刚劲，诗里也暗含对坚韧生命力的赞美。全诗二十八字，色彩（白云、红叶）与动静（斜径、停车）相映成趣，没有一句说理，却让人在寒意中读出昂扬。今天读它，适合在市场和国际局势都满是不确定性的日子，提醒我们：逆境里同样可以看到极美的风景。"
+  },
+  "special": {
+    "title": "本周末去哪儿",
+    "html": "<p>本期为 11 月 13–15 日（周五至周日）的周末活动指南，时间均为当地时间；从本期起加入北京、上海。<b>资料说明</b>：海外各城的日期和地点来自活动官网或本地媒体（Daily Hive、Seattle Refined、Time Out New York、Resident、LAist、Funcheap SF、SF Station）；北京来自北京旅游网和中国国家博物馆官网，上海来自上海博物馆官网和第一财经。票价和场次可能变动，出门前请以官方页面为准。</p>\n\n<h4>温哥华</h4>\n<ul>\n<li><b>Lumière 灯光艺术节</b>——11 月 12–14 日（周四至周六），市中心、West End 与 Gastown 多处，免费。第 13 届，以本地艺术家的灯光装置为主，配有音乐和讲故事活动，适合全家夜游；完整节目单以官网公布为准。<a href=\"https://www.lumiereyvr.com/\" target=\"_blank\">官网</a></li>\n<li><b>温哥华亚洲电影节（VAFF）闭幕周末</b>——至 11 月 15 日（周日），多个场地及线上。加拿大历史最久的亚洲电影节，今年第 30 届，放映 100 多部影片，另有论坛和工作坊，适合影迷。<a href=\"https://2026festival.vaff.org/\" target=\"_blank\">官网购票</a></li>\n<li><b>列治文 CF Richmond Centre 圣诞树点灯</b>——11 月 14 日（周六）晚 6 点，商场户外广场（6551 No. 3 Rd., Richmond），免费。点亮大温最高的户外圣诞树（78 英尺），有现场表演和倒数，适合带孩子。<a href=\"https://shops.cadillacfairview.com/property/cf-richmond-centre/news-events/e/holiday-tree-light-shows-2026\" target=\"_blank\">活动页</a></li>\n<li><b>UBC Farm 农夫市集</b>——11 月 14 日（周六）10:00–14:00，UBC Farm（3461 Ross Dr.）。本季每周六开到 11 月 28 日，有新鲜蔬果、花草、烘焙、咖啡和餐车，适合周末采购顺便散步。<a href=\"https://ubcfarm.ubc.ca/events/category/ubc-farm-markets/\" target=\"_blank\">市集页面</a></li>\n</ul>\n\n<h4>西雅图</h4>\n<ul>\n<li><b>西雅图国际车展</b>——11 月 13–15 日，周五、周六 10:00–21:00，周日 10:00–18:00，Lumen Field Event Center（800 Occidental Ave S）。新车可以近看、坐进去，部分车型能试驾，适合正在看车或爱车的人。<a href=\"https://www.seattleautoshow.com/\" target=\"_blank\">官网</a></li>\n<li><b>Gobble Up 美食市集</b>——11 月 13 日（周五）17:00–20:00 为 First Bite Night（8 美元），11 月 14 日（周六）10:00–17:00（2 美元），Magnuson Park 的 Hangar 30。100 多家太平洋西北地区的手工食品、饮品和厨具品牌，每小时有本地作者签售食谱，12 岁以下免费，适合提前备节礼。<a href=\"https://gobbleupnorthwest.com/seattle/\" target=\"_blank\">官网购票</a></li>\n<li><b>西雅图罗马尼亚电影节（第 13 届）</b>——11 月 13–15 日，SIFF Cinema Uptown。主题「Beyond Borders」，放映获奖的罗马尼亚喜剧和剧情片，如《R.M.N.》《Traffic》，适合影迷。<a href=\"https://www.siff.net/cinema/in-theaters/romanian-film-festival-seattle-13th-edition\" target=\"_blank\">场次与通票</a></li>\n</ul>\n\n<h4>纽约</h4>\n<ul>\n<li><b>纽约喜剧节最后一个周末</b>——至 11 月 15 日（周日），全城多个场馆。周五 Ilana Glazer、周六 Daniel Sloss 都在 Beacon Theatre 演出，周日有 Dane Cook 纪录片放映加问答，适合喜欢单口喜剧的人。<a href=\"https://nycomedyfestival.com/\" target=\"_blank\">官网与票务</a></li>\n<li><b>纽约植物园假日火车展</b>——11 月 14 日（周六）开幕，展至 2027 年 1 月 10 日，Enid A. Haupt 温室（2900 Southern Blvd, Bronx）。小火车穿行在近 200 座用植物材料做成的纽约地标模型之间，适合带孩子。<a href=\"https://www.nybg.org/event/holiday-train-show-2026/\" target=\"_blank\">官网购票</a></li>\n<li><b>布莱恩特公园冬季村</b>——展至 2027 年 2 月 28 日（节日摊位至 1 月 3 日），Bryant Park（第五、第六大道之间，西 40 至 42 街）。户外冰场自带冰鞋免费，租鞋另付；另有 180 多个节日摊位和餐饮，适合逛吃。<a href=\"https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park\" target=\"_blank\">官网</a></li>\n<li><b>「Sense &amp; the City」五感纽约展</b>——周六、周日 12:00–18:00，City Lore Gallery（56 East 1st Street，East Village），展至 2027 年 1 月 18 日。用气味、触感和声音呈现五个区的城市生活，适合带孩子。<a href=\"https://www.timeout.com/newyork/news/this-new-east-village-art-exhibition-lets-you-explore-new-york-city-through-all-five-senses-yes-even-smell-100126\" target=\"_blank\">Time Out 介绍</a></li>\n</ul>\n\n<h4>洛杉矶</h4>\n<ul>\n<li><b>Tinker Bell's Neverland 灯光步道</b>——11 月 13 日（周五）开幕，至 2027 年 1 月 3 日，入场时段 17:30–20:30，South Coast Botanic Garden（26300 Crenshaw Blvd, Palos Verdes Estates）。以《小飞侠》为主题的户外灯光步道，约 60–90 分钟，可推婴儿车；成人 38 美元起（另收手续费），3–15 岁 23 美元，售出不退。<a href=\"https://feverup.com/m/767098\" target=\"_blank\">票务</a></li>\n<li><b>Sheryl Crow 日落大道免费演出</b>——11 月 14 日（周六）下午 4 点，West Hollywood 的 Sunset Strip（San Vicente Blvd 至 Doheny Dr 一段），免费但需预约。Live on Sunset 街区音乐活动，同场还有 Local Natives、Empress Of。<a href=\"https://liveonsunsetweho.com/\" target=\"_blank\">官网预约</a></li>\n<li><b>摇滚音乐剧《The Who's Tommy》最后一个周末</b>——演至 11 月 15 日（周日），Pantages Theatre（6233 Hollywood Blvd.），票价 45 美元起。谁人乐队 1969 年摇滚歌剧的巡演复排版，适合音乐剧和老摇滚迷。<a href=\"https://www.broadwayinhollywood.com/events/detail/the-whos-tommy\" target=\"_blank\">票务</a></li>\n<li><b>Cj Hendry「Flower Shop」</b>——展至 11 月 21 日，Venice 的 Rose Room（6 Rose Ave.），免费入场。澳大利亚艺术家用毛毡做出满屋彩色花朵，花可以买走（10 美元起），适合拍照和挑小礼物。<a href=\"https://flowershop.art/\" target=\"_blank\">官网</a></li>\n</ul>\n\n<h4>旧金山湾区</h4>\n<ul>\n<li><b>旧金山国际茶节</b>——11 月 14–15 日，Ferry Building（1 Ferry Bldg.），周六 10:00–17:00。30 多家茶商、数百款茶可试饮，票含纪念品品茗杯，票价以售票页为准，适合爱茶的人。<a href=\"https://www.eventbrite.com/e/fall-sf-international-tea-festival-2026-tickets-1994590750628\" target=\"_blank\">票务</a></li>\n<li><b>Renegade 冬季手作市集</b>——11 月 14–15 日 11:00–17:00，Fort Mason Center Festival Pavilion（2 Marina Blvd），免费入场（现场建议捐 5 美元）。250 多位独立创作者和小店，陶瓷、服饰、首饰、家居都有，适合提前买节礼。周日 6:30–11:30 Marina Blvd 封路。<a href=\"https://www.renegadecraft.com/event/san-francisco-winter/\" target=\"_blank\">官网</a></li>\n<li><b>圣何塞节日灯会</b>——11 月 13 日（周五）开幕，至 2027 年 1 月 1 日，每晚 16:30–22:30，Discovery Meadow（330 W San Carlos St, San Jose）。有雨林、金色城堡和圣诞老人村等灯组；周五至周日成人 29 美元，3 岁及以下免费，适合全家。<a href=\"https://sjhl.us\" target=\"_blank\">官网购票</a></li>\n<li><b>第 27 届旧金山素食节（VegFest）</b>——11 月 14 日（周六）11:00–17:00，SMC Event Center（1111 Gough St），常规票 18 美元、现场 20 美元。植物性饮食主题，有 80 多个展位、现场音乐、讲座和厨师示范。<a href=\"https://www.sfvs.org/festival\" target=\"_blank\">官网购票</a></li>\n</ul>\n\n<h4>北京</h4>\n<ul>\n<li><b>马林斯基芭蕾舞团《睡美人》《堂·吉诃德》</b>——国家大剧院，11 月 13 日《睡美人》，14–15 日《堂·吉诃德》（12 日起共五场，场次时间以剧院公布为准）。马林斯基剧院芭蕾舞团携乐团演出两部古典芭蕾，此次来华仅北京一站。<a href=\"https://www.visitbeijing.com.cn/article/4TxBdUA5FAT\" target=\"_blank\">北京旅游网演出预告</a></li>\n<li><b>玛莎·葛兰姆舞团百年庆典演出</b>——11 月 13–15 日，北京天桥艺术中心。这支现代舞传奇舞团今年建团一百年，演出经典与新作，14 日演《编年史》《悲歌变奏曲》等，适合喜欢现代舞的观众。<a href=\"https://www.visitbeijing.com.cn/article/4TxBdUA5FAT\" target=\"_blank\">北京旅游网演出预告</a></li>\n<li><b>《明礼华章——万历孝端皇后九龙九凤冠》</b>——中国国家博物馆北 16 展厅，11 月 4 日起长期展出；09:00–17:00（16:00 停止入馆），周一闭馆，参观预约见国博官网。展出 1957 年定陵出土的九龙九凤冠，结合数字和沉浸式展示。<a href=\"https://www.chnmuseum.cn/zl/ztcl/202610/t20261030_283260.shtml\" target=\"_blank\">国博展览页</a></li>\n</ul>\n\n<h4>上海</h4>\n<ul>\n<li><b>《世界树之巅：美洲古代文明大展》</b>——上海博物馆人民广场馆（人民大道 201 号）一至三楼，展至 2027 年 11 月 14 日；09:00–17:00（15:00 后停止入场），周一闭馆，需预约购票。以古代美洲文明为主题的大型特展，展期很长，可以错峰去。<a href=\"https://www.shanghaimuseum.cn/\" target=\"_blank\">上海博物馆官网</a></li>\n<li><b>刘建华《大始》</b>——上海当代艺术博物馆，11 月 7 日开展，至 2027 年 2 月 21 日。展出艺术家刘建华近年的新作，由艺术史学者巫鸿策展，适合喜欢当代艺术的观众。<a href=\"https://www.yicai.com/news/103432711.html\" target=\"_blank\">第一财经看展推荐</a></li>\n<li><b>刘小东《亦南亦北》</b>——星美术馆，11 月 10 日开展，至 2027 年 3 月 31 日。以新系列「江南写生」为核心的个展。开放时间和购票以场馆公告为准。<a href=\"https://www.yicai.com/news/103432711.html\" target=\"_blank\">第一财经看展推荐</a></li>\n</ul>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 50
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Christmas Day",
+      "date": "2026-12-25",
+      "days": 43,
+      "scope": "BC · ON"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Thanksgiving Day",
+      "date": "2026-11-26",
+      "days": 14,
+      "scope": "Federal"
+    }
+  ],
+  "issue_no": 80
+}
