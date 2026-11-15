@@ -1,0 +1,227 @@
+{
+  "date": "2026-11-15",
+  "weekday": "星期日",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "数说APEC：中国经验为亚太增“绿”",
+        "summary": "央视网11月15日报道，数据显示过去十年中国森林面积年均净增长居世界首位，生态治理经验正在为亚太地区增“绿”。",
+        "url": "https://news.cctv.com/2026/11/15/ARTI0DBcgyo1OGutU1znzzoF261115.shtml"
+      },
+      {
+        "title": "解码能源转型背后的硬核担当",
+        "summary": "央视网评述称，清洁能源转型不只是换电源，而是储、运、产、销整条链条的重塑。",
+        "url": "https://news.cctv.com/2026/11/15/ARTIzsGUM0mzxJ8FOVkEN6fN261115.shtml"
+      },
+      {
+        "title": "多地开启秋假，激发文旅消费",
+        "summary": "央视网称，全国已有上百个城市的中小学陆续开启秋假，带动家庭出游和研学消费。",
+        "url": "https://news.cctv.com/2026/11/15/ARTIEVejyWGkehJMCNmK939E261115.shtml"
+      },
+      {
+        "title": "1至10月全国铁路发送旅客41.3亿人次，创新高",
+        "summary": "央视报道，今年前10个月全国铁路累计发送旅客41.3亿人次，为历史同期最高。",
+        "url": "https://tv.cctv.com/2026/11/15/VIDEvGZm2dKPqXMYQQuDzDes261115.shtml"
+      },
+      {
+        "title": "中央气象台：中东部将有大范围大风降温和雨雪天气",
+        "summary": "央视报道，中央气象台预报，中东部地区将迎来大范围大风降温和雨雪天气，出行请留意预警。",
+        "url": "https://tv.cctv.com/2026/11/15/VIDE3aH6uJH0OrVBee67mpOj261115.shtml"
+      },
+      {
+        "title": "特朗普、习近平、普京将在深圳APEC期间举行首次三方会晤",
+        "summary": "半岛电视台称，白宫11月14日宣布三国元首将于下周APEC峰会期间在深圳会晤，议题涉及伊朗战争和核军控；美方称不期待达成任何协议。",
+        "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china"
+      },
+      {
+        "title": "联合国呼吁恢复霍尔木兹海峡化肥运输",
+        "summary": "央视报道，联合国呼吁恢复经霍尔木兹海峡的化肥运输，以稳定全球粮食供应。",
+        "url": "https://tv.cctv.com/2026/11/15/VIDEALG4ERgjb7HmNu1D35E6261115.shtml"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "美国FAA停飞真相：一次路由器切换",
+        "summary": "半岛电视台称，导致美国全国飞机停飞的故障已查明与路由器切换有关；运输部长达菲表示将“追责”，这是9·11以来最长的全国性停飞。",
+        "url": "https://www.aljazeera.com/news/2026/11/15/what-forced-the-us-to-ground-all-planes-a-router-switch-we-now-know"
+      },
+      {
+        "title": "SpaceX星舰上面级首次被发射塔机械臂“接住”",
+        "summary": "半岛电视台称，星舰上面级绕地14圈、部署26颗星链卫星后返回，在得州发射台被机械臂接住；但助推器升空后爆炸，双回收计划落空。",
+        "url": "https://www.aljazeera.com/news/2026/11/15/spacexs-starship-captured-by-launchpad-arms-in-dramatic-first"
+      },
+      {
+        "title": "纽约民主社会主义者呼吁奥卡西奥-科特斯竞选总统",
+        "summary": "半岛电视台称，纽约的民主社会主义者组织呼吁AOC参选总统。",
+        "url": "https://www.aljazeera.com/news/2026/11/15/new-york-democratic-socialists-urge-ocasio-cortez-to-run-for-us-president"
+      },
+      {
+        "title": "布鲁克林楼房坍塌瞬间，保姆监控拍下室内画面",
+        "summary": "半岛电视台称，新公布的保姆监控视频显示了布鲁克林一栋公寓楼坍塌时，孩子仍在室内的瞬间。",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/11/15/video-shows-moment-of-brooklyn-building-collapse-from-inside"
+      },
+      {
+        "title": "加拿大Stelco在政府施压下召回175名工人",
+        "summary": "半岛电视台称，克利夫兰-克利夫斯旗下的Stelco将召回175名被裁员工并补发工资，此前渥太华施压。",
+        "url": "https://www.aljazeera.com/economy/2026/11/14/canadas-stelco-to-recall-175-workers-after-government-pressure"
+      },
+      {
+        "title": "B.C.中间派政党CentreBC党魁斯图尔科辞职，退出党派政治",
+        "summary": "Daily Hive称，斯图尔科在该党未在省选中赢得席位后宣布辞去党魁。",
+        "url": "https://dailyhive.com/vancouver/centrebc-party-leader-elenore-sturko-resigns"
+      },
+      {
+        "title": "加拿大人下周将收到联邦福利款",
+        "summary": "Daily Hive称，符合条件的加拿大人下周（11月19日前后）将收到政府发放的福利款项。",
+        "url": "https://dailyhive.com/canada/benefits-government-canada-november-19-2026"
+      }
+    ],
+    "global": [
+      {
+        "title": "伊朗加大对美军基地袭击，巴林称拦截来袭目标",
+        "summary": "半岛电视台称，巴林表示其防空系统拦截了伊朗的袭击；伊朗议长警告若美国“犯错”将扩大冲突地理范围，外界担心误判升级。",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/11/15/iran-war-live-israel-vows-gaza-offensive-policy-despite-caretaker-status"
+      },
+      {
+        "title": "泽连斯基：Starshield限制助长俄罗斯打击乌能源设施",
+        "summary": "半岛电视台称，泽连斯基表示对星盾（Starshield）使用的限制，正在帮助俄方袭击乌克兰能源基础设施。",
+        "url": "https://www.aljazeera.com/news/2026/11/15/starshield-restrictions-help-russias-energy-attacks-on-ukraine-zelenskyy"
+      },
+      {
+        "title": "美特使库什纳称欲促成欧俄就乌克兰问题谈判",
+        "summary": "半岛电视台称，欧洲直接与莫斯科接触的前景似乎在拉近。",
+        "url": "https://www.aljazeera.com/news/2026/11/14/us-envoy-kushner-says-he-aims-to-broker-europe-russia-talks-on-ukraine"
+      },
+      {
+        "title": "以色列空袭打死哈马斯高级指挥官",
+        "summary": "半岛电视台称，哈马斯证实拉法旅指挥官萨米尔·阿布·尤尼斯在汗尤尼斯遇袭身亡。",
+        "url": "https://www.aljazeera.com/news/2026/11/15/israeli-air-strike-kills-senior-hamas-commander-in-gaza"
+      },
+      {
+        "title": "沙特领衔联军拦截疑似胡塞导弹和无人机，也门战火致34万人流离",
+        "summary": "半岛电视台称，利雅得上空拦截两枚导弹、两架无人机；8月以来马里卜等地战事已致逾34万人流离失所。",
+        "url": "https://www.aljazeera.com/news/2026/11/15/saudi-led-coalition-intercepts-two-missiles-two-drones-in-riyadh"
+      },
+      {
+        "title": "伊拉克总理因石油走私撤换九名官员",
+        "summary": "半岛电视台称，调查发现亲伊朗武装控制地区存在非法炼油与走私。",
+        "url": "https://www.aljazeera.com/news/2026/11/15/iraq-pm-sacks-nine-officials-over-oil-smuggling-in-pro-iran-stronghold"
+      },
+      {
+        "title": "佛得角总统选举投票，首位女性总统候选人参选",
+        "summary": "半岛电视台称，佛得角15日举行总统选举。",
+        "url": "https://www.aljazeera.com/news/2026/11/15/polls-open-in-cape-verde-in-race-with-first-female-presidential-candidate"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美股周五收盘：道指微涨，标普、纳指下跌，但三大指数周涨逾2%",
+        "summary": "CNBC称，11月13日收盘道指52,347.55点（+0.1%），标普500为7,561.67点（-0.4%），纳指25,136.27点（-0.91%）；本周道指+2.1%、标普+2.5%、纳指+2.3%，均为8月初以来最佳一周。10年期美债收益率约5.13%，市场几乎完全定价12月加息。投资影响：高利率压制成长股估值，资金偏向防御与非AI基建股。",
+        "url": "https://www.cnbc.com/2026/11/12/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "黄仁勋离任英伟达CEO，HSBC降评级并将目标价从365美元砍至170美元",
+        "summary": "CNBC称，HSBC将英伟达降至持有，称新CEO确定前股价难有起色；周五英伟达跌约2%，思科财报后跌6%，苹果盘中创历史新高360.80美元。投资影响：AI龙头治理不确定性上升。",
+        "url": "https://www.cnbc.com/2026/11/13/hsbc-downgrades-nvidia-says-stock-to-struggle-until-new-ceo-named.html"
+      },
+      {
+        "title": "下周看点：英伟达财报、Anthropic拟在纳斯达克上市",
+        "summary": "CNBC称，英伟达周二盘后发财报；Anthropic（代码ANT）预计周三定价、区间每股70-78美元，周四开盘。",
+        "url": "https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html"
+      },
+      {
+        "title": "伯克希尔股价创历史新高",
+        "summary": "CNBC称，A、B类股自10月1日以来涨约19.1%，同期标普500下跌1.2%。投资影响：防御型价值股受青睐。",
+        "url": "https://www.cnbc.com/2026/11/14/berkshire-breaks-out-to-record-high-with-fourth-quarter-rally-reaching-19percent.html"
+      },
+      {
+        "title": "芝加哥联储古尔斯比：通胀六年高于目标，美联储“还有活要干”",
+        "summary": "CNBC称，10月PPI环比+0.3%、同比+6.5%为2022年11月来最高；市场已完全定价12月加息25个基点。",
+        "url": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html"
+      },
+      {
+        "title": "联合国呼吁恢复霍尔木兹海峡化肥运输",
+        "summary": "央视报道，中东局势持续扰动能源与化肥供应。投资影响：大宗商品与农产品价格对地缘消息高度敏感。",
+        "url": "https://tv.cctv.com/2026/11/15/VIDEALG4ERgjb7HmNu1D35E6261115.shtml"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "卡尔加里一匹马入住酒店，还喝了啤酒",
+        "summary": "Daily Hive称，灰杯赛前，一匹马办理了卡尔加里一家酒店的入住，据报道还喝了杯啤酒。",
+        "url": "https://dailyhive.com/toronto/horse-calgary-hotel-grey-cup-beer"
+      },
+      {
+        "title": "加拿大人今年圣诞想要iPod、黑莓和VHS录像带",
+        "summary": "Daily Hive称，复古电子产品需求上升，iPod、黑莓甚至VHS都在圣诞愿望清单上。",
+        "url": "https://dailyhive.com/canada/candians-retro-tech-holiday-gifts"
+      },
+      {
+        "title": "温哥华：前加人前锋戴着麦克风“怼”老队友",
+        "summary": "Daily Hive称，鲨鱼队一段戴麦视频里，谢伍德与前加人队友互相调侃，视频含粗口。",
+        "url": "https://dailyhive.com/vancouver/ex-canucks-forward-chirps-former-teammates-micd-up-video"
+      },
+      {
+        "title": "特鲁多晒挪威家庭度假照，鲑鱼出镜率颇高",
+        "summary": "Daily Hive称，加拿大前总理特鲁多发布挪威峡湾家庭旅行照片，其中少不了鲑鱼。",
+        "url": "https://dailyhive.com/canada/justin-trudeau-vacation-photos-norway"
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一笑",
+        "summary": "朋友说他决定戒掉熬夜。我问：“成功了吗？”他说：“成功了，现在我是凌晨才睡，不算熬，算早起。”",
+        "fictional": true
+      },
+      {
+        "title": "再来一个",
+        "summary": "我问天气预报：“明天会降温吗？”它说：“会。”我说：“那我穿什么？”它说：“穿你昨天说‘还不用穿’的那件。”",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "岳阳楼记（节选）",
+    "author": "范仲淹",
+    "dynasty": "北宋",
+    "lines": [
+      "予尝求古仁人之心，或异二者之为，何哉？",
+      "不以物喜，不以己悲；居庙堂之高则忧其民，处江湖之远则忧其君。",
+      "是进亦忧，退亦忧；然则何时而乐耶？",
+      "其必曰：“先天下之忧而忧，后天下之乐而乐”乎！"
+    ],
+    "note": "庆历四年（1044年），范仲淹因参与“庆历新政”失败被贬，谪守邓州。好友滕子京同样遭贬，在岳州重修岳阳楼后请他作记。有意思的是，范仲淹当时并没有亲临岳阳，文章是凭一幅《洞庭晚秋图》和想象写成的。全文先写洞庭湖的浩渺，再分写“阴风怒号”与“春和景明”两种天气带来的“览物之情”——迁客骚人或悲或喜，随外物而动；到了末段笔锋一转，提出“古仁人”的标准：不被外物牵着走，不被一己得失左右，无论在朝在野，都把天下放在心上。这篇文章值得一读，一是因为它写于作者自己也身处逆境的时刻，却没有一句抱怨，而是把个人的失意提升为对责任的追问；二是“先天下之忧而忧，后天下之乐而乐”已成为中国士人精神的一句总纲，千年后读来仍有力量。比起近日多选的写景抒怀之作，它是一篇有明确主张的论说，也正好给周日留一个可以静下来想想的问题：我们靠什么在顺境和逆境里保持不变？"
+  },
+  "special": {
+    "title": "本周回顾与下周展望",
+    "html": "<p>覆盖区间：11 月 8 日之后到今天（11 月 15 日）。本期主要从仓库内 11 月 9–14 日的已发简报提炼；展望部分的日期经搜索核对，但多数搜索结果只取到标题，未取到正文，凡未核实的已标明。</p>\n\n<h4>本周主线</h4>\n<p><b>1. 英伟达：从“被起诉”到“CEO 辞任”，一周内三步。</b>周日（8 日）董事会宣布调查黄仁勋与一名被指为中国从事间谍活动的女子的关系，他当时表示继续任职（<a href=\"https://www.aljazeera.com/news/2026/11/8/us-chipmaker-nvidia-investigates-ceo-jensen-huang-over-affair\" target=\"_blank\">半岛电视台</a>）；10 日股东在圣何塞起诉英伟达及黄仁勋（<a href=\"https://www.cbc.ca/news/business/nvidia-jensen-huang-lawsuit-spying-9.7416186\" target=\"_blank\">CBC</a>）；随后黄仁勋辞任，CFO 克雷斯任临时 CEO，董事会启动继任搜寻，市值跌破 4 万亿美元（<a href=\"https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-founder-ceo-transition.html\" target=\"_blank\">CNBC</a>）。13 日参议院银行委员会要求黄仁勋、卢特尼克 12 月 3 日出席听证，若拒绝将发传票（<a href=\"https://www.aljazeera.com/news/2026/11/13/nvidias-huang-lutnick-summoned-to-testify-to-us-senate\" target=\"_blank\">半岛电视台</a>）。汇丰将评级降至持有，目标价由 365 美元降至 170 美元，称新 CEO 确定前股价难有起色（<a href=\"https://www.cnbc.com/2026/11/13/hsbc-downgrades-nvidia-says-stock-to-struggle-until-new-ceo-named.html\" target=\"_blank\">CNBC</a>）。公司事件已升级为政治与监管事件。</p>\n<p><b>2. 通胀回潮与加息预期。</b>10 日 CPI 环比 0.4%，高于预期的 0.3%（<a href=\"https://news.sina.com.cn/w/2026-11-10/doc-iniyhmwq5756975.shtml\" target=\"_blank\">央视财经/新浪</a>）；13 日 PPI 同比 6.5%，为 2022 年 11 月以来最高，市场押注 12 月加息 25 个基点的概率约 87%（<a href=\"https://www.cnbc.com/2026/11/13/ppi-inflation-report-october-2026.html\" target=\"_blank\">CNBC</a>）。芝加哥联储古尔斯比称美联储“还有活要干”，加息 50 个基点的概率超 10%（<a href=\"https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html\" target=\"_blank\">CNBC</a>）。同时 10 年期美债收益率约 5.13%，日元一度跌破 160（<a href=\"https://www.cnbc.com/2026/11/12/stock-market-today-live-updates.html\" target=\"_blank\">CNBC</a>）。这一周股市被 AI 龙头的个股事件和利率预期同时拉扯。</p>\n<p><b>3. 伊朗战事：谈判与袭击并行，僵局未解。</b>9 日特朗普称谈成则再打“极不可能”（<a href=\"https://www.cnbc.com/2026/11/08/trump-iran-strikes-unlikely-talks-hormuz.html\" target=\"_blank\">CNBC</a>）；11 日伊朗否认与美谈判，称海峡在诉求满足前继续关闭（<a href=\"https://www.aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met\" target=\"_blank\">半岛电视台</a>）；13 日伊方称已通过卡塔尔提出七点方案，包括结束海上封锁、解除制裁（<a href=\"https://www.aljazeera.com/features/2026/11/13/why-is-trump-saying-no-deal-necessary-with-iran-as-he-sidelines-jd-vance\" target=\"_blank\">半岛电视台</a>）；14 日直播称 24 小时内五艘船受袭（<a href=\"https://www.aljazeera.com/news/liveblog/2026/11/14/iran-war-live-fighting-grips-yemen-as-qatar-turkiye-sign-defence-deal\" target=\"_blank\">半岛电视台</a>），联合国称战争开始以来已有 25 名海员遇难（<a href=\"https://www.aljazeera.com/news/2026/11/14/un-says-25-seafarers-killed-in-around-hormuz-since-february\" target=\"_blank\">半岛电视台</a>）。另据以媒报道以色列安全内阁令军方加紧准备打击，美军中央司令部称相关报道“纯属猜测”（<a href=\"https://www.aljazeera.com/news/2026/11/13/can-netanyahu-launch-a-strike-on-iran-before-he-leaves\" target=\"_blank\">半岛电视台</a>），属未证实消息。</p>\n<p><b>4. 美国中期选举后的政治余震。</b>民主党拿下国会两院（<a href=\"https://www.aljazeera.com/news/2026/11/12/migrant-caravan-sets-out-from-southern-mexico-bound-for-us-after-midterms\" target=\"_blank\">半岛电视台</a>）；特朗普承认移民政策对选民“太强硬”（<a href=\"https://www.aljazeera.com/news/2026/11/9/trump-says-his-immigration-policy-too-tough-for-voters\" target=\"_blank\">半岛电视台</a>），白宫则称关税将保留（<a href=\"https://www.cnbc.com/2026/11/10/trump-tariffs-midterms-gary-cohn-inflation.html\" target=\"_blank\">CNBC</a>）；米勒接任办公厅主任（<a href=\"https://www.cnbc.com/2026/11/06/trump-stephen-miller-wiles-chief-of-staff.html\" target=\"_blank\">CNBC</a>），特朗普又让万斯转去处理民主党治下城市（半岛电视台 13 日同一篇）。</p>\n\n<h4>被低估的一条：美国失去“消除麻疹”地位</h4>\n<p>12 日简报里只是一条“可能失去”的审议消息（<a href=\"https://www.aljazeera.com/news/2026/11/12/why-the-us-mexico-and-guatemala-may-lose-their-measles-free-status\" target=\"_blank\">半岛电视台</a>），14 日已成定局：泛美卫生组织认定美国麻疹传播持续超过 12 个月；今年确诊逾 5400 例，是 2025 年（2289 例）的两倍多，死亡累计 10 例（<a href=\"https://www.aljazeera.com/news/2026/11/14/measles-associated-deaths-reach-10-in-us-after-two-more-deaths-reported\" target=\"_blank\">半岛电视台</a>）。它淹没在英伟达和伊朗的头条里，但这是公共卫生能力的长期指标，疫苗接种政策、边境与旅行规则的争论都可能由此被重新点燃（此为编辑判断）。</p>\n\n<h4>下周展望</h4>\n<ul>\n<li><b>英伟达财报：</b>多家来源称定在 11 月 17 日（周二）盘后（如 <a href=\"https://www.insiderfinance.io/news/nvidia-earnings-set-for-nov-17-amid-sell-signals\" target=\"_blank\">InsiderFinance</a>，仅取到标题；与 CNBC 14 日的说法一致）。这是 CEO 辞任后的首份财报，看点是临时 CEO 对指引和出口限制的说法。</li>\n<li><b>Anthropic 上市：</b>《华尔街日报》称其拟下周在纳斯达克挂牌，代码 ANT（<a href=\"https://investinglive.com/stock-market-update/wsj-anthropic-targets-nasdaq-debut-next-week-under-ticker-ant-despite-tech-selloff/\" target=\"_blank\">investingLive</a>，仅取到标题）。14 日 CNBC 称预计周三定价、区间每股 70–78 美元、周四开盘；该具体日期与区间我未能二次核实。</li>\n<li><b>美联储：</b>12 月 8–9 日议息会议是下一个节点，本周留下的悬念是 12 月加息 25 还是 50 个基点。下周具体数据发布日程我没有取到可核实的来源，不列。</li>\n<li><b>零售财报：</b>搜索显示沃尔玛、塔吉特、家得宝一类零售财报通常在这个时间段，但我只取到标题，未核实具体日期，不作预告。</li>\n<li><b>后续节点：</b>英伟达听证 12 月 3 日（参议院银行委员会，众议院三个委员会另要求 12 月 1 或 2 日），属于再往后的日程。</li>\n<li><b>本周遗留悬念：</b>伊朗七点方案是否获美方回应；以色列看守政府是否真会动手；印尼副总统吉布兰辞职后 60 天内的继任选举（<a href=\"https://www.aljazeera.com/news/2026/11/12/indonesia-vice-president-resigns-amid-dispute-over-eligibility\" target=\"_blank\">半岛电视台</a>）；俄乌阿布扎比会谈除换俘外无突破，乌方称美方提出过入北约选项（<a href=\"https://www.aljazeera.com/news/2026/11/14/three-killed-in-russia-as-ukraine-claims-us-floated-nato-membership-option\" target=\"_blank\">半岛电视台</a>）。</li>\n</ul>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 47
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Christmas Day",
+      "date": "2026-12-25",
+      "days": 40,
+      "scope": "BC · ON"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Thanksgiving Day",
+      "date": "2026-11-26",
+      "days": 11,
+      "scope": "Federal"
+    }
+  ],
+  "issue_no": 83
+}
