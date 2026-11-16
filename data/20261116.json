@@ -1,0 +1,192 @@
+{
+  "date": "2026-11-16",
+  "weekday": "星期一",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "APEC“中国时间”进入核心议程",
+        "summary": "央视网报道，APEC领导人非正式会议即将在深圳开幕，中方表示将与各成员共同推动亚太共同繁荣。",
+        "url": "https://news.cctv.com/2026/11/16/ARTIvZjq3YMz2y8dq4IEFXix261116.shtml"
+      },
+      {
+        "title": "亚太经济体如何对接中国“十五五”规划",
+        "summary": "央视网评述，多个亚太经济体正将自身发展规划与中国“十五五”规划对接。",
+        "url": "https://news.cctv.com/2026/11/16/ARTIMDark1XGECaj0pmv7tGb261116.shtml"
+      },
+      {
+        "title": "习近平、特朗普、普京将于周四在深圳举行三方会晤",
+        "summary": "CNBC称，中国外交部已确认三国元首将在APEC期间会晤，系首次。分析人士预期难有实质成果，中美1月到期的贸易休战协议可能获延长，英伟达与芯片走私案预计不会被提及。",
+        "url": "https://www.cnbc.com/2026/11/16/trump-xi-putin-ukraine-nuclear-tariffs-russia-iran-.html"
+      },
+      {
+        "title": "10月中国经济数据全线不及预期",
+        "summary": "CNBC报道，10月社会消费品零售总额同比增0.4%（预期0.8%），工业增加值增4.8%（预期5.3%），前10个月固定资产投资下降8.1%。",
+        "url": "https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html"
+      },
+      {
+        "title": "前10个月国家铁路发送货物34.2亿吨",
+        "summary": "央视报道，今年1至10月国家铁路累计发送货物34.2亿吨。",
+        "url": "https://tv.cctv.com/2026/11/16/VIDEz8UWAIAeNO6Ftz3EhIVg261116.shtml"
+      },
+      {
+        "title": "中央气象台：两股冷空气接连来袭，中东部降温",
+        "summary": "央视报道，两股冷空气将接连影响我国，中东部气温明显下降，请注意添衣防寒。",
+        "url": "https://tv.cctv.com/2026/11/16/VIDEdRMDIn1tEvZAlIrxTIEa261116.shtml"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "全美停飞后：航空基础设施被追问",
+        "summary": "半岛电视台称，上周五FAA因光纤升级期间路由器故障全国停飞近4小时，超9000架次取消。国会2025年拨款125亿美元，仅花约10亿；运输部长达菲要求500亿美元，民主党要求更多透明度。",
+        "url": "https://www.aljazeera.com/news/2026/11/16/after-a-nationwide-ground-stop-us-faces-aviation-infrastructure-questions"
+      },
+      {
+        "title": "SpaceX星舰上面级首次被发射塔“接住”",
+        "summary": "半岛电视台称，星舰上面级绕地14圈、部署26颗星链卫星后返回，被得州发射台机械臂接住；助推器升空后爆炸。",
+        "url": "https://www.aljazeera.com/news/2026/11/15/spacexs-starship-captured-by-launchpad-arms-in-dramatic-first"
+      },
+      {
+        "title": "呼吁黄仁勋回归：英伟达CEO风波持续",
+        "summary": "CNBC称，要求让黄仁勋复任英伟达CEO的请愿已近18万人签名，马斯克表态支持；董事会仍在物色继任者，独立调查在进行中。",
+        "url": "https://www.cnbc.com/2026/11/16/nvidia-jensen-huang-return-tech.html"
+      },
+      {
+        "title": "卡尼：斯泰兰蒂斯出售布兰普顿工厂是“背叛”",
+        "summary": "BNN彭博称，斯泰兰蒂斯宣布将闲置的安省布兰普顿工厂卖给国防企业Roshel，加拿大总理卡尼称此举违背对联邦政府的承诺，加方将“充分行使权利”；Unifor工会称违反集体协议。",
+        "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/10/a-betrayal-carney-says-canada-will-fully-enforce-its-rights-following-sale-of-stellantis-plant/"
+      },
+      {
+        "title": "美国商务部堵上中企租用英伟达算力的漏洞",
+        "summary": "CNBC称，商务部新规封堵中国企业通过第三国租用英伟达算力的做法；财长贝森特呼吁英伟达董事会改组。",
+        "url": "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html"
+      }
+    ],
+    "global": [
+      {
+        "title": "伊朗称劫持美军无人机制导系统",
+        "summary": "半岛电视台称，伊朗革命卫队称其无人机部队在电子战行动中接管了一架美军MQ-170无人机；德黑兰警告可能先发制人。（伊朗方面说法，未经独立证实）",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/11/16/iran-war-live-tehran-warns-it-may-strike-first-before-another-us-attack"
+      },
+      {
+        "title": "俄袭乌致3死，欧盟指莫斯科拖延战争",
+        "summary": "半岛电视台称，赫尔松、第聂伯罗、扎波罗热遇袭；欧盟外交政策负责人卡拉斯称俄方要求是“继续战争的借口”，欧盟制裁近50家银行，并向基辅拨付18.8亿美元。",
+        "url": "https://www.aljazeera.com/news/2026/11/16/russian-attacks-kill-three-in-ukraine-eu-accuses-moscow-of-prolonging-war"
+      },
+      {
+        "title": "世卫：抗生素耐药或致25年内3900万人死亡",
+        "summary": "半岛电视台称，世卫组织警告耐药感染未来25年可能造成3900万人死亡。",
+        "url": "https://www.aljazeera.com/news/2026/11/16/un-health-agency-sounds-alarm-on-antimicrobial-resistance-threat"
+      },
+      {
+        "title": "泰国普吉岛芭东火灾致至少11死",
+        "summary": "半岛电视台称，一栋商业楼起火，造成至少11死16伤。警方称起火前附近变压器爆炸，排除纵火；摩托车租赁店囤放的燃油和约100辆摩托助长火势。",
+        "url": "https://www.aljazeera.com/news/2026/11/16/shophouse-fire-on-thai-resort-island-kills-11"
+      },
+      {
+        "title": "约旦以国家安全为由封禁Telegram",
+        "summary": "半岛电视台称，约旦宣布封锁Telegram。",
+        "url": "https://www.aljazeera.com/news/2026/11/16/jordan-bans-telegram-messing-app-over-national-security-concerns"
+      },
+      {
+        "title": "海地前总统遗孀将参加总统选举",
+        "summary": "半岛电视台称，被刺杀的海地前总统莫伊兹的遗孀玛蒂娜·莫伊兹计划参选。",
+        "url": "https://www.aljazeera.com/news/2026/11/16/widow-of-haitis-slain-leader-moise-to-contest-presidential-vote"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美股：AI芯片股领跌，纳指盘中跌约2%",
+        "summary": "CNBC实时页（美东10:10）显示，周一道指跌约0.6%（约300点）、标普500跌1.3%、纳指跌2%（均为盘中，非收盘）。英伟达因CEO黄仁勋辞职风波再跌逾2%，美光、英特尔、AMD、戴尔、甲骨文同步下挫。分析：AI算力链估值对单一龙头的治理风险高度敏感，英伟达周三盘后财报将成情绪试金石。",
+        "url": "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "美股：Anthropic IPO预计定价70-78美元",
+        "summary": "CNBC称，Anthropic IPO预计定价每股70至78美元，对应估值约1.4万亿美元，可能创纪录；GTA VI周四发售，关注Take-Two。",
+        "url": "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "中国10月数据不及预期，内需仍弱",
+        "summary": "零售增0.4%、工业增4.8%、前10个月固投降8.1%，房地产下行已连续第五年侵蚀居民财富。对投资者而言，增量刺激预期升温，但中美元首会晤能否延长1月到期的贸易休战同样关键。",
+        "url": "https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html"
+      },
+      {
+        "title": "油价与加密货币：霍尔木兹水雷传闻推升油价",
+        "summary": "CNBC称，布伦特原油涨0.3%至96.13美元/桶，WTI涨0.5%至89.03美元；比特币周末一度跌至约6.2万美元（8月来最低），后回升至约6.4万。日本三季度经济意外萎缩。能源价格高位对通胀和加拿大能源板块是支撑，对依赖进口能源的经济体是压力。",
+        "url": "https://www.cnbc.com/2026/11/15/stock-market-today-live-updates.html"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "温哥华与西雅图“时差”了：BC省启用永久夏令时",
+        "summary": "Global News称，11月1日起BC省永久使用夏令时，意味着半年里温哥华与西雅图不在同一时区，引发各种小混乱——约了西雅图购物的温哥华人，得先问一句“你的几点？”",
+        "url": "https://globalnews.ca/video/12129588/reaction-to-the-start-of-permanent-daylight-time-in-b-c/"
+      },
+      {
+        "title": "（虚构）多伦多浣熊成立“垃圾桶开锁互助会”",
+        "summary": "据说多伦多浣熊已将破解防浣熊垃圾桶的心得编成口诀，并开始收取“入会费”：一枚闪亮的瓶盖。市政厅表示正研究“再升级”。",
+        "fictional": true
+      },
+      {
+        "title": "（虚构）湾区共享单车被发现自己骑回充电桩",
+        "summary": "湾区一家共享单车公司称，有车辆“疑似自行归位”，调查后发现是一位早起老人每天顺手帮忙。公司考虑给他发年卡，老人表示只想要一杯咖啡。",
+        "fictional": true
+      }
+    ],
+    "jokes": [
+      {
+        "title": "冷笑话一",
+        "summary": "问：为什么AI芯片公司的会议室里没有窗户？答：怕股价一看到风景，就想“下跌”。",
+        "fictional": true
+      },
+      {
+        "title": "冷笑话二",
+        "summary": "朋友问我为什么周一总是没精神。我说：因为周一是一周的“首付”，我还没攒够精神。",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "青玉案·元夕",
+    "author": "辛弃疾",
+    "dynasty": "宋",
+    "lines": [
+      "东风夜放花千树，更吹落、星如雨。",
+      "宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。",
+      "蛾儿雪柳黄金缕，笑语盈盈暗香去。",
+      "众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。"
+    ],
+    "note": "这首词作于南宋，辛弃疾以抗金名将自许，却长年被投闲置散。上阕极写元宵之夜：花灯如千树怒放，烟火似星雨纷坠，宝马香车、箫声玉壶、鱼龙彩灯通宵起舞，是全词最热闹的铺陈。下阕笔锋一转，写盛装的女子笑语远去，而词人苦苦寻找的那个人，竟独立在灯火稀疏的角落。这个“那人”历来被读作词人的自我写照——不随流俗、甘守寂寞的高洁之士。王国维把“众里寻他千百度”三句列为人生的第三重境界：经过反复追寻，终在不经意处与理想相遇。值得一读，是因为它把最热烈与最清冷放在同一幅画里，在周一开工的喧嚷里，提醒人别丢了自己真正想找的东西，也让人看到豪放派大家笔下罕见的婉约深情。"
+  },
+  "special": {
+    "title": "本周财经展望",
+    "html": "<p>覆盖区间：10 月 19 日之后到今天（11 月 16 日）。<b>本期信源受限：</b>本次运行中 CNBC 等财经日历页面正文全部抓取失败（代理拒绝/客户端错误），只取到搜索结果的标题，因此下列内容只写标题能支持的结论；具体财报日期、盘前盘后、预期数字、宏观数据发布日程均<b>未能核实，不列</b>，请以公司投资者关系页或财经日历为准。</p>\n\n<h4>本周财报日历</h4>\n<ul>\n<li><b>英伟达：</b>CNBC 周一的报道标题称，这是首席财务官科莱特·克雷斯在黄仁勋离任后的首份财报，并要面对一系列关键问题（<a href=\"https://cnbc.com/2026/11/16/nvidia-earnings-jensen-huang-resignation.html\" target=\"_blank\">CNBC</a>，仅取到标题）。此前仓库内简报引述多家来源称财报定在 17 日（周二）盘后；本次未能再次核实具体时间。</li>\n<li><b>其他公司：</b>CNBC 投资俱乐部 13 日的预览标题提到“下周有 2 项 AI 交易的大考，外加若干持仓公司财报”（<a href=\"https://www.cnbc.com/investingclub/2026/11/13/next-week-brings-2-big-tests-of-the-ai-trade-and-a-handful-of-portfolio-earnings.html\" target=\"_blank\">CNBC</a>，仅取到标题），但未取到具体公司名单。沃尔玛、塔吉特、家得宝等零售财报我没有取到可核实的日期，不作预告。中概股同理，未取到可靠日期，不列。</li>\n</ul>\n\n<h4>本周关键事件</h4>\n<ul>\n<li><b>Anthropic 上市：</b>CNBC 13 日的周前展望标题称，本周 AI 交易的大考“从英伟达财报开始，以 Anthropic 的 IPO 收尾”（<a href=\"https://www.cnbc.com/2026/11/13/stock-market-next-week-outlook-for-nov-16-20-2026.html\" target=\"_blank\">CNBC</a>，仅取到标题）。定价日、价格区间、开盘日我本次均未取到正文，不写具体数字。</li>\n<li><b>宏观数据与央行：</b>本周的数据发布日程（如 CPI/PPI 之外的零售、就业、PMI 等）以及美联储官员讲话、会议纪要日程，我没有取到可核实的来源，不列。作为背景：上周 PPI 同比 6.5%，市场对 12 月加息 25 个基点的押注约 87%（<a href=\"https://www.cnbc.com/2026/11/13/ppi-inflation-report-october-2026.html\" target=\"_blank\">CNBC</a>，引自 13 日仓库简报）。</li>\n<li><b>英伟达政策线：</b>参议院银行委员会要求黄仁勋、卢特尼克 12 月 3 日出席听证（<a href=\"https://www.aljazeera.com/news/2026/11/13/nvidias-huang-lutnick-summoned-to-testify-to-us-senate\" target=\"_blank\">半岛电视台</a>），属于本周之后的节点。</li>\n</ul>\n\n<h4>看点</h4>\n<p>本周最值得盯的是“AI 交易”能否同时扛住两个考验：一是英伟达在 CEO 离任后的首份财报，二是 Anthropic 上市的市场接受度——这是 CNBC 周前展望的框架，不是我对结果的预测。叠加上周偏高的通胀数据与加息预期，利率敏感的科技股对任何指引偏差都可能反应更大（此为编辑判断）。</p>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 46
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Christmas Day",
+      "date": "2026-12-25",
+      "days": 39,
+      "scope": "BC · ON"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Thanksgiving Day",
+      "date": "2026-11-26",
+      "days": 10,
+      "scope": "Federal"
+    }
+  ],
+  "issue_no": 84
+}
