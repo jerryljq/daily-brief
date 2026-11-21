@@ -21,8 +21,11 @@ data JSON 结构（Claude 每天只需要产出这个，不需要重写HTML/CSS�
     "us_ca":     [...],
     "global":    [...],
     "economy":   [{"title": "...", "summary": "...", "url": "..."}, ...],
-    "local_fun": [{"title": "...", "summary": "...", "url": "...", "fictional": false}, ...],
-    "jokes":     [{"title": "今日一则", "summary": "笑话正文"}, ...]
+    "local_fun": [{"title": "...", "summary": "...", "url": "..."}, ...],
+    "jokes":     [{"kind": "trivia", "title": "...", "summary": "...", "url": "...",
+                   "source": "...", "evidence": "..."}, ...]
+                 // 「轻松一刻」：humor / trivia / today_cn / today_world 各一条，
+                 // today_* 另有 "year"。写法见 fun.md，写完跑 fun_helper.py check
   },
   "special": {                          // 可选，按 special_schedule.json 排期
     "title": "本周财经展望",
@@ -41,6 +44,7 @@ data JSON 结构（Claude 每天只需要产出这个，不需要重写HTML/CSS�
 
 安全闸（publish.py 会跑）要求：china / us_ca / global / economy / local_fun
 里的每一条，必须有 url，或者标 "fictional": true。两者都没有就拒绝发布。
+jokes 里带 kind 的条目必须有 url、不能标 fictional；旧式笑话（没有 kind）必须标 fictional。
 
 版数（"今日X版"）会由模板自动根据有内容的板块数量计算，不需要在数据里指定。
 期号（"总第X期"）由本脚本自动维护，不需要在数据里指定。

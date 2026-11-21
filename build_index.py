@@ -232,12 +232,16 @@ def audit_json(data):
             elif sourced and TELL_BLOCK.search(txt) and not flagged:
                 warnings.append(f"[{key}] {txt.strip()[:120]}")
 
-    # 笑话一律要标 fictional：笑话本来就不是报道，而“给真实主体编台词”
-    # （记者问美联储主席…、审计师问 CFO…）靠关键词根本认不出来，
+    # 「轻松一刻」（带 kind 的条目，见 fun.md）一律真实：必须有出处，不许标虚构。
+    # 旧式笑话（没有 kind）照旧一律要标 fictional：笑话本来就不是报道，而“给真实
+    # 主体编台词”（记者问美联储主席…、审计师问 CFO…）靠关键词根本认不出来，
     # 与其猜，不如要求全部标注。
     for it in sec.get('jokes') or []:
-        if not it.get('fictional'):
-            txt = (it.get('title') or '') + ' ' + (it.get('summary') or '')
+        txt = (it.get('title') or '') + ' ' + (it.get('summary') or '')
+        if it.get('kind'):
+            if not it.get('url') or it.get('fictional'):
+                blocking.append(f"[jokes] {txt.strip()[:120]} —— 轻松一刻的条目必须有 url，且不能标 fictional")
+        elif not it.get('fictional'):
             blocking.append(f"[jokes] {txt.strip()[:120]} —— 笑话必须标 fictional")
 
     # 特刊是 HTML 片段，按有无出处链接判断

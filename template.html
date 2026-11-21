@@ -156,6 +156,9 @@
   .tag-fiction{display:inline-block; font-family:var(--sans); font-size:9.5px;
     letter-spacing:.1em; border:1px solid currentColor; color:var(--lo);
     padding:0 5px; margin-left:7px; vertical-align:2px; white-space:nowrap;}
+  .tag-kind{display:inline-block; font-family:var(--sans); font-size:9.5px;
+    letter-spacing:.1em; border:1px solid currentColor; color:var(--accent, var(--jk));
+    padding:0 5px; margin-left:7px; vertical-align:2px; white-space:nowrap;}
   .empty{font-size:11.5px; color:var(--ink-muted); padding:10px 0; font-style:italic;}
 
   /* ── 通栏板块 ── */
@@ -303,7 +306,7 @@
         <div id="local-fun-section"></div>
       </div>
       <div class="col" id="sec-jokes" style="--accent:var(--jk)">
-        <div class="sechead">今日一笑<span class="en">LAUGH</span></div>
+        <div class="sechead">轻松一刻<span class="en">LIGHT</span></div>
         <div id="jokes-section"></div>
       </div>
     </div>
@@ -339,6 +342,8 @@ __BRIEF_DATA_JSON__
     return d.innerHTML;
   }
 
+  var KIND_LABEL = {humor:'幽默', trivia:'冷知识', today_cn:'历史上的今天 · 中国', today_world:'历史上的今天 · 世界'};
+
   function item(it, i, opts){
     opts = opts || {};
     var open = (opts.firstOpen && i === 0) ? ' open' : '';
@@ -347,8 +352,11 @@ __BRIEF_DATA_JSON__
       ? '<a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a>'
       : esc(it.title);
     var tag = it.fictional ? '<span class="tag-fiction">虚构</span>' : '';
+    // 「轻松一刻」的条目带 kind（fun.md），标上是哪一类
+    if(KIND_LABEL[it.kind]) tag = '<span class="tag-kind">' + KIND_LABEL[it.kind] + '</span>' + tag;
     var src = it.url
-      ? ' <a href="' + esc(it.url) + '" target="_blank" rel="noopener">原文 &rsaquo;</a>' : '';
+      ? ' <a href="' + esc(it.url) + '" target="_blank" rel="noopener">' +
+        (it.source ? '来源：' + esc(it.source) : '原文') + ' &rsaquo;</a>' : '';
     return '<details class="item' + lead + '"' + open + '>' +
       '<summary><span class="hl">' + title + tag + '</span><i class="chev"></i></summary>' +
       '<div class="body">' + esc(it.summary || '') + src + '</div></details>';
