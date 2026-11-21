@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-21",
+  "weekday": "星期六",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "10月份工业经济总体平稳，发展质量持续提升",
+        "summary": "央视网报道，10月工业经济总体平稳运行，发展质量持续提升；具体数据以报道正文为准。",
+        "url": "https://jingji.cctv.com/2026/11/21/ARTIGHUXUkVpB3KiGjSrJkXt261120.shtml"
+      },
+      {
+        "title": "我国成功发射卫星互联网低轨30组卫星",
+        "summary": "央视网称，发射于北京时间11月20日19时59分实施。",
+        "url": "https://news.cctv.com/2026/11/21/ARTIfHtLTscOyLLl0qGrFRZ4261120.shtml"
+      },
+      {
+        "title": "我国首个海上注碳增气项目建设迎新进展",
+        "summary": "央视网引述中国海油消息，11月20日该项目建设取得新进展。",
+        "url": "https://news.cctv.com/2026/11/21/ARTIIxgZO7IJWcWT4cUJ6Luh261120.shtml"
+      },
+      {
+        "title": "最高法印发意见，推进人民法庭规范化建设",
+        "summary": "央视视频标题披露，最高人民法院印发意见推进人民法庭规范化建设；细节页面未取到。",
+        "url": "https://tv.cctv.com/2026/11/21/VIDEehPk39AET91T9Oj0x3tx261121.shtml"
+      },
+      {
+        "title": "我国发现距今39.5亿年古老岩石",
+        "summary": "央视视频标题披露，我国发现距今约39.5亿年的古老岩石；细节页面未取到。",
+        "url": "https://tv.cctv.com/2026/11/21/VIDEm1sIHYMBRSW4UZSH67lu261121.shtml"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "CNN：美国FBI犯罪信息数据库遭入侵",
+        "summary": "CNBC转述CNN报道称，FBI的犯罪记录系统被攻破，更多细节未取到。",
+        "url": "https://www.cnbc.com/2026/11/21/fbis-criminal-information-database-hacked-cnn-reports.html"
+      },
+      {
+        "title": "特朗普令联邦承包商向白宫通报后才可向国会提供信息",
+        "summary": "CNBC称，新指令要求联邦承包商在向国会议员提供信息前先通知白宫。",
+        "url": "https://www.cnbc.com/2026/11/21/trump-orders-federal-contractors-to-notify-white-house-before-giving-congress-information.html"
+      },
+      {
+        "title": "白宫更换网络安全主管，正值大范围科技故障",
+        "summary": "CNBC称，白宫11月20日撤换国家网络主管Sean Cairncross，当时多地出现大范围技术故障。",
+        "url": "https://www.cnbc.com/2026/11/20/sean-cairncross-white-house-cyber-director.html"
+      },
+      {
+        "title": "黄仁勋将在参议院银行委员会公开作证",
+        "summary": "CNBC称，已辞去英伟达CEO的黄仁勋将公开作证，日期未定，委员会主席Scott希望圣诞前听取；他还同意12月1日接受三个众议院委员会闭门问询。",
+        "url": "https://www.cnbc.com/2026/11/20/jensen-huang-nvidia-senate-testimony.html"
+      },
+      {
+        "title": "参议院通过BAAJA许可改革法案",
+        "summary": "CNBC称，该法案得到AI与能源行业支持，参议院11月19日通过。",
+        "url": "https://www.cnbc.com/2026/11/20/baaja-bill-senate-passes-permitting-reform.html"
+      },
+      {
+        "title": "杰弗里斯赢得民主党众议院议长提名",
+        "summary": "CNBC称，若1月当选将成为首位黑人众议院议长。",
+        "url": "https://www.cnbc.com/2026/11/18/jeffries-house-speaker-congress.html"
+      },
+      {
+        "title": "安大略省五个教师工会投票支持罢工",
+        "summary": "CBC称，代表逾25万教师和教育工作者的五个工会本周举行罢工投票，中央谈判月底前开始。",
+        "url": "https://www.cbc.ca/news/canada/toronto"
+      }
+    ],
+    "global": [
+      {
+        "title": "伊朗称击中美军F-16，美方否认",
+        "summary": "半岛电视台称，伊朗陆军声称在海湾上空击中美军F-16并迫其迫降，美军否认。",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/11/21/iran-war-live-saudi-led-coalition-repels-houthi-missiles"
+      },
+      {
+        "title": "霍尔木兹海峡油轮遭袭，伊朗收紧航运控制",
+        "summary": "半岛电视台称多艘油轮在海峡被击中，伊朗扩大对航运的管控。",
+        "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping"
+      },
+      {
+        "title": "俄导弹击中波兰，北约会否回应？",
+        "summary": "半岛电视台发表解读，分析事件经过与北约可能的选择；细节以原文为准。",
+        "url": "https://www.aljazeera.com/news/2026/11/21/russian-missiles-hit-poland-what-happened-and-could-nato-respond"
+      },
+      {
+        "title": "无人机袭击芬兰湾俄货轮，乌军打击刻赤海峡大桥",
+        "summary": "半岛电视台称一艘俄货轮在芬兰湾被无人机击中，救援进行中；另报道乌方打击刻赤大桥。",
+        "url": "https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland"
+      },
+      {
+        "title": "各国同意2028年前就AI“杀手机器人”规则细化",
+        "summary": "半岛电视台称，军控峰会上各国同意到2028年细化自主武器规则。",
+        "url": "https://www.aljazeera.com/news/2026/11/21/nations-agree-to-draft-rules-for-killer-robots-at-arms-control-summit"
+      },
+      {
+        "title": "Anthropic员工称与Claude找到黎曼猜想证明",
+        "summary": "半岛电视台称，Levent Alpoge发布用Lean写成的证明，代码约1700万行，独立数学家仍在验证，尚未定论。",
+        "url": "https://www.aljazeera.com/news/2026/11/21/riemann-hypothesis-has-the-worlds-most-famous-maths-problem-been-cracked"
+      },
+      {
+        "title": "印度曼尼普尔邦毒酒致11死、约180人中毒",
+        "summary": "半岛电视台称，疑似有毒私酒造成至少11人死亡。",
+        "url": "https://www.aljazeera.com/news/2026/11/21/suspected-toxic-alcohol-kills-at-least-11-people-in-northeast-india"
+      }
+    ],
+    "economy": [
+      {
+        "title": "AI抛售加剧：标普、道指进入回调区间，纳指抹去年内涨幅",
+        "summary": "CNBC称，11月19日纳指收23,879.20点，跌2.25%；标普500跌约2.02%，道指跌约2.19%。周五（20日）收盘数据本次未取到。对投资者而言，AI高估值板块波动加大，宜控制仓位集中度。",
+        "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "Anthropic上市：募资813亿美元创纪录，首日开盘111.50美元",
+        "summary": "CNBC称，发行价对应首日收盘97.17美元（较发行价高17%）。Morningstar给出92美元公允价值，分析师提醒勿追高；OpenAI或2027年跟进上市。",
+        "url": "https://www.cnbc.com/2026/11/20/anthropic-ipo-stocks-market.html"
+      },
+      {
+        "title": "GTA VI首发：销量约1910万份，直播观看1.255亿小时",
+        "summary": "CNBC引述Sensor Tower估算，首批销售额约18.4亿美元，带动直播与创作者经济；数据未经独立核实。",
+        "url": "https://www.cnbc.com/2026/11/20/gta-vi-launch-streaming-content-economy.html"
+      },
+      {
+        "title": "中美俄会晤称将增产成品油；伊朗战事推高能源风险",
+        "summary": "CNBC称三国领导人承诺扩大成品油产量；与此同时霍尔木兹油轮遇袭，油价与通胀预期仍受地缘风险牵动。",
+        "url": "https://www.cnbc.com/2026/11/19/trump-xi-putin-trilateral-meeting-china.html"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "多伦多Edwards Gardens有孩子遭郊狼袭击",
+        "summary": "CBC称，事件发生于周四上午，孩子受轻伤，目击者对警方描述提出异议。城市公园里的野生动物，提醒大家别喂、别逗。",
+        "url": "https://www.cbc.ca/news/canada/toronto/edward-gardens-coyote-attack-child-toronto-police-9.7430082"
+      },
+      {
+        "title": "不列颠哥伦比亚省餐饮集团起诉支付公司：210万加元员工小费去哪了",
+        "summary": "CBC称，Northland餐饮集团指控支付公司高管未妥善保管本应发给员工的小费。",
+        "url": "https://cbc.ca/news/canada/british-columbia/northland-restaurant-group-missing-tips-9.7430320"
+      },
+      {
+        "title": "西雅图咖啡馆推出“AI上市同款”拿铁，开盘溢价、收盘打折",
+        "summary": "虚构段子：店员说，第一杯卖到111.5美元，喝到最后只值97.17美元。",
+        "fictional": true
+      }
+    ],
+    "jokes": [
+      {
+        "title": "今日一则",
+        "summary": "投资者问：“AI股票跌了，我该怎么办？”理财师答：“让AI帮你算算。”投资者：“它说它也在回调。”",
+        "fictional": true
+      },
+      {
+        "title": "再来一则",
+        "summary": "数学家证明了黎曼猜想，朋友问他有什么感想。他说：“终于可以名正言顺地说——这个我真的算过。”",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "春江花月夜（节选）",
+    "author": "张若虚",
+    "dynasty": "唐",
+    "lines": [
+      "江畔何人初见月？江月何年初照人？",
+      "人生代代无穷已，江月年年望相似。",
+      "不知江月待何人，但见长江送流水。"
+    ],
+    "note": "张若虚生平事迹所存极少，《全唐诗》仅录其诗两首，却凭这一篇留名千古，闻一多誉之为“诗中的诗，顶峰上的顶峰”。全诗沿用乐府旧题，描写春江月夜，却由眼前景象陡然拔高，向天地发问：第一个看见月亮的人是谁？月亮第一次照耀的又是谁？这一问把个人的离愁别绪放进了宇宙与时间的尺度里。节选的三联尤其动人：人生一代代更替没有尽头，江月却年年看去相似。人的短暂与月的恒常形成对照，但诗人并不因此悲观，而是在这种对照里生出一种温柔的释然——生命虽短，却在代代相续中被月光一同照亮。全诗后半转入游子思妇的牵挂，情感由大归小，又落回人间。今天的新闻里，战火、市场与技术都在快速翻涌，读这首诗，像在喧闹的一周末尾，静静看一眼江上的月亮。它值得一读，是因为它在初唐的格局里，已经问出了后世反复追问的问题，而且问得澄澈、不悲不躁。"
+  },
+  "special": {
+    "title": "深度分析",
+    "html": "<p>覆盖区间：11 月 18 日之后到今天（11 月 21 日）。选题：加拿大削减移民之后——人口、房租、劳动力市场各自发生了什么，以及政策为何出现“换包装不换方向”。（与此前委内瑞拉、稀土、加美贸易战、对华芯片管制、AI 与电网、央行购金、美伊战争、IEEPA 关税、中国楼市均不同题。）<b>资料说明：</b>本期读到全文的有 Desjardins 11 月 9 日的报告、DailyHive 对 2026 年联邦预算移民计划的整理、加拿大移民部（IRCC）2026 年 5 月的国会委员会要点页，以及 2024 年的 RBC 与 Global News 报道（用作历史背景，其数字不代表当前目标）。CTV 一篇文章只取到摘要，正文没有取到，未使用其内容。DailyHive 页面无明确发表日期，仅注明预算于 11 月 5 日发布。下文“判断”部分均为我的推断，不是任何人说过的话。</p>\n\n<h4>背景故事：从“人口爆炸”到急刹车</h4>\n<p><b>峰值与转折。</b>DailyHive 给出的对照是：新临时居民入境的 2023 年峰值为 971,815 人，永久居民入境的 2024 年峰值为 483,655 人。2024 年 10 月，渥太华宣布削减计划：Global News 报道，永久居民目标由 50 万（2025 年）下调到 39.5 万（2025 年），2026 年为 38 万，2027 年为 36.5 万；BMO 资本市场的 Robert Kavcic 当时说：“We're going to go from almost 3.5 per cent population growth to effectively zero over the next two years.”（人口增速将从近 3.5% 降到实际上接近零。）</p>\n<p><b>各方诉求。</b>政府的表述是让移民水平“manageable for housing affordability and supply”（DailyHive 对政府目标的转述，非原话）；IRCC 在 2026 年 5 月的要点中写道：“Lower immigration levels are easing pressure on housing by slowing population growth.”反对派方面，Global News 记录了当时保守党领袖 Pierre Poilievre 称这次回撤是“massive admission of failure”；时任移民部长 Marc Miller 则说“You can't go around saying that all the ills of society are caused by immigration.”</p>\n<p><b>2026 年预算的具体数字（DailyHive）：</b>永久居民每年 38 万（经济类 244,700、家庭类 81,000、难民及受保护人员 49,300、人道及其他 5,000）；临时居民由 2026 年的 385,000 降到 2027 年起每年 370,000（学生 15 万、工人 22 万）。2026 年 1 至 8 月与 2024 年同期相比，新入境国际学生下降 71%，新入境工人下降 57%，新增庇护申请下降 68%。外国买家禁令延长到 2029 年 1 月 1 日（新房除外）。</p>\n\n<h4>底层逻辑：为什么说“换包装、同路线”</h4>\n<p>Desjardins 11 月 9 日的报告（Randall Bartlett、LJ Valencia）标题是“Different Packaging, Same Approach”。要点：永久居民 38 万、临时居民 37 万的年度目标与此前“identical”（完全相同）；新增的一项是到 2027 年底再把最多 20 万临时居民转为永久居民。报告预计人口增长 2026 年“possibly being negative”（可能为负），2027 年“likely to turn positive”；并指出政府对在 2027 年底前把临时居民降到人口 5% 以下的承诺“appears less committed”。</p>\n<p><b>因果链（含我的推断）：</b></p>\n<ul>\n<li>入境人数骤降 → 租房需求减弱：Desjardins 认为人口压力缓和“should temper rent inflation”，因为临时工人和学生更依赖租赁住房；DailyHive 称大温哥华和大多伦多的挂牌租金已有下降。</li>\n<li>需求降温的同时，劳动力供给增速放缓：Desjardins 说这有助于让劳动供给与疲弱的需求相匹配，但若不是劳动力增长放慢，失业率“would likely edge higher”。DailyHive 引用加拿大央行的看法：人口增长曾推高失业，尤其是年轻人和新移民。</li>\n<li><b>被忽视的前提（我的分析）：</b>“少移民＝房价和房租下来”的叙事隐含了供给不变的假设。RBC 2024 年的分析就提醒过：它预计削减移民不会使房价下降（“We don't expect lower immigration targets will bring home prices down under our base case economic scenario.”），只是让房价比原本“flatter”；同时 2015 至 2023 年住房存量比新增家庭少了 545,000 套，缺口是历史累积的，不是一两年的人口波动能补上的。</li>\n<li><b>历史类比：</b>本次检索没有读到可靠的历史类似案例资料，我不凭印象写。</li>\n</ul>\n<p><b>结构性矛盾（我的判断）：</b>住房供给要靠几年周期的建设，而移民政策可以一年调整；一旦人口增速回升，若供给没跟上，压力会再回来。同时，短期内削减劳动力流入与长期劳动力短缺是冲突的——2024 年 Desjardins 的报告就说该计划“will come at the expense of solving Canada's longer-term labour force constraints”。</p>\n\n<h4>结论与判断</h4>\n<p><b>最可能的走向（推断）：</b>2026 年人口持平或略降，租金继续温和，但这是“需求端的暂时缓解”，不是问题解决。2027 年起新增 20 万临时转永久的安排，意味着政策重心从“减总量”转向“消化存量”。Desjardins 的结论是这份计划让其经济展望“broadly unchanged”，与此一致。</p>\n<p><b>值得盯的信号：</b>(1) 人口数据是否继续被上调修正（Desjardins 指出这会让其他目标面临风险）；(2) 租金与空置率是否持续；(3) 年轻人和新移民失业率；(4) 2027 年底 5% 目标是否被进一步推迟。</p>\n<p><b>对普通读者意味着什么：</b>租房者短期议价空间更大；留学生和临时工的路径更窄但已在境内者转永久的通道更宽；买房者不要指望靠移民削减就迎来房价大跌。</p>\n\n<h4>发散</h4>\n<ul>\n<li><b>高校与国际学生依赖：</b>新入境学生降 71%，对依赖国际学费的院校意味着什么？关键问题是财政缺口由谁补。</li>\n<li><b>临时转永久的 20 万：</b>DailyHive 文中对口径有不一致（“最多 20 万”与“10 万工人可走 Express Entry 或省提名”并存），实际执行规模是多少值得追踪。</li>\n<li><b>住房供给端：</b>2024 年 RBC 估算近三年年均竣工 225,000 套，而新增家庭年均 15 万——供给是否真能追上？</li>\n<li><b>政治层面：</b>移民政策已从“经济议题”变成“住房议题”，下一次选举中会如何被使用？</li>\n</ul>\n\n<h4>参考资料</h4>\n<ul>\n<li><a href=\"https://www.desjardins.com/en/savings-investment/economic-studies/canada-population-november-9-2026.html\" target=\"_blank\">Desjardins：Canada: The Canadian Immigration Plan–Different Packaging, Same Approach（2026-11-09）</a></li>\n<li><a href=\"https://dailyhive.com/vancouver/2026-federal-budget-canada-immigration-levels-plan-update\" target=\"_blank\">DailyHive：2026 年联邦预算移民水平计划更新</a></li>\n<li><a href=\"https://www.canada.ca/en/immigration-refugees-citizenship/corporate/transparency/committees/cow-may-28-2026/immigration-impacts-social-infrastructure.html\" target=\"_blank\">IRCC：Immigration Impacts on Social Infrastructure（2026-05-28）</a></li>\n<li><a href=\"https://www.rbc.com/en/economics/canadian-analysis/featured-analysis/insights/immigration-cuts-will-help-narrow-canadas-housing-gap-but-wont-solve-crisis/\" target=\"_blank\">RBC Economics（2024-11-04，历史背景）</a></li>\n<li><a href=\"https://globalnews.ca/news/10830683/canada-immigration-cuts-housing-impact/amp\" target=\"_blank\">Global News（2024-10-25，历史背景）</a></li>\n</ul>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 41
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Christmas Day",
+      "date": "2026-12-25",
+      "days": 34,
+      "scope": "BC · ON"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Thanksgiving Day",
+      "date": "2026-11-26",
+      "days": 5,
+      "scope": "Federal"
+    }
+  ],
+  "issue_no": 89
+}
