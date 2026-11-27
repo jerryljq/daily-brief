@@ -1,0 +1,191 @@
+{
+  "date": "2026-11-27",
+  "weekday": "星期五",
+  "lunar": "",
+  "sections": {
+    "china": [
+      {
+        "title": "A股尾盘大幅反弹：创业板指收涨11.61%，科创50涨超15%",
+        "summary": "据财联社报道，沪深两市午后急速拉升，创业板指涨幅为历史第二大单日涨幅，沪指收涨3.73%，深成指涨7.24%。全市场超5300只个股上涨、逾400只涨停，成交额回到2万亿元；半导体、华为产业链、算力硬件与机器人领涨，高股息板块逆势下跌。",
+        "url": "https://www.163.com/news/article/LCOHCV1H0001899O.html"
+      },
+      {
+        "title": "国务院常务会议：发挥“国家队”资金稳市作用",
+        "summary": "网易财经报道，国务院常务会议提出让“国家队”资金在稳定市场中发挥更大作用，释放稳市场的政策信号，与当日A股大幅反弹相呼应。",
+        "url": "https://www.163.com/money/article/LCO98CCL00259DLP.html"
+      },
+      {
+        "title": "神舟二十四号发射成功，巴基斯坦航天员进入中国空间站",
+        "summary": "神舟二十四号乘组进驻天宫空间站，巴基斯坦航天员穆罕默德·泽山·阿里成为首位进入中国空间站的外国航天员。巴方前总理接受CGTN采访时表示，这为两国友谊增添新光彩。",
+        "url": "https://www.163.com/news/article/LCP6I3O3000189FH.html"
+      },
+      {
+        "title": "全国首次省间、省内绿电联合交易：首批成交62亿千瓦时",
+        "summary": "央视财经报道，11月26日西北、华东10个省区市的市场主体参与首次省间与省内绿电联合交易，买方一次申报即可跨省匹配，被视为迈向全国统一电力市场的关键一步。首批电量约相当于近1亿辆普通电动车充满一次。",
+        "url": "https://www.163.com/news/article/LCP68B9D000189FH.html"
+      },
+      {
+        "title": "《北京市养犬管理条例》通过：五环内限养一只、禁养大型犬",
+        "summary": "据澎湃新闻，北京市人大常委会通过新条例：五环内及城市副中心规划区内每户限养一只，禁养大型犬；全市禁止饲养、销售烈性犬；对不牵绳、扰民、不清理粪便、致人伤害等行为加严处罚。",
+        "url": "https://www.163.com/dy/article/LCORG0EN0514R9P4.html"
+      }
+    ],
+    "us_ca": [
+      {
+        "title": "感恩节风暴致近90万户停电，梅西感恩节大游行罕见推迟",
+        "summary": "据半岛电视台，强风暴雨让美国东海岸为主的地区逾90万户断电，新泽西和纽约部分地区进入紧急状态，超2000个航班延误、400余个取消。纽约市长曼达尼称“没有任何目的地值得拿安全去换”。西雅图东南还出现罕见龙卷警报，加州沿海出现创纪录大潮并有居民被疏散。",
+        "url": "https://www.aljazeera.com/news/2026/11/27/thanksgiving-storms-leave-nearly-a-million-without-power-across-the-us"
+      },
+      {
+        "title": "美贸易代表拟对14个贸易伙伴加征关税，最高35%",
+        "summary": "据CNBC，拟征关税以“解决产能过剩”为由，欧盟、韩国、瑞士、台湾起征15%，越南最高35%；已达成协议或仍在谈判的国家可享更低上限。中国面临20%上限，叠加现有25%关税，若休战协议1月后不延长可能升至40%。措施最早明年1月生效。",
+        "url": "https://www.cnbc.com/2026/11/26/us-tariffs-hike-trade-agreement.html"
+      },
+      {
+        "title": "特朗普感恩节致电驻外美军：淡化中俄对伊朗的支持",
+        "summary": "据半岛电视台，特朗普称伊朗拥有可打到欧洲的导弹，并淡化俄、中向德黑兰提供情报的报道，称美国也在监视他们。此时伊朗对美军目标的袭击升级，科威特一起无人机袭击造成两名意大利工人死亡，伊朗否认参与。",
+        "url": "https://www.aljazeera.com/news/2026/11/27/trump-downplays-russia-china-support-for-iran-during-talks-with-us-troops"
+      },
+      {
+        "title": "三季度GDP上修至年化4.3%，特朗普称是“错误”并要求调查",
+        "summary": "据CNBC市场直播，美国第三季度GDP由3.4%上修至4.3%（年化），特朗普周四称该修正有误，要求调查。同周通胀数据高于预期，市场押注美联储将多次加息。",
+        "url": "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "马斯克：每年向美国所有儿童各赠一股SpaceX",
+        "summary": "据CNBC，马斯克在X上称将每年向全美儿童再捐赠一股SpaceX股票。此前SpaceX宣布向每个“特朗普账户”赠送一股A类股；白宫称截至10月已开立近7000万个此类账户。SpaceX盘前涨约4%。",
+        "url": "https://www.cnbc.com/2026/11/27/spacex-shares-musk-donations.html"
+      }
+    ],
+    "global": [
+      {
+        "title": "伊朗革命卫队称霍尔木兹海峡一油轮触雷爆炸",
+        "summary": "半岛电视台直播称，伊朗革命卫队表示一艘油轮在霍尔木兹海峡触雷并爆炸；警方称在东南部击落一架“敌对无人机”；海军称夺回两艘被美军“扣押”的伊朗油轮（时间与细节未披露）。伊朗外长称科威特致命袭击“可疑”。",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/11/27/iran-war-live-irans-araghchi-calls-deadly-kuwait-attack-suspicious"
+      },
+      {
+        "title": "沙特贾赞炼油厂遇袭，一名工人死亡、运营受扰",
+        "summary": "半岛电视台报道，沙特阿美位于贾赞的炼油厂遭袭击，造成一名工人死亡并中断部分运营。",
+        "url": "https://www.aljazeera.com/news/2026/11/26/attack-on-saudi-aramcos-jazan-refinery-kills-worker-disrupts-operations"
+      },
+      {
+        "title": "开罗油罐车起火致31人死亡，司机被拘",
+        "summary": "周三晚间一辆油罐车在开罗环城路吉萨瓦拉克路段侧翻起火，31人死亡、26人受伤、27辆车被毁。检方拘留了21岁的肇事司机，他称自己超车时撞上油罐车，已下令验毒；政府承诺向遇难者家属提供援助。",
+        "url": "https://www.aljazeera.com/news/2026/11/26/egypt-detains-driver-over-cairo-fuel-tanker-fire-that-killed-31"
+      },
+      {
+        "title": "西班牙经济学家埃尔南德斯·德科斯将出任欧洲央行行长",
+        "summary": "欧元区成员国一致推荐国际清算银行总经理巴勃罗·埃尔南德斯·德科斯接替拉加德，他将成为首位西班牙籍欧央行行长；拉加德2月提前离任。正式任命预计在12月欧盟峰会上敲定。",
+        "url": "https://www.aljazeera.com/news/2026/11/26/spanish-economist-to-become-new-european-central-bank-chief"
+      },
+      {
+        "title": "几内亚比绍军方将总统选举推迟至2028年",
+        "summary": "原定12月6日举行的总统与立法选举被推迟两年，改在2028年11月举行。",
+        "url": "https://www.aljazeera.com/news/2026/11/26/guinea-bissau-presidential-election-delayed-by-two-years"
+      },
+      {
+        "title": "加沙冬雨再度迫使流离失所者逃离帐篷",
+        "summary": "半岛电视台解读：冬季暴雨和洪水让加沙的帐篷营地再次被淹，巴勒斯坦人被迫再度转移。",
+        "url": "https://www.aljazeera.com/news/2026/11/26/why-are-winter-rains-forcing-palestinians-in-gaza-to-flee-again"
+      }
+    ],
+    "economy": [
+      {
+        "title": "美股：感恩节后半日市走高，道指本周有望创2025年4月以来最佳周表现",
+        "summary": "据CNBC，周五半日市早盘道指涨约326点（0.6%），标普500涨0.6%，纳指涨0.7%（盘中数据，非收盘）；本周三大指数累计涨幅约4%—5%。周一黄仁勋复任英伟达CEO，推动该股当日大涨31%、纳指创2025年4月以来最佳单日。但市场仍担忧AI债务融资与资本开支放缓，以及通胀偏热下美联储连续加息的可能。投资影响：科技股波动加大，利率敏感板块需留意加息预期。",
+        "url": "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "亚太股市全线大涨：韩国KOSPI涨4.34%，日经涨2.11%，沪深300涨超4%",
+        "summary": "据CNBC，中国半导体股录得有记录以来最大单日涨幅，起因是政策层面释放稳市场信号（见中国版面）。同时WTI原油涨约3%至85.75美元/桶，白银涨约5%至43.66美元/盎司，黄金约3567.6美元基本持平。投资影响：单日暴涨后波动大，追高需谨慎；中东局势仍是油价主要变量。",
+        "url": "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html"
+      },
+      {
+        "title": "美国拟对14国加征关税，对半导体及电子产品可能设豁免",
+        "summary": "据CNBC，韩国、台湾预计因半导体和电子产品豁免而受缓冲；中国20%上限叠加现有25%。投资影响：出口导向的亚洲制造业和关税敏感的零售、汽车板块不确定性上升，但措施最早明年1月才生效，且仍有谈判空间。",
+        "url": "https://www.cnbc.com/2026/11/26/us-tariffs-hike-trade-agreement.html"
+      },
+      {
+        "title": "阿根廷禁止央行印钞为政府开支融资",
+        "summary": "半岛电视台报道，阿根廷禁止中央银行通过发行货币为公共支出融资，是对长期恶性通胀的又一次制度性约束。",
+        "url": "https://www.aljazeera.com/news/2026/11/27/argentina-bars-central-bank-from-printing-money-to-fund-government-spending"
+      },
+      {
+        "title": "挪威大西洋航空暂停航班",
+        "summary": "据CNBC，廉价长途航空公司Norse Atlantic停飞，反映航空业在高油价下的财务压力。",
+        "url": "https://www.cnbc.com/2026/11/26/norse-airline-finance-business.html"
+      }
+    ],
+    "local_fun": [
+      {
+        "title": "【湾区】丹尼餐厅：英伟达“诞生卡座”的纪念牌被摘，黄仁勋复职后连夜装回",
+        "summary": "据CNBC，Denny's称硅谷那家门店的纪念牌在11月13日被发现已被取下，黄仁勋重返英伟达CEO后，连锁店在X上欢迎他，宣布纪念牌已恢复，并留言“你的卡座在等你，咖啡我们请”。黄仁勋少年时曾在Denny's打工，英伟达的创意正是在那张卡座上聊出来的。",
+        "url": "https://www.cnbc.com/2026/11/26/dennys-jensen-huang-nvidia.html"
+      },
+      {
+        "title": "【纽约】梅西感恩节大游行被暴风雨“罕见推迟”",
+        "summary": "据半岛电视台，狂风暴雨让纽约感恩节大游行少见地推迟；市里还有两人因积水被困车中获救。市长曼达尼说：“没有任何目的地值得拿安全去换。”火鸡显然也不想上街。",
+        "url": "https://www.aljazeera.com/news/2026/11/27/thanksgiving-storms-leave-nearly-a-million-without-power-across-the-us"
+      },
+      {
+        "title": "【中国大陆】海康威视被曝“996改965”，公司：不属实",
+        "summary": "有报道称海康威视通知全员取消“大小周”、试行“965”，话题冲上热搜；公司随即回应称消息不实，并表示反对以在岗时长而非贡献衡量价值的“无效内卷”。网友：连“辟谣加班”都能上热搜。",
+        "url": "https://www.163.com/news/article/LCOG8NOF0001899O.html"
+      }
+    ],
+    "jokes": [
+      {
+        "title": "感恩节后遗症",
+        "summary": "朋友问我：感恩节吃了多少？我说：不多，就是把‘感恩’吃成了‘感腰’。",
+        "fictional": true
+      },
+      {
+        "title": "牛市心理学",
+        "summary": "老王：股市大涨，我是不是该高兴？老李：你先看看账户里是涨了，还是你只是‘看了别人涨’。",
+        "fictional": true
+      }
+    ]
+  },
+  "poem": {
+    "title": "兰亭集序（节选）",
+    "author": "王羲之",
+    "dynasty": "东晋",
+    "lines": [
+      "永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。",
+      "夫人之相与，俯仰一世。",
+      "向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀。"
+    ],
+    "note": "永和九年（353年）三月初三上巳节，王羲之与谢安、孙绰等四十余位名士在会稽山阴的兰亭修禊，曲水流觞、赋诗纪游，事后诸人诗作结集，由王羲之作序，这便是《兰亭集序》，同时它的行书墨迹被后世尊为“天下第一行书”。文章先写山水之乐、群贤毕至的清欢，“仰观宇宙之大，俯察品类之盛”，把一次春游写得天朗气清；笔锋却在后半陡转：人生短暂，曾经欣喜的事转瞬成为陈迹，纵使寿命长短有异，终究“死生亦大矣”。他批评当时士人“一死生、齐彭殇”的玄谈是虚妄，直面生命的有限与可贵。读它的价值在于：文字清朗，情感却深沉，把欢聚之乐与生死之思写在同一页上；今天恰逢节后与大涨之日，读一读“俯仰之间，已为陈迹”，既能珍惜眼前，也提醒我们不必为一日涨跌悲喜过度。"
+  },
+  "special": {
+    "title": "创投观察",
+    "html": "<p>覆盖区间：11 月 24 日之后至 11 月 27 日。本期检索到的区间内交易很少：TechCrunch 的 Startups 页面仅列出一笔符合条件的融资，Venture 页面和 CNBC 本次未能读取。Sierra（11 月 23 日）与 CrowdStrike 收购 Zscaler（11 月 23 日）已在上期收录，此处不重复。宁可少写，不凑数。</p>\n\n<h4>1. Maple：种子轮 530 万美元</h4>\n<p><b>公司做什么：</b>Maple 是主打隐私的 AI 应用，称用户数据在设备端用只有用户知道的密码加密，随后在美国数据中心的可信执行环境（TEE）中处理，再加密返回，公司自己无法读取。产品包括聊天应用和新推出的桌面端 Maple Work，下一步是电脑关机后仍能工作的云端 agent。底层运行 DeepSeek、Kimi、GLM、Gemma、GPT OSS 等开源模型。订阅价格为每月 20、100、200 美元三档。团队 4 人，分布在奥斯汀和旧金山。</p>\n<p><b>交易本身：</b>超额认购的种子轮，融资 530 万美元，估值未披露。领投方 Epic Ventures，参与方 Draper Associates、Planetary VC、Epoch VC。此前有不足 100 万美元的天使 pre-seed。公司计划 2027 年上半年做 A 轮，并称过去三个月增长 60 倍，但未披露用户数。</p>\n<p><b>竞争对手：</b>报道称其与 Meta 的 Muse、Instinct 等主流消费级 AI 服务竞争，未点名其他直接对手。</p>\n<p><b>判断：</b>&ldquo;连公司自己都看不到数据&rdquo;是清晰的差异化卖点，CEO Mark Suman 称：&ldquo;We just simply don't want access to it.&rdquo; 但 60 倍增长基数不明，4 人团队要同时做消费端、桌面端和企业试点，资源很紧。可证伪信号：企业试点和 SOC 2 审计进展不顺，或付费用户数长期不披露。（此为编者判断，非报道内容。）</p>\n<p><a href=\"https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/\" target=\"_blank\">TechCrunch：Maple 融资 530 万美元</a></p>\n\n<h4>其他值得一提</h4>\n<p>本期区间内其他交易未能检索到可核实的正文，故不列入清单。</p>\n",
+    "status": "ready"
+  },
+  "holidays": [
+    {
+      "region": "cn",
+      "label": "中国",
+      "name": "元旦",
+      "date": "2027-01-01",
+      "days": 35
+    },
+    {
+      "region": "ca",
+      "label": "加拿大",
+      "name": "Christmas Day",
+      "date": "2026-12-25",
+      "days": 28,
+      "scope": "BC · ON"
+    },
+    {
+      "region": "us",
+      "label": "美国",
+      "name": "Day after Thanksgiving",
+      "date": "2026-11-27",
+      "days": 0,
+      "scope": "CA · WA"
+    }
+  ],
+  "issue_no": 95
+}
