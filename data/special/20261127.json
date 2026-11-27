@@ -1,0 +1,6 @@
+{
+  "date": "20261127",
+  "kind": "venture",
+  "title": "创投观察",
+  "html": "<p>覆盖区间：11 月 24 日之后至 11 月 27 日。本期检索到的区间内交易很少：TechCrunch 的 Startups 页面仅列出一笔符合条件的融资，Venture 页面和 CNBC 本次未能读取。Sierra（11 月 23 日）与 CrowdStrike 收购 Zscaler（11 月 23 日）已在上期收录，此处不重复。宁可少写，不凑数。</p>\n\n<h4>1. Maple：种子轮 530 万美元</h4>\n<p><b>公司做什么：</b>Maple 是主打隐私的 AI 应用，称用户数据在设备端用只有用户知道的密码加密，随后在美国数据中心的可信执行环境（TEE）中处理，再加密返回，公司自己无法读取。产品包括聊天应用和新推出的桌面端 Maple Work，下一步是电脑关机后仍能工作的云端 agent。底层运行 DeepSeek、Kimi、GLM、Gemma、GPT OSS 等开源模型。订阅价格为每月 20、100、200 美元三档。团队 4 人，分布在奥斯汀和旧金山。</p>\n<p><b>交易本身：</b>超额认购的种子轮，融资 530 万美元，估值未披露。领投方 Epic Ventures，参与方 Draper Associates、Planetary VC、Epoch VC。此前有不足 100 万美元的天使 pre-seed。公司计划 2027 年上半年做 A 轮，并称过去三个月增长 60 倍，但未披露用户数。</p>\n<p><b>竞争对手：</b>报道称其与 Meta 的 Muse、Instinct 等主流消费级 AI 服务竞争，未点名其他直接对手。</p>\n<p><b>判断：</b>&ldquo;连公司自己都看不到数据&rdquo;是清晰的差异化卖点，CEO Mark Suman 称：&ldquo;We just simply don't want access to it.&rdquo; 但 60 倍增长基数不明，4 人团队要同时做消费端、桌面端和企业试点，资源很紧。可证伪信号：企业试点和 SOC 2 审计进展不顺，或付费用户数长期不披露。（此为编者判断，非报道内容。）</p>\n<p><a href=\"https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/\" target=\"_blank\">TechCrunch：Maple 融资 530 万美元</a></p>\n\n<h4>其他值得一提</h4>\n<p>本期区间内其他交易未能检索到可核实的正文，故不列入清单。</p>\n"
+}
